@@ -1,0 +1,41 @@
+Reading bounded development events
+{"cutoff": 1, "queries": 4000, "full_cohorts": 0, "elapsed_s": 6.863959630951285}
+{"cutoff": 25, "queries": 100000, "full_cohorts": 0, "elapsed_s": 15.31508818292059}
+{"cutoff": 49, "queries": 196000, "full_cohorts": 0, "elapsed_s": 26.72242833999917}
+{"cutoff": 73, "queries": 292000, "full_cohorts": 0, "elapsed_s": 36.0817127058981}
+{"cutoff": 97, "queries": 388000, "full_cohorts": 0, "elapsed_s": 44.62804997898638}
+{"cutoff": 121, "queries": 480788, "full_cohorts": 0, "elapsed_s": 53.339723062934354}
+{"cutoff": 145, "queries": 574031, "full_cohorts": 0, "elapsed_s": 62.092906297999434}
+{"cutoff": 169, "queries": 644197, "full_cohorts": 0, "elapsed_s": 70.6121356219519}
+{"cutoff": 193, "queries": 719349, "full_cohorts": 0, "elapsed_s": 79.52310836699326}
+{"cutoff": 217, "queries": 815349, "full_cohorts": 0, "elapsed_s": 88.86833812692203}
+{"cutoff": 241, "queries": 904710, "full_cohorts": 0, "elapsed_s": 101.3644135359209}
+{"cutoff": 265, "queries": 996341, "full_cohorts": 0, "elapsed_s": 112.7353548919782}
+{"cutoff": 289, "queries": 1071872, "full_cohorts": 0, "elapsed_s": 123.21485395298805}
+{"cutoff": 313, "queries": 1132052, "full_cohorts": 0, "elapsed_s": 133.32301266596187}
+{"cutoff": 337, "queries": 1188006, "full_cohorts": 0, "elapsed_s": 143.26527501596138}
+{"cutoff": 361, "queries": 1265748, "full_cohorts": 0, "elapsed_s": 153.8260311979102}
+{"cutoff": 385, "queries": 1361748, "full_cohorts": 0, "elapsed_s": 164.46156328194775}
+{"cutoff": 409, "queries": 1447644, "full_cohorts": 0, "elapsed_s": 174.679649974918}
+Traceback (most recent call last):
+  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/build_borg_cohorts.py", line 67, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/build_borg_cohorts.py", line 49, in main
+    cq=label(query_frame(all_ids,0,1.),intervals,m['stop_us'])
+  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/build_borg_cohorts.py", line 16, in label
+    target=assign_interval_labels(intervals,q,3600_000_000,stop)
+  File "/mnt/zubair/Operational_Temporal_Graphs/otg/borg.py", line 125, in assign_interval_labels
+    joined=pd.merge_asof(left,right,by='task',left_on='cutoff_us',right_on='time_us',direction='backward')
+  File "/home/zubair/zubairEnv/lib/python3.10/site-packages/pandas/core/reshape/merge.py", line 691, in merge_asof
+    op = _AsOfMerge(
+  File "/home/zubair/zubairEnv/lib/python3.10/site-packages/pandas/core/reshape/merge.py", line 1999, in __init__
+    _OrderedMerge.__init__(
+  File "/home/zubair/zubairEnv/lib/python3.10/site-packages/pandas/core/reshape/merge.py", line 1911, in __init__
+    _MergeOperation.__init__(
+  File "/home/zubair/zubairEnv/lib/python3.10/site-packages/pandas/core/reshape/merge.py", line 802, in __init__
+    self._maybe_require_matching_dtypes(self.left_join_keys, self.right_join_keys)
+  File "/home/zubair/zubairEnv/lib/python3.10/site-packages/pandas/core/reshape/merge.py", line 2124, in _maybe_require_matching_dtypes
+    _check_dtype_match(lk, rk, i)
+  File "/home/zubair/zubairEnv/lib/python3.10/site-packages/pandas/core/reshape/merge.py", line 2120, in _check_dtype_match
+    raise MergeError(msg)
+pandas.errors.MergeError: incompatible merge keys [0] dtype('int64') and dtype('int32'), must be the same type

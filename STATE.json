@@ -1,20 +1,24 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
   "status": "active",
-  "phase": "joint_generation_pilots_and_full_development_preparation",
+  "phase": "full_development_cross_fitted_multihorizon_training",
   "final_test_opened": false,
   "research_direction": "behavior-preserving temporal graph generation",
   "datasets": ["Google ClusterData2011-2", "BPI Challenge 2017"],
   "gpu_inventory": [{"index": 0, "model": "RTX A6000", "memory_mib": 49140}, {"index": 1, "model": "RTX A6000", "memory_mib": 49140}],
   "interpreter": "/home/zubair/zubairEnv/bin/python",
   "torch_version": "2.5.1+cu124",
-  "next_actions": ["finish 22-day Borg development prefix", "construct multihorizon cohorts with explicit observed job/resource relations", "implement forward cross-fitting and context-dependent joint generator against classical shared-factor controls", "audit second-domain negative results", "freeze final protocol before opening final data"],
+  "next_actions": ["finish nine active cross-fitted marginal-training jobs", "compare development marginal arms and diagnose calibration", "train crossed job/machine and workflow coupling with forward out-of-sample probabilities", "evaluate full-population multihorizon scenarios and operational decision proxies", "implement appropriate temporal and joint-generative baselines with documented adaptations", "freeze final protocol before opening final data"],
   "results": [
     "All 500 Borg task-event shards and BPI archive acquired with checksums.",
     "Seven-day Borg prefix: 35,398,938 events; causal replay and 325,080 queries.",
     "Borg relational HGB improves pending pilot Brier but not clearly running versus best personal baseline.",
     "BPI causal replay: 410,629 development queries; relational summaries do NOT beat personal history on the August pilot.",
     "Classical copula pilot improves joint count CRPS with fixed marginals. Borg selects job correlation; BPI selects global correlation only. These are exploratory, sampled-population results, not final method evidence.",
-    "12 replay and score tests passed; final period remains unscored."
+    "17 local replay, score, and dependence-model tests passed; third-party suites are separate and were not claimed as validated.",
+    "22-day Borg prefix complete: 115,400,646 events. Full development: 1,833,102 queries, horizons 1/5/15/60 minutes, 16 complete-population cohorts.",
+    "BPI full development: 519,142 current-case queries at 1/3/7/14-day horizons.",
+    "GPU Gaussian context-factor pilots complete. Context adaptation does not consistently beat static factors on scenario scores; Marshall-Olkin/common-shock controls also give mixed results. No claim of a successful novel architecture yet.",
+    "Pinned DG-Gen, CEP3, TACTiS source archives. Released DG-Gen/CEP3 count-stopping protocols require explicit adaptation for unknown-count fixed-horizon forecasting."
   ]
 }

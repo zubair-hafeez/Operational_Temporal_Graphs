@@ -1,0 +1,6 @@
+{"state": 1, "arm": "global", "fold": "oof8_10", "horizon": 1, "elapsed_s": 6.477619771962054}
+{"state": 1, "arm": "global", "fold": "oof8_10", "horizon": 5, "elapsed_s": 13.082914403057657}
+{"state": 1, "arm": "global", "fold": "oof8_10", "horizon": 15, "elapsed_s": 19.25649245304521}
+{"state": 1, "arm": "global", "fold": "oof8_10", "horizon": 60, "elapsed_s": 26.79743099003099}
+{"state": 1, "arm": "global", "fold": "oof12_14", "horizon": 1, "elapsed_s": 35.81540442700498}
+{"state": 1, "arm": "global", "fold": "oof12_14", "horizon": 5, "elapsed_s": 44.775014966959134}

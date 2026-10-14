@@ -1,0 +1,23 @@
+[
+  {
+    "name": "dggen",
+    "sha": "9d9c94d1c8f60d4e3578ef0eb6b8671d88df3e12",
+    "commit_url": "https://github.com/ryienh/DGGen/commit/9d9c94d1c8f60d4e3578ef0eb6b8671d88df3e12",
+    "archive_sha256": "4be6b799f86b92039bcd1ef06d32b7e1c340b9d42a507ef0ce53ee31de74eef2",
+    "archive_bytes": 121549
+  },
+  {
+    "name": "cep3",
+    "sha": "7ea12a5e6c9587959e98c694f1bfc1747f81cec2",
+    "commit_url": "https://github.com/WangXuhongCN/CEP3/commit/7ea12a5e6c9587959e98c694f1bfc1747f81cec2",
+    "archive_sha256": "70d181574d1445aac3a715b1b291ba8be6ac2b996b972a788b6d3acdf9bac262",
+    "archive_bytes": 1122030
+  },
+  {
+    "name": "tactis",
+    "sha": "64e9db6405438ebd3a756a072711c81f57fbcffb",
+    "commit_url": "https://github.com/ServiceNow/TACTiS/commit/64e9db6405438ebd3a756a072711c81f57fbcffb",
+    "archive_sha256": "cca37fb4f166c09216d5c693a8754f83105468fb7e016195c3318ba69945c7ab",
+    "archive_bytes": 887967
+  }
+]

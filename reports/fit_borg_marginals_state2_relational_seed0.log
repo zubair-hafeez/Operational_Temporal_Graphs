@@ -1,0 +1,5 @@
+{"state": 2, "arm": "relational", "fold": "oof8_10", "horizon": 1, "elapsed_s": 8.709548451006413}
+{"state": 2, "arm": "relational", "fold": "oof8_10", "horizon": 5, "elapsed_s": 16.590323223965243}
+{"state": 2, "arm": "relational", "fold": "oof8_10", "horizon": 15, "elapsed_s": 24.02214642195031}
+{"state": 2, "arm": "relational", "fold": "oof8_10", "horizon": 60, "elapsed_s": 31.957919982960448}
+{"state": 2, "arm": "relational", "fold": "oof12_14", "horizon": 1, "elapsed_s": 46.47553195699584}

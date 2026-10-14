@@ -1,0 +1,259 @@
+{
+  "config": {
+    "per_state": 2000
+  },
+  "n_queries": 1833102,
+  "features": [
+    "state",
+    "log_state_age_s",
+    "unknown_state_age",
+    "log_since_event_s",
+    "priority",
+    "sched_class",
+    "cpu",
+    "memory",
+    "cpu_missing",
+    "memory_missing",
+    "log_seen_events",
+    "log_evictions",
+    "imputed_ever",
+    "log_since_first_seen_s",
+    "hour_sin",
+    "hour_cos",
+    "week_sin",
+    "week_cos",
+    "log_global_pending",
+    "log_global_running",
+    "log_job_seen",
+    "log_job_pending",
+    "log_job_running",
+    "job_running_mean_age_log",
+    "job_running_cpu_sum",
+    "job_running_memory_sum",
+    "log_machine_running",
+    "machine_cpu_sum",
+    "machine_memory_sum",
+    "machine_priority_mean",
+    "machine_age_log_mean",
+    "log_job_running_machine_degree"
+  ],
+  "feature_groups": {
+    "personal": [
+      "state",
+      "log_state_age_s",
+      "unknown_state_age",
+      "log_since_event_s",
+      "priority",
+      "sched_class",
+      "cpu",
+      "memory",
+      "cpu_missing",
+      "memory_missing",
+      "log_seen_events",
+      "log_evictions",
+      "imputed_ever",
+      "log_since_first_seen_s"
+    ],
+    "global": [
+      "hour_sin",
+      "hour_cos",
+      "week_sin",
+      "week_cos",
+      "log_global_pending",
+      "log_global_running"
+    ],
+    "relational": [
+      "log_job_seen",
+      "log_job_pending",
+      "log_job_running",
+      "job_running_mean_age_log",
+      "job_running_cpu_sum",
+      "job_running_memory_sum",
+      "log_machine_running",
+      "machine_cpu_sum",
+      "machine_memory_sum",
+      "machine_priority_mean",
+      "machine_age_log_mean",
+      "log_job_running_machine_degree"
+    ]
+  },
+  "horizon_minutes": [
+    1,
+    5,
+    15,
+    60
+  ],
+  "cohorts": [
+    {
+      "folder": "cohort_hour0432",
+      "cutoff_us": 1555800000000,
+      "elapsed_day": 18.0,
+      "n": 132613,
+      "pending": 262,
+      "running": 132351,
+      "queries_sha256": "7cb311e2c37c8b024eb41451fec26d8a4ee5da7a92feab22cc008d1355b70ce2",
+      "features_sha256": "a94bf95340137ccdfdc250d27b595945ed031472f097a04c886e645635f1a058"
+    },
+    {
+      "folder": "cohort_hour0438",
+      "cutoff_us": 1577400000000,
+      "elapsed_day": 18.25,
+      "n": 127246,
+      "pending": 765,
+      "running": 126481,
+      "queries_sha256": "34996731df5ac5ce1075b921557dad0cba8d7fc446a995c4268f67555cd467d5",
+      "features_sha256": "c629a3e84a0925d4573a46c3614d148f36314cfa9470ac604619740823fb1352"
+    },
+    {
+      "folder": "cohort_hour0444",
+      "cutoff_us": 1599000000000,
+      "elapsed_day": 18.5,
+      "n": 142748,
+      "pending": 5367,
+      "running": 137381,
+      "queries_sha256": "afc23ec43b52dcac2634fa54737b74c44e53ea92a28f652973c57882721b84fb",
+      "features_sha256": "8625e974b5b9ebead492e598b91c1333e499beec113d8dc85d22d8ae056a2113"
+    },
+    {
+      "folder": "cohort_hour0450",
+      "cutoff_us": 1620600000000,
+      "elapsed_day": 18.75,
+      "n": 160975,
+      "pending": 13186,
+      "running": 147789,
+      "queries_sha256": "e40c8fc5d4676fc2ffbbf552ed7b61a349ec4a905d54946d965d7dba89c353e0",
+      "features_sha256": "3950d0d51eb832e52906eed4120b78dc22b204a340364e56107ce34a2daa375c"
+    },
+    {
+      "folder": "cohort_hour0456",
+      "cutoff_us": 1642200000000,
+      "elapsed_day": 19.0,
+      "n": 134071,
+      "pending": 227,
+      "running": 133844,
+      "queries_sha256": "43b335123004183e351a1220ed57fe0d7e60801295e0cfd7c946fca0a4a2a389",
+      "features_sha256": "4319b68ee6e94d7f808537f5ca5fb6c8cc390baf6ae7f4c4950d28faf7fda0f8"
+    },
+    {
+      "folder": "cohort_hour0462",
+      "cutoff_us": 1663800000000,
+      "elapsed_day": 19.25,
+      "n": 118871,
+      "pending": 4899,
+      "running": 113972,
+      "queries_sha256": "5e6010b34e6ccd0cdfd3dee1ef940ad20091e32909df8c3e9a6313d89f2fd24f",
+      "features_sha256": "ce6a1c9ee93cc7f830283f2f2a2f0884ff4e2989b528d8cb04147cc3659381f1"
+    },
+    {
+      "folder": "cohort_hour0468",
+      "cutoff_us": 1685400000000,
+      "elapsed_day": 19.5,
+      "n": 132069,
+      "pending": 231,
+      "running": 131838,
+      "queries_sha256": "473e0c2bbdcdef893fc250df56bfad9ed695bbaf67bdf6af60cc75cd529aa838",
+      "features_sha256": "5cefcc89dce9616435544dff81482cbfa721d9b67300e470977891ff1bddc294"
+    },
+    {
+      "folder": "cohort_hour0474",
+      "cutoff_us": 1707000000000,
+      "elapsed_day": 19.75,
+      "n": 136225,
+      "pending": 6379,
+      "running": 129846,
+      "queries_sha256": "edf0632184e28d6fef00bea6867918216f2250889e39dbcf6f1babcc32fc73bf",
+      "features_sha256": "6ca20f245f858f81a9ba5a11e632d42d32bfa386fac4d7360933b69293399199"
+    },
+    {
+      "folder": "cohort_hour0480",
+      "cutoff_us": 1728600000000,
+      "elapsed_day": 20.0,
+      "n": 145771,
+      "pending": 7406,
+      "running": 138365,
+      "queries_sha256": "aaa501190e2aa591bc93ae1cabdfd3a1e1f7c2f71b71ffad2d7512761af67a40",
+      "features_sha256": "1c94ceeb24c008c532eef277942be535b2846c9d63eb79aa778f8b2a6b9577ba"
+    },
+    {
+      "folder": "cohort_hour0486",
+      "cutoff_us": 1750200000000,
+      "elapsed_day": 20.25,
+      "n": 122896,
+      "pending": 6469,
+      "running": 116427,
+      "queries_sha256": "7f4466f29a2d03fa47a80117ccd6737f0afd0dd60612002a694062a2955d9456",
+      "features_sha256": "dc8e52191529dc12809d44b90f18aa19589f13ee320b6f68931265e48ff45b33"
+    },
+    {
+      "folder": "cohort_hour0492",
+      "cutoff_us": 1771800000000,
+      "elapsed_day": 20.5,
+      "n": 118509,
+      "pending": 7711,
+      "running": 110798,
+      "queries_sha256": "ae207ea299b8212a44d4e3ace6bdba5e5cb92555d8bb321bfde7718451426eff",
+      "features_sha256": "85fb0229508feae825c60538c8dcae8250ded3d02474e7e67d3e4f85e47f6639"
+    },
+    {
+      "folder": "cohort_hour0498",
+      "cutoff_us": 1793400000000,
+      "elapsed_day": 20.75,
+      "n": 117617,
+      "pending": 7190,
+      "running": 110427,
+      "queries_sha256": "2b132765f392acecbf109d93d7f79e38255ffca426729d89273abe2c438a2e05",
+      "features_sha256": "ab7707de8502c32911df3305cd68c40be84b95b3e4304cedf5e94f99bbef94a7"
+    },
+    {
+      "folder": "cohort_hour0504",
+      "cutoff_us": 1815000000000,
+      "elapsed_day": 21.0,
+      "n": 118559,
+      "pending": 234,
+      "running": 118325,
+      "queries_sha256": "a2dc01967bf5cec82afde9763ae68279db756b46ea19d44503f3a5f40235fae9",
+      "features_sha256": "75c8ea51447b903cfb46d798051d495e25445cd2dd1ddb279cceef19f18fd427"
+    },
+    {
+      "folder": "cohort_hour0510",
+      "cutoff_us": 1836600000000,
+      "elapsed_day": 21.25,
+      "n": 118909,
+      "pending": 225,
+      "running": 118684,
+      "queries_sha256": "3a1762e9e8cca9c0832c280c20ee295710a198ff310c9ea5bde8955ac110e476",
+      "features_sha256": "b06a58d6dd7242379d6f07ed5440d91f36070cb7b13b20a0a7d8c68a4ae5b39c"
+    },
+    {
+      "folder": "cohort_hour0516",
+      "cutoff_us": 1858200000000,
+      "elapsed_day": 21.5,
+      "n": 141263,
+      "pending": 6268,
+      "running": 134995,
+      "queries_sha256": "4b7a1a9f6ac433787693104f3f40e8ad076170f5798d8d57ab26e0121e369f66",
+      "features_sha256": "8f7bca9d5597b50cd0607cb8b17adadf4a01d1f396a0ff3d60f57a60db520984"
+    },
+    {
+      "folder": "cohort_hour0522",
+      "cutoff_us": 1879800000000,
+      "elapsed_day": 21.75,
+      "n": 129126,
+      "pending": 7098,
+      "running": 122028,
+      "queries_sha256": "b55c6b615a2f2457df13e9df220442b315a00762fa35f7e034b7952bc6551054",
+      "features_sha256": "32c0ef944a2ece6a2e0cad793030e04466509f7fea8c50008734c7116ba32e2b"
+    }
+  ],
+  "splits": {
+    "train": 1523086,
+    "development": 310016
+  },
+  "relation_contract": "Job and machine incidence observed at cutoff. Pending/unknown machine is a unique singleton; future assignment is never used.",
+  "queries_sha256": "bbde582fd1df8063cb1e2726e4124dfc7e609a17c24ae427c84f1f94f340cf77",
+  "features_sha256": "aef1d794d99cef5fe553fc1877521bc2d8d3c48ae34568dd0024252780846322",
+  "script_sha256": "47585b292fbcf1642d93d8456afda21ff9aa3dcec25e98e4a4fdb9c83741d239",
+  "replay_sha256": "1aaf46da4fe58f4cd105d66dd60eca5b386beee0861cba3f30c7915a1bb22d67",
+  "prefix_metadata_sha256": "f8ea824be993dadb5df5816bb0a9814e289d9a2327603787b2fd47f7a82f7783",
+  "elapsed_s": 322.66706504195463
+}
