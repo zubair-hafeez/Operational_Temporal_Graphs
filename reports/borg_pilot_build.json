@@ -1,0 +1,1274 @@
+{
+  "config": {
+    "prefix": "borg_prefix_7d",
+    "step_minutes": 60,
+    "horizon_minutes": 15,
+    "per_state": 1000,
+    "seed": 20261014
+  },
+  "n_queries": 325080,
+  "n_features": 32,
+  "features": [
+    "state",
+    "log_state_age_s",
+    "unknown_state_age",
+    "log_since_event_s",
+    "priority",
+    "sched_class",
+    "cpu",
+    "memory",
+    "cpu_missing",
+    "memory_missing",
+    "log_seen_events",
+    "log_evictions",
+    "imputed_ever",
+    "log_since_first_seen_s",
+    "hour_sin",
+    "hour_cos",
+    "week_sin",
+    "week_cos",
+    "log_global_pending",
+    "log_global_running",
+    "log_job_seen",
+    "log_job_pending",
+    "log_job_running",
+    "job_running_mean_age_log",
+    "job_running_cpu_sum",
+    "job_running_memory_sum",
+    "log_machine_running",
+    "machine_cpu_sum",
+    "machine_memory_sum",
+    "machine_priority_mean",
+    "machine_age_log_mean",
+    "log_job_running_machine_degree"
+  ],
+  "feature_groups": {
+    "personal": [
+      "state",
+      "log_state_age_s",
+      "unknown_state_age",
+      "log_since_event_s",
+      "priority",
+      "sched_class",
+      "cpu",
+      "memory",
+      "cpu_missing",
+      "memory_missing",
+      "log_seen_events",
+      "log_evictions",
+      "imputed_ever",
+      "log_since_first_seen_s"
+    ],
+    "global": [
+      "hour_sin",
+      "hour_cos",
+      "week_sin",
+      "week_cos",
+      "log_global_pending",
+      "log_global_running"
+    ],
+    "relational": [
+      "log_job_seen",
+      "log_job_pending",
+      "log_job_running",
+      "job_running_mean_age_log",
+      "job_running_cpu_sum",
+      "job_running_memory_sum",
+      "log_machine_running",
+      "machine_cpu_sum",
+      "machine_memory_sum",
+      "machine_priority_mean",
+      "machine_age_log_mean",
+      "log_job_running_machine_degree"
+    ]
+  },
+  "splits": {
+    "train": 190000,
+    "pilot_test": 87080,
+    "validation": 48000
+  },
+  "label": "First change of current task state during (cutoff, cutoff+horizon]; no future input.",
+  "sampling": "Uniform within pending/running at each cutoff; full cell retained for context; inverse inclusion weights stored.",
+  "prefix_metadata": {
+    "through_days": 7.0,
+    "stop_us": 605400000000,
+    "rows": 35398938,
+    "tasks": 5695929,
+    "jobs": 154039,
+    "machines": 12562,
+    "unknown_machine": 48,
+    "initial_rows": 277321,
+    "imputed_positive_rows": 1795,
+    "was_time_sorted": true,
+    "sources": [
+      "part-00000-of-00500.csv.gz",
+      "part-00001-of-00500.csv.gz",
+      "part-00002-of-00500.csv.gz",
+      "part-00003-of-00500.csv.gz",
+      "part-00004-of-00500.csv.gz",
+      "part-00005-of-00500.csv.gz",
+      "part-00006-of-00500.csv.gz",
+      "part-00007-of-00500.csv.gz",
+      "part-00008-of-00500.csv.gz",
+      "part-00009-of-00500.csv.gz",
+      "part-00010-of-00500.csv.gz",
+      "part-00011-of-00500.csv.gz",
+      "part-00012-of-00500.csv.gz",
+      "part-00013-of-00500.csv.gz",
+      "part-00014-of-00500.csv.gz",
+      "part-00015-of-00500.csv.gz",
+      "part-00016-of-00500.csv.gz",
+      "part-00017-of-00500.csv.gz",
+      "part-00018-of-00500.csv.gz",
+      "part-00019-of-00500.csv.gz",
+      "part-00020-of-00500.csv.gz",
+      "part-00021-of-00500.csv.gz",
+      "part-00022-of-00500.csv.gz",
+      "part-00023-of-00500.csv.gz",
+      "part-00024-of-00500.csv.gz",
+      "part-00025-of-00500.csv.gz",
+      "part-00026-of-00500.csv.gz",
+      "part-00027-of-00500.csv.gz",
+      "part-00028-of-00500.csv.gz",
+      "part-00029-of-00500.csv.gz",
+      "part-00030-of-00500.csv.gz",
+      "part-00031-of-00500.csv.gz",
+      "part-00032-of-00500.csv.gz",
+      "part-00033-of-00500.csv.gz",
+      "part-00034-of-00500.csv.gz",
+      "part-00035-of-00500.csv.gz",
+      "part-00036-of-00500.csv.gz",
+      "part-00037-of-00500.csv.gz",
+      "part-00038-of-00500.csv.gz",
+      "part-00039-of-00500.csv.gz",
+      "part-00040-of-00500.csv.gz",
+      "part-00041-of-00500.csv.gz",
+      "part-00042-of-00500.csv.gz",
+      "part-00043-of-00500.csv.gz",
+      "part-00044-of-00500.csv.gz",
+      "part-00045-of-00500.csv.gz",
+      "part-00046-of-00500.csv.gz",
+      "part-00047-of-00500.csv.gz",
+      "part-00048-of-00500.csv.gz",
+      "part-00049-of-00500.csv.gz",
+      "part-00050-of-00500.csv.gz",
+      "part-00051-of-00500.csv.gz",
+      "part-00052-of-00500.csv.gz",
+      "part-00053-of-00500.csv.gz",
+      "part-00054-of-00500.csv.gz",
+      "part-00055-of-00500.csv.gz",
+      "part-00056-of-00500.csv.gz",
+      "part-00057-of-00500.csv.gz",
+      "part-00058-of-00500.csv.gz",
+      "part-00059-of-00500.csv.gz",
+      "part-00060-of-00500.csv.gz",
+      "part-00061-of-00500.csv.gz",
+      "part-00062-of-00500.csv.gz",
+      "part-00063-of-00500.csv.gz",
+      "part-00064-of-00500.csv.gz",
+      "part-00065-of-00500.csv.gz",
+      "part-00066-of-00500.csv.gz",
+      "part-00067-of-00500.csv.gz",
+      "part-00068-of-00500.csv.gz",
+      "part-00069-of-00500.csv.gz",
+      "part-00070-of-00500.csv.gz",
+      "part-00071-of-00500.csv.gz",
+      "part-00072-of-00500.csv.gz",
+      "part-00073-of-00500.csv.gz",
+      "part-00074-of-00500.csv.gz",
+      "part-00075-of-00500.csv.gz",
+      "part-00076-of-00500.csv.gz",
+      "part-00077-of-00500.csv.gz",
+      "part-00078-of-00500.csv.gz",
+      "part-00079-of-00500.csv.gz",
+      "part-00080-of-00500.csv.gz",
+      "part-00081-of-00500.csv.gz",
+      "part-00082-of-00500.csv.gz",
+      "part-00083-of-00500.csv.gz",
+      "part-00084-of-00500.csv.gz",
+      "part-00085-of-00500.csv.gz",
+      "part-00086-of-00500.csv.gz",
+      "part-00087-of-00500.csv.gz",
+      "part-00088-of-00500.csv.gz",
+      "part-00089-of-00500.csv.gz",
+      "part-00090-of-00500.csv.gz",
+      "part-00091-of-00500.csv.gz",
+      "part-00092-of-00500.csv.gz",
+      "part-00093-of-00500.csv.gz",
+      "part-00094-of-00500.csv.gz",
+      "part-00095-of-00500.csv.gz",
+      "part-00096-of-00500.csv.gz",
+      "part-00097-of-00500.csv.gz",
+      "part-00098-of-00500.csv.gz",
+      "part-00099-of-00500.csv.gz",
+      "part-00100-of-00500.csv.gz",
+      "part-00101-of-00500.csv.gz",
+      "part-00102-of-00500.csv.gz",
+      "part-00103-of-00500.csv.gz",
+      "part-00104-of-00500.csv.gz",
+      "part-00105-of-00500.csv.gz",
+      "part-00106-of-00500.csv.gz",
+      "part-00107-of-00500.csv.gz",
+      "part-00108-of-00500.csv.gz",
+      "part-00109-of-00500.csv.gz",
+      "part-00110-of-00500.csv.gz",
+      "part-00111-of-00500.csv.gz",
+      "part-00112-of-00500.csv.gz",
+      "part-00113-of-00500.csv.gz",
+      "part-00114-of-00500.csv.gz",
+      "part-00115-of-00500.csv.gz",
+      "part-00116-of-00500.csv.gz",
+      "part-00117-of-00500.csv.gz",
+      "part-00118-of-00500.csv.gz",
+      "part-00119-of-00500.csv.gz",
+      "part-00120-of-00500.csv.gz"
+    ],
+    "interval_count": 35375016,
+    "zero_length_intervals": 133334,
+    "transition_counts": {
+      "0": {
+        "0": 6208398,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "7": 0,
+        "8": 0
+      },
+      "1": {
+        "0": 0,
+        "1": 11536911,
+        "2": 3229,
+        "3": 1,
+        "4": 74,
+        "5": 230523,
+        "7": 40,
+        "8": 0
+      },
+      "2": {
+        "0": 1,
+        "1": 0,
+        "2": 1475644,
+        "3": 3942933,
+        "4": 4146344,
+        "5": 2000619,
+        "7": 0,
+        "8": 23515
+      }
+    },
+    "events_sha256": "79317904085192b8c44bbbe677d06e48af91ada33b357b78d5b79720738be633",
+    "source_manifest_sha256": "99d8064e35df5f848baa4abb06da07e67de517d5e0c6a0b6fc2e5a4902f3bbfa",
+    "script_sha256": "787ec61f9261b895625d13f8dd5ac9f3eedc00f50cd2d6e71ffef95d36010063",
+    "elapsed_s": 87.20604200405069
+  },
+  "queries_sha256": "ae43aae64097a6e8cbd1e4b1f3505328484ca06547cfd41ae844a873771dfddc",
+  "features_sha256": "a0601bd265ae2dfcb8a075f65705c83bb4dc8570c88714932a3dcb9b84550ea9",
+  "script_sha256": "82025fe7db1ce04f110fb2503f1798795ca2599e5b57811cab155490bf92cf66",
+  "replay_sha256": "1aaf46da4fe58f4cd105d66dd60eca5b386beee0861cba3f30c7915a1bb22d67",
+  "elapsed_s": 31.735032223979943,
+  "state_audit": [
+    {
+      "cutoff_us": 4200000000,
+      "pending": 11361,
+      "running": 133677,
+      "events_seen": 414049
+    },
+    {
+      "cutoff_us": 7800000000,
+      "pending": 11387,
+      "running": 131875,
+      "events_seen": 480147
+    },
+    {
+      "cutoff_us": 11400000000,
+      "pending": 10894,
+      "running": 131984,
+      "events_seen": 538789
+    },
+    {
+      "cutoff_us": 15000000000,
+      "pending": 11548,
+      "running": 135151,
+      "events_seen": 674247
+    },
+    {
+      "cutoff_us": 18600000000,
+      "pending": 11309,
+      "running": 136594,
+      "events_seen": 757046
+    },
+    {
+      "cutoff_us": 22200000000,
+      "pending": 11585,
+      "running": 140502,
+      "events_seen": 844661
+    },
+    {
+      "cutoff_us": 25800000000,
+      "pending": 11178,
+      "running": 138589,
+      "events_seen": 928499
+    },
+    {
+      "cutoff_us": 29400000000,
+      "pending": 13166,
+      "running": 144010,
+      "events_seen": 1058385
+    },
+    {
+      "cutoff_us": 33000000000,
+      "pending": 17330,
+      "running": 144054,
+      "events_seen": 1175195
+    },
+    {
+      "cutoff_us": 36600000000,
+      "pending": 12915,
+      "running": 140989,
+      "events_seen": 1255830
+    },
+    {
+      "cutoff_us": 40200000000,
+      "pending": 24912,
+      "running": 135263,
+      "events_seen": 1421524
+    },
+    {
+      "cutoff_us": 43800000000,
+      "pending": 16104,
+      "running": 142899,
+      "events_seen": 1530531
+    },
+    {
+      "cutoff_us": 47400000000,
+      "pending": 13516,
+      "running": 140231,
+      "events_seen": 1616178
+    },
+    {
+      "cutoff_us": 51000000000,
+      "pending": 25760,
+      "running": 136881,
+      "events_seen": 1831956
+    },
+    {
+      "cutoff_us": 54600000000,
+      "pending": 15669,
+      "running": 139802,
+      "events_seen": 2015687
+    },
+    {
+      "cutoff_us": 58200000000,
+      "pending": 16151,
+      "running": 136112,
+      "events_seen": 2139127
+    },
+    {
+      "cutoff_us": 61800000000,
+      "pending": 14727,
+      "running": 139433,
+      "events_seen": 2231284
+    },
+    {
+      "cutoff_us": 65400000000,
+      "pending": 15507,
+      "running": 135757,
+      "events_seen": 2414489
+    },
+    {
+      "cutoff_us": 69000000000,
+      "pending": 14151,
+      "running": 135343,
+      "events_seen": 2555692
+    },
+    {
+      "cutoff_us": 72600000000,
+      "pending": 15517,
+      "running": 138082,
+      "events_seen": 2754898
+    },
+    {
+      "cutoff_us": 76200000000,
+      "pending": 15724,
+      "running": 138702,
+      "events_seen": 2986648
+    },
+    {
+      "cutoff_us": 79800000000,
+      "pending": 14873,
+      "running": 137897,
+      "events_seen": 3122207
+    },
+    {
+      "cutoff_us": 83400000000,
+      "pending": 15097,
+      "running": 138590,
+      "events_seen": 3291727
+    },
+    {
+      "cutoff_us": 87000000000,
+      "pending": 18157,
+      "running": 141524,
+      "events_seen": 3531864
+    },
+    {
+      "cutoff_us": 90600000000,
+      "pending": 17820,
+      "running": 144096,
+      "events_seen": 3747718
+    },
+    {
+      "cutoff_us": 94200000000,
+      "pending": 16866,
+      "running": 144464,
+      "events_seen": 4236832
+    },
+    {
+      "cutoff_us": 97800000000,
+      "pending": 28716,
+      "running": 133121,
+      "events_seen": 5343222
+    },
+    {
+      "cutoff_us": 101400000000,
+      "pending": 30516,
+      "running": 148277,
+      "events_seen": 7528338
+    },
+    {
+      "cutoff_us": 105000000000,
+      "pending": 6339,
+      "running": 147808,
+      "events_seen": 9218360
+    },
+    {
+      "cutoff_us": 108600000000,
+      "pending": 24767,
+      "running": 142094,
+      "events_seen": 11194400
+    },
+    {
+      "cutoff_us": 112200000000,
+      "pending": 24950,
+      "running": 140443,
+      "events_seen": 13551291
+    },
+    {
+      "cutoff_us": 115800000000,
+      "pending": 14082,
+      "running": 125121,
+      "events_seen": 14079769
+    },
+    {
+      "cutoff_us": 119400000000,
+      "pending": 11821,
+      "running": 125466,
+      "events_seen": 14292607
+    },
+    {
+      "cutoff_us": 123000000000,
+      "pending": 12548,
+      "running": 127568,
+      "events_seen": 14608077
+    },
+    {
+      "cutoff_us": 126600000000,
+      "pending": 14321,
+      "running": 121893,
+      "events_seen": 14932581
+    },
+    {
+      "cutoff_us": 130200000000,
+      "pending": 14450,
+      "running": 127264,
+      "events_seen": 15222176
+    },
+    {
+      "cutoff_us": 133800000000,
+      "pending": 12327,
+      "running": 131850,
+      "events_seen": 15529854
+    },
+    {
+      "cutoff_us": 137400000000,
+      "pending": 8611,
+      "running": 130381,
+      "events_seen": 15859530
+    },
+    {
+      "cutoff_us": 141000000000,
+      "pending": 15019,
+      "running": 129302,
+      "events_seen": 16071053
+    },
+    {
+      "cutoff_us": 144600000000,
+      "pending": 12737,
+      "running": 124336,
+      "events_seen": 16270317
+    },
+    {
+      "cutoff_us": 148200000000,
+      "pending": 15943,
+      "running": 122969,
+      "events_seen": 16476032
+    },
+    {
+      "cutoff_us": 151800000000,
+      "pending": 14565,
+      "running": 123926,
+      "events_seen": 16629343
+    },
+    {
+      "cutoff_us": 155400000000,
+      "pending": 17642,
+      "running": 127049,
+      "events_seen": 16919383
+    },
+    {
+      "cutoff_us": 159000000000,
+      "pending": 14007,
+      "running": 124787,
+      "events_seen": 17140760
+    },
+    {
+      "cutoff_us": 162600000000,
+      "pending": 13259,
+      "running": 130786,
+      "events_seen": 17337403
+    },
+    {
+      "cutoff_us": 166200000000,
+      "pending": 12624,
+      "running": 121067,
+      "events_seen": 17470779
+    },
+    {
+      "cutoff_us": 169800000000,
+      "pending": 10607,
+      "running": 122640,
+      "events_seen": 17657167
+    },
+    {
+      "cutoff_us": 173400000000,
+      "pending": 12206,
+      "running": 128758,
+      "events_seen": 18132375
+    },
+    {
+      "cutoff_us": 177000000000,
+      "pending": 19206,
+      "running": 132867,
+      "events_seen": 18575678
+    },
+    {
+      "cutoff_us": 180600000000,
+      "pending": 15418,
+      "running": 133067,
+      "events_seen": 19057832
+    },
+    {
+      "cutoff_us": 184200000000,
+      "pending": 15533,
+      "running": 134664,
+      "events_seen": 19453394
+    },
+    {
+      "cutoff_us": 187800000000,
+      "pending": 33023,
+      "running": 131021,
+      "events_seen": 19847193
+    },
+    {
+      "cutoff_us": 191400000000,
+      "pending": 10855,
+      "running": 130221,
+      "events_seen": 20273141
+    },
+    {
+      "cutoff_us": 195000000000,
+      "pending": 11760,
+      "running": 127550,
+      "events_seen": 20704417
+    },
+    {
+      "cutoff_us": 198600000000,
+      "pending": 12806,
+      "running": 127976,
+      "events_seen": 21156980
+    },
+    {
+      "cutoff_us": 202200000000,
+      "pending": 21597,
+      "running": 130125,
+      "events_seen": 21602311
+    },
+    {
+      "cutoff_us": 205800000000,
+      "pending": 16544,
+      "running": 126496,
+      "events_seen": 21956440
+    },
+    {
+      "cutoff_us": 209400000000,
+      "pending": 20765,
+      "running": 130868,
+      "events_seen": 22183306
+    },
+    {
+      "cutoff_us": 213000000000,
+      "pending": 16557,
+      "running": 129527,
+      "events_seen": 22356186
+    },
+    {
+      "cutoff_us": 216600000000,
+      "pending": 17470,
+      "running": 126482,
+      "events_seen": 22486257
+    },
+    {
+      "cutoff_us": 220200000000,
+      "pending": 16842,
+      "running": 128167,
+      "events_seen": 22699046
+    },
+    {
+      "cutoff_us": 223800000000,
+      "pending": 15617,
+      "running": 127144,
+      "events_seen": 22881604
+    },
+    {
+      "cutoff_us": 227400000000,
+      "pending": 15079,
+      "running": 126423,
+      "events_seen": 22966877
+    },
+    {
+      "cutoff_us": 231000000000,
+      "pending": 15589,
+      "running": 122492,
+      "events_seen": 23083172
+    },
+    {
+      "cutoff_us": 234600000000,
+      "pending": 15191,
+      "running": 122782,
+      "events_seen": 23160317
+    },
+    {
+      "cutoff_us": 238200000000,
+      "pending": 16065,
+      "running": 121593,
+      "events_seen": 23263049
+    },
+    {
+      "cutoff_us": 241800000000,
+      "pending": 17860,
+      "running": 125464,
+      "events_seen": 23355876
+    },
+    {
+      "cutoff_us": 245400000000,
+      "pending": 22370,
+      "running": 133094,
+      "events_seen": 23510946
+    },
+    {
+      "cutoff_us": 249000000000,
+      "pending": 14580,
+      "running": 138165,
+      "events_seen": 23644490
+    },
+    {
+      "cutoff_us": 252600000000,
+      "pending": 15403,
+      "running": 134402,
+      "events_seen": 23954095
+    },
+    {
+      "cutoff_us": 256200000000,
+      "pending": 15696,
+      "running": 129887,
+      "events_seen": 24302430
+    },
+    {
+      "cutoff_us": 259800000000,
+      "pending": 13346,
+      "running": 130164,
+      "events_seen": 24640821
+    },
+    {
+      "cutoff_us": 263400000000,
+      "pending": 10967,
+      "running": 117373,
+      "events_seen": 24929165
+    },
+    {
+      "cutoff_us": 267000000000,
+      "pending": 10296,
+      "running": 119276,
+      "events_seen": 25134770
+    },
+    {
+      "cutoff_us": 270600000000,
+      "pending": 9657,
+      "running": 119658,
+      "events_seen": 25263767
+    },
+    {
+      "cutoff_us": 274200000000,
+      "pending": 18621,
+      "running": 127678,
+      "events_seen": 25400137
+    },
+    {
+      "cutoff_us": 277800000000,
+      "pending": 15360,
+      "running": 130853,
+      "events_seen": 25608430
+    },
+    {
+      "cutoff_us": 281400000000,
+      "pending": 15151,
+      "running": 114316,
+      "events_seen": 25810002
+    },
+    {
+      "cutoff_us": 285000000000,
+      "pending": 16825,
+      "running": 118448,
+      "events_seen": 25965665
+    },
+    {
+      "cutoff_us": 288600000000,
+      "pending": 7717,
+      "running": 120104,
+      "events_seen": 26127918
+    },
+    {
+      "cutoff_us": 292200000000,
+      "pending": 6751,
+      "running": 118053,
+      "events_seen": 26206140
+    },
+    {
+      "cutoff_us": 295800000000,
+      "pending": 5977,
+      "running": 120133,
+      "events_seen": 26317605
+    },
+    {
+      "cutoff_us": 299400000000,
+      "pending": 7611,
+      "running": 121277,
+      "events_seen": 26473647
+    },
+    {
+      "cutoff_us": 303000000000,
+      "pending": 9314,
+      "running": 114269,
+      "events_seen": 26666762
+    },
+    {
+      "cutoff_us": 306600000000,
+      "pending": 7898,
+      "running": 126653,
+      "events_seen": 26820372
+    },
+    {
+      "cutoff_us": 310200000000,
+      "pending": 9890,
+      "running": 124449,
+      "events_seen": 26956244
+    },
+    {
+      "cutoff_us": 313800000000,
+      "pending": 9725,
+      "running": 124391,
+      "events_seen": 27026824
+    },
+    {
+      "cutoff_us": 317400000000,
+      "pending": 8288,
+      "running": 119454,
+      "events_seen": 27105340
+    },
+    {
+      "cutoff_us": 321000000000,
+      "pending": 18374,
+      "running": 118425,
+      "events_seen": 27202604
+    },
+    {
+      "cutoff_us": 324600000000,
+      "pending": 17447,
+      "running": 128168,
+      "events_seen": 27402367
+    },
+    {
+      "cutoff_us": 328200000000,
+      "pending": 16396,
+      "running": 125905,
+      "events_seen": 27544648
+    },
+    {
+      "cutoff_us": 331800000000,
+      "pending": 16285,
+      "running": 125327,
+      "events_seen": 27651946
+    },
+    {
+      "cutoff_us": 335400000000,
+      "pending": 18561,
+      "running": 128773,
+      "events_seen": 27761976
+    },
+    {
+      "cutoff_us": 339000000000,
+      "pending": 18608,
+      "running": 127644,
+      "events_seen": 27850712
+    },
+    {
+      "cutoff_us": 342600000000,
+      "pending": 18235,
+      "running": 127960,
+      "events_seen": 27913982
+    },
+    {
+      "cutoff_us": 346200000000,
+      "pending": 10420,
+      "running": 127574,
+      "events_seen": 28092268
+    },
+    {
+      "cutoff_us": 349800000000,
+      "pending": 8316,
+      "running": 130933,
+      "events_seen": 28229030
+    },
+    {
+      "cutoff_us": 353400000000,
+      "pending": 6884,
+      "running": 121508,
+      "events_seen": 28370030
+    },
+    {
+      "cutoff_us": 357000000000,
+      "pending": 6535,
+      "running": 120565,
+      "events_seen": 28502217
+    },
+    {
+      "cutoff_us": 360600000000,
+      "pending": 6451,
+      "running": 120457,
+      "events_seen": 28651343
+    },
+    {
+      "cutoff_us": 364200000000,
+      "pending": 9201,
+      "running": 121087,
+      "events_seen": 28835160
+    },
+    {
+      "cutoff_us": 367800000000,
+      "pending": 12536,
+      "running": 119659,
+      "events_seen": 28950850
+    },
+    {
+      "cutoff_us": 371400000000,
+      "pending": 12262,
+      "running": 122788,
+      "events_seen": 29086091
+    },
+    {
+      "cutoff_us": 375000000000,
+      "pending": 8583,
+      "running": 119608,
+      "events_seen": 29202980
+    },
+    {
+      "cutoff_us": 378600000000,
+      "pending": 9070,
+      "running": 125414,
+      "events_seen": 29320069
+    },
+    {
+      "cutoff_us": 382200000000,
+      "pending": 8706,
+      "running": 117985,
+      "events_seen": 29439767
+    },
+    {
+      "cutoff_us": 385800000000,
+      "pending": 10859,
+      "running": 114028,
+      "events_seen": 29547531
+    },
+    {
+      "cutoff_us": 389400000000,
+      "pending": 12932,
+      "running": 126213,
+      "events_seen": 29669542
+    },
+    {
+      "cutoff_us": 393000000000,
+      "pending": 10717,
+      "running": 127063,
+      "events_seen": 29745512
+    },
+    {
+      "cutoff_us": 396600000000,
+      "pending": 10267,
+      "running": 115038,
+      "events_seen": 29875069
+    },
+    {
+      "cutoff_us": 400200000000,
+      "pending": 7416,
+      "running": 113173,
+      "events_seen": 30016428
+    },
+    {
+      "cutoff_us": 403800000000,
+      "pending": 8885,
+      "running": 113318,
+      "events_seen": 30128216
+    },
+    {
+      "cutoff_us": 407400000000,
+      "pending": 1683,
+      "running": 107961,
+      "events_seen": 30211586
+    },
+    {
+      "cutoff_us": 411000000000,
+      "pending": 4113,
+      "running": 110496,
+      "events_seen": 30321924
+    },
+    {
+      "cutoff_us": 414600000000,
+      "pending": 1893,
+      "running": 109695,
+      "events_seen": 30464869
+    },
+    {
+      "cutoff_us": 418200000000,
+      "pending": 1618,
+      "running": 111069,
+      "events_seen": 30539905
+    },
+    {
+      "cutoff_us": 421800000000,
+      "pending": 1346,
+      "running": 106195,
+      "events_seen": 30630945
+    },
+    {
+      "cutoff_us": 425400000000,
+      "pending": 1368,
+      "running": 107593,
+      "events_seen": 30687460
+    },
+    {
+      "cutoff_us": 429000000000,
+      "pending": 1167,
+      "running": 107346,
+      "events_seen": 30780424
+    },
+    {
+      "cutoff_us": 432600000000,
+      "pending": 2071,
+      "running": 115439,
+      "events_seen": 30931856
+    },
+    {
+      "cutoff_us": 436200000000,
+      "pending": 1713,
+      "running": 116993,
+      "events_seen": 31109354
+    },
+    {
+      "cutoff_us": 439800000000,
+      "pending": 1151,
+      "running": 107737,
+      "events_seen": 31306065
+    },
+    {
+      "cutoff_us": 443400000000,
+      "pending": 8037,
+      "running": 111937,
+      "events_seen": 31455040
+    },
+    {
+      "cutoff_us": 447000000000,
+      "pending": 7929,
+      "running": 111857,
+      "events_seen": 31634282
+    },
+    {
+      "cutoff_us": 450600000000,
+      "pending": 7693,
+      "running": 107237,
+      "events_seen": 31748476
+    },
+    {
+      "cutoff_us": 454200000000,
+      "pending": 7668,
+      "running": 106869,
+      "events_seen": 31806780
+    },
+    {
+      "cutoff_us": 457800000000,
+      "pending": 7593,
+      "running": 108179,
+      "events_seen": 31887437
+    },
+    {
+      "cutoff_us": 461400000000,
+      "pending": 7183,
+      "running": 113120,
+      "events_seen": 31971155
+    },
+    {
+      "cutoff_us": 465000000000,
+      "pending": 6236,
+      "running": 106881,
+      "events_seen": 32077555
+    },
+    {
+      "cutoff_us": 468600000000,
+      "pending": 5397,
+      "running": 118454,
+      "events_seen": 32224726
+    },
+    {
+      "cutoff_us": 472200000000,
+      "pending": 6091,
+      "running": 117357,
+      "events_seen": 32303936
+    },
+    {
+      "cutoff_us": 475800000000,
+      "pending": 5637,
+      "running": 112050,
+      "events_seen": 32382875
+    },
+    {
+      "cutoff_us": 479400000000,
+      "pending": 4761,
+      "running": 108634,
+      "events_seen": 32451602
+    },
+    {
+      "cutoff_us": 483000000000,
+      "pending": 4135,
+      "running": 108762,
+      "events_seen": 32596149
+    },
+    {
+      "cutoff_us": 486600000000,
+      "pending": 4103,
+      "running": 107909,
+      "events_seen": 32686825
+    },
+    {
+      "cutoff_us": 490200000000,
+      "pending": 4379,
+      "running": 108761,
+      "events_seen": 32753711
+    },
+    {
+      "cutoff_us": 493800000000,
+      "pending": 4141,
+      "running": 109453,
+      "events_seen": 32831154
+    },
+    {
+      "cutoff_us": 497400000000,
+      "pending": 3247,
+      "running": 108720,
+      "events_seen": 32885896
+    },
+    {
+      "cutoff_us": 501000000000,
+      "pending": 2532,
+      "running": 112419,
+      "events_seen": 32949732
+    },
+    {
+      "cutoff_us": 504600000000,
+      "pending": 1848,
+      "running": 120503,
+      "events_seen": 33029520
+    },
+    {
+      "cutoff_us": 508200000000,
+      "pending": 1934,
+      "running": 112434,
+      "events_seen": 33105500
+    },
+    {
+      "cutoff_us": 511800000000,
+      "pending": 1969,
+      "running": 112485,
+      "events_seen": 33165548
+    },
+    {
+      "cutoff_us": 515400000000,
+      "pending": 1281,
+      "running": 111738,
+      "events_seen": 33239505
+    },
+    {
+      "cutoff_us": 519000000000,
+      "pending": 1674,
+      "running": 111780,
+      "events_seen": 33370023
+    },
+    {
+      "cutoff_us": 522600000000,
+      "pending": 1386,
+      "running": 114463,
+      "events_seen": 33487138
+    },
+    {
+      "cutoff_us": 526200000000,
+      "pending": 1109,
+      "running": 109802,
+      "events_seen": 33567083
+    },
+    {
+      "cutoff_us": 529800000000,
+      "pending": 448,
+      "running": 107924,
+      "events_seen": 33619458
+    },
+    {
+      "cutoff_us": 533400000000,
+      "pending": 3301,
+      "running": 116003,
+      "events_seen": 33739782
+    },
+    {
+      "cutoff_us": 537000000000,
+      "pending": 8979,
+      "running": 112793,
+      "events_seen": 33882008
+    },
+    {
+      "cutoff_us": 540600000000,
+      "pending": 237,
+      "running": 107696,
+      "events_seen": 34010246
+    },
+    {
+      "cutoff_us": 544200000000,
+      "pending": 239,
+      "running": 113649,
+      "events_seen": 34106904
+    },
+    {
+      "cutoff_us": 547800000000,
+      "pending": 240,
+      "running": 107597,
+      "events_seen": 34187360
+    },
+    {
+      "cutoff_us": 551400000000,
+      "pending": 3099,
+      "running": 114421,
+      "events_seen": 34268577
+    },
+    {
+      "cutoff_us": 555000000000,
+      "pending": 244,
+      "running": 114822,
+      "events_seen": 34393351
+    },
+    {
+      "cutoff_us": 558600000000,
+      "pending": 244,
+      "running": 107678,
+      "events_seen": 34464505
+    },
+    {
+      "cutoff_us": 562200000000,
+      "pending": 235,
+      "running": 116159,
+      "events_seen": 34567222
+    },
+    {
+      "cutoff_us": 565800000000,
+      "pending": 236,
+      "running": 107603,
+      "events_seen": 34666899
+    },
+    {
+      "cutoff_us": 569400000000,
+      "pending": 8323,
+      "running": 105972,
+      "events_seen": 34799111
+    },
+    {
+      "cutoff_us": 573000000000,
+      "pending": 8126,
+      "running": 105917,
+      "events_seen": 34851454
+    },
+    {
+      "cutoff_us": 576600000000,
+      "pending": 7949,
+      "running": 106065,
+      "events_seen": 34893229
+    },
+    {
+      "cutoff_us": 580200000000,
+      "pending": 7666,
+      "running": 105226,
+      "events_seen": 34952911
+    },
+    {
+      "cutoff_us": 583800000000,
+      "pending": 7598,
+      "running": 110071,
+      "events_seen": 34996922
+    },
+    {
+      "cutoff_us": 587400000000,
+      "pending": 1341,
+      "running": 106828,
+      "events_seen": 35057894
+    },
+    {
+      "cutoff_us": 591000000000,
+      "pending": 238,
+      "running": 107639,
+      "events_seen": 35124807
+    },
+    {
+      "cutoff_us": 594600000000,
+      "pending": 240,
+      "running": 109313,
+      "events_seen": 35198433
+    },
+    {
+      "cutoff_us": 598200000000,
+      "pending": 241,
+      "running": 105347,
+      "events_seen": 35257346
+    },
+    {
+      "cutoff_us": 601800000000,
+      "pending": 238,
+      "running": 102562,
+      "events_seen": 35310951
+    }
+  ]
+}

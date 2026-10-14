@@ -1,0 +1,194 @@
+[
+  {
+    "state": 1,
+    "arm": "personal",
+    "calibration": "raw",
+    "n_test": 39080,
+    "same_job_residual_pair_product": 0.010111817209862383,
+    "matched_permutation_mean": 0.0057151659020913395,
+    "matched_permutation_95": [
+      0.00562717969158352,
+      0.005811215822366214
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 280,
+    "squared_count_error_over_independent_variance": 1253.7415099114216,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 1,
+    "arm": "personal",
+    "calibration": "development_platt",
+    "n_test": 39080,
+    "same_job_residual_pair_product": 0.011503562972207261,
+    "matched_permutation_mean": 0.00956527661771122,
+    "matched_permutation_95": [
+      0.009427848781337886,
+      0.009695984623824915
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 280,
+    "squared_count_error_over_independent_variance": 419.8696866531286,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 1,
+    "arm": "global",
+    "calibration": "raw",
+    "n_test": 39080,
+    "same_job_residual_pair_product": 0.006001316276071054,
+    "matched_permutation_mean": 0.00304562908150719,
+    "matched_permutation_95": [
+      0.003005298207922909,
+      0.003094900570445443
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 280,
+    "squared_count_error_over_independent_variance": 461.6310213385553,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 1,
+    "arm": "global",
+    "calibration": "development_platt",
+    "n_test": 39080,
+    "same_job_residual_pair_product": 0.005434346581391027,
+    "matched_permutation_mean": 0.0024987802791527763,
+    "matched_permutation_95": [
+      0.0024479280230783945,
+      0.002553740853713699
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 280,
+    "squared_count_error_over_independent_variance": 263.4603020386149,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 1,
+    "arm": "relational",
+    "calibration": "raw",
+    "n_test": 39080,
+    "same_job_residual_pair_product": 0.0030141774722876875,
+    "matched_permutation_mean": 0.0015494820543702306,
+    "matched_permutation_95": [
+      0.001530057170328942,
+      0.0015673586362640937
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 280,
+    "squared_count_error_over_independent_variance": 1125.789160419645,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 1,
+    "arm": "relational",
+    "calibration": "development_platt",
+    "n_test": 39080,
+    "same_job_residual_pair_product": 0.002796424821979304,
+    "matched_permutation_mean": 0.0019861963317887774,
+    "matched_permutation_95": [
+      0.00195669338693478,
+      0.002022029212712559
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 280,
+    "squared_count_error_over_independent_variance": 304.9672786027556,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 2,
+    "arm": "personal",
+    "calibration": "raw",
+    "n_test": 48000,
+    "same_job_residual_pair_product": 0.015487966525513519,
+    "matched_permutation_mean": 0.006949390154928162,
+    "matched_permutation_95": [
+      0.006748384477704554,
+      0.0071744743520272755
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 2250,
+    "squared_count_error_over_independent_variance": 11.011491524628614,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 2,
+    "arm": "personal",
+    "calibration": "development_platt",
+    "n_test": 48000,
+    "same_job_residual_pair_product": 0.014943503812411966,
+    "matched_permutation_mean": 0.006527757446982034,
+    "matched_permutation_95": [
+      0.006301736721863948,
+      0.006778367641862779
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 2250,
+    "squared_count_error_over_independent_variance": 11.400140409017531,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 2,
+    "arm": "global",
+    "calibration": "raw",
+    "n_test": 48000,
+    "same_job_residual_pair_product": 0.022870362224041763,
+    "matched_permutation_mean": 0.010180302903952733,
+    "matched_permutation_95": [
+      0.009740323972890024,
+      0.010822908504975451
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 2250,
+    "squared_count_error_over_independent_variance": 23.935244952534582,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 2,
+    "arm": "global",
+    "calibration": "development_platt",
+    "n_test": 48000,
+    "same_job_residual_pair_product": 0.022003459106923594,
+    "matched_permutation_mean": 0.00797886670114355,
+    "matched_permutation_95": [
+      0.0075589288679600445,
+      0.00847436523243127
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 2250,
+    "squared_count_error_over_independent_variance": 20.09353020459126,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 2,
+    "arm": "relational",
+    "calibration": "raw",
+    "n_test": 48000,
+    "same_job_residual_pair_product": 0.017791764925269998,
+    "matched_permutation_mean": 0.00532180539260254,
+    "matched_permutation_95": [
+      0.004941792500715377,
+      0.005793405989437196
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 2250,
+    "squared_count_error_over_independent_variance": 26.313476699279644,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  },
+  {
+    "state": 2,
+    "arm": "relational",
+    "calibration": "development_platt",
+    "n_test": 48000,
+    "same_job_residual_pair_product": 0.01769472497376801,
+    "matched_permutation_mean": 0.0054397398410092335,
+    "matched_permutation_95": [
+      0.005062699135258125,
+      0.005851731776005228
+    ],
+    "permutation_p_one_sided": 0.005,
+    "groups_size_at_least_5": 2250,
+    "squared_count_error_over_independent_variance": 19.66372422054992,
+    "caveat": "Pilot only; two days, overlapping entity histories; misspecified marginals and omitted histories can produce residual dependence. Permutation is a descriptive conditional-association diagnostic, not final inferential evidence."
+  }
+]

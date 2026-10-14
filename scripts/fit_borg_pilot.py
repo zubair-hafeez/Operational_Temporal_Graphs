@@ -39,6 +39,7 @@ def main():
     data=ROOT/'data/processed'/a.dataset
     meta=json.loads((data/'metadata.json').read_text())
     x=np.load(data/'features.npy');q=pd.read_parquet(data/'queries.parquet')
+    if 'observed' not in q:q['observed']=True
     if set(q.split)-{'train','validation','pilot_test','embargo'}:raise ValueError('Not a pilot dataset')
     if not np.isfinite(x).all():raise ValueError('Nonfinite inputs')
     run=ROOT/'runs'/f'pilot_hgb_seed{a.seed}_{a.dataset}'
@@ -54,7 +55,7 @@ def main():
     (run/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     rows=[];predictions=[]
     with threadpool_limits(limits=4):
-        for state in (1,2):
+        for state in map(int,sorted(q.state.unique())):
             train=(q.split=='train')&(q.state==state)&q.observed
             y=q['exit'].to_numpy()
             weight=q.sampling_weight.to_numpy()
@@ -70,7 +71,7 @@ def main():
                     p=model.predict_proba(x[mask][:,cols])[:,1]
                     result=dict(arm=arm,state=state,split=split,fit_seconds=fit_seconds,**scores(y[mask],p,weight[mask]))
                     rows.append(result);print(json.dumps(result),flush=True)
-                    pred=q.loc[mask,['query_id','cutoff_us','elapsed_day','sampling_weight','state','split','exit']].copy()
+                    pred=q.loc[mask,[c for c in ['query_id','cutoff_us','elapsed_day','sampling_weight','state','split','exit'] if c in q]].copy()
                     pred['arm']=arm;pred['probability']=p;predictions.append(pred)
                 manifest['models'].append(dict(arm=arm,state=state,features=feature_sets[arm],fit_seconds=fit_seconds))
                 (run/'metrics.json').write_text(json.dumps(rows,indent=2)+'\n')
