@@ -1,0 +1,45 @@
+{
+  "scope": "Only October 2011 events; later activities/outcomes not retained or summarized",
+  "activities": {
+    "A_SUBMITTED": 2393,
+    "A_PARTLYSUBMITTED": 2393,
+    "A_PREACCEPTED": 1424,
+    "W_Completeren aanvraag": 9582,
+    "A_ACCEPTED": 1001,
+    "O_SELECTED": 1222,
+    "A_FINALIZED": 981,
+    "O_CREATED": 1222,
+    "O_SENT": 1222,
+    "W_Nabellen offertes": 6935,
+    "O_SENT_BACK": 448,
+    "W_Valideren aanvraag": 2038,
+    "A_REGISTERED": 227,
+    "A_APPROVED": 227,
+    "O_ACCEPTED": 226,
+    "A_ACTIVATED": 227,
+    "O_CANCELLED": 363,
+    "A_DECLINED": 1246,
+    "A_CANCELLED": 240,
+    "W_Afhandelen leads": 2824,
+    "O_DECLINED": 83,
+    "W_Nabellen incomplete dossiers": 1935,
+    "W_Beoordelen fraude": 113,
+    "W_Wijzigen contractgegevens": 3
+  },
+  "lifecycles": {
+    "COMPLETE": 24720,
+    "SCHEDULE": 4283,
+    "START": 9572
+  },
+  "keys": {
+    "org:resource": 32895,
+    "lifecycle:transition": 38575,
+    "concept:name": 38575,
+    "time:timestamp": 38575
+  },
+  "cases": 2393,
+  "events": 38575,
+  "min_timestamp": "2011-10-01T00:38:44.546+02:00",
+  "max_timestamp": "2011-10-31T22:57:39.925+01:00",
+  "source_sha256": "5cd9cc16b9bcb20bd4aae45666a5d87479ddbf47e6371618b6ad217174cecdf3"
+}

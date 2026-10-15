@@ -1,7 +1,7 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
-  "status": "complete",
-  "phase": "ready_for_author_review",
+  "status": "active",
+  "phase": "post_review_revision",
   "final_test_opened": true,
   "research_direction": "Joint first-exit forecasting for changing operational cohorts on temporal graphs",
   "datasets": [
@@ -23,8 +23,10 @@
   "interpreter": "/home/zubair/zubairEnv/bin/python",
   "torch_version": "2.5.1+cu124",
   "next_actions": [
-    "Author review of manuscript, contribution and limitations",
-    "Author/affiliation, venue and eventual release-license decisions remain with researcher"
+    "Complete delayed calibration and direct count diagnostics",
+    "Add established reconciliation comparison",
+    "Audit fresh replication source and freeze protocol before opening reserved outcomes",
+    "Revise and critically audit manuscript against actual results"
   ],
   "results": [
     "All 500 Borg task-event shards and BPI archive acquired with checksums.",
@@ -84,5 +86,11 @@
     "generated_numeric_and_text_files_identical": 13,
     "manuscript_compiled_from_archive": true,
     "sha256": "a6d9aaa7e372dfd9b21c09285dbe76c4fdfe7fec2ddbd3b3dcf13d460cf7b2ef"
+  },
+  "revision": {
+    "authorized": "2026-10-15",
+    "original_study": "complete; immutable review archive retained",
+    "current": "BPI calibration diagnosis and direct aggregate/reconciliation comparisons; fresh-data suitability audit",
+    "new_test_status": "not frozen; original final periods are retrospective for revision analyses"
   }
 }

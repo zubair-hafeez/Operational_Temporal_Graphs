@@ -1,3 +1,11 @@
+# Active revision — authorized 2026-10-15
+
+The user reauthorized iterative experiments and manuscript revision. See `revision/README.md` and saved plans. The original study and ZIP remain preserved; new analyses of its final periods are retrospective. Current work: CPU BPI delayed recalibration diagnostic, direct count comparator, established reconciliation, and BPI 2015 municipality 1 source audit. Municipalities 4 and 5 are reserved until a concrete new protocol is frozen.
+
+Reporting correction: residual sampler used three seeds; a later caption incorrectly says one. Numerical results are unchanged. No subagents authorized; RF excluded.
+
+---
+
 # Current state: complete and ready for author review
 
 The complete manuscript is `paper/main.pdf` (12 pages, including references and appendix), with source in `paper/main.tex`. All final experiments, both families and all seeds, the 1,024-draw sensitivity, diagnostics, generated tables/figures and the artifact consistency audit are complete. Read `REVIEW_NOTES.md` before making any publication claim. The study is an application benchmark with classical dependence models, not a new copula architecture. No external submission or publication has occurred.
