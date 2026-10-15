@@ -1,0 +1,151 @@
+\section{Forecast contract and controls}
+Let $V_t$ be the entities active after processing all events recorded by origin
+$t$, and let $g_r(i,t)$ denote entity $i$'s observed membership in relation type
+$r$. For ordered horizons $h_1<\cdots<h_K$, the outcome
+$Y_{ik}=\ind\{T_i\leq t+h_k\}$ records the first exit from the current task
+state or the first qualifying application resolution. Each forecast draw
+assigns one of $K+1$ categories, with the final category indicating survival
+beyond $h_K$. This contract does not predict subsequent returns, exact
+within-bin times, or outcomes of future arrivals.
+
+An individual predictor supplies monotone CDFs $F_{ik}$. For a current group
+$A$, the expected exit count is $\sum_{i\in A}F_{ik}$ under every coupling,
+whereas its variance also includes pairwise outcome covariances. Thus a
+coupling can change aggregate dispersion and tails but cannot fix a biased
+expected count. We exploit this distinction in two separate experiments:
+matched-marginal dependence comparisons and controlled marginal correction.
+
+\subsection{Entity-coherent factor scenarios}
+For each draw, generate independent standard normal global, relation-group,
+and private factors and set
+\begin{equation}
+ Z_i=a_iZ_0+\sum_r b_{ir}Z_{r,g_r(i,t)}+c_i\epsilon_i,
+ \quad a_i^2+\sum_r b_{ir}^2+c_i^2=1.
+\end{equation}
+Using $U_i=\Phi(Z_i)$ and $Y_{ik}=\ind\{U_i\leq F_{ik}\}$ preserves each
+individual CDF and gives ordered horizon outcomes. Shared draws persist across
+streamed entity chunks. Missing memberships transfer their squared loading
+to private noise. Identities index incidence; no identity embedding or future
+assignment is used. The construction handles simultaneous job and machine
+membership without a dense entity covariance matrix.
+
+Independent sampling uses only private noise. Global models learn
+state-specific global/private weights; typed models add one weight per
+observed relation type. The initial study also includes context-dependent
+weight offsets and an exponential common-shock family. All weights are
+nonnegative, with at least .02 private variance. These families cannot express
+arbitrary negative association. We fit them by composite binary pair
+likelihood using earlier out-of-sample individual forecasts, random fitting
+horizon pairs, and January or original-development checkpoint selection.
+Different calibration treatments receive separate dependence fits in the
+fresh replication; retrospective BPI 2017 diagnostics retain original weights
+to isolate marginal correction.
+
+We permute noise-sharing incidence within current state and half-unit
+last-horizon logit-risk bins, retaining true evaluation groups. This preserves
+individual probabilities, fitted weights and group sizes within strata.
+Additional Borg controls remove job or machine variance and transfer it to
+private noise. These sampler interventions assess predictive grouping under a
+fitted model, not causal effects of reassigning actual tasks or people.
+
+\subsection{Delayed calibration}
+A shared logit intercept preserves horizon order:
+\begin{equation}
+ F_{ik}^{(\beta)}=\operatorname{logit}^{-1}
+ \{\operatorname{logit}(F_{ik})+\beta\}.
+\end{equation}
+We fit $\beta\in[-2,2]$ by equal-origin, equal-horizon Bernoulli loss with
+$10^{-4}\beta^2$ regularization. The static control uses an earlier calibration
+window. Rolling correction uses origins in the previous 60 days whose entire
+14-day outcome window has matured; fewer than four eligible origins triggers
+an expanding-history fallback. Updated labels enter only after maturity.
+
+A retrospective failure motivates an explicit version control: calibration
+residuals from earlier separately fitted predictors need not describe the
+current predictor's bias. We therefore compare that transfer with history
+from the same fitted predictor. This is a practical calibration control,
+not a new online-learning algorithm. Static calibration data also selected
+the original neural checkpoint/temperature, so its own fit score is not an
+independent validation estimate.
+
+\subsection{Direct counts and discrete reconciliation}
+For group $A$, average the individual first-exit category probabilities to
+obtain $\bar{\pi}_A$. A conditional Dirichlet--multinomial (DM) baseline uses
+\begin{equation}
+ N_A\sim\operatorname{DM}(|A|,\kappa q_A),\qquad
+ q_A=\operatorname{softmax}(\log\bar\pi_A+\delta).
+\end{equation}
+We fit one concentration and optionally four category offsets (the fifth is
+zero) per projection type, with equal-origin and equal-within-origin-group
+likelihood weights. Offsets have fixed weak shrinkage. Concentration-only
+and bias-adjusted candidates are selected on development count CRPS.
+Training uses complete out-of-sample cohorts, never sampled partial group
+counts. Every group draw is bounded, integer-valued and ordered across
+horizons. Separately drawn overlapping projections need not correspond to a
+common entity realization.
+
+For the retrospective original-log analyses we also fit DM on the more recent
+development forecasts, matching the fitting window of historical residuals.
+Leave-one-origin-out development CRPS selects concentration-only versus
+bias-adjusted DM; all development origins then fit the final predictor.
+These selection folds can use later development origins and are not online
+validation. Exact beta-binomial cumulative-count marginals supply CRPS and
+discrete quantiles for this control; joint-profile scores still use sampled
+DM trajectories. This stronger comparison avoids attributing an advantage
+to dependence when it comes from access to recent same-version errors.
+
+For the workflow hierarchy, include every handler group, plus an unknown
+handler group, in a complete partition. Independently sampled bottom count
+vectors $N_g$ are reweighted by the population forecast mass
+\begin{equation}
+ w^{(m)}\ \propto\ p_{\rm pop}\!\left(\sum_gN_g^{(m)}\right).
+\end{equation}
+This two-level conditioning adaptation \citep{zambon2024} uses 8,192 proposal
+draws and resamples 512 coherent group/population trajectories. We report
+effective sample sizes and verify its distribution against an enumerated
+small example. Bottom-up aggregation without conditioning is a separate
+control. Neither count method preserves individual CDFs. The implemented
+hierarchy is complete for workflow handlers; it is not a full crossed
+job--machine reconciliation implementation. Historical aggregate residual
+resampling remains a comparator in the original two logs.
+
+\section{Evaluation}
+We score current-state population counts and observed relation groups of at
+least five entities. Fair ensemble CRPS \citep{ferro2014} is divided by current
+group size, then averaged equally over groups within projection, horizons,
+projection types and origins. This weighting is a benchmark convention, not
+an inferred organizational utility. Coverage and width of 90\% intervals are
+reported separately by projection.
+
+For remaining current-cohort count $R=|A|-C$, the reserve proxy chooses forecast
+quantile $b$ at $r/(r+1)$ and scores
+\begin{equation}
+ \ell_r(b,R)=\{r(R-b)_++(b-R)_+\}/|A|,\quad r\in\{3,9\}.
+\end{equation}
+It measures a specified quantile tradeoff, not money or realized staffing
+savings. CRPS integrates quantile losses \citep{gneiting2007}; improving it
+does not guarantee improvement at this particular quantile.
+
+For joint group risk, let $x_g=C_g/|g|$. We use an energy score with
+$d(x,y)=\sqrt{G^{-1}\sum_g(x_g-y_g)^2}$ and a power-.5 variogram score
+\citep{scheuerer2015}. The latter averages 2,048 outcome-independent ordered
+group pairs; subtracting the ensemble variance divided by draw count removes
+finite-ensemble bias of its squared moment error. Its estimate can be slightly
+negative. We additionally score the distribution of
+\begin{equation}
+ D_k=\max_g\frac{\mu_{gk}-C_{gk}}
+ {\sqrt{1+\sum_{i\in g}F_{ik}(1-F_{ik})}},
+ \qquad \mu_{gk}=\sum_{i\in g}F_{ik}.
+\end{equation}
+This is the largest standardized slow-progress deviation relative to a
+fixed reference forecast. Every compared method uses the same reference
+$F$, including recalibrated methods. It measures forecast-relative group
+risk, not an observed capacity threshold or an organizational SLA.
+
+We average three random seeds within each origin before paired circular
+moving-block resampling (10,000 replicates). Borg blocks span one/two days;
+BPI 2017 blocks span 14/28 days; the fresh BPI 2012 analysis prespecifies
+seven days with fourteen-day sensitivity. Short traces provide few blocks,
+so intervals describe these observed periods and offer limited evidence for
+other operating regimes. Cases and random seeds are not independent temporal
+replications.

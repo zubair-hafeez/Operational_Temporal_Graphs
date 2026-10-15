@@ -1,0 +1,43 @@
+\section{Related work}
+\paragraph{Temporal graphs and event generation.}
+GraphMixer illustrates strong temporal encoding with simple components
+\citep{cong2023}; our Mixer-style survival predictor is an independent
+adaptation, not a reproduction of its link-prediction protocol. CEP3 models
+community event times \citep{wang2022}, and DG-Gen generates continuous-time
+dynamic graphs \citep{hosseini2025}. Their generation targets differ from
+conditional first exits of an already active population. We make no numerical
+superiority claim over these systems. Such a comparison requires explicit
+state initialization, unknown future-count stopping and outcome adapters.
+
+\paragraph{Joint forecasting and reconciliation.}
+TACTiS and TACTiS-2 learn flexible multivariate copulas
+\citep{drouin2022,ashok2024}; separating learned marginals from spatial copulas
+is also established \citep{huk2025}. Our positive-factor Gaussian and
+Marshall--Olkin controls \citep{marshall1967} are deliberately restrictive
+classical families. Typed current incidence specifies shared randomness for
+changing entities; neither that construction nor the marginal--dependence
+decomposition is claimed as a new statistical principle.
+
+Probabilistic reconciliation already conditions forecast distributions on
+aggregation constraints, including discrete counts \citep{zambon2024}.
+We adapt a two-level importance-conditioning step to vectors of first-exit
+category counts and compare it with direct Dirichlet--multinomial forecasts
+and bottom-up aggregation. This is an established-method comparator, not a
+new reconciliation algorithm or an exact reproduction of an entire software
+package. Proper multivariate scores complement marginal scores; the limited
+dependence sensitivity of energy scores motivates an additional variogram
+score \citep{scheuerer2015}.
+
+\paragraph{Operational forecasting.}
+RIMS combines learned predictions and intercase simulation
+\citep{meneghello2025}, while AgentSimulator models resource interactions
+\citep{kirchdorfer2025}. Closely related work initializes business-process
+simulation from current states and estimates conditional uncertainty,
+including on BPI 2017 \citep{avramenko2026}. Current-state forecasting and
+operational uncertainty are therefore established problems. Our empirical
+distinction is to hold individual probabilities fixed when testing incidence,
+then separately test correction of those probabilities, direct count
+alternatives and joint group-risk scores across workflow and compute logs.
+Executable workload generation, such as Mimesys \citep{kim2026}, has a
+different output contract: our first-exit scenarios do not reproduce full
+workloads, future arrivals or repeated process transitions.

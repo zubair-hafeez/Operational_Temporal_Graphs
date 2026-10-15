@@ -1,0 +1,102 @@
+\section{Data and evidence stages}
+\subsection{Timestamp-bounded adapters}
+\paragraph{Borg.}
+All 500 task-event shards of Google ClusterData2011-2 supply the compute
+application \citep{google2011}. We replay pending/running states in timestamp
+and source order, retaining unknown preceding age for time-zero records.
+The target is first state change at 1/5/15/60 minutes, including failures,
+evictions and kills as well as completion. Current job and known
+running-machine memberships define the graph. The evaluated final prefix
+contains 144.6 million events; 28 six-hour origins span elapsed days
+22--28.75, with 3,760,001 task--origin queries and 105,077--171,603 active tasks
+per origin. Those repeated queries are not independent replications.
+
+\paragraph{BPI 2017.}
+The application workflow \citep{vandongen2017} uses first
+\texttt{A\_Pending}, \texttt{A\_Denied} or \texttt{A\_Cancelled} after creation
+at 1/3/7/14 days. This is a documented application milestone, not repayment
+or necessarily the final event. Last observed workflow handling supplies the
+relation. We exclude retrospective trace attributes, eventual offer outcomes
+and future assignments. The original final period comprises 61 daily noon
+UTC origins during November--December 2016, with 114,051 case--origin queries
+and 1,484--2,189 cases per cohort.
+
+\paragraph{BPI 2012.}
+A fresh workflow release \citep{vandongen2012} supplies an analogous target:
+first \texttt{A\_APPROVED}, \texttt{A\_DECLINED} or \texttt{A\_CANCELLED}
+after \texttt{A\_SUBMITTED}. We normalize these four activity names only to
+reuse the replay adapter, retaining their original target definition. All
+other activity names remain distinct; workflow lifecycle values are
+normalized to lower case. Missing handlers share no entity-level factor.
+This is additional temporal/source evidence, not a claim about another
+independent bank. February 1--28, 2012 provides 28 final daily origins, with
+23,749 case--origin queries, 793--889 cases per cohort, and
+follow-up through March 14 00:00 UTC. Activity vocabulary is derived from
+the individual fit prefix only.
+
+In every source, observed events through the origin build features and
+memberships; outcomes are attached separately. Entire longest-horizon windows
+must be observable. Prefix state carries across date partitions without
+revealing future events. Recorded event time is the availability proxy;
+the archives do not establish live ingestion latency or exclusive resource
+ownership. The municipal BPI 2015 candidate was deferred after a
+development-source audit exposed inconsistent activity labels and ambiguous
+closure semantics. No outcome definition was forced to obtain another
+favorable benchmark.
+
+\subsection{Initial frozen evaluation}
+The initial study compares HGB personal/global/relational arms and temporal
+Mixer, GRU and tabular MLP ensembles. Borg uses 32 base features plus a
+144-event-count extension; BPI 2017 uses 103 features. Temporal models use
+the last 16 events per task/job/machine or case/handler scope, width 64 and
+a five-category first-exit head. Selection uses equal-origin mean Brier over
+the four horizons, including monotone calibration variants and three-seed
+neural means; no best-seed selection is permitted.
+
+Borg individual training/calibration/development end at days 18/20/22;
+dependence uses forward-fold predictions in days 8--10, 12--14 and 16--18,
+each produced by earlier fitted and calibrated predictors. BPI 2017 uses
+training before September, September calibration and October development,
+with June/July/August forward folds for dependence. Selected individual
+models are HGB global for pending tasks, HGB relational for running tasks,
+and the temperature-calibrated Mixer ensemble for BPI 2017. Gaussian typed
+and global models are selected for Borg and BPI respectively.
+
+An immutable 264-file manifest froze code, models and evaluation choices
+before those final periods were opened. This was a development-informed
+holdout freeze, not external preregistration. A lossless Borg timestamp-type
+repair after a replay failure retained all original data and changed no
+timestamp value or frozen model. The original study and review archive
+remain preserved.
+
+\subsection{Retrospective diagnostics and fresh confirmation}
+The initial outcomes motivated the direct DM controls, delayed calibration,
+factor removals and joint-profile scores. Their analyses on the original
+final periods are therefore \emph{retrospective}. Direct count training uses
+24 complete Borg six-hour OOF cohorts and 50 complete BPI 2017 OOF cohorts.
+The stronger development-fitted DM control instead uses the eight Borg or
+17 BPI 2017 current-version development origins, matching the historical
+residual fitting period. Both fitting regimes are retained.
+The original residual comparator instead fits on development residuals,
+with leave-one-origin-out development scoring. It uses three sampling seeds;
+a one-seed caption in an earlier review version was incorrect, without
+affecting any reported number.
+
+For fresh confirmation, BPI 2012 individual fitting ends before November 1,
+2011; November calibrates the individual model, December fits dependence and
+direct counts, and January selects configurations. The global-feature HGB
+with identity correction wins individual Brier. Identity/global wins
+Gaussian development count CRPS; bias-DM wins the direct comparison;
+bias-DM conditioning wins the conditioning comparison. Static and rolling
+correction remain prespecified controls, with dependence fitted separately
+for each treatment. All six Gaussian fits per seed use only development
+data.
+
+Before retaining any February outcomes, a second immutable manifest froze
+82 assets, the primary comparisons, metrics, origins and bootstrap settings.
+The raw parser had previously discarded every event at or after February 1
+before retaining its activity or outcome. Final predictors remain fixed;
+only the explicitly prespecified rolling correction may use earlier
+February outcomes after their 14-day maturity delay. January 19--31 origins
+provide cross-boundary calibration history but are not final score origins.
+We retain all prespecified outcomes irrespective of which method wins.

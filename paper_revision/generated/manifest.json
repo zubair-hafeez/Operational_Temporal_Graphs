@@ -1,0 +1,81 @@
+{
+  "status": "complete",
+  "sources": [
+    {
+      "path": "reports/summary_borg_selected_v2_final_m512/all_scores.parquet",
+      "sha256": "00b22b090f13ad05566c60d9a300a9a41f8e776449db5957e23aaef32ae80cf6"
+    },
+    {
+      "path": "runs/aggregate_residual_borg_selected_v2/final_scores_m512.parquet",
+      "sha256": "bf5026496a511d606c152927752ee347423058dab4becf0a29a34b7622f29f77"
+    },
+    {
+      "path": "runs/revision_borg_direct_counts_v2/scores.parquet",
+      "sha256": "f266cf430d5bbc4eb86b19ee0ac56f26fe32ad5f7b7c44b3c5f7bc8beadf1acb"
+    },
+    {
+      "path": "runs/revision_borg_development_fitted_dm_v1/scores.parquet",
+      "sha256": "19b18005c8f0d8c5238bcfea0509aa5144efe2af21428bec103aec8c71f27d1f"
+    },
+    {
+      "path": "runs/revision_borg_joint_profiles_v1/scores.parquet",
+      "sha256": "a8cfc6461ceabb3ad45beaf303b7b83ab597708241cd3049e3487e745a677858"
+    },
+    {
+      "path": "runs/revision_borg_updated_dm_profiles_v1/scores.parquet",
+      "sha256": "18d5e951f75846dd17621a762d6bef00abb8000b387c106ad9d4c157a1cdaea1"
+    },
+    {
+      "path": "reports/summary_bpi_selected_v2_final_m512/all_scores.parquet",
+      "sha256": "4cbaa6459d48ec500a8f01b58c9989d0d386719988ec7723bf015c43ec7a9af3"
+    },
+    {
+      "path": "runs/aggregate_residual_bpi_selected_v2/final_scores_m512.parquet",
+      "sha256": "75052b82b1c876b7ade52cc770d2c2f82a6d86560467edf0a4f48faf8d927d20"
+    },
+    {
+      "path": "runs/revision_bpi_direct_counts_v2/scores.parquet",
+      "sha256": "d82fde03ab60270dd47d14924798111075655e59628ba59346cb97cb3752ec0e"
+    },
+    {
+      "path": "runs/revision_bpi_development_fitted_dm_v1/scores.parquet",
+      "sha256": "506f8991eb53f8e7166271552b399abd024d33a730d599fe07e1f23fc66b459a"
+    },
+    {
+      "path": "runs/revision_bpi_updated_dm_profiles_v1/count_scores.parquet",
+      "sha256": "e844a792e120005195fc399b76f77b6a9bc2dbc9ac88245b75c4fa51ce6cbede"
+    },
+    {
+      "path": "runs/revision_bpi_joint_profiles_v1/scores.parquet",
+      "sha256": "7f1a8e245188eaae0877c6f0e7bdc55128fe2daedf40513dc04ca0b05311c2bd"
+    },
+    {
+      "path": "runs/revision_bpi_updated_dm_profiles_v1/scores.parquet",
+      "sha256": "f50e7fbd4c0ac9e0d2227b26ecbd9a1ac70307235ea38d29aab6dfb2377c505c"
+    },
+    {
+      "path": "runs/revision_bpi2012_final_evaluation_v1/scores.parquet",
+      "sha256": "9cc05f3b42adb6274b3f5795bb308e2b2d874b8c686964d403731ec551b1d40f"
+    },
+    {
+      "path": "runs/revision_bpi2012_final_evaluation_v1/joint_profiles.parquet",
+      "sha256": "fa9b2cb647d7811dc806ce67c48d07885fa0078455180ff0a9f8700d3d8f2135"
+    },
+    {
+      "path": "runs/revision_bpi_calibration_same_version_v2/scores.parquet",
+      "sha256": "b292934e87fa6594ed9553c27a8d58fa6dae0200a388d450aa796da43ea606af"
+    },
+    {
+      "path": "runs/revision_borg_collective_risk_v1/group_scores.parquet",
+      "sha256": "9691104e967a3515c38b63991fe0c3b12acbee202a1a2ec9beb7ba674f46c386"
+    },
+    {
+      "path": "runs/revision_bpi_calibration_same_version_v2/marginals.csv",
+      "sha256": "93e22187a1087a0841e33af5dde1944f0ea845b341d22aef8208fbdfd6f5bcce"
+    }
+  ],
+  "script_sha256": "4cdc6737fb90728a989683fa7fa9fcbce7f9ba59fcae69b292b752ca7d80028f",
+  "original_frozen_assets_verified": 264,
+  "fresh_frozen_assets_verified": 82,
+  "interpretation": "Original holdout scores, explicitly retrospective follow-ups, and separately frozen fresh confirmation are distinguished in manuscript."
+}

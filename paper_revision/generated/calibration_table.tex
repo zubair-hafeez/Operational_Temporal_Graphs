@@ -1,0 +1,15 @@
+\begin{table*}[t]\centering\small
+\caption{BPI 2017 controlled same-version correction. Original Gaussian weights are fixed. These are retrospective diagnostics; improved mean calibration does not guarantee a better reserve quantile.}\label{tab:calibration}
+\begin{tabular}{llrr rr}\toprule
+& &\multicolumn{2}{c}{October development}&\multicolumn{2}{c}{November--December}\\
+Correction&Dependence&CRPS&Loss$_9$&CRPS&Loss$_9$\\\midrule
+Identity&Independent&0.0433&0.0954&0.0501&0.1176\\
+Identity&Global factor&0.0410&0.1195&0.0459&0.1290\\
+Identity&Typed factors&0.0411&0.1088&0.0465&0.1222\\
+Static&Independent&0.0401&0.0945&0.0469&0.1197\\
+Static&Global factor&0.0386&0.1147&0.0435&0.1244\\
+Static&Typed factors&0.0383&0.1039&0.0439&0.1188\\
+Rolling 60D&Independent&0.0401&0.0947&0.0435&0.1441\\
+Rolling 60D&Global factor&0.0385&0.1146&0.0407&0.1182\\
+Rolling 60D&Typed factors&0.0382&0.1037&0.0408&0.1199\\
+\bottomrule\end{tabular}\end{table*}

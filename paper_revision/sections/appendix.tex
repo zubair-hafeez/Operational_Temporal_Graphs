@@ -1,0 +1,78 @@
+\section{Implementation and reproduction details}
+\paragraph{Individual and dependence models.}
+The original HGB runs use 250 iterations, 31 leaves, minimum leaf size 100,
+learning rate .05 and L2 regularization 1. Neural models use width 64, up to
+30 epochs, AdamW at .001, gradient clipping at 5 and calibration-window
+early stopping with patience 5. Case/job/machine histories contain at most
+16 prior events per scope; time lags are computed at the origin. All initial
+neural architectures have three-seed ensembles. The fresh HGB control uses
+15 leaves and minimum leaf size 50 because its fit window is smaller; it
+does not repeat the full neural architecture search. This difference is a
+limitation of the fresh replication, not a claim of universal model optimality.
+
+Pair sampling draws 1,000 uniform entity pairs per origin and, per relation,
+1,000 uniformly selected group pairs and 1,000 group-size-weighted pairs.
+It never conditions on future labels. Static/global AdamW uses learning rate
+.02 and up to 50 epochs, with development pair-likelihood patience 8.
+The context model in the initial study uses two width-32 SiLU layers,
+bounded logit offsets and shrinkage .01. Gaussian probabilities use
+32-point double-precision quadrature. Private variance is at least .02.
+The common-shock, context and complete individual-arm results remain in the
+original artifact; no consistent context-network advantage was established.
+
+DM fits use $\log\kappa\in[-2,12]$ and four offsets in $[-2,2]$, with
+$10^{-3}\|\delta\|^2$ penalty. Two fixed concentration initializations are
+optimized with analytic gradients and a converged minimum is retained.
+A first finite-difference Borg fit stopped at a line-search failure before
+producing scores; its directory and source snapshot are preserved. The
+analytic-gradient correction changed the repeated BPI count CRPS by less
+than $4\times10^{-6}$. Exact cumulative beta-binomial CRPS is checked against
+an enumerated pairwise expectation. Reconciliation uses log-normalized
+importance weights; all fitting and sampling functions are independently
+checked on small known distributions.
+
+\paragraph{Historical residual comparator.}
+For each development origin/group, store the four-dimensional residual
+$(C-\mu)/\sqrt{1+\sum_iF_i(1-F_i)}$. Each draw selects one common historical
+origin, then size-bin-matched group residual vectors. Counts are clipped,
+rounded and monotonized. Development scoring omits its own origin; final
+scoring uses all development residuals. It changes group means and does not
+enforce agreement between overlapping projections. Contrary to one caption
+in the original review PDF, its saved evaluator and result files use seeds
+0, 1 and 2, not one seed. The correction affects reporting only.
+
+\paragraph{Interval and Monte Carlo interpretation.}
+Seed averaging occurs before temporal block resampling. The original
+512-to-1,024-draw sensitivity changes macro CRPS by at most .000122 and
+preserves within-family rankings. This does not establish sampling precision
+for every newly added peak or variogram score; close differences are not
+treated as decisive. Fair variogram estimates use sampled group pairs and
+can be slightly negative after finite-ensemble correction. Main tables
+separate exact direct-count marginal scores from sampled distributions;
+exact discrete quantiles and finite-ensemble quantiles can differ slightly.
+Projection/horizon CSVs and paired block-size sensitivities accompany the
+reported macro values.
+
+\paragraph{Computation and integrity.}
+The experiments use two RTX A6000 GPUs, with CPU replay, HGB and direct-count
+fits. Original Borg evaluation of five controls over 28 origins requires
+about 245--251 seconds per 512-draw process under concurrent shared-device
+execution, with at most .67 GiB allocated PyTorch memory; it excludes replay,
+training and individual inference and is not an isolated latency benchmark.
+The original 264-file freeze and the fresh 82-file freeze are verified after
+evaluation. Original code, results and the immutable review archive remain
+intact; new diagnostics and manuscript sources live in separate directories.
+The test suite covers causal replay, temporal eligibility, coherent sampling,
+known DM moments, exact reconciliation on a small enumerated distribution,
+and dependence-sensitive profile scores.
+
+\paragraph{Data and access.}
+Raw-source manifests retain checksums and publisher URLs. Google trace
+attribution follows its CC-BY-4.0 release; BPI datasets retain the 4TU General
+Terms of Use specified in their metadata. The artifact does not relicense
+third-party data or software. The reproduction package supplies executable
+analysis, fitted parameters and score evidence; large original logs are
+acquired through the documented source workflow. Author identities, permanent
+public artifact links and any venue-specific disclosure must be finalized by
+the researcher before submission. No external submission or release has been
+made during this study.

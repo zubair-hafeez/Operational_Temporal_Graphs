@@ -1,0 +1,14 @@
+\begin{table*}[t]\centering\small
+\caption{Joint group-profile scores. ES is RMS-normalized energy score; Peak is CRPS of the maximum standardized slow-progress deviation. Scales differ across datasets. Original-period rows are retrospective; all fresh endpoints were frozen before opening February.}\label{tab:joint}
+\begin{tabular}{lrr rr rr}\toprule
+&\multicolumn{2}{c}{Borg}&\multicolumn{2}{c}{BPI 2017}&\multicolumn{2}{c}{BPI 2012 (fresh)}\\
+Method&ES&Peak&ES&Peak&ES&Peak\\\midrule
+Independent&0.0597&15.7604&0.0957&0.4613&0.1058&0.5183\\
+Global factor&0.0575&7.5434&0.0942&0.4608&0.1023&0.4790\\
+Typed factors&0.0546&4.1726&0.0942&0.6686&0.1015&0.7362\\
+DM, earlier fit&0.0543&3.9903&0.0923&0.9984&0.0859&0.3903\\
+DM, development fit&0.0544&4.0844&0.0879&0.5343&---&---\\
+Bottom-up DM&---&---&0.0879&0.5380&0.0861&0.3907\\
+Conditioned DM&---&---&0.0879&0.5539&0.0860&0.3922\\
+Rolling correction + global&---&---&0.0880&0.4363&0.0928&0.4882\\
+\bottomrule\end{tabular}\end{table*}

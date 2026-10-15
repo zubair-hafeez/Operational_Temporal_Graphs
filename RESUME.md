@@ -1,3 +1,15 @@
+# Active revision — four-source feasibility stage
+
+The user authorized iterative execution until a strong reviewable paper. Goal remains active. Original frozen study/archive preserved. New 10-page draft at `paper_revision/main.pdf` compiles cleanly (no overfull/undefined references), but final packaging/review is outstanding. See `revision/` and LEDGER.
+
+Original-data direct, calibration, reconciliation, graph ablation, and joint-profile experiments are complete. Fresh BPI2012 February confirmation is COMPLETE under 82-file freeze SHA d40ee5bbfac35299e298c60521c27d6116ee7871d6e73b36c1661e49297e0e20; do not edit its frozen sources/assets. Both original264 and fresh82 hashes verify. Paper has actual results and generated tables/figure. Need independent correctness/artifact review, reproduction docs, archive and venue fit.
+
+New opportunity: Alibaba2018 public batch-task table (130MB archive, publisher checksum verified) can add a second compute provider. First2day feasibility audit:1,924,310 tasks,547,350 jobs, no duplicatejob/task keys;95,299 zero-duration tasks and64negative intervals. 24–344 eligiblejob groups per hourly cohort. Only development prefix is being prepared by `revision/prepare_alibaba.py --period development`, session53167. Finaloutcomes at/afterday6 remain unopened. Candidatefit<day3,cal3–4,dependence4–5,dev5–6,final6–8. Strict longesthorizon<partitionend; prepareddevorigins1..142h, candidatefinal144..190h(47origins). No machine data, no eventualstatus, no futureDAG/instancecount/resourceplans asfeatures. Prefixfeaturetests pass. Need fitmarginals/dependence/counts, freeze a separate executableprotocol, then final if suitable.
+
+GPU runner `/mnt/zubair/Operational_Temporal_Graphs/revision/research.py` prefix persistently approved; namedtasks collective-risk,fresh-fit,joint-profiles; UUID logs. Originalrunner staysfrozen. Add scopednewAlibaba task only whencode ready. Noagentsauthorized; RFexcluded. User-owned untracked `paper/.ipynb_checkpoints/` must stay untouched.
+
+--- Historical notes ---
+
 # Active revision — authorized 2026-10-15
 
 The user reauthorized iterative experiments and manuscript revision. See `revision/README.md` and saved plans. The original study and ZIP remain preserved; new analyses of its final periods are retrospective. Current work: CPU BPI delayed recalibration diagnostic, direct count comparator, established reconciliation, and BPI 2015 municipality 1 source audit. Municipalities 4 and 5 are reserved until a concrete new protocol is frozen.

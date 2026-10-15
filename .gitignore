@@ -14,3 +14,9 @@ paper/*.blg
 paper/tools/
 paper/preview/
 releases/
+paper_revision/*.aux
+paper_revision/*.log
+paper_revision/*.out
+paper_revision/*.bbl
+paper_revision/*.blg
+paper_revision/preview/

@@ -90,7 +90,9 @@
   "revision": {
     "authorized": "2026-10-15",
     "original_study": "complete; immutable review archive retained",
-    "current": "BPI calibration diagnosis and direct aggregate/reconciliation comparisons; fresh-data suitability audit",
-    "new_test_status": "not frozen; original final periods are retrospective for revision analyses"
+    "current": "Three-source revision drafted; added strong current-version direct baseline; auditing independent-provider Alibaba2018 replication",
+    "new_test_status": "BPI2012 February complete under frozen protocol; Alibaba day6+ remains gated",
+    "fresh_protocol_sha256": "d40ee5bbfac35299e298c60521c27d6116ee7871d6e73b36c1661e49297e0e20",
+    "draft": "paper_revision/main.pdf"
   }
 }

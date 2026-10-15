@@ -1,0 +1,62 @@
+\section{Discussion}
+\paragraph{An evidence requirement, not a universal winning architecture.}
+The benchmark exposes distinctions that an individual-event leaderboard
+cannot resolve. A shared factor can improve collective dispersion without
+changing a single individual probability. Typed incidence can then add a
+smaller, projection-specific gain. Correcting a common bias or forecasting
+counts directly can change the ranking again. These are empirical reasons to
+include global, direct-count and calibration controls before attributing
+collective accuracy to a temporal graph architecture.
+
+\paragraph{Which output is needed?}
+If the application asks only for a few fixed group counts, direct count models
+are strong and economical candidates. Entity-level factor scenarios supply a
+different capability: the same realization can be projected onto overlapping
+jobs and machines or an alternative grouping without fitting another count
+model. A complete handler hierarchy can also be reconciled coherently. Neither
+capability guarantees better prediction. In particular, separate good group
+marginals need not give the right extreme across groups, and a globally
+coherent scenario can still have biased means or incorrect tails. The joint
+profile and peak-deviation scores therefore complement count CRPS.
+
+\paragraph{Calibration and dependence interact.}
+Replacing biased individual probabilities changes both expected group counts
+and the quantile needed by a reserve proxy. A coupling that improved CRPS
+before correction need not have the same decision effect afterward. The
+same-version requirement matters because a sequence of chronological OOF
+predictors is not one stationary calibration object. Nevertheless, delayed
+updates can lag a regime change, and the fresh replication does not justify
+claiming that rolling correction always beats a fixed earlier map. A factor
+estimated from forecast residuals may absorb misspecification; its value is
+predictive rather than evidence of an identified common cause.
+
+\paragraph{Limits of generalization.}
+The evidence covers one compute cluster and two workflow releases, with only
+seven final Borg days and 28 fresh workflow origins. Four or two bootstrap
+blocks in the latter are weak support for long-run uncertainty. Repeated cases,
+millions of tasks and Monte Carlo seeds do not multiply independent temporal
+replications. Retrospective follow-ups are separated from their motivating
+outcomes, and the single fresh confirmation should not be interpreted as
+broad external validation. No live operator study, policy deployment, measured
+cost saving or resource-capacity ground truth is available.
+
+The benchmark conditions on the currently active cohort and excludes future
+arrivals, subsequent exits/returns and membership evolution. Last handler is
+an observed association, not exclusive ownership. Positive factor families
+cannot represent general negative dependence. A full crossed job--machine
+probabilistic reconciliation baseline, adaptations of TACTiS or graph
+point-process generators, and complete business-process simulation remain
+unimplemented comparisons. The paper makes no superiority claim over them.
+The three individual architectures and fixed training budgets are useful
+controls, not an exhaustive model search.
+
+\paragraph{Implications for scientific dataset generation.}
+A reusable scenario source should declare the conditioning population,
+observable history and outcome contract before generating records. It should
+also test both individual and collective statistics under meaningful group
+projections. Our adapters, score suite and provenance checks provide a bounded
+foundation for that purpose. They are not a full synthetic-data factory and
+have not been validated by training downstream models on synthetic data.
+Extending them requires arrivals, repeated transitions and separate utility
+and privacy studies. Original public-source license and attribution terms
+remain applicable.

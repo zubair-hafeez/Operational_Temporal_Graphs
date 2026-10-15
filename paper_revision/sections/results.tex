@@ -1,0 +1,117 @@
+\section{Results}
+\input{generated/count_table}
+\input{generated/calibration_table}
+\input{generated/joint_table}
+\begin{figure*}[t]
+\centering\includegraphics[width=.98\textwidth]{figures/calibration_and_controls.pdf}
+\caption{Left: retrospective BPI 2017 fourteen-day population mean predictions
+under original and delayed same-version correction. Right: matched-marginal
+factor comparisons on original final periods and fresh BPI 2012. The global
+factor captures much of the improvement over independence; typed incidence
+has an application-specific incremental contribution.}
+\label{fig:controls}
+\end{figure*}
+
+\subsection{Count gains survive strong controls only in some settings}
+The original frozen Borg typed Gaussian model reduces count-fraction CRPS
+from .03417 under independence to .02587, a 24.3\% improvement
+(Table~\ref{tab:counts}). Ratio-9 reserve loss falls from .13106 to .05280.
+The global factor already reaches .02646 CRPS: the additional typed gain is
+2.2\%, not 24.3\%. The paired typed-minus-global CRPS interval is
+$[-.00105,-.00018]$ with one-day blocks. Removing job variance increases
+job-level CRPS from .01451 to .01922; removing machine variance changes
+machine CRPS from .02507 to .02525. The strongest demonstrated typed signal
+is therefore job grouping, with a much smaller machine contribution.
+
+Stronger direct controls do not remove Borg's count result. The
+development-fitted DM model reaches .02853 CRPS and .06931 reserve loss.
+Typed-minus-DM CRPS is $-.00266$, with one-day block interval
+$[-.00366,-.00169]$. The earlier-OOF DM and historical residual controls are
+weaker. Nevertheless, macro coverage is insufficient evidence of uniform
+calibration: original typed population coverage is about .763 while job and
+machine coverage are about .978 and .976. A macro value near .90 hides this
+imbalance.
+
+BPI 2017 gives a different ranking. The original global model improves CRPS
+by 8.3\% over independence but increases the reserve loss by 9.6\%.
+Development-fitted bias-DM reaches .04077 CRPS and .11396 loss, outperforming
+the original global forecast on both. Its CRPS difference is $-.00518$
+with 14-day block interval $[-.00983,-.00096]$. Conditioning reconciles
+handler/population trajectories but does not improve on the unreconciled
+direct count model; its population and group tradeoffs must be inspected
+separately. The early-OOF DM is weaker than its same-version development fit,
+showing why comparator training windows matter.
+
+\subsection{Calibration changes the operational comparison}
+The first retrospective correction transferred June--August OOF errors to
+the current BPI 2017 predictor. It made October global-model CRPS worse,
+from .04102 to .05422. Those OOF forecasts came from different fitted
+predictors. Using earlier September forecasts from the \emph{same} predictor
+reverses that failure: delayed correction gives October CRPS .03845.
+The later-period global score improves from .04589 to .04072, with paired
+difference $-.00517$ and 14-day interval $[-.00859,-.00192]$.
+Its fourteen-day mean resolution forecast rises from .525 to .578, against
+observed .579. These are controlled follow-ups, not untouched final estimates.
+
+The corrected global model and development-fitted direct DM have almost
+identical count CRPS: difference $-.00005$, interval
+$[-.00134,.00120]$. Correction therefore does not establish superiority over
+a strong direct alternative. Nor is the decision effect uniform. Corrected
+global reserve loss falls from .12899 to .11816, whereas corrected
+independence worsens from .11761 to .14405. The same improved marginal means
+produce different reserve quantiles under different joint laws
+(Table~\ref{tab:calibration}). Identity rows here use a common diagnostic
+random stream, so they differ slightly from the independently generated
+original frozen table.
+
+\subsection{Fresh confirmation favors the direct model}
+The February BPI 2012 confirmation was evaluated once under the separately
+frozen protocol. The development-selected identity/global model improves
+CRPS by 12.7\% over independence (.06253 versus .07162), but worsens
+reserve loss by 20.4\% (.16694 versus .13864). Its CRPS difference is
+$-.00909$, with seven-day block interval $[-.01081,-.00721]$.
+Typed factors are worse than the global control by .00274 CRPS, interval
+$[.00187,.00357]$.
+
+The development-selected bias-DM is substantially stronger: .03893 CRPS,
+.9145 coverage and .11246 reserve loss. Relative to the selected Gaussian,
+CRPS improves 37.7\% and reserve loss 32.6\%; the CRPS-difference interval
+is $[-.03183,-.01436]$. Bottom-up and conditioned bias-DM have similar
+count CRPS but less favorable coverage and reserve loss. Concentration-only
+DM is much weaker, implicating mean correction rather than dispersion alone.
+
+This confirmation is a demanding extrapolation for the individual predictor,
+which had only 4,854 training case--origin queries before November. Its
+fourteen-day February mean is .468 versus observed .617. Static correction
+raises it to .575 and rolling correction to .532; both improve aggregate
+CRPS, but neither beats bias-DM. Static correction also outperforms rolling
+correction on count CRPS in this period. These outcomes confirm the need for
+strong bias/direct-count controls, not universal success of an online update
+or a conclusion about the best possible individual model for this source.
+Only four seven-day or two fourteen-day blocks are available, limiting the
+strength of temporal inference.
+
+\subsection{Joint group risk changes the ranking}
+Table~\ref{tab:joint} evaluates full group profiles and the largest standardized
+slow-progress deviation. In BPI 2017, recent direct DM improves count CRPS
+over the original global model, but its peak-deviation CRPS is worse
+(.53433 versus .46081). The paired increase is .07351 with 14-day interval
+$[.00348,.14454]$. Thus access to better individual group-count distributions
+does not establish better prediction of their joint extreme. Delayed
+correction plus global dependence reaches .43633 peak CRPS and .08803
+profile energy; typed correction offers no clear general advantage.
+
+Borg's global and typed factors substantially improve peak-deviation scores
+over independence, primarily through jobs. Direct DM is also competitive
+on joint profiles and peaks, despite weaker count CRPS. In fresh BPI 2012,
+bias-DM wins both count and peak-deviation comparisons against the selected
+global model (.39031 versus .47902 peak CRPS). There is no universal
+coherence-versus-accuracy ranking. Full variogram results and projection-level
+scores are released rather than selecting only a favorable multivariate metric.
+
+An earlier simultaneous-alarm endpoint required at least 20\% of groups to
+fall more than two reference standard deviations behind. It was absent in
+Borg and occurred only once across BPI 2017 final horizon--origin outcomes.
+That endpoint is uninformative here and was not promoted as a successful
+warning task. Threshold-free profile and peak scores were specified before
+opening the fresh period.

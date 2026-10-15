@@ -1,0 +1,47 @@
+\section{Introduction}
+A cluster operator sees pending and running tasks belonging to jobs and
+machines. A workflow analyst sees unresolved applications linked to their
+recent handlers. Both need collective forecasts: how many current entities
+will remain unresolved, and which groups might fall behind together? Temporal
+models can supply each entity's event probability, but those probabilities
+alone do not specify the distribution of group counts or the largest group
+delay. Moreover, a well-scored count distribution need not support the
+particular decision quantile used by an operator.
+
+This study asks a practical evaluation question: \emph{what additional evidence
+is needed before individual forecasts on a temporal operational graph can be
+used as collective scenarios?} Three issues are easily conflated. Individual
+predictions may share a mean bias. Outcomes may retain common variation after
+conditioning on observed history. Typed relations may identify additional
+association beyond a global factor. Improving the first issue, adding the
+second, and exploiting the third require different controls. An apparent
+``graph benefit'' against independent sampling can otherwise be mostly a
+benefit of shared uncertainty available without typed relations.
+
+We define a common current-cohort target for a public compute-cluster trace
+and two releases of a loan-processing workflow. At each origin, a causal
+adapter reconstructs the active entities and their observed memberships.
+Scenarios assign each entity a first-exit bin across four horizons, including
+survival beyond the final horizon. The cohort is not selected using future
+exits, arrivals or assignments. The resulting counts can be projected onto
+overlapping jobs and machines or onto recent-handler groups.
+
+The contribution is a reproducible benchmark and controlled empirical study,
+not a new copula architecture. We compare strong individual predictors,
+matched-marginal global and typed factors, direct count distributions,
+historical residuals, and discrete probabilistic reconciliation. Delayed
+calibration controls separate mean error from dependence, and threshold-free
+joint scores test whether count accuracy extends to a group-risk profile.
+An initial two-log evaluation motivates retrospective diagnostics; a separately
+frozen third-log period supplies fresh confirmation. The manuscript identifies
+these evidence stages explicitly.
+
+Three findings organize the study. Shared factors are strong controls, so the
+incremental contribution of typed incidence must be measured against them.
+Calibration can materially change both collective scores and asymmetric loss,
+but transferring residuals across predictor versions is unreliable. Finally,
+methods that forecast individual group counts well can rank differently on
+the largest standardized group delay. These findings motivate an evaluation
+workflow that checks marginal bias, group-count uncertainty, and joint group
+risk separately, rather than treating one score as validation of a scenario
+generator.
