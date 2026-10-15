@@ -1,0 +1,21 @@
+{"parts": 25, "rows": 14881553, "elapsed_s": 17.58}
+{"parts": 50, "rows": 23813417, "elapsed_s": 27.89}
+{"parts": 75, "rows": 29241874, "elapsed_s": 34.14}
+{"parts": 100, "rows": 32959317, "elapsed_s": 38.38}
+{"parts": 125, "rows": 36137507, "elapsed_s": 42.07}
+{"parts": 150, "rows": 40719904, "elapsed_s": 47.31}
+{"parts": 175, "rows": 58799213, "elapsed_s": 68.1}
+{"parts": 200, "rows": 70419912, "elapsed_s": 81.49}
+{"parts": 225, "rows": 77948024, "elapsed_s": 90.38}
+{"parts": 250, "rows": 84343332, "elapsed_s": 97.98}
+{"parts": 275, "rows": 93294186, "elapsed_s": 108.55}
+{"parts": 300, "rows": 99515425, "elapsed_s": 115.77}
+{"parts": 325, "rows": 106257848, "elapsed_s": 123.74}
+{"parts": 350, "rows": 110752618, "elapsed_s": 129.04}
+{"parts": 375, "rows": 114398202, "elapsed_s": 133.26}
+{"parts": 400, "rows": 121587073, "elapsed_s": 141.75}
+{"parts": 425, "rows": 127601113, "elapsed_s": 148.73}
+{"parts": 450, "rows": 133830168, "elapsed_s": 156.13}
+{"parts": 475, "rows": 138626435, "elapsed_s": 161.67}
+{"parts": 500, "rows": 144648283, "elapsed_s": 168.66}
+{"through_days": 29.0, "stop_us": 2506200000000, "rows": 144648283, "tasks": 25424731, "jobs": 672004, "machines": 12586, "unknown_machine": 48, "initial_rows": 277321, "imputed_positive_rows": 18439, "was_time_sorted": true, "interval_count": 143996870, "zero_length_intervals": 135113, "events_sha256": "6ecdf003e456d8663529dce6649163600e50e8261917a3d77793639007da2baf", "source_manifest_sha256": "99d8064e35df5f848baa4abb06da07e67de517d5e0c6a0b6fc2e5a4902f3bbfa", "script_sha256": "aaeeeeb39c801fa811cd7ba352d94533d926acfdbf13ebcfe29eba1806362fa7", "elapsed_s": 371.01036201196257}

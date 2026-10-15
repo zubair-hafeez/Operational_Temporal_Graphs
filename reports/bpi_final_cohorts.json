@@ -1,0 +1,654 @@
+{
+  "dataset": "bpi",
+  "period": "final",
+  "cohorts": [
+    {
+      "folder": "cohort_1478001600000000",
+      "cutoff_us": 1478001600000000,
+      "n": 1996,
+      "queries_sha256": "792a2ccab464b0acc7434c26ff5fe1903aeca596164524113a816968bf441ff0",
+      "features_sha256": "0751ea65ca67fa13961fa5bb0dbb3d45c64345a54ae2264b58d0a4e6e0096024"
+    },
+    {
+      "folder": "cohort_1478088000000000",
+      "cutoff_us": 1478088000000000,
+      "n": 2018,
+      "queries_sha256": "32b0de1c0740363fbc5b5ab0c9951aad7b793bdaf3758a94fd10e797b2d82013",
+      "features_sha256": "0b0bf371b3dccf437590038a10894d5c896297b6c3bec99d667468666e1d0c4d"
+    },
+    {
+      "folder": "cohort_1478174400000000",
+      "cutoff_us": 1478174400000000,
+      "n": 2029,
+      "queries_sha256": "12ec6117d3320696c84ea8af43e8b61e941f4b21ad15fd15f32575e892450101",
+      "features_sha256": "9e65ebba64e675cda8d376ee33bbb7b0023103e69922708e86b7542bd17b2c0a"
+    },
+    {
+      "folder": "cohort_1478260800000000",
+      "cutoff_us": 1478260800000000,
+      "n": 1991,
+      "queries_sha256": "9d46abdb005d5df153f3aa0137a9f2c88260ebd43c8d6ff9ae4c2a96629fc0d7",
+      "features_sha256": "71bcd3ec90857a60a04e50dc130623cba7a018939ef64de8b0bcdf33052cb9ba"
+    },
+    {
+      "folder": "cohort_1478347200000000",
+      "cutoff_us": 1478347200000000,
+      "n": 2028,
+      "queries_sha256": "75dc6fa889dbe342465f9f3db8fc71928b29035b9987afc9f10c223d69e9591a",
+      "features_sha256": "e58b1b703525c494e9b073fa9bd6190033a537893e1de54c753f1a7aef74b832"
+    },
+    {
+      "folder": "cohort_1478433600000000",
+      "cutoff_us": 1478433600000000,
+      "n": 2055,
+      "queries_sha256": "a224d9bbf643005006eebba08a6f22ce98e94cd5f7f2a171676a19b42aa3266c",
+      "features_sha256": "8913e9ebf1d08e0cc72b913eeca9ef98150cd0df6f34afcc403626d9479a1178"
+    },
+    {
+      "folder": "cohort_1478520000000000",
+      "cutoff_us": 1478520000000000,
+      "n": 2062,
+      "queries_sha256": "cc1b1114b0fbee1fc0eda033c6b573270eafb049ce470203161a1fbe030203c5",
+      "features_sha256": "bc01ddb7c089ad42f519b3352c3f2eadb981a75d5f346a6ceb452e1842386bc6"
+    },
+    {
+      "folder": "cohort_1478606400000000",
+      "cutoff_us": 1478606400000000,
+      "n": 2091,
+      "queries_sha256": "d60aae44ed66aed34d70ef8d24fccd671a282529ad44ec6fd628939e54a7be17",
+      "features_sha256": "e457b5e954c0d6e7f78cbeeb656edb227a7f2138b720d35b15f4efb81a1f0f8a"
+    },
+    {
+      "folder": "cohort_1478692800000000",
+      "cutoff_us": 1478692800000000,
+      "n": 2108,
+      "queries_sha256": "cbd875e075b1625046e8324b6673c166cf02a834bb48c9466e17dbd1a9bbd5d3",
+      "features_sha256": "4570f22f04f4affafe194a8063808f370f0e0f3e9daa92c0c7ac723449bebecb"
+    },
+    {
+      "folder": "cohort_1478779200000000",
+      "cutoff_us": 1478779200000000,
+      "n": 2128,
+      "queries_sha256": "49d958618de6675e833316517df09265b9ad1c01288a1d1ab0a091343515eb49",
+      "features_sha256": "e8c93e46fcb766494458d49488a21d0892c26fe20080727182553721b31d1d9f"
+    },
+    {
+      "folder": "cohort_1478865600000000",
+      "cutoff_us": 1478865600000000,
+      "n": 2111,
+      "queries_sha256": "73aa4d62fd611f70d85da4fc7d8f39a5e88fd6e012b01594736d08782b21a9bc",
+      "features_sha256": "66785507661c4d3404428b91b1b4c7ba2c9ad144272462c5e7f8844b83e2d58d"
+    },
+    {
+      "folder": "cohort_1478952000000000",
+      "cutoff_us": 1478952000000000,
+      "n": 2118,
+      "queries_sha256": "a5a1aa64bf5c61a86ac20c0368c0046bc5cb41c0aeed463807accf96587ff862",
+      "features_sha256": "c557747c7caa26665541cd3903fdd587af3d38b8382555d1040df836b3fed21d"
+    },
+    {
+      "folder": "cohort_1479038400000000",
+      "cutoff_us": 1479038400000000,
+      "n": 2119,
+      "queries_sha256": "67b8e9d5c35cacd5ba215e938eb45081098d5ce8881e23ead56e291f3002f843",
+      "features_sha256": "1d7fb5d9b86775c08930bf3905b2b2cb04bb571353a0cfe8b4e44d949a8844b6"
+    },
+    {
+      "folder": "cohort_1479124800000000",
+      "cutoff_us": 1479124800000000,
+      "n": 2130,
+      "queries_sha256": "84d63282d45935ed5e311e886240cd5ad72fc97dc6d501c8340c5738631e948e",
+      "features_sha256": "f51127def7c69b242d208f09eb47d1b33a9cf8b87611dfeca360d1a0ed878ee3"
+    },
+    {
+      "folder": "cohort_1479211200000000",
+      "cutoff_us": 1479211200000000,
+      "n": 2155,
+      "queries_sha256": "a57f22273f0f63387be568195a72b5653edfc3996f71e120bf36a9623fdc1386",
+      "features_sha256": "bb363e6795e834c5ffb8193cf600267133feaa79d60e4d231c17a80b6a4c4ffc"
+    },
+    {
+      "folder": "cohort_1479297600000000",
+      "cutoff_us": 1479297600000000,
+      "n": 2164,
+      "queries_sha256": "2938b49bc8ac535c6347685a4008ce0f7564cfc9123ca4ef1687b394598db90b",
+      "features_sha256": "e704773d911b40424bca07ac72c856dca4a0dc2ef28fc5dc6873dc0cf2bbdd3f"
+    },
+    {
+      "folder": "cohort_1479384000000000",
+      "cutoff_us": 1479384000000000,
+      "n": 2170,
+      "queries_sha256": "e1f2c7ad634ff57534e40ddcf6854b5294d2f1d653066f167e84347ba0ff4d33",
+      "features_sha256": "81008547b4396096ed18f3206a68d7da187a42e2c7b7fef4c6fb5d28a46d522e"
+    },
+    {
+      "folder": "cohort_1479470400000000",
+      "cutoff_us": 1479470400000000,
+      "n": 2165,
+      "queries_sha256": "7ebeed8e9549f2bcaccb5f9ee80eadf050ed33d074f247d580d4a08e41fee32a",
+      "features_sha256": "f4fa2f0104b032f822ec13a33629311291155437fc52fec5f20c20aa08fc135d"
+    },
+    {
+      "folder": "cohort_1479556800000000",
+      "cutoff_us": 1479556800000000,
+      "n": 2152,
+      "queries_sha256": "1e0c2573db4611a7073615405b12105df9cc1a0d1e7978f34b2a9460623d02cd",
+      "features_sha256": "07ce38c69e6874abe939941bceef41aee6e511b19130325b3e93b3626d8ff68f"
+    },
+    {
+      "folder": "cohort_1479643200000000",
+      "cutoff_us": 1479643200000000,
+      "n": 2177,
+      "queries_sha256": "18646f15e4423d31130a282ce6ffb50c3bedcf6b6d6995be4bab173b3d4fc397",
+      "features_sha256": "baae079999a605a4a0d5c97736414d012b4092c9e439ba7e60ee37d3a38e433d"
+    },
+    {
+      "folder": "cohort_1479729600000000",
+      "cutoff_us": 1479729600000000,
+      "n": 2189,
+      "queries_sha256": "7c53cca7442552a1a8484c5ead1ebefbf674972a4fc0748f35fdd344e9af4aa3",
+      "features_sha256": "92dd44d6f48bcbeb84735629b2a7014b3f118772f62d3ca3e4dc3f220c77b0fc"
+    },
+    {
+      "folder": "cohort_1479816000000000",
+      "cutoff_us": 1479816000000000,
+      "n": 1879,
+      "queries_sha256": "73917fd4c8daa3df0b1c36f57d9465626ec26f89e7b8fd6d7bf78decbec258e6",
+      "features_sha256": "febc9b2029a6a2d389215384d9d1754839c3eca8470a214aadd47968856bb9c3"
+    },
+    {
+      "folder": "cohort_1479902400000000",
+      "cutoff_us": 1479902400000000,
+      "n": 1884,
+      "queries_sha256": "039e8c3c4c85780b5cd028d3121464ad155edf3dae17e20419626732995b4c0f",
+      "features_sha256": "3ec5fda49d28cb20dcccca276cb85ae3dbc950eb804b463f0ecbb17bc9304108"
+    },
+    {
+      "folder": "cohort_1479988800000000",
+      "cutoff_us": 1479988800000000,
+      "n": 1827,
+      "queries_sha256": "1fc265d3aa984634f323cd35703e62359e255e45e350e63edd26f4b532d30fbc",
+      "features_sha256": "e705acb0d37ff2951205bad32e779859033bacc393d0a3651f9af94f270daced"
+    },
+    {
+      "folder": "cohort_1480075200000000",
+      "cutoff_us": 1480075200000000,
+      "n": 1816,
+      "queries_sha256": "345c024ecdff13db69a1f973c2ea017d9460f7f3026ed72c28331e7d04446ec5",
+      "features_sha256": "5346abeab51b11a54e155b8643e11a7a914e01443ee5c02ec0d293d9ae66d54c"
+    },
+    {
+      "folder": "cohort_1480161600000000",
+      "cutoff_us": 1480161600000000,
+      "n": 1801,
+      "queries_sha256": "2dfc9bb57dde2ba72eec95e743c66331733b0b7afff54b86c0a3788cf44cfeb7",
+      "features_sha256": "65f86248483c3cfcbaf2bd00edcbb03e81656a1dd1ed281108bdf9cafb7f6ed0"
+    },
+    {
+      "folder": "cohort_1480248000000000",
+      "cutoff_us": 1480248000000000,
+      "n": 1820,
+      "queries_sha256": "bb8617336ee89dafb9c0ddc4926307286ae4e42c295c8a9457fd89aaed99a1c2",
+      "features_sha256": "8729ede806906b8cde191fc98c46e222a9913f5990c78a3cfa40d5708407f8d6"
+    },
+    {
+      "folder": "cohort_1480334400000000",
+      "cutoff_us": 1480334400000000,
+      "n": 1802,
+      "queries_sha256": "9b7b423b945cea215078b5b2126678c15c5a9d1272aabad9e289a6ae59cc4164",
+      "features_sha256": "9c6b1b271ff96566a1c4f3eb7bb535ea0997bfe24afb54fab5d6a616552c8768"
+    },
+    {
+      "folder": "cohort_1480420800000000",
+      "cutoff_us": 1480420800000000,
+      "n": 1808,
+      "queries_sha256": "da7891ec5d59a6666fe2d8248da29dfe1c6a11e5195f75d84dd42f4f37eeb5e4",
+      "features_sha256": "95032a4c5dd442999374bf4dc51cb5400d33b4272ccbf5be928b8aebd4cd5548"
+    },
+    {
+      "folder": "cohort_1480507200000000",
+      "cutoff_us": 1480507200000000,
+      "n": 1804,
+      "queries_sha256": "f357ed3d19fd95818048e55d64dd86e9c08362a7b832d96b82c4002d16fa69b7",
+      "features_sha256": "d4118ac14136cf830f4cd614dfe2c124a9130bc9770e1174fe78d764748acf2d"
+    },
+    {
+      "folder": "cohort_1480593600000000",
+      "cutoff_us": 1480593600000000,
+      "n": 1757,
+      "queries_sha256": "3ccc67a5d5ab9eb5d4e4e867bc62cd5c12b26f43f4f941fd11de48f46ca92bf5",
+      "features_sha256": "87772cbf368d610ecdd16f266e84eb6672d9a44f9160cc587aaf4b6b3550b330"
+    },
+    {
+      "folder": "cohort_1480680000000000",
+      "cutoff_us": 1480680000000000,
+      "n": 1763,
+      "queries_sha256": "3570ef9a226db6d4c0609caa62c707665f3c558a5fb8aaa7c32e3d5c57f45821",
+      "features_sha256": "ed709d9fe4cd0d8dad3232112d4fff1030e899396964d4bc1029306b48b6e50f"
+    },
+    {
+      "folder": "cohort_1480766400000000",
+      "cutoff_us": 1480766400000000,
+      "n": 1768,
+      "queries_sha256": "205dea72caebe488bc75d40f7fc92ebb40aeebd3af3c8dd8baa27401d6bc99e9",
+      "features_sha256": "3f072e812a8a18ce36cbfc3d52a24b9db8f3e7603b230c752c5af5d28c22a7c5"
+    },
+    {
+      "folder": "cohort_1480852800000000",
+      "cutoff_us": 1480852800000000,
+      "n": 1782,
+      "queries_sha256": "6f42569f9bccb3111ee4afbcf38a1a928a9ee209d20f583e6881307f3bbe6d66",
+      "features_sha256": "f3358865918cb3f3f0dc4c83df6dcebf6fe121c88856548c25756f692bc4e15a"
+    },
+    {
+      "folder": "cohort_1480939200000000",
+      "cutoff_us": 1480939200000000,
+      "n": 1782,
+      "queries_sha256": "e8d3e402624260c679d10a5089b664562823f1115b7dfc00f120be57f60ea5c7",
+      "features_sha256": "b9e9be6408ce0c59dcc27788e0186fb53682432556b06db538a3277636fd940e"
+    },
+    {
+      "folder": "cohort_1481025600000000",
+      "cutoff_us": 1481025600000000,
+      "n": 1803,
+      "queries_sha256": "fd5a65666abb13f184e532ca0ca43b8f91b2a2928e7b2c4e8d12790f042ad7f3",
+      "features_sha256": "3ff36eea8deb0352a6511e216d6665ff61c4e9273c66b8cdeed70602da625f57"
+    },
+    {
+      "folder": "cohort_1481112000000000",
+      "cutoff_us": 1481112000000000,
+      "n": 1825,
+      "queries_sha256": "1407e53a586cc90c954f030c5fccb80213d4d98d93e97075cb8508de7d7f994d",
+      "features_sha256": "4795185dea94c309ee31a0e4475063f05375fd801d2a3e01844f33e80de66bf1"
+    },
+    {
+      "folder": "cohort_1481198400000000",
+      "cutoff_us": 1481198400000000,
+      "n": 1801,
+      "queries_sha256": "edb80d5852b268dae2717d7273c0971e071ec498f59aa8c51b9c45b3e26b42a6",
+      "features_sha256": "fc2d766a60d66f1e888174daad0e6e4dd3f1027ce9edf5b2afeb60ece895e5ae"
+    },
+    {
+      "folder": "cohort_1481284800000000",
+      "cutoff_us": 1481284800000000,
+      "n": 1796,
+      "queries_sha256": "c5891dfd98476cdef5b70cebd2cc737f56e047cc65e2a73d6b733073cfbb5c02",
+      "features_sha256": "cca831c2dfcc65e002a7de3c85abad6c6c2677c0e1b14e572d15f62f7e6910da"
+    },
+    {
+      "folder": "cohort_1481371200000000",
+      "cutoff_us": 1481371200000000,
+      "n": 1795,
+      "queries_sha256": "38b21ff355198fa70c69363139308587d4ee99c9ae4c14652748271075322640",
+      "features_sha256": "779407120f9eb7b001710dfaea158d1f61749da2b9d630b487b0f9fd54da61a8"
+    },
+    {
+      "folder": "cohort_1481457600000000",
+      "cutoff_us": 1481457600000000,
+      "n": 1817,
+      "queries_sha256": "c6cb4029891d7588ae8e752577d2dc91d0977b0a2c735aee24a1adfcd952875f",
+      "features_sha256": "0b0a53156ea0e822fba7d508f1522e7c854834128948d1992c4272af51ecfa6e"
+    },
+    {
+      "folder": "cohort_1481544000000000",
+      "cutoff_us": 1481544000000000,
+      "n": 1802,
+      "queries_sha256": "d8ed6226cf11adb746ebc7e9da8f92cea1c61ec8a3d9d7e3c1a23ddba2be6e7a",
+      "features_sha256": "9e9f88bb815dc66e5009c0b32fee79450d15f7c478aa9cee30cf7cd7b510270e"
+    },
+    {
+      "folder": "cohort_1481630400000000",
+      "cutoff_us": 1481630400000000,
+      "n": 1825,
+      "queries_sha256": "f72db4e01f4f23bfed2ea17a27a147a13a352c04c6b2683f4b85b1a3c1770b38",
+      "features_sha256": "edc2bff1115185576fa12b115bfea82a43eaaaae792849198cca5e2d7517dc05"
+    },
+    {
+      "folder": "cohort_1481716800000000",
+      "cutoff_us": 1481716800000000,
+      "n": 1858,
+      "queries_sha256": "46d51b90aa7fbe8d68a235ddfe2dd7b7c52483d687bdc0b968b4c48673096c3b",
+      "features_sha256": "12b6f2bd12de1d4848b9a136f822b33a14f8a57a855c144e46dd557259eeedd4"
+    },
+    {
+      "folder": "cohort_1481803200000000",
+      "cutoff_us": 1481803200000000,
+      "n": 1876,
+      "queries_sha256": "5a53371d13a6569a78daa9687257746e8e6c5af8b2bb2a77d0d48f93049e1a04",
+      "features_sha256": "2b048bf99814834a9b0b90ca4119b5d1384044649e74931dbc9d4d1979a0eadc"
+    },
+    {
+      "folder": "cohort_1481889600000000",
+      "cutoff_us": 1481889600000000,
+      "n": 1871,
+      "queries_sha256": "fe9ffb1bf3051fa62635a8433c9b844d6fc80abd1e575de0c4a339205778d138",
+      "features_sha256": "5933b2c6ad1f5c01d32fe0f0ac2defdf120b9a914f32995e83ff77f703829e6e"
+    },
+    {
+      "folder": "cohort_1481976000000000",
+      "cutoff_us": 1481976000000000,
+      "n": 1860,
+      "queries_sha256": "a4bccf5230331d37f92d8385304c5bf6b5dcc6b0efc4a65e30dd8ee642f6adb6",
+      "features_sha256": "7ca770c1852f23be14c98c26e3ef5dec78c211aaeb282974cc2296d805146639"
+    },
+    {
+      "folder": "cohort_1482062400000000",
+      "cutoff_us": 1482062400000000,
+      "n": 1877,
+      "queries_sha256": "0bc4ba16ddd4e9a091b0cb019f2f38352505e13c3de8d4e9cd3d820bb27cdb5c",
+      "features_sha256": "917eba13c831ecde57f105336ec28f6c2136a3d19866bab8d758a9540300689d"
+    },
+    {
+      "folder": "cohort_1482148800000000",
+      "cutoff_us": 1482148800000000,
+      "n": 1892,
+      "queries_sha256": "59f61b1179ac33da5eed8f0bc841e5bd8a7c08f49b5b09d4a178d28f9646d880",
+      "features_sha256": "1d25f56f494b3664b1632f6154a230c4c096dae17db1e1f4311e2572148efdf8"
+    },
+    {
+      "folder": "cohort_1482235200000000",
+      "cutoff_us": 1482235200000000,
+      "n": 1900,
+      "queries_sha256": "08d52d2acab1d4fc8a62d20b9cf629317919267e45c939516f0f23565ec23a03",
+      "features_sha256": "0fbd366da5fc464e40eb9f55c3375c857bb57c5d7441d9642721c855fe4eacf6"
+    },
+    {
+      "folder": "cohort_1482321600000000",
+      "cutoff_us": 1482321600000000,
+      "n": 1926,
+      "queries_sha256": "62d55a25fdb1603e2f07565f39f1a8004aed77bbe3c70de45674b065ce1b12f8",
+      "features_sha256": "73425c5452824311a0cf9ee817928ac9627f767a6db155af3d746d1c16d39313"
+    },
+    {
+      "folder": "cohort_1482408000000000",
+      "cutoff_us": 1482408000000000,
+      "n": 1585,
+      "queries_sha256": "f01b01b3aeb6bd43dd7cfa803ad4765cac0d30d77f2bb4aa8a9fcb0e1557623e",
+      "features_sha256": "d399ff2f11aa57817d3129f5b9981cb9726fb449020da5adfb9e5c50d68f4510"
+    },
+    {
+      "folder": "cohort_1482494400000000",
+      "cutoff_us": 1482494400000000,
+      "n": 1513,
+      "queries_sha256": "d0e9ba5e3e8c7a92c83e8a34c9acd7d6096ac3328867787b84e903e2a85acbdc",
+      "features_sha256": "78a61b0fc552418ccf8dd3ac91eb307a84a860dfa8843838169c88aeaceeb009"
+    },
+    {
+      "folder": "cohort_1482580800000000",
+      "cutoff_us": 1482580800000000,
+      "n": 1507,
+      "queries_sha256": "7abb1c48fb766d02ba9b96c88de85530bfee01efda176ec55acafb7e3d66ba05",
+      "features_sha256": "ca817df514c4907361c6e7bd44d6729f14884d2f51e79b4d91748e64bee1ea81"
+    },
+    {
+      "folder": "cohort_1482667200000000",
+      "cutoff_us": 1482667200000000,
+      "n": 1502,
+      "queries_sha256": "39fac9b1885aea8c20516ad6339b547680f944d053d35a11dcfdf3dcf83ea93c",
+      "features_sha256": "420236f90e0accfba9249cdab853e37964ec8d14c26aac393fed3316664f249b"
+    },
+    {
+      "folder": "cohort_1482753600000000",
+      "cutoff_us": 1482753600000000,
+      "n": 1498,
+      "queries_sha256": "e6536501c5603afeca7801ec7ffba523cca4ab36e2dee623aacd1c7156ac5b59",
+      "features_sha256": "b554caca2027ac2842a700eb9330a2b89544951c28929ceb540c5c38b9d71394"
+    },
+    {
+      "folder": "cohort_1482840000000000",
+      "cutoff_us": 1482840000000000,
+      "n": 1494,
+      "queries_sha256": "da57cc9fd0ac0969a134020dd48fd9e9c4f205406781d89711236f1d53ac3cd3",
+      "features_sha256": "99fd76f613184e6d324e9712a5794c36e9fc6b282de46cc4651584c16c920fcb"
+    },
+    {
+      "folder": "cohort_1482926400000000",
+      "cutoff_us": 1482926400000000,
+      "n": 1485,
+      "queries_sha256": "f414cefdc13e5090e5362f09c956a74d509c98b4f5d8f9de0503245f58f1c775",
+      "features_sha256": "237b85b3a1007e9c798fc827aef907fdaaebde985c78666c555c7489d9d47310"
+    },
+    {
+      "folder": "cohort_1483012800000000",
+      "cutoff_us": 1483012800000000,
+      "n": 1484,
+      "queries_sha256": "32838428b8215f446cfb1ee20764ea20b2b47a43c43a2b52db5e71d3fb6b491f",
+      "features_sha256": "e31b2be4156d9e718001184871d9cceb3c14314379cb921518b2745de3ed0211"
+    },
+    {
+      "folder": "cohort_1483099200000000",
+      "cutoff_us": 1483099200000000,
+      "n": 1500,
+      "queries_sha256": "e266f2343e1ef00dacde4d875858b6f961ce234e820fa60e79e968496f95dd7a",
+      "features_sha256": "721aa3590e6d372451c4fbe0b09770defb6dd8c1c334274fd7b288b5c82946de"
+    },
+    {
+      "folder": "cohort_1483185600000000",
+      "cutoff_us": 1483185600000000,
+      "n": 1510,
+      "queries_sha256": "5c727621d47a5d5c304e51bddcf1c2d7687b9153831bc8190f766fa76385c946",
+      "features_sha256": "10b8c3cdd2cc518870434ea6f87b0f6c99698d556d775b78154c68194509af8d"
+    }
+  ],
+  "features": [
+    "log_age_days",
+    "log_since_event_days",
+    "log_events",
+    "log_offers_seen",
+    "log_offers_open",
+    "last_UNKNOWN",
+    "last_A_Accepted",
+    "last_A_Cancelled",
+    "last_A_Complete",
+    "last_A_Concept",
+    "last_A_Create Application",
+    "last_A_Denied",
+    "last_A_Incomplete",
+    "last_A_Pending",
+    "last_A_Submitted",
+    "last_A_Validating",
+    "last_O_Accepted",
+    "last_O_Cancelled",
+    "last_O_Create Offer",
+    "last_O_Created",
+    "last_O_Refused",
+    "last_O_Returned",
+    "last_O_Sent (mail and online)",
+    "last_O_Sent (online only)",
+    "last_W_Assess potential fraud",
+    "last_W_Call after offers",
+    "last_W_Call incomplete files",
+    "last_W_Complete application",
+    "last_W_Handle leads",
+    "last_W_Personal Loan collection",
+    "last_W_Shortened completion ",
+    "last_W_Validate application",
+    "app_UNKNOWN",
+    "app_A_Accepted",
+    "app_A_Cancelled",
+    "app_A_Complete",
+    "app_A_Concept",
+    "app_A_Create Application",
+    "app_A_Denied",
+    "app_A_Incomplete",
+    "app_A_Pending",
+    "app_A_Submitted",
+    "app_A_Validating",
+    "app_O_Accepted",
+    "app_O_Cancelled",
+    "app_O_Create Offer",
+    "app_O_Created",
+    "app_O_Refused",
+    "app_O_Returned",
+    "app_O_Sent (mail and online)",
+    "app_O_Sent (online only)",
+    "app_W_Assess potential fraud",
+    "app_W_Call after offers",
+    "app_W_Call incomplete files",
+    "app_W_Complete application",
+    "app_W_Handle leads",
+    "app_W_Personal Loan collection",
+    "app_W_Shortened completion ",
+    "app_W_Validate application",
+    "count_UNKNOWN",
+    "count_A_Accepted",
+    "count_A_Cancelled",
+    "count_A_Complete",
+    "count_A_Concept",
+    "count_A_Create Application",
+    "count_A_Denied",
+    "count_A_Incomplete",
+    "count_A_Pending",
+    "count_A_Submitted",
+    "count_A_Validating",
+    "count_O_Accepted",
+    "count_O_Cancelled",
+    "count_O_Create Offer",
+    "count_O_Created",
+    "count_O_Refused",
+    "count_O_Returned",
+    "count_O_Sent (mail and online)",
+    "count_O_Sent (online only)",
+    "count_W_Assess potential fraud",
+    "count_W_Call after offers",
+    "count_W_Call incomplete files",
+    "count_W_Complete application",
+    "count_W_Handle leads",
+    "count_W_Personal Loan collection",
+    "count_W_Shortened completion ",
+    "count_W_Validate application",
+    "weekday_sin",
+    "weekday_cos",
+    "year_sin",
+    "year_cos",
+    "log_active_cases",
+    "log_day_events",
+    "log_day_arrivals",
+    "log_day_resolutions",
+    "log_week_events",
+    "log_week_arrivals",
+    "log_week_resolutions",
+    "resource_unknown",
+    "log_since_resource_days",
+    "log_resource_active_cases",
+    "resource_mean_log_age",
+    "log_resource_same_stage_cases",
+    "log_resource_week_handling_events"
+  ],
+  "feature_groups": {
+    "personal": [
+      "log_age_days",
+      "log_since_event_days",
+      "log_events",
+      "log_offers_seen",
+      "log_offers_open",
+      "last_UNKNOWN",
+      "last_A_Accepted",
+      "last_A_Cancelled",
+      "last_A_Complete",
+      "last_A_Concept",
+      "last_A_Create Application",
+      "last_A_Denied",
+      "last_A_Incomplete",
+      "last_A_Pending",
+      "last_A_Submitted",
+      "last_A_Validating",
+      "last_O_Accepted",
+      "last_O_Cancelled",
+      "last_O_Create Offer",
+      "last_O_Created",
+      "last_O_Refused",
+      "last_O_Returned",
+      "last_O_Sent (mail and online)",
+      "last_O_Sent (online only)",
+      "last_W_Assess potential fraud",
+      "last_W_Call after offers",
+      "last_W_Call incomplete files",
+      "last_W_Complete application",
+      "last_W_Handle leads",
+      "last_W_Personal Loan collection",
+      "last_W_Shortened completion ",
+      "last_W_Validate application",
+      "app_UNKNOWN",
+      "app_A_Accepted",
+      "app_A_Cancelled",
+      "app_A_Complete",
+      "app_A_Concept",
+      "app_A_Create Application",
+      "app_A_Denied",
+      "app_A_Incomplete",
+      "app_A_Pending",
+      "app_A_Submitted",
+      "app_A_Validating",
+      "app_O_Accepted",
+      "app_O_Cancelled",
+      "app_O_Create Offer",
+      "app_O_Created",
+      "app_O_Refused",
+      "app_O_Returned",
+      "app_O_Sent (mail and online)",
+      "app_O_Sent (online only)",
+      "app_W_Assess potential fraud",
+      "app_W_Call after offers",
+      "app_W_Call incomplete files",
+      "app_W_Complete application",
+      "app_W_Handle leads",
+      "app_W_Personal Loan collection",
+      "app_W_Shortened completion ",
+      "app_W_Validate application",
+      "count_UNKNOWN",
+      "count_A_Accepted",
+      "count_A_Cancelled",
+      "count_A_Complete",
+      "count_A_Concept",
+      "count_A_Create Application",
+      "count_A_Denied",
+      "count_A_Incomplete",
+      "count_A_Pending",
+      "count_A_Submitted",
+      "count_A_Validating",
+      "count_O_Accepted",
+      "count_O_Cancelled",
+      "count_O_Create Offer",
+      "count_O_Created",
+      "count_O_Refused",
+      "count_O_Returned",
+      "count_O_Sent (mail and online)",
+      "count_O_Sent (online only)",
+      "count_W_Assess potential fraud",
+      "count_W_Call after offers",
+      "count_W_Call incomplete files",
+      "count_W_Complete application",
+      "count_W_Handle leads",
+      "count_W_Personal Loan collection",
+      "count_W_Shortened completion ",
+      "count_W_Validate application"
+    ],
+    "global": [
+      "weekday_sin",
+      "weekday_cos",
+      "year_sin",
+      "year_cos",
+      "log_active_cases",
+      "log_day_events",
+      "log_day_arrivals",
+      "log_day_resolutions",
+      "log_week_events",
+      "log_week_arrivals",
+      "log_week_resolutions"
+    ],
+    "relational": [
+      "resource_unknown",
+      "log_since_resource_days",
+      "log_resource_active_cases",
+      "resource_mean_log_age",
+      "log_resource_same_stage_cases",
+      "log_resource_week_handling_events"
+    ]
+  },
+  "prefix": "data/processed/bpi_before_20170116",
+  "frozen_protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77",
+  "prefix_metadata_sha256": "f70532d3379b305f122b69c1001ac229b1e4326c26b07e3f4c9a0cf5c749509d",
+  "script_sha256": "86f56f85760ccf8efc22dfb46f9121460186d8cd219d76bce508b21fe102bf34",
+  "elapsed_s": 3.9864358380436897
+}

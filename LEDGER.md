@@ -69,3 +69,7 @@ Thirty-six local tests passed. During pre-final runtime instrumentation, two eva
 ## 2026-10-15T00:44:25.718025+00:00 Final evaluation opened
 
 Verified frozen protocol SHA256 `3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77`. Final preparation begins; model/architecture/threshold selection is closed. Preserve every outcome and any required bug-fix audit.
+
+## Final Borg timestamp-schema correction
+
+The original final prefix stored time_us as float64; frozen replay rejected its join to int64 origins before any cohort output/scoring. A separately recorded lossless conversion checked every timestamp and preserved all original artifacts. Models, frozen code, periods, labels, thresholds and comparisons are unchanged. See reports/final_borg_timestamp_correction.json.

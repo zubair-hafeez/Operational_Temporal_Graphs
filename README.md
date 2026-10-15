@@ -1,6 +1,8 @@
-# Operational temporal graph generation
+# Joint forecasting for operational temporal graphs
 
-Research project on preserving operational behavior in generated temporal graphs. The primary application is Google Borg task scheduling; BPI 2017 supplies a second application. The full approved motivation is in [the research proposal](../Temporal_Graph_Papers_2024-2026/FIRST_PAPER_PROPOSAL.md).
+Research project on joint first-exit forecasts for populations active at a forecast origin. Applications are Google Borg task states and BPI 2017 application resolution. The [scope revision](docs/SCOPE_REVISION.md) records how experiments and prior work narrowed the original event-log-generation proposal. This implementation does not generate full future logs or arrivals.
+
+The [final evaluation protocol](docs/FINAL_PROTOCOL.json) freezes selected models, code hashes, periods and comparisons. It must not be silently changed after final data access. The manuscript source is [paper/main.tex](paper/main.tex); its abstract/results and PDF are still being completed.
 
 The target deliverable is a complete research manuscript with reproducible evidence for the user's final review. Results must determine the final claims. No external submission or publication is authorized by this repository.
 

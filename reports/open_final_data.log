@@ -1,0 +1,20 @@
+{"completed": "bpi_before_20170116", "log": "/mnt/zubair/Operational_Temporal_Graphs/reports/prepare_final_bpi_before_20170116.log"}
+{"completed": "bpi_final_cohorts_v1", "log": "/mnt/zubair/Operational_Temporal_Graphs/reports/prepare_final_bpi_final_cohorts_v1.log"}
+{"completed": "bpi_final_histories_k16_v1", "log": "/mnt/zubair/Operational_Temporal_Graphs/reports/prepare_final_bpi_final_histories_k16_v1.log"}
+{"completed": "borg_prefix_29d", "log": "/mnt/zubair/Operational_Temporal_Graphs/reports/prepare_final_borg_prefix_29d.log"}
+Traceback (most recent call last):
+  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/open_final_data.py", line 33, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/open_final_data.py", line 30, in main
+    for future in [pool.submit(prepare,d) for d in a.datasets]:future.result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/open_final_data.py", line 18, in prepare
+    with log.open('x') as f:subprocess.run([sys.executable,str(ROOT/'scripts'/args[0]),*args[1:]],cwd=ROOT,stdout=f,stderr=subprocess.STDOUT,check=True)
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/zubair/zubairEnv/bin/python', '/mnt/zubair/Operational_Temporal_Graphs/scripts/build_final_cohorts.py', '--dataset', 'borg']' returned non-zero exit status 1.

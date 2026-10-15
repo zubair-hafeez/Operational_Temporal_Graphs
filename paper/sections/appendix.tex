@@ -83,5 +83,13 @@ Tables and figures are generated from saved results. Public raw data are
 obtained from the original providers under their original terms; the BPI
 archive is not relicensed as Creative Commons by this artifact.
 
+The first final Borg replay stopped before producing cohort scores because its
+Parquet timestamps were floating-point while query timestamps were integers.
+An audited schema correction checks every timestamp for exact integer
+representation before a lossless cast, preserving the original prefix and
+failed logs. The frozen model and evaluation code were unchanged. This
+correction is recorded separately from the original freeze and is included in
+the reproduction instructions; it was not a model adjustment based on scores.
+
 \section{Supplementary quantitative results}
 \input{generated/supplementary_tables}

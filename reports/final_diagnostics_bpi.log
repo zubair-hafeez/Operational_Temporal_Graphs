@@ -1,0 +1,1 @@
+{"dataset": "bpi", "n_origins": 61, "frozen_protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77", "script_sha256": "5e2f62db637c00ced274fea754144f242235e2f6f3124acc3d2f31290685cb96", "status": "complete", "scope": "Strata use cutoff-known features. This evaluates marginal robustness; it does not imply conditional joint calibration."}

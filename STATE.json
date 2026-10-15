@@ -1,7 +1,7 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
   "status": "active",
-  "phase": "frozen_final_data_preparation",
+  "phase": "frozen_final_cluster_replay_after_lossless_schema_correction",
   "final_test_opened": true,
   "research_direction": "Joint first-exit forecasting for changing operational cohorts on temporal graphs",
   "datasets": [
@@ -23,9 +23,9 @@
   "interpreter": "/home/zubair/zubairEnv/bin/python",
   "torch_version": "2.5.1+cu124",
   "next_actions": [
-    "Finish Borg selected-v2 score summary and freeze final protocol",
-    "Prepare and evaluate untouched final cohorts, including direct aggregate residual baseline",
-    "Complete paper figures, evidence-linked results, PDF and reproducibility audit"
+    "Finish Borg final cohorts/histories; predict frozen selected CDFs",
+    "Score both families and all three seeds on Borg final; run1024 draw seed0 sensitivity",
+    "Complete final artifacts/audit, abstract and cluster results, PDF and review archive"
   ],
   "results": [
     "All 500 Borg task-event shards and BPI archive acquired with checksums.",
@@ -50,7 +50,9 @@
     "Project-specific GPU runner persistent prefix saved; use it without shell redirects for all future GPU work.",
     "All temporal baselines complete, 3 architectures x 3 seeds x 4 folds per dataset. Borg selects original HGB global for pending and relational for running; BPI selects temperature-calibrated Mixer ensemble.",
     "Historical aggregate residual baseline completed before final: leave-one-origin-out development macro CRPS Borg .0252772; BPI .0359439. It changes means and is not entity-coherent.",
-    "36 local tests passed after aggregate-score refactoring. Closely related Avramenko et al. 2026 current-state simulation/UQ cited explicitly; no claim that operational initialization or UQ is novel."
+    "36 local tests passed after aggregate-score refactoring. Closely related Avramenko et al. 2026 current-state simulation/UQ cited explicitly; no claim that operational initialization or UQ is novel.",
+    "BPI final61 origins complete: Gaussian/global count-fraction CRPS .0459513 vs independence .0501015; reserve ratio9 loss .1289912 vs .1176986. Historical residual CRPS .0438663. No tuning on final.",
+    "Final Borg timestamp schema corrected losslessly after merge failure before cohort outputs; all144,648,283 event and143,996,870 interval timestamps checked. Original prefix/failed logs preserved; all264 frozen hashes still verify."
   ],
   "final_opened_utc": "2026-10-15T00:44:25.718025+00:00",
   "final_protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77"

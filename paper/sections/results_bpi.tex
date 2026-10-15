@@ -1,0 +1,50 @@
+\subsection{Workflow: distributional improvement and decision loss diverge}
+On the 61 frozen final workflow origins, the development-selected Gaussian
+global model reduces macro count-fraction CRPS from 0.05010 to 0.04595, an
+8.3\% improvement over independent sampling. Its mean paired difference is
+$-0.00415$; the 14-day block interval is $[-0.00638,-0.00188]$, and the 28-day
+interval also excludes zero. Mean 90\% coverage rises from 0.536 to 0.890,
+while normalized interval width rises from 0.140 to 0.222. This illustrates a
+practical failure of independent sampling: reasonable individual probabilities
+can induce overly concentrated collective forecasts.
+
+The projection breakdown localizes the effect. Population CRPS improves from
+0.03421 to 0.02728 and population coverage from 0.219 to 0.869. Handler-group
+CRPS improves more modestly, from 0.06599 to 0.06462, with coverage rising from
+0.853 to 0.911. Equal projection weighting keeps these effects visible rather
+than allowing the many handler groups to obscure the population result.
+
+That improvement does not extend to the specified reserve loss. At under/over
+ratio 9, the selected model's loss is 0.12899 versus 0.11770 for independence,
+a 9.6\% increase. The paired difference is 0.01129; its 14-day block interval
+is $[-0.00117,0.02129]$, while the 28-day interval is $[0.00426,0.01746]$.
+The direction of the mean tradeoff is clear, but its uncertainty depends on
+the block choice. We therefore report it as a held-out decision-loss tradeoff,
+not a universally established cost penalty. At ratio 3, the mean loss likewise
+increases, from 0.08933 to 0.09873.
+
+Observed handler incidence provides a smaller, distinct signal. Gaussian
+static factors obtain CRPS 0.04649, compared with 0.04694 after risk-stratified
+incidence permutation. The difference, $-0.000454$, has a 14-day block interval
+$[-0.000726,-0.000188]$. However, the corresponding reserve loss increases
+from 0.11936 under permutation to 0.12219 under true incidence; the paired
+interval for this increase is $[0.00119,0.00442]$. Thus, even the same
+relation-incidence control can favor one model under a distributional score
+and the other under a decision loss. It does not identify a causal effect of
+actual handler assignment.
+
+The richer context model does not establish a reliable improvement over the
+static model: its mean CRPS difference is $-0.000188$, with a 14-day interval
+$[-0.000626,0.000262]$. The common-shock static model has CRPS 0.05026 versus
+0.05013 for its independent control. Merely adding a dependence model is
+therefore insufficient, and the choice of family matters.
+
+The direct historical-residual comparator achieves the lowest aggregate CRPS
+among these workflow comparisons, 0.04387, while its coverage is 0.831 and its
+ratio-9 loss is 0.12576. It can shift aggregate means and is not a
+matched-marginal ablation. This distinction is consequential: at 14 days, the
+selected individual ensemble predicts an average population resolution
+fraction of 0.5252 versus the observed 0.5792. Every matched-marginal copula
+inherits that mean bias. The residual baseline's advantage is evidence for
+retaining simple aggregate-error controls, rather than evidence that its
+separately sampled projections form a better entity-level joint law.

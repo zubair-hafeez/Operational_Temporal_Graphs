@@ -18,6 +18,14 @@ decision quantile. Moreover, composite-likelihood fitting can attribute common
 forecast errors to dependence. A learned global or relation factor is a
 predictive construction, not proof of a physical common cause.
 
+The score--loss disagreement is not a theoretical paradox. CRPS aggregates
+quantile losses across probability levels \cite{gneiting2007}, whereas a
+particular reserve penalty evaluates one quantile. Improving the former does
+not guarantee improvement at every level. The application evidence makes this
+distinction operational: validation should report the intended loss alongside
+distributional scores, and inspect mean bias before interpreting a wider
+scenario distribution as a useful decision forecast.
+
 \paragraph{Scope of the evidence.}
 The two logs are single organizational settings, and the final cluster period
 contains only seven days. Millions of entity queries do not create millions of

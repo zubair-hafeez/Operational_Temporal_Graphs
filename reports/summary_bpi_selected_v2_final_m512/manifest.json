@@ -1,0 +1,43 @@
+{
+  "config": {
+    "dataset": "bpi",
+    "data_tag": "selected_v2",
+    "draws": 512,
+    "period": "final"
+  },
+  "sources": [
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed0/final_cohort_scores_m512.parquet",
+      "sha256": "ede83d6a60cdd961a1201429d651c21f5fe2d0b433da3639c9c5eb18e1f1238d"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed1/final_cohort_scores_m512.parquet",
+      "sha256": "9f0414dcfc58428e70e866952e193dfdb965f9988acd40c26f2f42347020ef8b"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed2/final_cohort_scores_m512.parquet",
+      "sha256": "5aaf61941ea7a329b7ea6c9e9120ff9f941d479a42b5e2a74b946d177dcf3bc6"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed0/final_cohort_scores_m512.parquet",
+      "sha256": "bc51c4830e5ac1d43c9ae5845dea244ac23fd2ab9fb4bf169cdba420b50e5a1c"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed1/final_cohort_scores_m512.parquet",
+      "sha256": "74d6b8cbe3df29501802cf873aa862073794e2e83b725a8e412eb4268fb735ea"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed2/final_cohort_scores_m512.parquet",
+      "sha256": "a71dc62ca719619d712b296c5c0fffa4b5a4514565812fa1ee0076f9b3ead760"
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_origins": 61,
+  "status": "complete",
+  "interpretation": "Final scores use frozen development checkpoints without adaptation. Intervals are descriptive paired circular moving-block bootstrap intervals with seed-averaged forecast origins. No task-level IID or seed-as-new-data inference.",
+  "script_sha256": "ad653669611e48d13d1db21a8b9f41df963a9e586e64d9b1d1756cecd1692777"
+}

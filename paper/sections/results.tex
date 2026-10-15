@@ -1,0 +1,37 @@
+\section{Results}
+\subsection{Individual-model selection does not select a joint distribution}
+Table~\ref{tab:marginal} reports the development comparison used to select
+individual forecasts. Borg selects the original HGB global arm for pending
+tasks (integrated Brier 0.06415) and the relational arm for running tasks
+(0.01591). The additional recent-event-count features and the neural
+alternatives do not displace these choices. BPI selects the temperature-scaled
+three-seed temporal Mixer ensemble (0.09796), ahead of the best HGB candidate
+(0.10039). These are development selection results, not an unbiased ranking
+on final data.
+
+We now hold each selected CDF fixed across dependence controls.
+Table~\ref{tab:main} reports all frozen final models; Figure~\ref{fig:scores}
+shows the distinction between count CRPS and reserve loss. The two datasets
+are not pooled into a single score. They have different event semantics,
+horizons, group structures, and observation spans.
+\input{generated/marginal_table}
+\input{generated/main_table}
+\begin{figure*}[t]
+\centering\includegraphics[width=\textwidth]{figures/joint_scores.pdf}
+\caption{Final count-fraction CRPS and reserve loss for representative controls.
+The same individual CDFs underlie the Gaussian and common-shock comparisons.
+Historical errors are a separate direct aggregate forecast. Lower values are
+better on each axis; the two axes measure different objectives.}
+\label{fig:scores}
+\end{figure*}
+\input{sections/results_borg}
+\input{sections/results_bpi}
+\begin{figure*}[t]
+\centering\includegraphics[width=\textwidth]{figures/marginal_bias.pdf}
+\caption{Longest-horizon population mean forecasts and outcomes at each final
+origin. These means are identical in expectation for all matched-marginal
+dependence models. A copula changes dispersion and tails, but cannot repair
+their mean forecast bias.}
+\label{fig:bias}
+\end{figure*}
+\input{sections/results_audits}

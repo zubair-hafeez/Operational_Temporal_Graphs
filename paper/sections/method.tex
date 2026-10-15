@@ -20,9 +20,11 @@ Individual predictive accuracy does not determine collective uncertainty.
 For a known group $A\subseteq V_t$, its exit count is
 $C_{Ak}=\sum_{i\in A}Y_{ik}$ and
 \begin{equation}
+ \begin{aligned}
  \operatorname{Var}(C_{Ak}\mid\mathcal H_t)
- =\sum_{i\in A}F_{ik}(1-F_{ik})
- +2\sum_{i<j,\,i,j\in A}\operatorname{Cov}(Y_{ik},Y_{jk}\mid\mathcal H_t).
+ &=\sum_{i\in A}F_{ik}(1-F_{ik})\\
+ &\quad+2\sum_{i<j,\,i,j\in A}\operatorname{Cov}(Y_{ik},Y_{jk}\mid\mathcal H_t).
+ \end{aligned}
 \end{equation}
 This standard decomposition motivates a controlled comparison: keep every
 $F_{ik}$ fixed and vary only the joint sampling law.
@@ -32,9 +34,10 @@ For each forecast draw, independently sample a global factor $Z_0$, one factor
 $Z_{r,g}$ per observed relation group, and a private factor $\epsilon_i$ per
 entity. The Gaussian construction is
 \begin{equation}
- Z_i=a_iZ_0+\sum_{r=1}^{R}b_{ir}Z_{r,g_r(i,t)}+c_i\epsilon_i,
- \qquad a_i^2+\sum_r b_{ir}^2+c_i^2=1,
- \qquad U_i=\Phi(Z_i).
+ \begin{aligned}
+ Z_i&=a_iZ_0+\sum_{r=1}^{R}b_{ir}Z_{r,g_r(i,t)}+c_i\epsilon_i,\\
+ a_i^2+\sum_r b_{ir}^2+c_i^2&=1,\qquad U_i=\Phi(Z_i).
+ \end{aligned}
 \end{equation}
 All underlying factors are standard normal. The nonnegative loading
 parameterization models positive residual association. It cannot express
@@ -49,10 +52,12 @@ We also evaluate a classical common-shock construction related to
 Marshall--Olkin models \cite{marshall1967}. With independent unit-rate
 exponential factors $E_0,E_{r,g},E_i$ and nonnegative weights summing to one,
 \begin{equation}
- L_i=\min\left\{\frac{E_0}{a_i^2},
+ \begin{aligned}
+ L_i&=\min\left\{\frac{E_0}{a_i^2},
        \left\{\frac{E_{r,g_r(i,t)}}{b_{ir}^2}\right\}_{r=1}^{R},
-       \frac{E_i}{c_i^2}\right\},
- \qquad U_i=1-\exp(-L_i).
+       \frac{E_i}{c_i^2}\right\},\\
+ U_i&=1-\exp(-L_i).
+ \end{aligned}
 \end{equation}
 A zero-weight factor has an infinite race time. Since the minimum has unit
 exponential rate, this construction also preserves each individual CDF. Neither
@@ -104,9 +109,11 @@ separately so a population-level benefit cannot conceal a relation-level loss.
 For $M$ independent scenario draws, the fair ensemble CRPS
 \cite{ferro2014,gneiting2007} is
 \begin{equation}
- \widehat{\operatorname{CRPS}}(X,y)=
- \frac{1}{M}\sum_m |X^{(m)}-y|
- -\frac{1}{2M(M-1)}\sum_{m\ne n}|X^{(m)}-X^{(n)}|.
+ \begin{aligned}
+ \widehat{\operatorname{CRPS}}(X,y)&=
+ \frac{1}{M}\sum_m |X^{(m)}-y|\\
+ &\quad-\frac{\sum_{m\ne n}|X^{(m)}-X^{(n)}|}{2M(M-1)}.
+ \end{aligned}
 \end{equation}
 We additionally report 90\% central interval coverage, width, and interval
 score; an energy score for each group's normalized multihorizon trajectory;
@@ -119,10 +126,10 @@ members that have not exited. For an under/over penalty ratio $r$, select the
 $r/(r+1)$ forecast quantile $b$ of $R_{Ak}$ and evaluate
 \begin{equation}
  \ell_r(b,R_{Ak})=
- \frac{r\max(R_{Ak}-b,0)+\max(b-R_{Ak},0)}{|A|},
- \qquad r\in\{3,9\}.
+ \frac{r(R_{Ak}-b)_++(b-R_{Ak})_+}{|A|},
+ \quad r\in\{3,9\},
 \end{equation}
-This is a reserve-cost proxy for the current cohort. It is not measured
+where $(x)_+=\max(x,0)$. This is a reserve-cost proxy for the current cohort. It is not measured
 currency, a staffing policy, or a counterfactual deployment estimate. Future
 arrivals and subsequent state returns are outside its scope. Distributional
 score improvements and improvements under this particular loss are reported

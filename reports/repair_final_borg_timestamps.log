@@ -1,0 +1,3 @@
+{"file": "events.parquet", "rows_checked": 144648283, "minimum": 0, "maximum": 2506199602822, "old_sha256": "6ecdf003e456d8663529dce6649163600e50e8261917a3d77793639007da2baf", "new_sha256": "470947a4f4314503b7eba0e8364b04ff13729e3e6cbed5c47f69b931ed373b5a", "all_values_exactly_preserved": true}
+{"file": "intervals.parquet", "rows_checked": 143996870, "minimum": 0, "maximum": 2506199602822, "old_sha256": "cc2d37856d9a0b39fcdfcf79dee14af7d290095f904912a5ffe67197d24808c9", "new_sha256": "63c95f68c64e5a6c23f1e73fe2beff495df5106f36f9a2fbdbf9364ef1c8be29", "all_values_exactly_preserved": true}
+{"status": "corrected", "protocol_unchanged": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77"}
