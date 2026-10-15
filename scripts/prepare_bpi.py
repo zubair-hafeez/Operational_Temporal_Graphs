@@ -6,18 +6,23 @@ import hashlib
 import json
 from pathlib import Path
 import time
+import sys
 import xml.etree.ElementTree as ET
 import pandas as pd
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 RESOLUTION={'A_Pending','A_Denied','A_Cancelled'}
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--before',default='2016-11-01');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--before',default='2016-11-01');p.add_argument('--frozen-final',action='store_true');a=p.parse_args()
     if pd.Timestamp(a.before)>pd.Timestamp('2016-11-01'):
-        raise ValueError('Final period remains locked')
+        if not a.frozen_final:raise ValueError('Final period remains locked')
+        from otg.protocol import verify_final_protocol
+        verify_final_protocol(ROOT)
+        if pd.Timestamp(a.before)>pd.Timestamp('2017-02-01'):raise ValueError('Requested endpoint exceeds the supported archive period')
     src=ROOT/'data/raw/bpi/bpi2017.xes.gz'
     rows=[];total_cases=total_events=0;start=time.monotonic()
     with gzip.open(src,'rb') as f:
@@ -40,7 +45,7 @@ def main():
     df['offer'],offer_keys=pd.factorize(df.offer_id.fillna('__NONE__'),sort=False);df['offer']=df.offer.astype('int32')
     df['activity_code'],activity_keys=pd.factorize(df.activity,sort=False);df['activity_code']=df.activity_code.astype('int8')
     df['lifecycle_code'],lifecycle_keys=pd.factorize(df.lifecycle,sort=False);df['lifecycle_code']=df.lifecycle_code.astype('int8')
-    out=ROOT/'data/processed'/('bpi_before_'+a.before.replace('-',''));out.mkdir(parents=True,exist_ok=True)
+    out=ROOT/'data/processed'/('bpi_before_'+a.before.replace('-',''));out.mkdir(parents=True,exist_ok=False)
     df.to_parquet(out/'events.parquet',index=False,compression='zstd')
     resolution=df[df.activity.isin(RESOLUTION)]
     first_res=resolution.drop_duplicates('case',keep='first')[['case','time_us','activity']].rename(columns={'time_us':'resolution_us','activity':'resolution_activity'})
@@ -71,7 +76,8 @@ def main():
               raw_sha256=hashlib.sha256(src.read_bytes()).hexdigest(),events_sha256=hashlib.sha256((out/'events.parquet').read_bytes()).hexdigest(),
               script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),elapsed_s=time.monotonic()-start)
     (out/'metadata.json').write_text(json.dumps(meta,indent=2,default=int)+'\n')
-    (ROOT/'reports/bpi_development_audit.json').write_text(json.dumps(meta,indent=2,default=int)+'\n')
+    report_name='bpi_before_'+a.before.replace('-','')+'_audit.json' if a.frozen_final else 'bpi_development_audit.json'
+    (ROOT/'reports'/report_name).write_text(json.dumps(meta,indent=2,default=int)+'\n')
     print(json.dumps(meta,default=int),flush=True)
 
 

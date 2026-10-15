@@ -1,0 +1,20 @@
+{
+  "device": "cuda:1",
+  "torch": "2.5.1+cu124",
+  "draws": 200000,
+  "results": [
+    {
+      "family": "gaussian",
+      "max_marginal_error": 0.0013800263404846191,
+      "shared_across_chunks": true,
+      "exact_repeatability": true
+    },
+    {
+      "family": "commonshock",
+      "max_marginal_error": 0.0010049939155578613,
+      "shared_across_chunks": true,
+      "exact_repeatability": true
+    }
+  ],
+  "accumulation": "int32 scatter-add; integer sum is invariant to parallel scheduling"
+}

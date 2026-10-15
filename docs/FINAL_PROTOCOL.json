@@ -1,0 +1,1254 @@
+{
+  "status": "frozen",
+  "frozen_utc": "2026-10-15T00:44:11.217352+00:00",
+  "scope": "Conditional discrete-horizon first-exit/resolution trajectories for observed current cohorts. No full event-log, new-arrival, or causal deployment claim.",
+  "development_informed": true,
+  "selected_marginals": {
+    "borg": [
+      {
+        "kind": "hgb",
+        "tag": "v1",
+        "arm": "global",
+        "variant": "shared_population",
+        "state": 1,
+        "development_integrated_brier": 0.06414762139320374,
+        "brier_by_horizon": [
+          0.006082850508391857,
+          0.046762265264987946,
+          0.06887245923280716,
+          0.13489066064357758
+        ],
+        "prediction_mean_by_horizon": [
+          0.024020597338676453,
+          0.04404356703162193,
+          0.09694244712591171,
+          0.19808879494667053
+        ],
+        "actual_mean_by_horizon": [
+          0.01893485596235106,
+          0.062249668069006024,
+          0.1116967448836962,
+          0.240983058615903
+        ]
+      },
+      {
+        "kind": "hgb",
+        "tag": "v1",
+        "arm": "relational",
+        "variant": "individual_platt_sorted",
+        "state": 2,
+        "development_integrated_brier": 0.01590598002076149,
+        "brier_by_horizon": [
+          0.002155379159376025,
+          0.00998053140938282,
+          0.019373543560504913,
+          0.032104119658470154
+        ],
+        "prediction_mean_by_horizon": [
+          0.004999188706278801,
+          0.01283147744834423,
+          0.033449336886405945,
+          0.06778202950954437
+        ],
+        "actual_mean_by_horizon": [
+          0.0027916666025978184,
+          0.014166666623819362,
+          0.034885416499067005,
+          0.0721562502090322
+        ]
+      }
+    ],
+    "bpi": [
+      {
+        "kind": "temporal_ensemble",
+        "architecture": "mixer",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "variant": "temperature",
+        "state": 1,
+        "development_integrated_brier": 0.0979566445812223,
+        "brier_by_horizon": [
+          0.024906542159329675,
+          0.0647637088752232,
+          0.12917788298850508,
+          0.17297844431454698
+        ],
+        "prediction_mean_by_horizon": [
+          0.03644943648711197,
+          0.10992507455836048,
+          0.2645066139263241,
+          0.5110854379854066
+        ],
+        "actual_mean_by_horizon": [
+          0.04164535945325651,
+          0.12549445442953397,
+          0.2926781091403349,
+          0.5771902916809776
+        ]
+      }
+    ]
+  },
+  "primary_selected_comparison": {
+    "borg": {
+      "family": "gaussian",
+      "mode": "static",
+      "selection_metric": "Development macro fraction CRPS averaged over three seeds",
+      "selected_score": 0.0193579326849471
+    },
+    "bpi": {
+      "family": "gaussian",
+      "mode": "global",
+      "selection_metric": "Development macro fraction CRPS averaged over three seeds",
+      "selected_score": 0.0408549177851549
+    }
+  },
+  "final_origins": {
+    "borg": {
+      "elapsed_days": [
+        22,
+        29
+      ],
+      "every_hours": 6,
+      "first_day": 22,
+      "last_day": 28.75,
+      "horizons_minutes": [
+        1,
+        5,
+        15,
+        60
+      ]
+    },
+    "bpi": {
+      "first": "2016-11-01T12:00:00Z",
+      "last": "2016-12-31T12:00:00Z",
+      "every_days": 1,
+      "horizons_days": [
+        1,
+        3,
+        7,
+        14
+      ],
+      "followup_before": "2017-01-16"
+    }
+  },
+  "model_update_policy": "Use frozen development-selected individual and coupling checkpoints. No final retraining, recalibration, architecture/threshold selection, or best-seed selection.",
+  "additional_baseline": "Historical aggregate residual bootstrap, fitted on development origins. Standardized four-horizon errors, shared resampled origin, nearest log2 group-size bin, clipped/rounded/monotonized counts. Does not preserve individual CDFs or entity-level coherence; compare separately. Development evaluation leaves each origin out.",
+  "comparisons": {
+    "families": [
+      "gaussian",
+      "commonshock"
+    ],
+    "modes": [
+      "independent",
+      "global",
+      "static",
+      "context",
+      "static_permuted"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "main_draws": 512,
+    "monte_carlo_sensitivity_draws": 1024
+  },
+  "projections": {
+    "population": "Current-state groups",
+    "relations": "Known job/machine or handler groups with at least five current entities",
+    "normalization": "Each group score divided by its current size; equal group, horizon, projection and origin weights"
+  },
+  "metrics": [
+    "fair count-fraction CRPS",
+    "90% coverage/width/interval score",
+    "group multihorizon energy",
+    "fraction of groups with >=20% exits CRPS",
+    "current-cohort reserve loss with under/over ratios3 and9"
+  ],
+  "inference": {
+    "unit": "Forecast origin after averaging seeds",
+    "paired_circular_block_origins": {
+      "borg": [
+        4,
+        8
+      ],
+      "bpi": [
+        14,
+        28
+      ]
+    },
+    "repeats": 10000,
+    "bootstrap_seed": 20261014,
+    "report_insufficient_span": true,
+    "interpretation": "Descriptive paired intervals; no IID task-count inference or unqualified cross-site generalization"
+  },
+  "sensitivity_plan": [
+    "Report per-horizon and per-projection scores, not only macro averages",
+    "Check Monte Carlo stability with1024 draws for seed0",
+    "Report cutoff-wise marginal bias and calibration",
+    "Report known-imputation and unknown-initial-age marginal-score strata using cutoff features; no outcome-defined filtering",
+    "Report end-to-end scenario sampling and projection-scoring time and process memory; no isolated kernel-speed claim"
+  ],
+  "bug_policy": "If a correctness bug is discovered, preserve original artifacts, record exact correction and which conclusions may change, and rerun all affected comparisons. Do not silently tune after final outcomes.",
+  "frozen_files": [
+    {
+      "path": "data/processed/borg_joint_selected_v2/cdf.npy",
+      "sha256": "caf1b2f5546516b7a7b0b032e4c28bfe6ad43cf0aa6da370cb0b296bb7383dba"
+    },
+    {
+      "path": "data/processed/borg_joint_selected_v2/metadata.json",
+      "sha256": "6713c4f919ba276dfa09f1960c60f6eb3a9e21fd614832d12642aff3530ab9cf"
+    },
+    {
+      "path": "data/processed/borg_joint_selected_v2/queries.parquet",
+      "sha256": "c6f43509e8c63f527b9068696c15a3926811a0bea49c06df4ea7877e765111c5"
+    },
+    {
+      "path": "data/processed/borg_joint_selected_v2/scaler.npz",
+      "sha256": "2effd387a0db10f6c9af459b1b1f5c43e33d1267d5516d934a325e3112942ee9"
+    },
+    {
+      "path": "data/processed/bpi_joint_selected_v2/cdf.npy",
+      "sha256": "e0f7e5fe5279a5e1ec65179cdb8148bb79815503a306adea7b3609cdb66502e5"
+    },
+    {
+      "path": "data/processed/bpi_joint_selected_v2/metadata.json",
+      "sha256": "4acd795b116cc6e6f2f9a297fdd7b83fd46c02828008eea88f3201dc1546f5fa"
+    },
+    {
+      "path": "data/processed/bpi_joint_selected_v2/queries.parquet",
+      "sha256": "a39a0db190c177e8d08fc03eef3b2adc1ce75fab56b85b834f46ce8c8052022b"
+    },
+    {
+      "path": "data/processed/bpi_joint_selected_v2/scaler.npz",
+      "sha256": "6e8c9864b257dba714652c59cc9ae981ddfcba600b8994e4d39c2c964fbb366a"
+    },
+    {
+      "path": "docs/SCOPE_REVISION.md",
+      "sha256": "a083c70c42dc5eafe2425dffaa8538b08fc4194c8143e5a86278ab93f0b68157"
+    },
+    {
+      "path": "otg/__init__.py",
+      "sha256": "1e5c5bda9d72a6492e871ac90b41bc89df37fd26621e44a5b83ab1cff56ba5e2"
+    },
+    {
+      "path": "otg/borg.py",
+      "sha256": "1aaf46da4fe58f4cd105d66dd60eca5b386beee0861cba3f30c7915a1bb22d67"
+    },
+    {
+      "path": "otg/bpi.py",
+      "sha256": "897d15513d4569fdd6b7000640aa96153b1df4a1353e1a4063d2a87a6e9840dc"
+    },
+    {
+      "path": "otg/cohort_scores.py",
+      "sha256": "663f08dba185ffc4984d651631805f0480e38d408922ff07a4a07b6b188696e0"
+    },
+    {
+      "path": "otg/copula.py",
+      "sha256": "79a442e36c54c3bb356fa5b9cbe8c06c9b472122556fad94739f5e81d71c092b"
+    },
+    {
+      "path": "otg/forecast.py",
+      "sha256": "400468d116fd3f9c14a9b84d68aaece18d202df4d359fabe24d2369fa5e02047"
+    },
+    {
+      "path": "otg/history.py",
+      "sha256": "e1e75f40439436dfb1490621f1a0c610aa04dbde7993eeb56f4a944f40a9d64e"
+    },
+    {
+      "path": "otg/protocol.py",
+      "sha256": "fdf0b055a4f45fb5c4700060167005bcdf032543964e682b5d4f93975657c498"
+    },
+    {
+      "path": "otg/residuals.py",
+      "sha256": "8b0291b93d80fdb89972c912da418b9c87eccc25eb0a9e30384e294cda573793"
+    },
+    {
+      "path": "otg/scenarios.py",
+      "sha256": "fce65d84e016d49d004b2a4ebe558b4181a126bd3cad4ebb1b8d7dbce5c224c5"
+    },
+    {
+      "path": "otg/scores.py",
+      "sha256": "0d62bc1b0f59518617d44a0749bd51371078e403ba5d2e5681ca90f10eae7e12"
+    },
+    {
+      "path": "otg/temporal.py",
+      "sha256": "88093a629ac0aecfd1938e8ea4d65be87133fd506104d86279b0914077329417"
+    },
+    {
+      "path": "otg/torch_scenarios.py",
+      "sha256": "e97bf41347fc96d76af67ce51e7c6d2b546f6f315f6eadbeabd20762a2ea31b4"
+    },
+    {
+      "path": "otg/uncertainty.py",
+      "sha256": "d96d8653765f43dba907c49ebc034202753280d701ee9367b9ae4755ab0fc314"
+    },
+    {
+      "path": "reports/summary_borg_selected_v2_development_m512/macro_metrics.csv",
+      "sha256": "6f8f005254edeb904ee8cd0cab04939330867fd5e688f5315e35937e372a30f2"
+    },
+    {
+      "path": "reports/summary_borg_selected_v2_development_m512/manifest.json",
+      "sha256": "9c84fd1c8739b2d7e8f5cc2d2d1bf77b91fcc557cab3043c15d9688b2b4d8649"
+    },
+    {
+      "path": "reports/summary_bpi_selected_v2_development_m512/macro_metrics.csv",
+      "sha256": "8e7bbb7ac9048ed6001b82c1f0c9e02ef1f788a72bc137ae0ec6dcd00824d2d9"
+    },
+    {
+      "path": "reports/summary_bpi_selected_v2_development_m512/manifest.json",
+      "sha256": "7a27cd716e08a9bf7177b8365f3f868a91a670056b942bb8c543a6ccfcf66c42"
+    },
+    {
+      "path": "runs/aggregate_residual_borg_selected_v2/development_report_m512.json",
+      "sha256": "66b5fd8ea60d9533631a14c4beb3d0e5a182e246be7874b27be9f3095e6909a3"
+    },
+    {
+      "path": "runs/aggregate_residual_borg_selected_v2/fit_manifest.json",
+      "sha256": "774e867391f276149bd31a10b7034e14c3ce2e34dcf40eca9ced438d242dac5c"
+    },
+    {
+      "path": "runs/aggregate_residual_borg_selected_v2/templates.npz",
+      "sha256": "034879b2c0098e35475bf8d551784566c4eec8633a3195d60068e2987badde66"
+    },
+    {
+      "path": "runs/aggregate_residual_bpi_selected_v2/development_report_m512.json",
+      "sha256": "4e4f9a873f29e11cf656643aa2c656ce783e65d5824d95e3d6c01dc9c5ad3ac9"
+    },
+    {
+      "path": "runs/aggregate_residual_bpi_selected_v2/fit_manifest.json",
+      "sha256": "16c9e18441d42a21b94993974dce8ccff117ea3181d9e55ed0462ee105426701"
+    },
+    {
+      "path": "runs/aggregate_residual_bpi_selected_v2/templates.npz",
+      "sha256": "200871fed1f39c4b02f50b98d35c5b7c65418d66f5e6d128b1cae473843d6dff"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_global_seed0/development20_22/calibration_audit.json",
+      "sha256": "67238fe21b488f82799e0d234bba20785730add1c3530ec575001bfc3ab91717"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_global_seed0/development20_22/horizon15m.joblib",
+      "sha256": "5ca42ad36b17d7ff764a7ae76f08ce7e04351834a2a1531ec74950c4b780445c"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_global_seed0/development20_22/horizon1m.joblib",
+      "sha256": "4683c56b913074e6fb02d7518fa5abeb493b124acd6fe4e1d3a67c2ce59358fc"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_global_seed0/development20_22/horizon5m.joblib",
+      "sha256": "e4ac53985573568a0e779e52caf837a2d2519b6f2121ee42531472ca504deda8"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_global_seed0/development20_22/horizon60m.joblib",
+      "sha256": "a9f137c9cced92778f9bf040ad0d93d082b5ba703202c4f4a4ef02ca15f8a141"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_global_seed0/development20_22/manifest.json",
+      "sha256": "7a983fe68682d938444c36866fa0b0093a1263689a52e7ec4dd079e741fd56d9"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_personal_seed0/development20_22/calibration_audit.json",
+      "sha256": "1425b6aa248557d7d0e71082f81bfee400f804a4bb15b711f1e4b8bc89eb0791"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_personal_seed0/development20_22/horizon15m.joblib",
+      "sha256": "7e83210e5091332c84019465c92bdff101f731edede1b7d15ed5109369fe772e"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_personal_seed0/development20_22/horizon1m.joblib",
+      "sha256": "5b7e3a0660f9cb249be7c6d78a22653007eb1b90ec61f46ecd4bc12367c52a4d"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_personal_seed0/development20_22/horizon5m.joblib",
+      "sha256": "fb7bf7b5da88e341a932f55d86c3f17f2c8cdd8e2422876c775e7dcb87f7af67"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_personal_seed0/development20_22/horizon60m.joblib",
+      "sha256": "5613021d8acdd63cbca3211b949b850c810254af988de12555a2e81740b5f653"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_personal_seed0/development20_22/manifest.json",
+      "sha256": "810700e744ef9cddaeecad105818c9e94ba4bc3e609b229452bc3ed672c65b7b"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_relational_seed0/development20_22/calibration_audit.json",
+      "sha256": "43c9b4a25f2009a4d1f0b33d595607dd14b627ce1f4fce6851acefd1b1a6bb1e"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_relational_seed0/development20_22/horizon15m.joblib",
+      "sha256": "8bbeb76682d50ab88ade6bb43ac268610a8829d819d53e5419f49afb527d8d2c"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_relational_seed0/development20_22/horizon1m.joblib",
+      "sha256": "c5922f42a781e2b6e2e11bf457a69aa32887c2103967d32dffa5c67ce6d258bd"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_relational_seed0/development20_22/horizon5m.joblib",
+      "sha256": "bf45beeebbef2a723bc38b6b09b3a1db8019df2bb28cb4a32fe773100350168e"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_relational_seed0/development20_22/horizon60m.joblib",
+      "sha256": "d982514f6b4782414673c19868864e030a5b560a5f6abf4bd73e2c6c3bf0d949"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state1_relational_seed0/development20_22/manifest.json",
+      "sha256": "6b0ca58c1e4600d1fc67065ad64df1f487749f96f63668ddd7927feb17589fd7"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_global_seed0/development20_22/calibration_audit.json",
+      "sha256": "3ef7c159e63e5a41a197ffc2560cb4f94f91f199b97002d628242902b3baac2f"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_global_seed0/development20_22/horizon15m.joblib",
+      "sha256": "882640a395adf2685777b9264d86688fcc973efefccd19d65411b6761455d52b"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_global_seed0/development20_22/horizon1m.joblib",
+      "sha256": "0d995d8b385d9135d710bcf00e35118d9698a275bce15481c2f0cc1bb91c9dd1"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_global_seed0/development20_22/horizon5m.joblib",
+      "sha256": "09a50aab885c3abe4fde7b8b97ac7af6c728fefbac96c359dd66ee8f56eb2966"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_global_seed0/development20_22/horizon60m.joblib",
+      "sha256": "f9b458af33eb105df45365dff521743ea10282ff07a9dc0219aaeb16ef9dd156"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_global_seed0/development20_22/manifest.json",
+      "sha256": "64f4e33d2cbf5e1f13f7f191af471a254b39a859997bcfc0995b6a0b57fcebf8"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_personal_seed0/development20_22/calibration_audit.json",
+      "sha256": "75de5e5842ef5c216082b0791bd32021a4bc3b725663ff5a56982581f8139f77"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_personal_seed0/development20_22/horizon15m.joblib",
+      "sha256": "4af438399dda1d8f6649c24725f00b54fdcd3b45ab2f60980567879d3b96feee"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_personal_seed0/development20_22/horizon1m.joblib",
+      "sha256": "1ea194e17390f5ca2ae07ab523e0d7022899e1f6e719d6cf493d4d61b18699f5"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_personal_seed0/development20_22/horizon5m.joblib",
+      "sha256": "7193fb4500ca53237861b2b399d594bad1eff341f16c324ac17298b185018456"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_personal_seed0/development20_22/horizon60m.joblib",
+      "sha256": "0cbe5af477be6195662d89586846cc1878fceeec015c94a7190fa6cc4cf0731f"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_personal_seed0/development20_22/manifest.json",
+      "sha256": "260829beebb46d62151c76d281a5a6c6a58f3615975e668819d03fdffe70d39a"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_relational_seed0/development20_22/calibration_audit.json",
+      "sha256": "e9821ddfdb5362f350022913d9c66bd070c6b3ff38d6c25254b8faa56ecaddfa"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_relational_seed0/development20_22/horizon15m.joblib",
+      "sha256": "c2f87a1bd4c264cecc0064a560d238cc2fc78528197ac24a8eadcc011d452b9d"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_relational_seed0/development20_22/horizon1m.joblib",
+      "sha256": "bd4e4af5c0cffadb9eb8bb377fde67f84745886da563de9471c5d862f8b85d79"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_relational_seed0/development20_22/horizon5m.joblib",
+      "sha256": "2c656227ff8cd094a564236cb970d89d08e03ad12662af969a019e042b07030a"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_relational_seed0/development20_22/horizon60m.joblib",
+      "sha256": "fe6650949f58099b5f2195c8571ded4932898e21144d8e962eeff770a55b5fd9"
+    },
+    {
+      "path": "runs/borg_marginals_history_v1_state2_relational_seed0/development20_22/manifest.json",
+      "sha256": "22ec20c0bc49ea222b53f1053215f7315d9e04bd306e345df43235311ae01133"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_global_seed0/development20_22/calibration_audit.json",
+      "sha256": "ef7cd7f643ed8d0b27c215dc29a5635469292300e1b66bd3eb2eeb13034607b8"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_global_seed0/development20_22/horizon15m.joblib",
+      "sha256": "52c285fae448171420dc66c88262ea4830055218f94d45a1bf9abf44e09adad5"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_global_seed0/development20_22/horizon1m.joblib",
+      "sha256": "5eabe8aa261443ba95decab87e08db5c23d700be640da6fbc614209205a9f87b"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_global_seed0/development20_22/horizon5m.joblib",
+      "sha256": "2351fe535c57068cbd934d0445e26fb3e4a729f19236fd7cb5e6cf8e1f718ba0"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_global_seed0/development20_22/horizon60m.joblib",
+      "sha256": "f88307dbcfc9c2a7290c0bd2219303d6d91380419ac812bd26f168784766b573"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_global_seed0/development20_22/manifest.json",
+      "sha256": "259f5a4f031795505378055cc36c47831fc1693a3b110cbb858cb9965d6918f2"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_personal_seed0/development20_22/calibration_audit.json",
+      "sha256": "3d7aeaa3882367e5ba9284a96bb02b51f1344f1431f13a8eb82ec28912537336"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_personal_seed0/development20_22/horizon15m.joblib",
+      "sha256": "2b4b3c26c510ce69f0bbfaff08d44b60e6d041d6cb7d893f806ed8dec8a54c9f"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_personal_seed0/development20_22/horizon1m.joblib",
+      "sha256": "45e211d325720597555c49fe1946418e8a3e8502ff729fe68fed91946f642ff4"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_personal_seed0/development20_22/horizon5m.joblib",
+      "sha256": "559a4009c668a7dce1acdf814942a95ee16ec2e19913f16f77dbd4d1282a3588"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_personal_seed0/development20_22/horizon60m.joblib",
+      "sha256": "928d283363be88d91924e4a03203f0f0fc02237a221941da49c34f33e2a7ddaf"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_personal_seed0/development20_22/manifest.json",
+      "sha256": "80bdcedf46bc4150fbd73705a05be21fb09dd2d599a6bb5fc4a7872841e6c46f"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_relational_seed0/development20_22/calibration_audit.json",
+      "sha256": "cedfe6803eee697d6881690ed76e92a20c3ea8a2ef13a642c671fd2b9196e4a1"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_relational_seed0/development20_22/horizon15m.joblib",
+      "sha256": "6a32f9a6be8beb783ca071daa6d15ae32ff5a5a380648b795756f43f6b5e113e"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_relational_seed0/development20_22/horizon1m.joblib",
+      "sha256": "62251849db1df92b69b39021819e75e584b3ac5b7313124a1d63cb1b05287051"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_relational_seed0/development20_22/horizon5m.joblib",
+      "sha256": "68fe11cff8c5b959e1f8aec7ab810c590e34e8d692e97e2d22192a2c64fae4e3"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_relational_seed0/development20_22/horizon60m.joblib",
+      "sha256": "6a078bfb739406758d7ced046b1c239ed0fe9263227e7c7926ab3f8f7b44463c"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state1_relational_seed0/development20_22/manifest.json",
+      "sha256": "71f0617e38de015089bf5a299243353ef0b10eb920cae2221caac888836123bc"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_global_seed0/development20_22/calibration_audit.json",
+      "sha256": "2492862382d21c7d95bb9596939aa2237c07f0f17326bdd10976ec9c61a5f0ff"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_global_seed0/development20_22/horizon15m.joblib",
+      "sha256": "c3155b8670bb46f6f84d921b5c02dd51b8b637729cff153b4227a835804f405a"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_global_seed0/development20_22/horizon1m.joblib",
+      "sha256": "8a6ecca66293300fec0e85b61becc4013b8d1ab4e2eefbd1a4159b2a4ae6f9ce"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_global_seed0/development20_22/horizon5m.joblib",
+      "sha256": "2f452e653175f9ebacdbc366991c71d1dab8d79de8e39e838ee98778b0213892"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_global_seed0/development20_22/horizon60m.joblib",
+      "sha256": "ef280eacfcc3ebc1785271245e3c9e2450ca812a5274c39b2864dd8b13f8d619"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_global_seed0/development20_22/manifest.json",
+      "sha256": "fb9150d87fe0f78268f5d77cd8142d68d61d12c6e3dd72be40066c94e6644ecf"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_personal_seed0/development20_22/calibration_audit.json",
+      "sha256": "b51941e23f2e6da83c541fb35940282b93d9c97a15b5ddc2e315793fd3c99e20"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_personal_seed0/development20_22/horizon15m.joblib",
+      "sha256": "781ae646394794b86e3568d12c2513f6a03f866026e12c284adfd423d84f1c0d"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_personal_seed0/development20_22/horizon1m.joblib",
+      "sha256": "061b74d182516d9fc3ae2d4bbc9cac819313f993b3d895f0230e8921e49faf09"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_personal_seed0/development20_22/horizon5m.joblib",
+      "sha256": "b1a28f1cf1845ca9d1d0a5d7f2b8c415c704f95cca9367cc764edb28f7feba00"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_personal_seed0/development20_22/horizon60m.joblib",
+      "sha256": "14378c77e2ec7fab59eb6ef27396287b5cda34d00fd526ff7347abc2c2eab5e8"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_personal_seed0/development20_22/manifest.json",
+      "sha256": "a8abbe9c9610546ccfe7d0d57293465f28737f6a960d3efa6b79c4f33498668b"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_relational_seed0/development20_22/calibration_audit.json",
+      "sha256": "7cc146d4218e76b9cd71e4a5ab4a20371376cf01f1ac55ff68b0564943cd8f55"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_relational_seed0/development20_22/horizon15m.joblib",
+      "sha256": "d47b1222628af99fd6be197e2d97e99f474c4c5b36f254d3ba4355941c6dc142"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_relational_seed0/development20_22/horizon1m.joblib",
+      "sha256": "5221e62abef472fdfc2d133c99ebb157ebfa49df1daf656a3db6027a6b2533d9"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_relational_seed0/development20_22/horizon5m.joblib",
+      "sha256": "951c7fdb5c382c2dda5e3feff2a5521353a4aeee82af22ab8807e0234b619e64"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_relational_seed0/development20_22/horizon60m.joblib",
+      "sha256": "02974e1e2f9d80ab297c17b7bf219c623d54f3a706e5f770353cd2eb00957778"
+    },
+    {
+      "path": "runs/borg_marginals_v1_state2_relational_seed0/development20_22/manifest.json",
+      "sha256": "57ef2d593359db80453927eacc42574f9bd500fb0420e720d3f6a0679bf7e8d1"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_global_seed0/development_october/calibration_audit.json",
+      "sha256": "831ec112a7a72f3bcb50d2e9813540919486be524cc7e98693f064e3f345b030"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_global_seed0/development_october/horizon14d.joblib",
+      "sha256": "339338ea4b5e7d18108a1d292fa7a580303e2b1d990256d407671bd3fc979c4e"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_global_seed0/development_october/horizon1d.joblib",
+      "sha256": "7fc49299dd036568eae3874cbcfcf05d688c960725993a869f6536643993854c"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_global_seed0/development_october/horizon3d.joblib",
+      "sha256": "51551dcc5c38df407779374cee910a569e04c42a660a3ab46b64d96d65fa212f"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_global_seed0/development_october/horizon7d.joblib",
+      "sha256": "657bdef2320d9398c54f245c2bc19301a8667b998f4a0bc7e39599bed98d9ed8"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_global_seed0/development_october/manifest.json",
+      "sha256": "9f96978fafcdba22d7196fb28ab0da819eb3430999a4a9b6799086fc30348866"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_personal_seed0/development_october/calibration_audit.json",
+      "sha256": "a718e9cee9e66dcb26f26b60ae3e3c7e8e57b434d3517e8d73d51ecc440aac88"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_personal_seed0/development_october/horizon14d.joblib",
+      "sha256": "52623197455e94f70998d4b74a8ea8a043359d8be92ae6a27c054bd49447c02c"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_personal_seed0/development_october/horizon1d.joblib",
+      "sha256": "81ad5a08361c3b94df53629e5e5b68f53f3f4a43006c4ead49c0baf0146d64b2"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_personal_seed0/development_october/horizon3d.joblib",
+      "sha256": "4d619999c86df675d3a399855db3fd4837a3a65dc9fe4e95693cdda58f4e86f1"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_personal_seed0/development_october/horizon7d.joblib",
+      "sha256": "72562fd99b1dd149f89fc11d7b3e4532c6407290524a816e71b76f87714f5757"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_personal_seed0/development_october/manifest.json",
+      "sha256": "edd0864b0d72c3df108cb4d392932cec3f12d9f42deb5404ca15a290b8be99ea"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_relational_seed0/development_october/calibration_audit.json",
+      "sha256": "1adc207ad014dd207cd465c3d41dad061d69ef7de5d66308e89900ff89a68a08"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_relational_seed0/development_october/horizon14d.joblib",
+      "sha256": "c059920808e31fe622281eca87160a5e1af1d17623f9e700663fde1b2d729fda"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_relational_seed0/development_october/horizon1d.joblib",
+      "sha256": "5fb3fc2f187fa0b32011da16e96292fb2c08d366bef3743f64f6a588731eec32"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_relational_seed0/development_october/horizon3d.joblib",
+      "sha256": "bcdffbbf430c84ef9b8e32a1629db8279c53b74f0a59c5f6be7e61712ab4f6df"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_relational_seed0/development_october/horizon7d.joblib",
+      "sha256": "44ed611f7d95bde516dd414e66656135f1afb49bef3e9250be2a944c5deeebd4"
+    },
+    {
+      "path": "runs/bpi_marginals_v1_state1_relational_seed0/development_october/manifest.json",
+      "sha256": "476701855a738ae755dfa93136d10fff302d60f73c3b30efc052457789fdb495"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed0/context.pt",
+      "sha256": "4a2ad9e77d3ef7b5904892c696b24659465bc9b61a3d4e5f8c2bccca201ed112"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed0/global.pt",
+      "sha256": "9b22d2569b4dc8eacb63c025fdae42d396750a2e6f8727d178dd22132c1be063"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed0/manifest.json",
+      "sha256": "3f8fef40f50c4e2941f631f6cced32747d3a1a3a4abf406de437db070ce97f14"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed0/static.pt",
+      "sha256": "44329db81801923c36d5d84a2ae447abe0d9e52b9d61e55dbcdb75d0c6b26594"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed1/context.pt",
+      "sha256": "1edef1026f71c1027be7a26f8c9cbdf9370e76e3fd41a13643a982736f189c3b"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed1/global.pt",
+      "sha256": "7133aca677881dd483a51e2e13e2c490c7f34a43b2dd4816be5c186c1cdceb1b"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed1/manifest.json",
+      "sha256": "1f85c4a0e7e9ac171efc41c9a065ca1e9dc031bc73238fa8c29e7706160be0c1"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed1/static.pt",
+      "sha256": "c51cbd740ebbb535180f3b06f3fdc7d0069ada601f29cb06583a05886c9d53a8"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed2/context.pt",
+      "sha256": "91758d150280e53b902d19e82b9f604e3e1156df7eb394ab87f7a2717d7349e4"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed2/global.pt",
+      "sha256": "4d20929a3ec3279ff36ccc6213416f3e060a4207ae6fe4fd4301ff8801bac7c9"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed2/manifest.json",
+      "sha256": "bc1954e7b794790f12906be935161599021ba49bc90d9cf7d7518533245314d4"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed2/static.pt",
+      "sha256": "ccab9f5ba8e322293b036b3bbc9b3930b7dbd29c4b3dc2b7c8f3d55388b477c3"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed0/context.pt",
+      "sha256": "1ee66918be473efdd400f0736514745cfe38411a540f063a305ee6888fc87a8c"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed0/global.pt",
+      "sha256": "c50de733fcf2a9406aabdba7f57ef3c83a47d0bdd6e1bf88a53710dbb6fbe3ae"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed0/manifest.json",
+      "sha256": "da1d49d16d7f61c98d87cfabca615629c22db51a91b821a0c17774162cc7ace2"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed0/static.pt",
+      "sha256": "7faec08b9d5aef2c03464c0c654cdb64cc3ac755ae6f4583e37d06762daa5778"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed1/context.pt",
+      "sha256": "bd317d492d17d6101835cf2678f78e285bf46287789868f0a68ded1b91a1ca1d"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed1/global.pt",
+      "sha256": "ac16c79c570fa9c547487fc641b92b9c383646e9e2a047241842b9e5c413132d"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed1/manifest.json",
+      "sha256": "ba0245ac00ed5d751e255d40f0432cd109d885ec8f74863d37f67681b70fb7c8"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed1/static.pt",
+      "sha256": "4c1a832a56a7d3fc8b04bd900d33839e0d5c68f7102f528911c605b391b8efa0"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed2/context.pt",
+      "sha256": "d54c4883acd1e6e6cbc6b5f9be8a69a09146b083b405376c02f0c0e33c5c094a"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed2/global.pt",
+      "sha256": "63305adbbd5b4f911fd06dbb672d9b567f5d0138769714d9608794216038eba6"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed2/manifest.json",
+      "sha256": "e074aac5f09552caf292fcb1c1638aaa350ad7458b2885dd8a01b696229582c0"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed2/static.pt",
+      "sha256": "b8caa6d9eaed8d349de0f9ff191bee461719232952ed0fc546ed4d640274f200"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed0/context.pt",
+      "sha256": "4c3514f53b3098fe284785e3b5ceae52f7a4b1a388bf431b31827e5fc0cae927"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed0/global.pt",
+      "sha256": "1db2c77406102781e26970e57cd134391aee9da655553ef5efe5e19ec52c956d"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed0/manifest.json",
+      "sha256": "aa63e06c2cf23717e24463d7a4643d4d3eb1fe1ab1c27b8ed22fc8c10e7556c8"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed0/static.pt",
+      "sha256": "2146e6eb5c0dee1c5aa6a0bfa246e168d6df88116b98cb9c7ce772f795dd343e"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed1/context.pt",
+      "sha256": "99fdd0dafa21beec4d376ce99eee8708d4ef329de3d53d72708825773b960dcf"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed1/global.pt",
+      "sha256": "4c3f54958ad3f022e3cc7c1b96412d4040f8b63054182fd2740e997c0047e1a1"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed1/manifest.json",
+      "sha256": "77f6b6f4977a690bfcbd9b4b795562601a6c0be943b686c6cd83dbeb0d9a59f4"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed1/static.pt",
+      "sha256": "6803b85c3258c1006a964f682cd6beaf8d09953d4134a1a1dee95f9b46e30d57"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed2/context.pt",
+      "sha256": "77f45d1eeda0a460b85bf11bd515a786e415d79c71f48f730e2fe91fac866210"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed2/global.pt",
+      "sha256": "7c848999fe2317802f4ad81ae5638be3b7dc42f288f55f570bfa495df85d6ab5"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed2/manifest.json",
+      "sha256": "ba826a4750e3431d56eaddbd53524b6836f710c6acb336c6efb264a039714eef"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed2/static.pt",
+      "sha256": "5f8c1ca4747508e9c4a016e5e598f1e80b78019c49a92d63af560ae3e9583041"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed0/context.pt",
+      "sha256": "ee24b12a3a233e6b9f8c7e6b44a09bfc0cc363838cb96b6f88d674cd3893cf50"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed0/global.pt",
+      "sha256": "64b494373d762ae63383bf8f4a796ab1681dea993657cc7fa255dabe03bdbe81"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed0/manifest.json",
+      "sha256": "b81a5ec030dab5b55160e9fe87c7b7f6298f553b55a1e8b9887be762a45e3005"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed0/static.pt",
+      "sha256": "b26a409292240064d1dd8213b3370fd65b080ac17d78d380845b568968de0edd"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed1/context.pt",
+      "sha256": "7dfb061b8cc0ecaa1f08facc9c5aa5d852b25ef3c7169da28f625935dfc896ed"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed1/global.pt",
+      "sha256": "4a4e9dd6266b1a1baa3ffcf7e0fefed15a8f18966c439f602c9018021baf7a8c"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed1/manifest.json",
+      "sha256": "c6e9adc7c54b5ca6c738300ea0070ba094ec691b08f950e90f3af94e3674fc84"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed1/static.pt",
+      "sha256": "0765817a9aaf86969b378ae267aabd067b0bf965803e8590295895287481aaa9"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed2/context.pt",
+      "sha256": "7b5a53fe1ad7e23c26b136b46759e54b61737a9c89b1b7be3e88dde19f97999f"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed2/global.pt",
+      "sha256": "07d88b0390186e2146166ae9491c8b290e6fdce00dfc3d7d0d39a1aa83e0db0c"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed2/manifest.json",
+      "sha256": "d4d31d83c4bc271796969f678e5c33af425eb0e21320c6b13bf0590112dd6957"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed2/static.pt",
+      "sha256": "0ead342cd6475e6fd496b54b809b12fccfec7b362b295446d7f3f57965c771de"
+    },
+    {
+      "path": "runs/temporal_borg_gru_seed0/development20_22/manifest.json",
+      "sha256": "3e7582addf8f4ed4f15dc1b5e3093e59317fa478c3ec70221ed279a50def7ddd"
+    },
+    {
+      "path": "runs/temporal_borg_gru_seed0/development20_22/model.pt",
+      "sha256": "60e4a36b4f460461350e8d1ee2f596bc1ed99f1ea40e09531fcf16cbc2f8bc83"
+    },
+    {
+      "path": "runs/temporal_borg_gru_seed0/development20_22/scaler.npz",
+      "sha256": "c3b04bdb1eb726722d4fdfd0b5c92792988783831a9fbdc1e1242ccf71e89859"
+    },
+    {
+      "path": "runs/temporal_borg_gru_seed1/development20_22/manifest.json",
+      "sha256": "b7f8ccf3522e7c8f97a035f6a72c5f68c2792192f4cb51c8150ce029ca89e3b9"
+    },
+    {
+      "path": "runs/temporal_borg_gru_seed1/development20_22/model.pt",
+      "sha256": "ce35744a1fb87a3a35e865a662ab44902b80f3d509d5ed180bae527cbfae3ed9"
+    },
+    {
+      "path": "runs/temporal_borg_gru_seed1/development20_22/scaler.npz",
+      "sha256": "c3b04bdb1eb726722d4fdfd0b5c92792988783831a9fbdc1e1242ccf71e89859"
+    },
+    {
+      "path": "runs/temporal_borg_gru_seed2/development20_22/manifest.json",
+      "sha256": "345692135ee3d16bfd0c47452fe94071ac038fc5e12742c16a6e4dd6fe5fe508"
+    },
+    {
+      "path": "runs/temporal_borg_gru_seed2/development20_22/model.pt",
+      "sha256": "7f042abb41fe2aef1b64898b43e6d28cf60838291cd0a1effe587d154285c354"
+    },
+    {
+      "path": "runs/temporal_borg_gru_seed2/development20_22/scaler.npz",
+      "sha256": "c3b04bdb1eb726722d4fdfd0b5c92792988783831a9fbdc1e1242ccf71e89859"
+    },
+    {
+      "path": "runs/temporal_borg_mixer_seed0/development20_22/manifest.json",
+      "sha256": "ccfe7c50df075ce6a5862e11788d06f3138b467b076ca0340f32bdfaf3b96922"
+    },
+    {
+      "path": "runs/temporal_borg_mixer_seed0/development20_22/model.pt",
+      "sha256": "b889f26ec36e2ba52fe914ee7e00a5e6325ea4a3f07991cd4f8a85c407705719"
+    },
+    {
+      "path": "runs/temporal_borg_mixer_seed0/development20_22/scaler.npz",
+      "sha256": "c3b04bdb1eb726722d4fdfd0b5c92792988783831a9fbdc1e1242ccf71e89859"
+    },
+    {
+      "path": "runs/temporal_borg_mixer_seed1/development20_22/manifest.json",
+      "sha256": "ab5912f6c2388dbb0e7980c4d3faef7eaaf0dbfa03cb3dd6580d0a0e0d5a8e52"
+    },
+    {
+      "path": "runs/temporal_borg_mixer_seed1/development20_22/model.pt",
+      "sha256": "2d088a5dda70e39be42366f3c52544875f180e0aa2ca47094dc8acd84c5919d9"
+    },
+    {
+      "path": "runs/temporal_borg_mixer_seed1/development20_22/scaler.npz",
+      "sha256": "c3b04bdb1eb726722d4fdfd0b5c92792988783831a9fbdc1e1242ccf71e89859"
+    },
+    {
+      "path": "runs/temporal_borg_mixer_seed2/development20_22/manifest.json",
+      "sha256": "47687fc2500282bf551c3f779f5a901ea80140f7b221135ef4e49b2bc9a379ba"
+    },
+    {
+      "path": "runs/temporal_borg_mixer_seed2/development20_22/model.pt",
+      "sha256": "a3cd1e548bb2e42439ce30775838117a2b843f7793300f33c15b04a111c1a06a"
+    },
+    {
+      "path": "runs/temporal_borg_mixer_seed2/development20_22/scaler.npz",
+      "sha256": "c3b04bdb1eb726722d4fdfd0b5c92792988783831a9fbdc1e1242ccf71e89859"
+    },
+    {
+      "path": "runs/temporal_borg_mlp_seed0/development20_22/manifest.json",
+      "sha256": "8e82b150ce8bb9f7a1967cd1a2083b24bf32cc83c72f8b8577521df2e651c431"
+    },
+    {
+      "path": "runs/temporal_borg_mlp_seed0/development20_22/model.pt",
+      "sha256": "5eaf4872168ef95d1a93fd71e2bdc25867fafafd7d4a134a92ee008c24f620d0"
+    },
+    {
+      "path": "runs/temporal_borg_mlp_seed0/development20_22/scaler.npz",
+      "sha256": "c3b04bdb1eb726722d4fdfd0b5c92792988783831a9fbdc1e1242ccf71e89859"
+    },
+    {
+      "path": "runs/temporal_borg_mlp_seed1/development20_22/manifest.json",
+      "sha256": "4833680d61300e0ac3a29dc3f316613b98aaafb3fabc7b4174fdcd3041bf422c"
+    },
+    {
+      "path": "runs/temporal_borg_mlp_seed1/development20_22/model.pt",
+      "sha256": "d2b37ce3bbfdaa2b4557427e37ec3db548917098f08cea8dfc9a3dd69a5246d1"
+    },
+    {
+      "path": "runs/temporal_borg_mlp_seed1/development20_22/scaler.npz",
+      "sha256": "c3b04bdb1eb726722d4fdfd0b5c92792988783831a9fbdc1e1242ccf71e89859"
+    },
+    {
+      "path": "runs/temporal_borg_mlp_seed2/development20_22/manifest.json",
+      "sha256": "4611c6829c7639f05b11a4db1e9c37b48b38afc24bcc701ffdeeea1211a80080"
+    },
+    {
+      "path": "runs/temporal_borg_mlp_seed2/development20_22/model.pt",
+      "sha256": "048a168ec13fbd822af5df33e3757d1eed5633115bc146799d5fb8b4792d682b"
+    },
+    {
+      "path": "runs/temporal_borg_mlp_seed2/development20_22/scaler.npz",
+      "sha256": "c3b04bdb1eb726722d4fdfd0b5c92792988783831a9fbdc1e1242ccf71e89859"
+    },
+    {
+      "path": "runs/temporal_bpi_gru_seed0/development_october/manifest.json",
+      "sha256": "7cb061da37bce41fd1f4780ac1ce2bf5fd0bbcebe884d255fd5bbdde9e3b2515"
+    },
+    {
+      "path": "runs/temporal_bpi_gru_seed0/development_october/model.pt",
+      "sha256": "3383adb9f5c3ac6f35d8122f50b4e2f2ff2416ef2b0557bff7bd837465b5034e"
+    },
+    {
+      "path": "runs/temporal_bpi_gru_seed0/development_october/scaler.npz",
+      "sha256": "e138896bd150441512329fff96b3812b4b29f2519870b3a80a410c9f6c71f187"
+    },
+    {
+      "path": "runs/temporal_bpi_gru_seed1/development_october/manifest.json",
+      "sha256": "a676ec524e34ffe0699869a6022619474d3aaaabf8122160679a16e35b9b6ed6"
+    },
+    {
+      "path": "runs/temporal_bpi_gru_seed1/development_october/model.pt",
+      "sha256": "bce47d2c7f9219879f001e5e5f13f3878ea815d1897d822ed8b1b37ed708a25a"
+    },
+    {
+      "path": "runs/temporal_bpi_gru_seed1/development_october/scaler.npz",
+      "sha256": "e138896bd150441512329fff96b3812b4b29f2519870b3a80a410c9f6c71f187"
+    },
+    {
+      "path": "runs/temporal_bpi_gru_seed2/development_october/manifest.json",
+      "sha256": "4bcede6bb90bc6c2a0b0886df4527eecee51421822f911312325c6227a95adbe"
+    },
+    {
+      "path": "runs/temporal_bpi_gru_seed2/development_october/model.pt",
+      "sha256": "797712b1b8647fac3d55d189c64c19b93434793bcda2474316521d32e03eb68f"
+    },
+    {
+      "path": "runs/temporal_bpi_gru_seed2/development_october/scaler.npz",
+      "sha256": "e138896bd150441512329fff96b3812b4b29f2519870b3a80a410c9f6c71f187"
+    },
+    {
+      "path": "runs/temporal_bpi_mixer_seed0/development_october/manifest.json",
+      "sha256": "a5ea721be695eb017940d730a53e3a13f077e1e829c6642465dd800c042bbd60"
+    },
+    {
+      "path": "runs/temporal_bpi_mixer_seed0/development_october/model.pt",
+      "sha256": "848c622e9588d6a3cd8635e20b6836fba2d547c0db9a7ac4e3b8665f5ccd4571"
+    },
+    {
+      "path": "runs/temporal_bpi_mixer_seed0/development_october/scaler.npz",
+      "sha256": "e138896bd150441512329fff96b3812b4b29f2519870b3a80a410c9f6c71f187"
+    },
+    {
+      "path": "runs/temporal_bpi_mixer_seed1/development_october/manifest.json",
+      "sha256": "73ab4156c62bae845bf8dd4d512c9760adabec6dd04fb15f63684a93ef5442dd"
+    },
+    {
+      "path": "runs/temporal_bpi_mixer_seed1/development_october/model.pt",
+      "sha256": "60865699543c0320cd9ecf1cfe495524abab76213339eb43f53615a49dfa09b9"
+    },
+    {
+      "path": "runs/temporal_bpi_mixer_seed1/development_october/scaler.npz",
+      "sha256": "e138896bd150441512329fff96b3812b4b29f2519870b3a80a410c9f6c71f187"
+    },
+    {
+      "path": "runs/temporal_bpi_mixer_seed2/development_october/manifest.json",
+      "sha256": "59e736cefead61714cbe2b598761eaaea8331a94a1eea8f8fbf2087b93348794"
+    },
+    {
+      "path": "runs/temporal_bpi_mixer_seed2/development_october/model.pt",
+      "sha256": "b094958fbb915722961575f76a04134ca4d36b52b48c05ad64721b4cbd0e75b7"
+    },
+    {
+      "path": "runs/temporal_bpi_mixer_seed2/development_october/scaler.npz",
+      "sha256": "e138896bd150441512329fff96b3812b4b29f2519870b3a80a410c9f6c71f187"
+    },
+    {
+      "path": "runs/temporal_bpi_mlp_seed0/development_october/manifest.json",
+      "sha256": "c01190973fa9574ee91bd4df7173af15ecbf82352ac1e1ad0ea2edb6daf45248"
+    },
+    {
+      "path": "runs/temporal_bpi_mlp_seed0/development_october/model.pt",
+      "sha256": "53b1c75568917f36d7ecc41df3a7b56b51e20d08c496c0b88028044de033ea5e"
+    },
+    {
+      "path": "runs/temporal_bpi_mlp_seed0/development_october/scaler.npz",
+      "sha256": "e138896bd150441512329fff96b3812b4b29f2519870b3a80a410c9f6c71f187"
+    },
+    {
+      "path": "runs/temporal_bpi_mlp_seed1/development_october/manifest.json",
+      "sha256": "d939caac9076d5da13170c1d0b85c594bddbc216b07982962baf5135ab45dc70"
+    },
+    {
+      "path": "runs/temporal_bpi_mlp_seed1/development_october/model.pt",
+      "sha256": "a3f0601273cd03a14b413da42a54a05c52ffd033b5f9c8f97fdd434d72ab0354"
+    },
+    {
+      "path": "runs/temporal_bpi_mlp_seed1/development_october/scaler.npz",
+      "sha256": "e138896bd150441512329fff96b3812b4b29f2519870b3a80a410c9f6c71f187"
+    },
+    {
+      "path": "runs/temporal_bpi_mlp_seed2/development_october/manifest.json",
+      "sha256": "b5fd470550f8ceb1b8d1ede9e2be255c4c3ba3f36a7b723c427177dbfbe8c914"
+    },
+    {
+      "path": "runs/temporal_bpi_mlp_seed2/development_october/model.pt",
+      "sha256": "056f391cf2f0c8955b4d8425163a4686198d967b703d4e625c933c1f780ee5ec"
+    },
+    {
+      "path": "runs/temporal_bpi_mlp_seed2/development_october/scaler.npz",
+      "sha256": "e138896bd150441512329fff96b3812b4b29f2519870b3a80a410c9f6c71f187"
+    },
+    {
+      "path": "scripts/add_borg_event_history.py",
+      "sha256": "8e6f5305ac39bf96a8c9ce508e8bf0478ebce98da53d0686497bece1d8d45ab3"
+    },
+    {
+      "path": "scripts/aggregate_residual_baseline.py",
+      "sha256": "b2adc5c6db97a1258950980f43363bf6464ccb4ce8d9ab87dd99d4fdc126c30a"
+    },
+    {
+      "path": "scripts/audit_borg_dependence.py",
+      "sha256": "83daaecb3bcc166827fde0b393c5b5bcc9b270e29e417af375d9f9cea9c4cc9c"
+    },
+    {
+      "path": "scripts/audit_borg_transitions.py",
+      "sha256": "01bca9762dba9b272c3e4022b13c65d61a25b89082ecbec28b260e8774f22e5d"
+    },
+    {
+      "path": "scripts/audit_gpu_scenarios.py",
+      "sha256": "481513679e5a6e6d832ce05f0bf826b48c072b588a4459c30a50be399ee34504"
+    },
+    {
+      "path": "scripts/audit_marginal_calibration.py",
+      "sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2"
+    },
+    {
+      "path": "scripts/audit_noise_incidence.py",
+      "sha256": "acd707b3c2264c35950582a5a3c753eea20b07484d48ae833ee7b593913be7c1"
+    },
+    {
+      "path": "scripts/audit_temporal_inference.py",
+      "sha256": "eb23fcbe6cb97797f168bef8e9a2a6d9b49f9aeb35f1a47001a0126cf40329f8"
+    },
+    {
+      "path": "scripts/build_borg_cohorts.py",
+      "sha256": "47585b292fbcf1642d93d8456afda21ff9aa3dcec25e98e4a4fdb9c83741d239"
+    },
+    {
+      "path": "scripts/build_borg_pilot.py",
+      "sha256": "82025fe7db1ce04f110fb2503f1798795ca2599e5b57811cab155490bf92cf66"
+    },
+    {
+      "path": "scripts/build_bpi_cohorts.py",
+      "sha256": "998060aef697b8a1e52e4bbfe21467700997e38ecccf819d8b383a5cd707fe14"
+    },
+    {
+      "path": "scripts/build_bpi_pilot.py",
+      "sha256": "113eebe21aaa56ac68202fed9818efaaf3137d2626c27c742b290b563a2d4a71"
+    },
+    {
+      "path": "scripts/build_final_cohorts.py",
+      "sha256": "86f56f85760ccf8efc22dfb46f9121460186d8cd219d76bce508b21fe102bf34"
+    },
+    {
+      "path": "scripts/build_final_histories.py",
+      "sha256": "c24b8597d65b4afc8bda0e3b8ff4b226ef95310ef0a4a6cbecc7ffc413275e38"
+    },
+    {
+      "path": "scripts/build_paper_artifacts.py",
+      "sha256": "2300e362d4981e5502a7009777b663c1b780a9db96fc27f1e7edaf74a76af45d"
+    },
+    {
+      "path": "scripts/build_temporal_histories.py",
+      "sha256": "40a1cbee440a7c5a0945e162fb7268376547359923ffc9981ca531153ac5df04"
+    },
+    {
+      "path": "scripts/evaluate_copula_pilot.py",
+      "sha256": "98bac71983eaa79165c98a7b0d08117812bafdc7353bbce3b34205459fe72192"
+    },
+    {
+      "path": "scripts/evaluate_development_suite.py",
+      "sha256": "eaa6d75ad09c64b4d1d838faefcf2f45471bd93c7b981adf60e88581f068716e"
+    },
+    {
+      "path": "scripts/evaluate_joint_development.py",
+      "sha256": "1653d283bf77319b347f5b2bf68c66f0f839f4d5e070948469f186f823d8b57e"
+    },
+    {
+      "path": "scripts/fetch_data.py",
+      "sha256": "82935a00312fbdba87437763779711a440e0347d561a74ad51781a2e1b903578"
+    },
+    {
+      "path": "scripts/final_diagnostics.py",
+      "sha256": "5e2f62db637c00ced274fea754144f242235e2f6f3124acc3d2f31290685cb96"
+    },
+    {
+      "path": "scripts/fit_borg_development_marginals.py",
+      "sha256": "38273f1d5c19355568e5c7db7331ddc0e9a11e98c5e96a8ecf440917cef8f4ff"
+    },
+    {
+      "path": "scripts/fit_borg_pilot.py",
+      "sha256": "1870529f41e8c73f86ba1189af3cb5084049ea3c278096c0df5271e4f64904ea"
+    },
+    {
+      "path": "scripts/freeze_final_protocol.py",
+      "sha256": "ca4009b1b366ca9345c7e16d2655c6c29fd8a797efa0368616a4790fa13a466a"
+    },
+    {
+      "path": "scripts/gpu_research.py",
+      "sha256": "0e2712458041fd63158824fa508b0822d9f0a8804cd425bc8c29314a48e8c884"
+    },
+    {
+      "path": "scripts/open_final_data.py",
+      "sha256": "a77401acf09016e7e22db81bb7b59435c9630089a80a53f3046d0dad82c868fc"
+    },
+    {
+      "path": "scripts/pilot_joint_scenarios.py",
+      "sha256": "7a33737d0a67ef1631f3d0549837dfc1085cd95f5bba9790deb70b22e504ccec"
+    },
+    {
+      "path": "scripts/predict_selected_cohorts.py",
+      "sha256": "f485287e3e8cb9317dd8804350d0b16f66b106794fe3aa99754d522e46ec218a"
+    },
+    {
+      "path": "scripts/prepare_borg.py",
+      "sha256": "aaeeeeb39c801fa811cd7ba352d94533d926acfdbf13ebcfe29eba1806362fa7"
+    },
+    {
+      "path": "scripts/prepare_bpi.py",
+      "sha256": "6a08e12d4adc384f75801d5a8d078b4ce66bed10ca0e018fff3e10df8485bfdd"
+    },
+    {
+      "path": "scripts/prepare_copula_pilot.py",
+      "sha256": "51522680f5da130b17451468d3b7cb7af2794fecb53a4256d4acdb79ac3a428d"
+    },
+    {
+      "path": "scripts/prepare_full_cohort_predictions.py",
+      "sha256": "335b1f9bf895d8437efa0d44df2585f37e0a46260d3398ac9816b700a08cd9e6"
+    },
+    {
+      "path": "scripts/prepare_joint_development.py",
+      "sha256": "7b3dbcc099da3040d5010fa85c6bda00d75d932649d2608da95f8667e126b94f"
+    },
+    {
+      "path": "scripts/run_development_suite.py",
+      "sha256": "b666c771f0edf7cac61d0f3b2d91be87ecf43c01c5b3269c77464a2a9945cea1"
+    },
+    {
+      "path": "scripts/select_development_marginals.py",
+      "sha256": "08fe7295055aafd38a1f76428eb6055b6b6ed8d1ba16e6e622d8222f0e1144ac"
+    },
+    {
+      "path": "scripts/summarize_joint_results.py",
+      "sha256": "ad653669611e48d13d1db21a8b9f41df963a9e586e64d9b1d1756cecd1692777"
+    },
+    {
+      "path": "scripts/train_copula_pilot.py",
+      "sha256": "2a5bbbe7e0bf2bc6748d53854af4af53600bae4c5b1ea1689b4c146182886090"
+    },
+    {
+      "path": "scripts/train_joint_development.py",
+      "sha256": "f4466db9ff189ddf01035ddcfa3cae430f9c13da4dc3673db9c54d95954e556d"
+    },
+    {
+      "path": "scripts/train_temporal_marginals.py",
+      "sha256": "1e0d3759b56ad67296183741782b992e46a90cc1af97a9bd5851088b2c9c4069"
+    }
+  ]
+}

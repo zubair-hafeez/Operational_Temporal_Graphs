@@ -1,0 +1,10 @@
+{"mode": "global", "epoch": 0, "train_pair_nll": 0.2757000498182218, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.18285265519832059, "elapsed_s": 1.630758214974776}
+{"mode": "global", "epoch": 5, "train_pair_nll": 0.274997264451881, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.1827522989480164, "elapsed_s": 5.290752491913736}
+{"mode": "global", "epoch": 10, "train_pair_nll": 0.27481410787622684, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.18283712866952279, "elapsed_s": 8.921840814989991}
+{"mode": "static", "epoch": 0, "train_pair_nll": 0.27421939790242744, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.18218467782324352, "elapsed_s": 9.656712254974991}
+{"mode": "static", "epoch": 5, "train_pair_nll": 0.27404941021310003, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.18178147797592492, "elapsed_s": 13.212634600000456}
+{"mode": "static", "epoch": 10, "train_pair_nll": 0.2738857857226531, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.1820070107052256, "elapsed_s": 16.852936352952383}
+{"mode": "context", "epoch": 0, "train_pair_nll": 0.2738792984009159, "mean_context_offset_squared": 0.04254009696858831, "validation_pair_nll": 0.18337755500806693, "elapsed_s": 18.064312043017708}
+{"mode": "context", "epoch": 5, "train_pair_nll": 0.2715692339851848, "mean_context_offset_squared": 0.08090591578483582, "validation_pair_nll": 0.1813327951519951, "elapsed_s": 23.558594446978532}
+{"mode": "context", "epoch": 10, "train_pair_nll": 0.27084533258248406, "mean_context_offset_squared": 0.08612711465093825, "validation_pair_nll": 0.1814263631066033, "elapsed_s": 29.027786582009867}
+[{"mode": "global", "best_epoch": 2, "validation_pair_nll": 0.1825644386650855, "parameters": 4, "elapsed_s": 8.944486715015955}, {"mode": "static", "best_epoch": 2, "validation_pair_nll": 0.18167444061939766, "parameters": 8, "elapsed_s": 16.87443074991461}, {"mode": "context", "best_epoch": 5, "validation_pair_nll": 0.1813327951519951, "parameters": 6860, "elapsed_s": 32.38335646491032}]

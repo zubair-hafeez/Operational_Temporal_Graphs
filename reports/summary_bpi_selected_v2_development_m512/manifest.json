@@ -1,0 +1,43 @@
+{
+  "config": {
+    "dataset": "bpi",
+    "data_tag": "selected_v2",
+    "draws": 512,
+    "period": "development"
+  },
+  "sources": [
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed0/full_cohort_scores_m512.parquet",
+      "sha256": "769ce4ab04bb0fbeae17b34b5f69ced7f4fec7ecc95ca511e76dd3ec1154d481"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed1/full_cohort_scores_m512.parquet",
+      "sha256": "7a937a2cb3d779e4a5050b5acd7bc73518376933a5516076fb53d3ad06fdb5b5"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed2/full_cohort_scores_m512.parquet",
+      "sha256": "cf92c475263810b509334aae19c0119e78511613f2c42f6c2a8f4aebe8e3c6c9"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed0/full_cohort_scores_m512.parquet",
+      "sha256": "bf728d88acae50dfa8a84a73dacdc0b33ac2ed39471a2a663d8a2ee3c2115101"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed1/full_cohort_scores_m512.parquet",
+      "sha256": "9742cee3b342816d4a3b70a18c0d4bbb2648532b8b011babda7d0bbab25e4b52"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed2/full_cohort_scores_m512.parquet",
+      "sha256": "7aa4cf13fee1ed9c4719fbd7bd814559e4686d2e82a4449f19eace0a12b8d952"
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_origins": 17,
+  "status": "complete",
+  "interpretation": "Development scores are selected on development and are not unbiased final estimates. Intervals are descriptive paired circular moving-block bootstrap intervals with seed-averaged forecast origins. No task-level IID or seed-as-new-data inference.",
+  "script_sha256": "edaf0a4d35bedcb88789bb2d7b14b51cc8a34c396b774dc44ee333727e4347e1"
+}

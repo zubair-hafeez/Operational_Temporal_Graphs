@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/evaluate_joint_development.py", line 74, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/evaluate_joint_development.py", line 33, in main
+    if a.device.startswith('cuda'):torch.cuda.reset_peak_memory_stats(a.device)
+  File "/home/zubair/zubairEnv/lib/python3.10/site-packages/torch/cuda/memory.py", line 344, in reset_peak_memory_stats
+    return torch._C._cuda_resetPeakMemoryStats(device)
+RuntimeError: Invalid device argument 

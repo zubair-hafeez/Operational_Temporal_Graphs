@@ -1,0 +1,274 @@
+{
+  "config": {
+    "dataset": "borg",
+    "history": false,
+    "family": "commonshock",
+    "seed": 1,
+    "draws": 512,
+    "data_tag": "selected_v2",
+    "device": "cuda:0",
+    "period": "development"
+  },
+  "macro_fraction_crps": {
+    "context": 0.01948696219812592,
+    "global": 0.020250371122180692,
+    "independent": 0.0280160304985226,
+    "static": 0.019615550084140412,
+    "static_permuted": 0.020006958894918384
+  },
+  "n_cohorts": 8,
+  "elapsed_s": 55.33150706603192,
+  "timings": [
+    {
+      "cutoff_us": 1728600000000,
+      "mode": "global",
+      "n": 145771,
+      "sampling_and_scoring_s": 1.694536947994493
+    },
+    {
+      "cutoff_us": 1728600000000,
+      "mode": "static",
+      "n": 145771,
+      "sampling_and_scoring_s": 1.5436592180049047
+    },
+    {
+      "cutoff_us": 1728600000000,
+      "mode": "context",
+      "n": 145771,
+      "sampling_and_scoring_s": 1.537578796967864
+    },
+    {
+      "cutoff_us": 1728600000000,
+      "mode": "independent",
+      "n": 145771,
+      "sampling_and_scoring_s": 1.5421213919762522
+    },
+    {
+      "cutoff_us": 1728600000000,
+      "mode": "static_permuted",
+      "n": 145771,
+      "sampling_and_scoring_s": 1.5310544030508026
+    },
+    {
+      "cutoff_us": 1750200000000,
+      "mode": "global",
+      "n": 122896,
+      "sampling_and_scoring_s": 1.2934208429651335
+    },
+    {
+      "cutoff_us": 1750200000000,
+      "mode": "static",
+      "n": 122896,
+      "sampling_and_scoring_s": 1.4408380950335413
+    },
+    {
+      "cutoff_us": 1750200000000,
+      "mode": "context",
+      "n": 122896,
+      "sampling_and_scoring_s": 1.3726526320679113
+    },
+    {
+      "cutoff_us": 1750200000000,
+      "mode": "independent",
+      "n": 122896,
+      "sampling_and_scoring_s": 1.3321777150267735
+    },
+    {
+      "cutoff_us": 1750200000000,
+      "mode": "static_permuted",
+      "n": 122896,
+      "sampling_and_scoring_s": 1.2947631630813703
+    },
+    {
+      "cutoff_us": 1771800000000,
+      "mode": "global",
+      "n": 118509,
+      "sampling_and_scoring_s": 1.3059009079588577
+    },
+    {
+      "cutoff_us": 1771800000000,
+      "mode": "static",
+      "n": 118509,
+      "sampling_and_scoring_s": 1.3033219670178369
+    },
+    {
+      "cutoff_us": 1771800000000,
+      "mode": "context",
+      "n": 118509,
+      "sampling_and_scoring_s": 1.2946264250203967
+    },
+    {
+      "cutoff_us": 1771800000000,
+      "mode": "independent",
+      "n": 118509,
+      "sampling_and_scoring_s": 1.3082478309515864
+    },
+    {
+      "cutoff_us": 1771800000000,
+      "mode": "static_permuted",
+      "n": 118509,
+      "sampling_and_scoring_s": 1.3016828909749165
+    },
+    {
+      "cutoff_us": 1793400000000,
+      "mode": "global",
+      "n": 117617,
+      "sampling_and_scoring_s": 1.255906828911975
+    },
+    {
+      "cutoff_us": 1793400000000,
+      "mode": "static",
+      "n": 117617,
+      "sampling_and_scoring_s": 1.2977940250420943
+    },
+    {
+      "cutoff_us": 1793400000000,
+      "mode": "context",
+      "n": 117617,
+      "sampling_and_scoring_s": 1.299166740034707
+    },
+    {
+      "cutoff_us": 1793400000000,
+      "mode": "independent",
+      "n": 117617,
+      "sampling_and_scoring_s": 1.3080192001070827
+    },
+    {
+      "cutoff_us": 1793400000000,
+      "mode": "static_permuted",
+      "n": 117617,
+      "sampling_and_scoring_s": 1.259530566050671
+    },
+    {
+      "cutoff_us": 1815000000000,
+      "mode": "global",
+      "n": 118559,
+      "sampling_and_scoring_s": 1.2852409509941936
+    },
+    {
+      "cutoff_us": 1815000000000,
+      "mode": "static",
+      "n": 118559,
+      "sampling_and_scoring_s": 1.2989492900669575
+    },
+    {
+      "cutoff_us": 1815000000000,
+      "mode": "context",
+      "n": 118559,
+      "sampling_and_scoring_s": 1.28978510806337
+    },
+    {
+      "cutoff_us": 1815000000000,
+      "mode": "independent",
+      "n": 118559,
+      "sampling_and_scoring_s": 1.294752632966265
+    },
+    {
+      "cutoff_us": 1815000000000,
+      "mode": "static_permuted",
+      "n": 118559,
+      "sampling_and_scoring_s": 1.296000199043192
+    },
+    {
+      "cutoff_us": 1836600000000,
+      "mode": "global",
+      "n": 118909,
+      "sampling_and_scoring_s": 1.2993352139601484
+    },
+    {
+      "cutoff_us": 1836600000000,
+      "mode": "static",
+      "n": 118909,
+      "sampling_and_scoring_s": 1.3105399770429358
+    },
+    {
+      "cutoff_us": 1836600000000,
+      "mode": "context",
+      "n": 118909,
+      "sampling_and_scoring_s": 1.294543809024617
+    },
+    {
+      "cutoff_us": 1836600000000,
+      "mode": "independent",
+      "n": 118909,
+      "sampling_and_scoring_s": 1.3033498999429867
+    },
+    {
+      "cutoff_us": 1836600000000,
+      "mode": "static_permuted",
+      "n": 118909,
+      "sampling_and_scoring_s": 1.3052034470019862
+    },
+    {
+      "cutoff_us": 1858200000000,
+      "mode": "global",
+      "n": 141263,
+      "sampling_and_scoring_s": 1.4546092309756204
+    },
+    {
+      "cutoff_us": 1858200000000,
+      "mode": "static",
+      "n": 141263,
+      "sampling_and_scoring_s": 1.4549911050125957
+    },
+    {
+      "cutoff_us": 1858200000000,
+      "mode": "context",
+      "n": 141263,
+      "sampling_and_scoring_s": 1.4451741989469156
+    },
+    {
+      "cutoff_us": 1858200000000,
+      "mode": "independent",
+      "n": 141263,
+      "sampling_and_scoring_s": 1.4581877399468794
+    },
+    {
+      "cutoff_us": 1858200000000,
+      "mode": "static_permuted",
+      "n": 141263,
+      "sampling_and_scoring_s": 1.4656146469060332
+    },
+    {
+      "cutoff_us": 1879800000000,
+      "mode": "global",
+      "n": 129126,
+      "sampling_and_scoring_s": 1.3409768299898133
+    },
+    {
+      "cutoff_us": 1879800000000,
+      "mode": "static",
+      "n": 129126,
+      "sampling_and_scoring_s": 1.350748035009019
+    },
+    {
+      "cutoff_us": 1879800000000,
+      "mode": "context",
+      "n": 129126,
+      "sampling_and_scoring_s": 1.3516127350740135
+    },
+    {
+      "cutoff_us": 1879800000000,
+      "mode": "independent",
+      "n": 129126,
+      "sampling_and_scoring_s": 1.3592828940600157
+    },
+    {
+      "cutoff_us": 1879800000000,
+      "mode": "static_permuted",
+      "n": 129126,
+      "sampling_and_scoring_s": 1.3637617978965864
+    }
+  ],
+  "peak_host_rss_kib": 2050824,
+  "peak_torch_allocated_bytes": 689249792,
+  "gpu_name": "NVIDIA RTX A6000",
+  "macro_definition": "Equal cutoff, projection type, horizon, and group weights; population projection groups by current state. Relation groups require >=5 entities.",
+  "decision_proxy": "Reserve capacity for unexited current cohort at quantiles .75/.9 under normalized asymmetric loss ratios 3/9. No causal policy or currency claim.",
+  "script_sha256": "1653d283bf77319b347f5b2bf68c66f0f839f4d5e070948469f186f823d8b57e",
+  "scoring_module_sha256": "663f08dba185ffc4984d651631805f0480e38d408922ff07a4a07b6b188696e0",
+  "sampler_module_sha256": "fce65d84e016d49d004b2a4ebe558b4181a126bd3cad4ebb1b8d7dbce5c224c5",
+  "torch_sampler_sha256": "e97bf41347fc96d76af67ce51e7c6d2b546f6f315f6eadbeabd20762a2ea31b4",
+  "scores_sha256": "4dbe3b626f27c2581890d4a8c7d076ecd4255e7abb93b594608e69ff579c4349",
+  "training_manifest_sha256": "1f85c4a0e7e9ac171efc41c9a065ca1e9dc031bc73238fa8c29e7706160be0c1"
+}

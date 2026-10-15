@@ -1,0 +1,28 @@
+{
+  "config": {
+    "dataset": "bpi",
+    "history": false,
+    "family": "gaussian",
+    "seed": 2,
+    "draws": 512,
+    "data_tag": "selected_v2",
+    "device": "cpu"
+  },
+  "macro_fraction_crps": {
+    "context": 0.0409042254515628,
+    "global": 0.040791360473132754,
+    "independent": 0.04324370120675282,
+    "static": 0.04091056723931352,
+    "static_permuted": 0.04137709418842136
+  },
+  "n_cohorts": 17,
+  "elapsed_s": 8.58932101400569,
+  "macro_definition": "Equal cutoff, projection type, horizon, and group weights; population projection groups by current state. Relation groups require >=5 entities.",
+  "decision_proxy": "Reserve capacity for unexited current cohort at quantiles .75/.9 under normalized asymmetric loss ratios 3/9. No causal policy or currency claim.",
+  "script_sha256": "dbd5dda994d8a9f24370509d032c467cb065df21f56dcb72a4d7949536ff90b8",
+  "scoring_module_sha256": "78f579373bca0b5035aea6368598b7fe01bbee755db10924b3f5e16cbe13ff4f",
+  "sampler_module_sha256": "fce65d84e016d49d004b2a4ebe558b4181a126bd3cad4ebb1b8d7dbce5c224c5",
+  "torch_sampler_sha256": "e97bf41347fc96d76af67ce51e7c6d2b546f6f315f6eadbeabd20762a2ea31b4",
+  "scores_sha256": "cf92c475263810b509334aae19c0119e78511613f2c42f6c2a8f4aebe8e3c6c9",
+  "training_manifest_sha256": "d4d31d83c4bc271796969f678e5c33af425eb0e21320c6b13bf0590112dd6957"
+}

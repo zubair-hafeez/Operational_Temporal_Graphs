@@ -5,23 +5,28 @@ import hashlib
 import json
 from pathlib import Path
 import time
+import sys
 import numpy as np
 import pandas as pd
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 COLUMNS=['time_us','missing','job_id','task_index','machine_id','event_type','user','sched_class','priority','cpu','memory','disk','different_machine']
 KEEP=['time_us','missing','job_id','task_index','machine_id','event_type','sched_class','priority','cpu','memory']
 DTYPES={'time_us':'int64','missing':'float32','job_id':'int64','task_index':'int32','machine_id':'Int64','event_type':'int8','sched_class':'float32','priority':'int8','cpu':'float32','memory':'float32'}
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--through-days',type=float,default=7)
+    p=argparse.ArgumentParser();p.add_argument('--through-days',type=float,default=7);p.add_argument('--frozen-final',action='store_true')
     args=p.parse_args()
-    if not 0<args.through_days<=22:
-        raise ValueError('Development preparation restricted to <=22 days; final access requires frozen evaluation machinery.')
+    if not 0<args.through_days<=29:raise ValueError('Trace horizon must be in (0,29] days')
+    if args.through_days>22:
+        if not args.frozen_final:raise ValueError('Final preparation requires --frozen-final and a verified frozen protocol')
+        from otg.protocol import verify_final_protocol
+        verify_final_protocol(ROOT)
     stop=int((600+args.through_days*86400)*1e6)
     name=f'borg_prefix_{args.through_days:g}d'
-    out=ROOT/'data/processed'/name;out.mkdir(parents=True,exist_ok=True)
+    out=ROOT/'data/processed'/name;out.mkdir(parents=True,exist_ok=False)
     frames=[];sources=[];rid=0;start=time.monotonic()
     for path in sorted((ROOT/'data/raw/borg/task_events').glob('*.csv.gz')):
         df=pd.read_csv(path,names=COLUMNS,usecols=KEEP,dtype=DTYPES)
@@ -35,8 +40,13 @@ def main():
         if len(sources)%25==0:
             print(json.dumps({'parts':len(sources),'rows':sum(len(x) for x in frames),'elapsed_s':round(time.monotonic()-start,2)}),flush=True)
         if max_time>=stop:break
-    if not frames or max_time<stop:
-        raise RuntimeError('Insufficient downloaded data for requested prefix')
+    if not frames:raise RuntimeError('No events in requested prefix')
+    if max_time<stop:
+        # The archive's last event can precede the nominal 29-day endpoint.
+        # Record the actual observed boundary; complete horizon labels must
+        # still fit before it. Never invent an additional observation period.
+        if args.frozen_final and len(sources)==500:stop=max_time+1
+        else:raise RuntimeError('Insufficient downloaded data for requested prefix')
     df=pd.concat(frames,ignore_index=True);del frames
     was_sorted=bool(df.time_us.is_monotonic_increasing)
     if not was_sorted:df=df.sort_values(['time_us','source_row'],kind='stable').reset_index(drop=True)

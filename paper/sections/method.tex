@@ -1,0 +1,137 @@
+\section{Joint forecasts for observed operational cohorts}
+At forecast origin $t$, let $V_t$ be the set of currently active entities and
+$\mathcal H_t$ the event history observable by $t$. Each entity has a current
+state $s_i(t)$ and zero or more observed relation memberships $g_r(i,t)$.
+Memberships may be shared across states. A missing membership creates no shared
+factor. Identities index the observed incidence structure; they are not learned
+identity embeddings.
+
+For ordered horizons $h_1<\cdots<h_K$, define
+$Y_{ik}=\mathbb{1}\{T_i\leq t+h_k\}$, where $T_i$ is the first exit from the
+entity's current task state or, in the workflow application, its first qualifying
+application-resolution event. We estimate the conditional joint law of these
+outcomes for the entire current cohort. This is a discrete-horizon forecast:
+each draw assigns an exit bin or survival beyond $h_K$. It does not specify
+within-bin event times, subsequent returns, or outcomes for future arrivals.
+
+An individual forecaster supplies a monotone CDF
+$F_{ik}=\Pr(T_i\leq t+h_k\mid\mathcal H_t)$.
+Individual predictive accuracy does not determine collective uncertainty.
+For a known group $A\subseteq V_t$, its exit count is
+$C_{Ak}=\sum_{i\in A}Y_{ik}$ and
+\begin{equation}
+ \operatorname{Var}(C_{Ak}\mid\mathcal H_t)
+ =\sum_{i\in A}F_{ik}(1-F_{ik})
+ +2\sum_{i<j,\,i,j\in A}\operatorname{Cov}(Y_{ik},Y_{jk}\mid\mathcal H_t).
+\end{equation}
+This standard decomposition motivates a controlled comparison: keep every
+$F_{ik}$ fixed and vary only the joint sampling law.
+
+\subsection{Observed-incidence factor sampling}
+For each forecast draw, independently sample a global factor $Z_0$, one factor
+$Z_{r,g}$ per observed relation group, and a private factor $\epsilon_i$ per
+entity. The Gaussian construction is
+\begin{equation}
+ Z_i=a_iZ_0+\sum_{r=1}^{R}b_{ir}Z_{r,g_r(i,t)}+c_i\epsilon_i,
+ \qquad a_i^2+\sum_r b_{ir}^2+c_i^2=1,
+ \qquad U_i=\Phi(Z_i).
+\end{equation}
+All underlying factors are standard normal. The nonnegative loading
+parameterization models positive residual association. It cannot express
+general negative dependence. When a relation is unavailable, its squared
+loading is transferred to the private component. Consequently, each $U_i$ is
+uniform, independently of the cohort size and incidence pattern. Setting
+$Y_{ik}^{(m)}=\mathbb{1}\{U_i^{(m)}\leq F_{ik}\}$ preserves the supplied
+marginals and makes every sampled trajectory monotone across horizons.
+The same shared draws are reused across streamed entity chunks.
+
+We also evaluate a classical common-shock construction related to
+Marshall--Olkin models \cite{marshall1967}. With independent unit-rate
+exponential factors $E_0,E_{r,g},E_i$ and nonnegative weights summing to one,
+\begin{equation}
+ L_i=\min\left\{\frac{E_0}{a_i^2},
+       \left\{\frac{E_{r,g_r(i,t)}}{b_{ir}^2}\right\}_{r=1}^{R},
+       \frac{E_i}{c_i^2}\right\},
+ \qquad U_i=1-\exp(-L_i).
+\end{equation}
+A zero-weight factor has an infinite race time. Since the minimum has unit
+exponential rate, this construction also preserves each individual CDF. Neither
+construction is a new copula family or an identified causal shock model.
+
+The independent comparison sets the private weight to one. The global model
+learns state-specific global/private weights. The static relation model adds
+state-specific weights for each relation type. The context model adds a
+two-layer, width-32 MLP offset to the state-specific logits, with bounded offsets
+and a quadratic shrinkage penalty. A softmax allocates variance weights, with
+at least $0.02$ private mass. This prevents perfect dependence in fitted models.
+Sampling costs are linear in the number of entities and observed memberships
+per draw; no dense entity-by-entity covariance matrix is formed.
+
+\subsection{Fitting without in-sample forecast residuals}
+We fit dependence on chronological forward-fold predictions: every training
+CDF was produced by an individual model trained before that target period,
+with any calibrator fitted in a separate earlier window. At each origin we
+sample uniform entity pairs, uniform eligible relation-group pairs, and
+group-size-weighted pairs. Sampling uses observed membership and group size,
+not future outcomes. Pairs may span current states.
+
+Training minimizes the composite negative log probability of the observed
+binary pair, with independently sampled horizon indices for its two entities.
+The Gaussian pair law uses the correlation implied by shared factors and a
+bivariate normal CDF; the common-shock pair law has an analytic expression.
+Validation uses a fixed balanced pattern over the $K^2$ horizon pairs. Pair
+likelihood is a tractable fitting objective; it does not guarantee optimal
+aggregate scores or operational decisions. Dependence parameters can absorb
+individual-model misspecification as well as residual association.
+
+\subsection{A control on relation incidence}
+For a fitted static model, we permute relation memberships within current state
+and half-unit logit-risk bins of the last-horizon marginal prediction. Known
+group sizes within each stratum, all individual CDFs, and fitted loading weights
+are preserved. Evaluation groups retain their true observed memberships.
+Thus, only the identity of entities sharing relation noise changes. A benefit
+from true incidence supports the predictive usefulness of this grouping under
+the fitted model; it does not establish that changing an actual job or handler
+assignment would cause the same effect.
+
+\section{Evaluation quantities}
+For each origin, we score current-state population counts and observed relation
+groups containing at least five entities. Scores are normalized by the group's
+known current size. We average equally across groups within a projection,
+horizons, projection types, and forecast origins. We also report projections
+separately so a population-level benefit cannot conceal a relation-level loss.
+
+For $M$ independent scenario draws, the fair ensemble CRPS
+\cite{ferro2014,gneiting2007} is
+\begin{equation}
+ \widehat{\operatorname{CRPS}}(X,y)=
+ \frac{1}{M}\sum_m |X^{(m)}-y|
+ -\frac{1}{2M(M-1)}\sum_{m\ne n}|X^{(m)}-X^{(n)}|.
+\end{equation}
+We additionally report 90\% central interval coverage, width, and interval
+score; an energy score for each group's normalized multihorizon trajectory;
+and CRPS for the fraction of groups in which at least 20\% of the current cohort
+exits. These are evaluations of specified operational projections, not a claim
+that a small collection of scores identifies the full high-dimensional law.
+
+To expose decision tradeoffs, let $R_{Ak}=|A|-C_{Ak}$ be the number of current
+members that have not exited. For an under/over penalty ratio $r$, select the
+$r/(r+1)$ forecast quantile $b$ of $R_{Ak}$ and evaluate
+\begin{equation}
+ \ell_r(b,R_{Ak})=
+ \frac{r\max(R_{Ak}-b,0)+\max(b-R_{Ak},0)}{|A|},
+ \qquad r\in\{3,9\}.
+\end{equation}
+This is a reserve-cost proxy for the current cohort. It is not measured
+currency, a staffing policy, or a counterfactual deployment estimate. Future
+arrivals and subsequent state returns are outside its scope. Distributional
+score improvements and improvements under this particular loss are reported
+separately.
+
+We average random-seed repetitions within each forecast origin before paired
+time-block resampling. Seeds and individual tasks are not additional independent
+temporal observations. The final analysis uses circular moving blocks of one
+and two days for the cluster trace and 14 and 28 days for the workflow trace,
+reporting when the available span is too short to support a chosen block size.
+The resulting intervals are descriptive approximations for finite dependent
+traces, rather than guarantees of performance at other sites.

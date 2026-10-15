@@ -1,0 +1,18 @@
+{"cohort": "cohort_1475323200000000", "n": 2223, "elapsed_s": 0.5183494800003245}
+{"cohort": "cohort_1475409600000000", "n": 2212, "elapsed_s": 1.0217393890488893}
+{"cohort": "cohort_1475496000000000", "n": 2210, "elapsed_s": 1.5269431499764323}
+{"cohort": "cohort_1475582400000000", "n": 2220, "elapsed_s": 2.036327722016722}
+{"cohort": "cohort_1475668800000000", "n": 2246, "elapsed_s": 2.5481748760212213}
+{"cohort": "cohort_1475755200000000", "n": 2241, "elapsed_s": 3.059445647057146}
+{"cohort": "cohort_1475841600000000", "n": 2256, "elapsed_s": 3.5802288450067863}
+{"cohort": "cohort_1475928000000000", "n": 2258, "elapsed_s": 4.097263340954669}
+{"cohort": "cohort_1476014400000000", "n": 2243, "elapsed_s": 4.611362698022276}
+{"cohort": "cohort_1476100800000000", "n": 2238, "elapsed_s": 5.12951925303787}
+{"cohort": "cohort_1476187200000000", "n": 2237, "elapsed_s": 5.639204776030965}
+{"cohort": "cohort_1476273600000000", "n": 2271, "elapsed_s": 6.150935017969459}
+{"cohort": "cohort_1476360000000000", "n": 2269, "elapsed_s": 6.667880133958533}
+{"cohort": "cohort_1476446400000000", "n": 2244, "elapsed_s": 7.182825285941362}
+{"cohort": "cohort_1476532800000000", "n": 2238, "elapsed_s": 7.695197536959313}
+{"cohort": "cohort_1476619200000000", "n": 2244, "elapsed_s": 8.206791489967145}
+{"cohort": "cohort_1476705600000000", "n": 2257, "elapsed_s": 8.73315966303926}
+{"config": {"dataset": "bpi", "history": false, "family": "gaussian", "seed": 0, "draws": 512, "data_tag": "selected_v2", "device": "cpu"}, "macro_fraction_crps": {"context": 0.040944518135706105, "global": 0.040753438226837246, "independent": 0.04327370990728884, "static": 0.040981170670715626, "static_permuted": 0.04147150716058659}, "n_cohorts": 17, "elapsed_s": 8.74234489002265, "macro_definition": "Equal cutoff, projection type, horizon, and group weights; population projection groups by current state. Relation groups require >=5 entities.", "decision_proxy": "Reserve capacity for unexited current cohort at quantiles .75/.9 under normalized asymmetric loss ratios 3/9. No causal policy or currency claim.", "script_sha256": "dbd5dda994d8a9f24370509d032c467cb065df21f56dcb72a4d7949536ff90b8", "scoring_module_sha256": "78f579373bca0b5035aea6368598b7fe01bbee755db10924b3f5e16cbe13ff4f", "sampler_module_sha256": "fce65d84e016d49d004b2a4ebe558b4181a126bd3cad4ebb1b8d7dbce5c224c5", "torch_sampler_sha256": "e97bf41347fc96d76af67ce51e7c6d2b546f6f315f6eadbeabd20762a2ea31b4", "scores_sha256": "769ce4ab04bb0fbeae17b34b5f69ced7f4fec7ecc95ca511e76dd3ec1154d481", "training_manifest_sha256": "b81a5ec030dab5b55160e9fe87c7b7f6298f553b55a1e8b9887be762a45e3005"}

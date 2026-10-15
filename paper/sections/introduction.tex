@@ -1,0 +1,47 @@
+\section{Introduction}
+A cluster operator sees a population of pending and running tasks. A workflow
+analyst sees a population of unresolved applications. In both cases, a useful
+question concerns their collective future: how many of the entities active now
+will remain in their current state, and how uncertain is that count? Related
+entities can evolve together because they belong to the same job, use the same
+machine, or share a recent handler. A collection of accurate individual
+probabilities does not specify this joint uncertainty.
+
+Temporal graph learning provides useful representations of observed event
+histories. However, an individual prediction benchmark and an operational
+scenario benchmark answer different questions. Improving an entity's event
+probability need not improve the distribution of a group count. Conversely,
+adding shared random factors may improve a count distribution while leaving
+every individual probability unchanged. Even an improvement in a proper
+distributional score need not improve a particular asymmetric decision loss.
+An application study should measure these distinctions directly.
+
+We construct a common forecasting task on two public operational logs:
+Google's 2011 cluster trace and BPI Challenge 2017. At a timestamp, an adapter
+reconstructs the currently observed entities and typed relation memberships.
+The target is their joint first-exit or resolution trajectory at four future
+horizons. The entire current population is evaluated, including entities that
+have not exited by the longest horizon. Future arrivals, eventual endpoints,
+and future assignments are not supplied to the forecaster. This yields a
+shared task across applications without assuming that a machine and a workflow
+handler represent the same physical constraint.
+
+Our study separates individual forecasts from the coupling of their outcomes.
+We first compare tree predictors and temporal Mixer, GRU, and MLP ensembles.
+We then hold the selected individual CDFs fixed while comparing independent,
+global, typed relation, and context-dependent joint sampling. Classical
+Gaussian and common-shock factors make this comparison computationally
+feasible for changing populations. A risk-stratified incidence permutation
+tests the role of observed relations. A historical aggregate-error bootstrap
+provides a deliberately simple competitor that can correct group-level bias
+but does not generate a consistent entity-level joint law.
+
+The contribution is an application benchmark and controlled empirical study,
+with reproducible adapters and a scalable reference implementation. It is not
+a new copula family, a discovery that operational entities are dependent, or a
+complete event-log simulator. The benchmark makes three questions separately
+testable: whether temporal graph information improves individual forecasts;
+whether observed relations improve collective forecasts when individual
+probabilities are identical; and whether any distributional improvement
+survives an operational loss and a future-period evaluation. Preserving negative
+answers is part of the benchmark's purpose.

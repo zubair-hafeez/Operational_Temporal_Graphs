@@ -1,9 +1,9 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
   "status": "active",
-  "phase": "full_cohort_joint_validation_and_temporal_neural_controls",
-  "final_test_opened": false,
-  "research_direction": "behavior-preserving temporal graph generation",
+  "phase": "frozen_final_data_preparation",
+  "final_test_opened": true,
+  "research_direction": "Joint first-exit forecasting for changing operational cohorts on temporal graphs",
   "datasets": [
     "Google ClusterData2011-2",
     "BPI Challenge 2017"
@@ -23,12 +23,9 @@
   "interpreter": "/home/zubair/zubairEnv/bin/python",
   "torch_version": "2.5.1+cu124",
   "next_actions": [
-    "finish temporal Mixer/GRU/MLP forward folds and multi-seed controls",
-    "compare full-population dependence and incidence controls with strongest marginal forecasts",
-    "add empirical/resampling and direct aggregate controls",
-    "quantify block uncertainty and operational proxy utility",
-    "freeze final protocol before preparing untouched final periods",
-    "write and compile complete evidence-backed manuscript and reproducibility package"
+    "Finish Borg selected-v2 score summary and freeze final protocol",
+    "Prepare and evaluate untouched final cohorts, including direct aggregate residual baseline",
+    "Complete paper figures, evidence-linked results, PDF and reproducibility audit"
   ],
   "results": [
     "All 500 Borg task-event shards and BPI archive acquired with checksums.",
@@ -45,6 +42,16 @@
     "Full joint models use frozen out-of-fold CDFs and simultaneous global/job/machine or handler factors, one uniform per entity across four horizons.",
     "Full development Gaussian macro fraction CRPS: Borg independent .023049, global .018615, static .018238, context .018227; BPI independent .043650, global .038720, static .039012, context .039699. Only 8 Borg / 17 BPI development cutoffs; final remains untouched.",
     "Recent-event retrieval finished: 115.4 million Borg events, task/job/machine last-16 histories; BPI case/handler histories. 29 local tests passed.",
-    "BPI Mixer seed0 full development integrated Brier .097513, improving HGB personal .100393. Borg Mixer seed0 training active."
-  ]
+    "BPI Mixer seed0 full development integrated Brier .097513, improving HGB personal .100393. Borg Mixer seed0 training active.",
+    "34 local tests plus GPU sampling audit passed; integer GPU scenario aggregation reduces full Borg evaluation from about 8 minutes to 55 seconds for eight development cohorts.",
+    "All BPI temporal baselines (Mixer/GRU/MLP, three seeds, four forward folds) complete. Selected three-seed temperature-calibrated Mixer mean by development IBrier .0979566.",
+    "BPI selected-v2 three-seed joint evaluation complete: Gaussian independent macro CRPS .0432585 vs global .0408549 and static .0409496. Gaussian global reserve-cost ratio9 worsens .0953152 to .1184485. Common-shock macro CRPS is worse than independence.",
+    "Borg history-v1 three-seed Gaussian/common-shock full cohort evaluations completed; selected-v2 awaits final neural control fits.",
+    "Project-specific GPU runner persistent prefix saved; use it without shell redirects for all future GPU work.",
+    "All temporal baselines complete, 3 architectures x 3 seeds x 4 folds per dataset. Borg selects original HGB global for pending and relational for running; BPI selects temperature-calibrated Mixer ensemble.",
+    "Historical aggregate residual baseline completed before final: leave-one-origin-out development macro CRPS Borg .0252772; BPI .0359439. It changes means and is not entity-coherent.",
+    "36 local tests passed after aggregate-score refactoring. Closely related Avramenko et al. 2026 current-state simulation/UQ cited explicitly; no claim that operational initialization or UQ is novel."
+  ],
+  "final_opened_utc": "2026-10-15T00:44:25.718025+00:00",
+  "final_protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77"
 }

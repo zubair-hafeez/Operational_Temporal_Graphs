@@ -1,0 +1,241 @@
+projection,family,metric,model,reference,mean_difference,relative_improvement,n_origins,block_length_origins,ci95_low,ci95_high,bootstrap_repeats,seed,uncertainty_note
+macro,gaussian,fraction_crps,global,independent,-0.004530525757911322,0.1964582861130681,8,4,-0.005806364404626534,-0.003254687111196109,10000.0,20261014.0,
+macro,gaussian,fraction_crps,global,independent,-0.004530525757911322,0.1964582861130681,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,fraction_crps,static,independent,-0.004877286020836476,0.21149493540866762,8,4,-0.006074836074796217,-0.003679735966876735,10000.0,20261014.0,
+macro,gaussian,fraction_crps,static,independent,-0.004877286020836476,0.21149493540866762,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,fraction_crps,static,global,-0.0003467602629251543,0.018712966652177244,8,4,-0.0005576752779733005,-0.0001358452478770081,10000.0,20261014.0,
+macro,gaussian,fraction_crps,static,global,-0.0003467602629251543,0.018712966652177244,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,fraction_crps,context,static,-6.132288756454524e-05,0.0033724060255447877,8,4,-0.00016913474381930198,4.6488968690211506e-05,10000.0,20261014.0,
+macro,gaussian,fraction_crps,context,static,-6.132288756454524e-05,0.0033724060255447877,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,fraction_crps,static,static_permuted,-0.0005150682999075474,0.02754554392381808,8,4,-0.0005280461662913482,-0.0005020904335237466,10000.0,20261014.0,
+macro,gaussian,fraction_crps,static,static_permuted,-0.0005150682999075474,0.02754554392381808,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,buffer_cost_ratio9,global,independent,-0.047727925605800935,0.5999334096732862,8,4,-0.06010916419482237,-0.035346687016779496,10000.0,20261014.0,
+macro,gaussian,buffer_cost_ratio9,global,independent,-0.047727925605800935,0.5999334096732862,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,buffer_cost_ratio9,static,independent,-0.049750739665171864,0.6253599020332635,8,4,-0.06186407868835411,-0.03763740064198962,10000.0,20261014.0,
+macro,gaussian,buffer_cost_ratio9,static,independent,-0.049750739665171864,0.6253599020332635,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,buffer_cost_ratio9,static,global,-0.0020228140593709356,0.06355565042112835,8,4,-0.0024915974540033374,-0.0015540306647385338,10000.0,20261014.0,
+macro,gaussian,buffer_cost_ratio9,static,global,-0.0020228140593709356,0.06355565042112835,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,buffer_cost_ratio9,context,static,6.305331429696463e-05,-0.0021155541696987155,8,4,-3.6922010205218286e-05,0.00016302863879914754,10000.0,20261014.0,
+macro,gaussian,buffer_cost_ratio9,context,static,6.305331429696463e-05,-0.0021155541696987155,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,buffer_cost_ratio9,static,static_permuted,-0.002102863411876977,0.06590499693026108,8,4,-0.0022393853944522473,-0.0019663414293017065,10000.0,20261014.0,
+macro,gaussian,buffer_cost_ratio9,static,static_permuted,-0.002102863411876977,0.06590499693026108,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,trajectory_energy,global,independent,-0.01425858604670214,0.21178723821049955,8,4,-0.01772041602943911,-0.010796756063965173,10000.0,20261014.0,
+macro,gaussian,trajectory_energy,global,independent,-0.01425858604670214,0.21178723821049955,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,trajectory_energy,static,independent,-0.015119467543490056,0.22457418034024904,8,4,-0.01843762391873354,-0.011801311168246573,10000.0,20261014.0,
+macro,gaussian,trajectory_energy,static,independent,-0.015119467543490056,0.22457418034024904,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,trajectory_energy,static,global,-0.0008608814967879146,0.01622270375414746,8,4,-0.0011863581770617704,-0.0005354048165140588,10000.0,20261014.0,
+macro,gaussian,trajectory_energy,static,global,-0.0008608814967879146,0.01622270375414746,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,trajectory_energy,context,static,2.9719698770151216e-05,-0.000569282025531161,8,4,-0.00026479820863044724,0.00032423760617074967,10000.0,20261014.0,
+macro,gaussian,trajectory_energy,context,static,2.9719698770151216e-05,-0.000569282025531161,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,gaussian,trajectory_energy,static,static_permuted,-0.0010586988807043327,0.019876339029822342,8,4,-0.0011059825969258405,-0.0010114151644828248,10000.0,20261014.0,
+macro,gaussian,trajectory_energy,static,static_permuted,-0.0010586988807043327,0.019876339029822342,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,fraction_crps,global,independent,-0.0040846424418018775,0.17714293328061329,8,4,-0.0051121524717737754,-0.0030571324118299796,10000.0,20261014.0,
+macro,commonshock,fraction_crps,global,independent,-0.0040846424418018775,0.17714293328061329,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,fraction_crps,static,independent,-0.004715981250413382,0.2045228594417865,8,4,-0.005751618936127497,-0.0036803435646992682,10000.0,20261014.0,
+macro,commonshock,fraction_crps,static,independent,-0.004715981250413382,0.2045228594417865,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,fraction_crps,static,global,-0.0006313388086115052,0.03327421889968458,8,4,-0.0007931947751040147,-0.00046948284211899565,10000.0,20261014.0,
+macro,commonshock,fraction_crps,static,global,-0.0006313388086115052,0.03327421889968458,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,fraction_crps,context,static,-0.00019504837645636713,0.010633700445519164,8,4,-0.00027615280441625517,-0.00011394394849647909,10000.0,20261014.0,
+macro,commonshock,fraction_crps,context,static,-0.00019504837645636713,0.010633700445519164,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,fraction_crps,static,static_permuted,-0.00039611717271760007,0.02113911147724533,8,4,-0.00041357062052038815,-0.000378663724914812,10000.0,20261014.0,
+macro,commonshock,fraction_crps,static,static_permuted,-0.00039611717271760007,0.02113911147724533,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,buffer_cost_ratio9,global,independent,-0.03986118473201601,0.5004087610429607,8,4,-0.04780543182856596,-0.03191693763546606,10000.0,20261014.0,
+macro,commonshock,buffer_cost_ratio9,global,independent,-0.03986118473201601,0.5004087610429607,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,buffer_cost_ratio9,static,independent,-0.04468707401322415,0.5609919397009758,8,4,-0.05355149767790588,-0.03582265034854242,10000.0,20261014.0,
+macro,commonshock,buffer_cost_ratio9,static,independent,-0.04468707401322415,0.5609919397009758,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,buffer_cost_ratio9,static,global,-0.004825889281208141,0.1212654945360736,8,4,-0.005902077937791435,-0.0037497006246248465,10000.0,20261014.0,
+macro,commonshock,buffer_cost_ratio9,static,global,-0.004825889281208141,0.1212654945360736,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,buffer_cost_ratio9,context,static,-0.0020394379681878847,0.05831935450263242,8,4,-0.0037796483659437155,-0.000299227570432054,10000.0,20261014.0,
+macro,commonshock,buffer_cost_ratio9,context,static,-0.0020394379681878847,0.05831935450263242,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,buffer_cost_ratio9,static,static_permuted,-0.001357709882157079,0.037373767506587094,8,4,-0.0016015228978297261,-0.001113896866484432,10000.0,20261014.0,
+macro,commonshock,buffer_cost_ratio9,static,static_permuted,-0.001357709882157079,0.037373767506587094,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,trajectory_energy,global,independent,-0.013568017067035438,0.2015427529659853,8,4,-0.016403657384215342,-0.010732376749855532,10000.0,20261014.0,
+macro,commonshock,trajectory_energy,global,independent,-0.013568017067035438,0.2015427529659853,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,trajectory_energy,static,independent,-0.014902361941288965,0.22136344880049216,8,4,-0.017806405530141706,-0.011998318352436225,10000.0,20261014.0,
+macro,commonshock,trajectory_energy,static,independent,-0.014902361941288965,0.22136344880049216,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,trajectory_energy,static,global,-0.0013343448742535262,0.02482374091804376,8,4,-0.001556732078709004,-0.0011119576697980484,10000.0,20261014.0,
+macro,commonshock,trajectory_energy,static,global,-0.0013343448742535262,0.02482374091804376,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,trajectory_energy,context,static,-0.00025669579396453207,0.0048970526265050066,8,4,-0.0005378583146110009,2.4466726681936744e-05,10000.0,20261014.0,
+macro,commonshock,trajectory_energy,context,static,-0.00025669579396453207,0.0048970526265050066,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+macro,commonshock,trajectory_energy,static,static_permuted,-0.0008394329876258819,0.01576167335941634,8,4,-0.000908267769539904,-0.0007705982057118598,10000.0,20261014.0,
+macro,commonshock,trajectory_energy,static,static_permuted,-0.0008394329876258819,0.01576167335941634,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,fraction_crps,global,independent,-0.0026295915419626585,0.20734859582787435,8,4,-0.002809575353209819,-0.0024496077307154976,10000.0,20261014.0,
+job,gaussian,fraction_crps,global,independent,-0.0026295915419626585,0.20734859582787435,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,fraction_crps,static,independent,-0.0033984064381671723,0.2679712007593526,8,4,-0.0036581857016175032,-0.003138627174716842,10000.0,20261014.0,
+job,gaussian,fraction_crps,static,independent,-0.0033984064381671723,0.2679712007593526,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,fraction_crps,static,global,-0.0007688148962045143,0.07648078917464954,8,4,-0.00086019887841159,-0.0006774309139974386,10000.0,20261014.0,
+job,gaussian,fraction_crps,static,global,-0.0007688148962045143,0.07648078917464954,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,fraction_crps,context,static,-0.00026790196806554447,0.028857622057768893,8,4,-0.0003493428279614328,-0.00018646110816965614,10000.0,20261014.0,
+job,gaussian,fraction_crps,context,static,-0.00026790196806554447,0.028857622057768893,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,fraction_crps,static,static_permuted,-0.001325275074634816,0.12492162345714038,8,4,-0.001474339135171164,-0.0011762110140984678,10000.0,20261014.0,
+job,gaussian,fraction_crps,static,static_permuted,-0.001325275074634816,0.12492162345714038,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,buffer_cost_ratio9,global,independent,-0.01814208830422114,0.47664568270234503,8,4,-0.02021780634512066,-0.016066370263321618,10000.0,20261014.0,
+job,gaussian,buffer_cost_ratio9,global,independent,-0.01814208830422114,0.47664568270234503,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,buffer_cost_ratio9,static,independent,-0.020454799126808615,0.5374073552529536,8,4,-0.0231423046671302,-0.01776729358648703,10000.0,20261014.0,
+job,gaussian,buffer_cost_ratio9,static,independent,-0.020454799126808615,0.5374073552529536,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,buffer_cost_ratio9,static,global,-0.0023127108225874794,0.11610045153415773,8,4,-0.0030173891766237778,-0.001608032468551181,10000.0,20261014.0,
+job,gaussian,buffer_cost_ratio9,static,global,-0.0023127108225874794,0.11610045153415773,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,buffer_cost_ratio9,context,static,-0.0006938590309252567,0.03940768374853095,8,4,-0.0009937571991777353,-0.0003939608626727781,10000.0,20261014.0,
+job,gaussian,buffer_cost_ratio9,context,static,-0.0006938590309252567,0.03940768374853095,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,buffer_cost_ratio9,static,static_permuted,-0.005152214460721743,0.22637726974878736,8,4,-0.006248351306372116,-0.0040560776150713705,10000.0,20261014.0,
+job,gaussian,buffer_cost_ratio9,static,static_permuted,-0.005152214460721743,0.22637726974878736,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,trajectory_energy,global,independent,-0.0057516277853671225,0.16967499865339786,8,4,-0.006189440972486719,-0.005313814598247526,10000.0,20261014.0,
+job,gaussian,trajectory_energy,global,independent,-0.0057516277853671225,0.16967499865339786,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,trajectory_energy,static,independent,-0.007217762865187832,0.21292648796694003,8,4,-0.007772885048629453,-0.006662640681746211,10000.0,20261014.0,
+job,gaussian,trajectory_energy,static,independent,-0.007217762865187832,0.21292648796694003,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,trajectory_energy,static,global,-0.0014661350798207094,0.05208983138337143,8,4,-0.0016089486416767267,-0.001323321517964692,10000.0,20261014.0,
+job,gaussian,trajectory_energy,static,global,-0.0014661350798207094,0.05208983138337143,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,trajectory_energy,context,static,-0.0005474753312895418,0.0205199519461679,8,4,-0.0007328030454038931,-0.00036214761717519046,10000.0,20261014.0,
+job,gaussian,trajectory_energy,context,static,-0.0005474753312895418,0.0205199519461679,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,gaussian,trajectory_energy,static,static_permuted,-0.0028181885014939307,0.09553720465452437,8,4,-0.0031616281347042947,-0.0024747488682835667,10000.0,20261014.0,
+job,gaussian,trajectory_energy,static,static_permuted,-0.0028181885014939307,0.09553720465452437,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,fraction_crps,global,independent,-0.002121982915132898,0.16726810191666086,8,4,-0.0022509290504544484,-0.001993036779811348,10000.0,20261014.0,
+job,commonshock,fraction_crps,global,independent,-0.002121982915132898,0.16726810191666086,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,fraction_crps,static,independent,-0.003086673230110603,0.24331108830121453,8,4,-0.003314208632486656,-0.0028591378277345505,10000.0,20261014.0,
+job,commonshock,fraction_crps,static,independent,-0.003086673230110603,0.24331108830121453,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,fraction_crps,static,global,-0.0009646903149777052,0.0913174895300376,8,4,-0.001063987058562398,-0.0008653935713930124,10000.0,20261014.0,
+job,commonshock,fraction_crps,static,global,-0.0009646903149777052,0.0913174895300376,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,fraction_crps,context,static,-0.00039183720083624805,0.040818734968727184,8,4,-0.0004966451726513875,-0.00028702922902110856,10000.0,20261014.0,
+job,commonshock,fraction_crps,context,static,-0.00039183720083624805,0.040818734968727184,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,fraction_crps,static,static_permuted,-0.0009096263810463649,0.08655630445847784,8,4,-0.001010941219109272,-0.0008083115429834578,10000.0,20261014.0,
+job,commonshock,fraction_crps,static,static_permuted,-0.0009096263810463649,0.08655630445847784,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,buffer_cost_ratio9,global,independent,-0.009390968207874984,0.24624153267766122,8,4,-0.010383978273835217,-0.008397958141914751,10000.0,20261014.0,
+job,commonshock,buffer_cost_ratio9,global,independent,-0.009390968207874984,0.24624153267766122,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,buffer_cost_ratio9,static,independent,-0.015248779025570284,0.3998397860159582,8,4,-0.016993904935340566,-0.013503653115800002,10000.0,20261014.0,
+job,commonshock,buffer_cost_ratio9,static,independent,-0.015248779025570284,0.3998397860159582,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,buffer_cost_ratio9,static,global,-0.005857810817695298,0.2037764880890046,8,4,-0.006609926661505347,-0.00510569497388525,10000.0,20261014.0,
+job,commonshock,buffer_cost_ratio9,static,global,-0.005857810817695298,0.2037764880890046,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,buffer_cost_ratio9,context,static,-0.00302472506525753,0.13215075204779106,8,4,-0.004116072765926973,-0.0019333773645880876,10000.0,20261014.0,
+job,commonshock,buffer_cost_ratio9,context,static,-0.00302472506525753,0.13215075204779106,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,buffer_cost_ratio9,static,static_permuted,-0.0024173069221084006,0.09552401530570098,8,4,-0.0029689371136250066,-0.0018656767305917947,10000.0,20261014.0,
+job,commonshock,buffer_cost_ratio9,static,static_permuted,-0.0024173069221084006,0.09552401530570098,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,trajectory_energy,global,independent,-0.004862736996083123,0.14344417917836902,8,4,-0.005210241077904089,-0.004515232914262158,10000.0,20261014.0,
+job,commonshock,trajectory_energy,global,independent,-0.004862736996083123,0.14344417917836902,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,trajectory_energy,static,independent,-0.006855282292131582,0.20222157649547978,8,4,-0.007374545848886164,-0.006336018735377,10000.0,20261014.0,
+job,commonshock,trajectory_energy,static,independent,-0.006855282292131582,0.20222157649547978,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,trajectory_energy,static,global,-0.0019925452960484584,0.06862062680366811,8,4,-0.002173865657598949,-0.0018112249344979679,10000.0,20261014.0,
+job,commonshock,trajectory_energy,static,global,-0.0019925452960484584,0.06862062680366811,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,trajectory_energy,context,static,-0.000661342103818614,0.024453781920549332,8,4,-0.0008427734295872419,-0.00047991077804998604,10000.0,20261014.0,
+job,commonshock,trajectory_energy,context,static,-0.000661342103818614,0.024453781920549332,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+job,commonshock,trajectory_energy,static,static_permuted,-0.002008156277537271,0.06912108738821368,8,4,-0.0022442723737674214,-0.0017720401813071207,10000.0,20261014.0,
+job,commonshock,trajectory_energy,static,static_permuted,-0.002008156277537271,0.06912108738821368,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,fraction_crps,global,independent,-0.00021999441907669527,0.012751574109012486,8,4,-0.00046772136526241357,2.7732527109023027e-05,10000.0,20261014.0,
+machine,gaussian,fraction_crps,global,independent,-0.00021999441907669527,0.012751574109012486,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,fraction_crps,static,independent,-0.0004590908792765022,0.02661036309209796,8,4,-0.0006588987291990009,-0.0002592830293540035,10000.0,20261014.0,
+machine,gaussian,fraction_crps,static,independent,-0.0004590908792765022,0.02661036309209796,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,fraction_crps,static,global,-0.00023909646019980692,0.014037792940087975,8,4,-0.00031552238449126906,-0.00016267053590834479,10000.0,20261014.0,
+machine,gaussian,fraction_crps,static,global,-0.00023909646019980692,0.014037792940087975,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,fraction_crps,context,static,1.957713484391924e-06,-0.00011657744952044603,8,4,-5.0201206392734e-05,5.411663336151785e-05,10000.0,20261014.0,
+machine,gaussian,fraction_crps,context,static,1.957713484391924e-06,-0.00011657744952044603,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,fraction_crps,static,static_permuted,-0.0002067136595277645,0.012159657747432806,8,4,-0.0003397797556370678,-7.364756341846123e-05,10000.0,20261014.0,
+machine,gaussian,fraction_crps,static,static_permuted,-0.0002067136595277645,0.012159657747432806,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,buffer_cost_ratio9,global,independent,-0.0016956232532224945,0.047088088115053196,8,4,-0.004327329899551842,0.0009360833931068527,10000.0,20261014.0,
+machine,gaussian,buffer_cost_ratio9,global,independent,-0.0016956232532224945,0.047088088115053196,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,buffer_cost_ratio9,static,independent,-0.0031462043191307332,0.08737126359032615,8,4,-0.006153888681450421,-0.00013851995681104547,10000.0,20261014.0,
+machine,gaussian,buffer_cost_ratio9,static,independent,-0.0031462043191307332,0.08737126359032615,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,buffer_cost_ratio9,static,global,-0.0014505810659082383,0.0422737663081461,8,4,-0.002158961987541763,-0.0007422001442747139,10000.0,20261014.0,
+machine,gaussian,buffer_cost_ratio9,static,global,-0.0014505810659082383,0.0422737663081461,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,buffer_cost_ratio9,context,static,0.0001941664663903859,-0.0059082896919662,8,4,-0.0001801996317831807,0.0005685325645639525,10000.0,20261014.0,
+machine,gaussian,buffer_cost_ratio9,context,static,0.0001941664663903859,-0.0059082896919662,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,buffer_cost_ratio9,static,static_permuted,-0.000864831983115935,0.0256411920731879,8,4,-0.0018188233910975474,8.915942486567748e-05,10000.0,20261014.0,
+machine,gaussian,buffer_cost_ratio9,static,static_permuted,-0.000864831983115935,0.0256411920731879,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,trajectory_energy,global,independent,-0.0003490858093310495,0.00699785733029026,8,4,-0.0007907965172640769,9.26248986019779e-05,10000.0,20261014.0,
+machine,gaussian,trajectory_energy,global,independent,-0.0003490858093310495,0.00699785733029026,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,trajectory_energy,static,independent,-0.0007963248316320824,0.01596331736030002,8,4,-0.0011693270986771467,-0.00042332256458701804,10000.0,20261014.0,
+machine,gaussian,trajectory_energy,static,independent,-0.0007963248316320824,0.01596331736030002,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,trajectory_energy,static,global,-0.00044723902230103287,0.009028641172823561,8,4,-0.00055669225724114,-0.00033778578736092576,10000.0,20261014.0,
+machine,gaussian,trajectory_energy,static,global,-0.00044723902230103287,0.009028641172823561,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,trajectory_energy,context,static,-9.977463536083638e-06,0.0002032552398381454,8,4,-0.00013084660384341494,0.00011089167677124766,10000.0,20261014.0,
+machine,gaussian,trajectory_energy,context,static,-9.977463536083638e-06,0.0002032552398381454,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,gaussian,trajectory_energy,static,static_permuted,-0.0003192524034732582,0.006461605378476314,8,4,-0.0005825800816393915,-5.5924725307124855e-05,10000.0,20261014.0,
+machine,gaussian,trajectory_energy,static,static_permuted,-0.0003192524034732582,0.006461605378476314,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,fraction_crps,global,independent,-0.0002540793280384002,0.014727272788487122,8,4,-0.00043342302878626336,-7.473562729053704e-05,10000.0,20261014.0,
+machine,commonshock,fraction_crps,global,independent,-0.0002540793280384002,0.014727272788487122,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,fraction_crps,static,independent,-0.0005265448445132689,0.03052026947798942,8,4,-0.0007392325484062976,-0.00031385714062024013,10000.0,20261014.0,
+machine,commonshock,fraction_crps,static,independent,-0.0005265448445132689,0.03052026947798942,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,fraction_crps,static,global,-0.0002724655164748687,0.016029061044041205,8,4,-0.0003986980894815414,-0.00014623294346819598,10000.0,20261014.0,
+machine,commonshock,fraction_crps,static,global,-0.0002724655164748687,0.016029061044041205,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,fraction_crps,context,static,-1.4235214980199036e-05,0.0008510955029921373,8,4,-4.938517628901842e-05,2.0914746328620348e-05,10000.0,20261014.0,
+machine,commonshock,fraction_crps,context,static,-1.4235214980199036e-05,0.0008510955029921373,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,fraction_crps,static,static_permuted,-0.00025058455531163965,0.014760811804639161,8,4,-0.0003666925982336636,-0.00013447651238961567,10000.0,20261014.0,
+machine,commonshock,fraction_crps,static,static_permuted,-0.00025058455531163965,0.014760811804639161,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,buffer_cost_ratio9,global,independent,-0.0020240576977582367,0.056181657555595316,8,4,-0.003915277550121627,-0.0001328378453948468,10000.0,20261014.0,
+machine,commonshock,buffer_cost_ratio9,global,independent,-0.0020240576977582367,0.056181657555595316,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,buffer_cost_ratio9,static,independent,-0.003300838281225378,0.09162118558556756,8,4,-0.0061681932298119,-0.00043348333263885605,10000.0,20261014.0,
+machine,commonshock,buffer_cost_ratio9,static,independent,-0.003300838281225378,0.09162118558556756,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,buffer_cost_ratio9,static,global,-0.0012767805834671415,0.03754909863076728,8,4,-0.0022744101329153104,-0.0002791510340189726,10000.0,20261014.0,
+machine,commonshock,buffer_cost_ratio9,static,global,-0.0012767805834671415,0.03754909863076728,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,buffer_cost_ratio9,context,static,0.00024163651770503915,-0.007383584193450354,8,4,0.00010847498962204024,0.00037479804578803805,10000.0,20261014.0,
+machine,commonshock,buffer_cost_ratio9,context,static,0.00024163651770503915,-0.007383584193450354,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,buffer_cost_ratio9,static,static_permuted,-0.0011300563760716228,0.03337808454880758,8,4,-0.0020668003712926543,-0.00019331238085059104,10000.0,20261014.0,
+machine,commonshock,buffer_cost_ratio9,static,static_permuted,-0.0011300563760716228,0.03337808454880758,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,trajectory_energy,global,independent,-0.0004811218801524684,0.009645488828294026,8,4,-0.0010073548092129356,4.511104890799877e-05,10000.0,20261014.0,
+machine,commonshock,trajectory_energy,global,independent,-0.0004811218801524684,0.009645488828294026,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,trajectory_energy,static,independent,-0.0008381647376347768,0.016803452402880194,8,4,-0.0013221870091750694,-0.0003541424660944842,10000.0,20261014.0,
+machine,commonshock,trajectory_energy,static,independent,-0.0008381647376347768,0.016803452402880194,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,trajectory_energy,static,global,-0.00035704285748230837,0.0072276780625934196,8,4,-0.0007964570060005035,8.237129103588672e-05,10000.0,20261014.0,
+machine,commonshock,trajectory_energy,static,global,-0.00035704285748230837,0.0072276780625934196,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,trajectory_energy,context,static,-4.8684734141493484e-05,0.0009927081611799985,8,4,-0.00014107030419228256,4.370083590929559e-05,10000.0,20261014.0,
+machine,commonshock,trajectory_energy,context,static,-4.8684734141493484e-05,0.0009927081611799985,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+machine,commonshock,trajectory_energy,static,static_permuted,-0.0004293847408646783,0.008679396504934878,8,4,-0.0006563732085365292,-0.0002023962731928274,10000.0,20261014.0,
+machine,commonshock,trajectory_energy,static,static_permuted,-0.0004293847408646783,0.008679396504934878,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,fraction_crps,global,independent,-0.010741991312694616,0.27369036846830763,8,4,-0.014486027763051912,-0.0069979548623373185,10000.0,20261014.0,
+population_by_state,gaussian,fraction_crps,global,independent,-0.010741991312694616,0.27369036846830763,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,fraction_crps,static,independent,-0.010774360745065752,0.27451509468664825,8,4,-0.014378374937801287,-0.007170346552330217,10000.0,20261014.0,
+population_by_state,gaussian,fraction_crps,static,independent,-0.010774360745065752,0.27451509468664825,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,fraction_crps,static,global,-3.2369432371136644e-05,0.00113550224661261,8,4,-0.0005194718967990527,0.00045473303205677946,10000.0,20261014.0,
+population_by_state,gaussian,fraction_crps,static,global,-3.2369432371136644e-05,0.00113550224661261,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,fraction_crps,context,static,8.197559188751461e-05,-0.00287892862408354,8,4,-0.0002318412689461749,0.0003957924527212041,10000.0,20261014.0,
+population_by_state,gaussian,fraction_crps,context,static,8.197559188751461e-05,-0.00287892862408354,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,fraction_crps,static,static_permuted,-1.3216165560057448e-05,0.00046392767348612347,8,4,-2.9582655095937893e-05,3.150323975822998e-06,10000.0,20261014.0,
+population_by_state,gaussian,fraction_crps,static,static_permuted,-1.3216165560057448e-05,0.00046392767348612347,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,buffer_cost_ratio9,global,independent,-0.12334606525995916,0.7493935353926637,8,4,-0.16063314372741921,-0.08605898679249911,10000.0,20261014.0,
+population_by_state,gaussian,buffer_cost_ratio9,global,independent,-0.12334606525995916,0.7493935353926637,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,buffer_cost_ratio9,static,independent,-0.12565121554957626,0.7633985603726405,8,4,-0.16203047061994108,-0.08927196047921142,10000.0,20261014.0,
+population_by_state,gaussian,buffer_cost_ratio9,static,independent,-0.12565121554957626,0.7633985603726405,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,buffer_cost_ratio9,static,global,-0.0023051502896170835,0.05588453195698908,8,4,-0.003598171214468771,-0.001012129364765396,10000.0,20261014.0,
+population_by_state,gaussian,buffer_cost_ratio9,static,global,-0.0023051502896170835,0.05588453195698908,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,buffer_cost_ratio9,context,static,0.0006888525074257635,-0.017688601707154958,8,4,0.000398374227685082,0.000979330787166445,10000.0,20261014.0,
+population_by_state,gaussian,buffer_cost_ratio9,context,static,0.0006888525074257635,-0.017688601707154958,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,buffer_cost_ratio9,static,static_permuted,-0.00029154379179325673,0.0074307368171271345,8,4,-0.00032563376134642306,-0.0002574538222400904,10000.0,20261014.0,
+population_by_state,gaussian,buffer_cost_ratio9,static,static_permuted,-0.00029154379179325673,0.0074307368171271345,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,trajectory_energy,global,independent,-0.03667504454540826,0.3102990845467787,8,4,-0.04701106164595805,-0.026339027444858464,10000.0,20261014.0,
+population_by_state,gaussian,trajectory_energy,global,independent,-0.03667504454540826,0.3102990845467787,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,trajectory_energy,static,independent,-0.03734431493365026,0.3159616267838749,8,4,-0.04734453211444495,-0.027344097752855578,10000.0,20261014.0,
+population_by_state,gaussian,trajectory_energy,static,independent,-0.03734431493365026,0.3159616267838749,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,trajectory_energy,static,global,-0.0006692703882420041,0.008210141686379013,8,4,-0.0015339566645580032,0.00019541588807399498,10000.0,20261014.0,
+population_by_state,gaussian,trajectory_energy,static,global,-0.0006692703882420041,0.008210141686379013,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,trajectory_energy,context,static,0.0006466118911360769,-0.007997846522326048,8,4,-0.00024494918302407805,0.0015381729652962318,10000.0,20261014.0,
+population_by_state,gaussian,trajectory_energy,context,static,0.0006466118911360769,-0.007997846522326048,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,gaussian,trajectory_energy,static,static_permuted,-3.86557371458234e-05,0.00047789857987914756,8,4,-6.9883301913376e-05,-7.428172378270807e-06,10000.0,20261014.0,
+population_by_state,gaussian,trajectory_energy,static,static_permuted,-3.86557371458234e-05,0.00047789857987914756,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,fraction_crps,global,independent,-0.009877865082234333,0.2517490661260816,8,4,-0.01286896982856233,-0.0068867603359063344,10000.0,20261014.0,
+population_by_state,commonshock,fraction_crps,global,independent,-0.009877865082234333,0.2517490661260816,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,fraction_crps,static,independent,-0.010534725676616272,0.2684899347079059,8,4,-0.013649073142322643,-0.007420378210909902,10000.0,20261014.0,
+population_by_state,commonshock,fraction_crps,static,independent,-0.010534725676616272,0.2684899347079059,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,fraction_crps,static,global,-0.0006568605943819386,0.022373334698229934,8,4,-0.0012172667712978596,-9.645441746601764e-05,10000.0,20261014.0,
+population_by_state,commonshock,fraction_crps,static,global,-0.0006568605943819386,0.022373334698229934,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,fraction_crps,context,static,-0.00017907271355265745,0.006238984212073117,8,4,-0.000453288803023449,9.514337591813408e-05,10000.0,20261014.0,
+population_by_state,commonshock,fraction_crps,context,static,-0.00017907271355265745,0.006238984212073117,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,fraction_crps,static,static_permuted,-2.8140581794792313e-05,0.0009794718442106814,8,4,-4.055301504262299e-05,-1.5728148546961633e-05,10000.0,20261014.0,
+population_by_state,commonshock,fraction_crps,static,static_permuted,-2.8140581794792313e-05,0.0009794718442106814,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,buffer_cost_ratio9,global,independent,-0.1081685282904148,0.6563325558367681,8,4,-0.13177243593342952,-0.08456462064740006,10000.0,20261014.0,
+population_by_state,commonshock,buffer_cost_ratio9,global,independent,-0.1081685282904148,0.6563325558367681,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,buffer_cost_ratio9,static,independent,-0.11551160473287679,0.7008880305701053,8,4,-0.14194980809908264,-0.08907340136667094,10000.0,20261014.0,
+population_by_state,commonshock,buffer_cost_ratio9,static,independent,-0.11551160473287679,0.7008880305701053,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,buffer_cost_ratio9,static,global,-0.007343076442461989,0.12964706285118643,8,4,-0.010417977087458912,-0.004268175797465068,10000.0,20261014.0,
+population_by_state,commonshock,buffer_cost_ratio9,static,global,-0.007343076442461989,0.12964706285118643,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,buffer_cost_ratio9,context,static,-0.003335225357011161,0.06765726188095007,8,4,-0.007891881013236238,0.001221430299213917,10000.0,20261014.0,
+population_by_state,commonshock,buffer_cost_ratio9,context,static,-0.003335225357011161,0.06765726188095007,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,buffer_cost_ratio9,static,static_permuted,-0.0005257663482912149,0.010552966755573491,8,4,-0.0007493521430785191,-0.00030218055350391066,10000.0,20261014.0,
+population_by_state,commonshock,buffer_cost_ratio9,static,static_permuted,-0.0005257663482912149,0.010552966755573491,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,trajectory_energy,global,independent,-0.035360192324870726,0.2992011614202712,8,4,-0.04351680496562011,-0.027203579684121338,10000.0,20261014.0,
+population_by_state,commonshock,trajectory_energy,global,independent,-0.035360192324870726,0.2992011614202712,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,trajectory_energy,static,independent,-0.03701363879410052,0.3131918405261606,8,4,-0.045690357525700845,-0.0283369200625002,10000.0,20261014.0,
+population_by_state,commonshock,trajectory_energy,static,independent,-0.03701363879410052,0.3131918405261606,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,trajectory_energy,static,global,-0.0016534464692297983,0.019963901672901782,8,4,-0.0027984280635329536,-0.0005084648749266432,10000.0,20261014.0,
+population_by_state,commonshock,trajectory_energy,static,global,-0.0016534464692297983,0.019963901672901782,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,trajectory_energy,context,static,-6.0060543933501557e-05,0.0007399501652413276,8,4,-0.0009437543738421124,0.0008236332859751093,10000.0,20261014.0,
+population_by_state,commonshock,trajectory_energy,context,static,-6.0060543933501557e-05,0.0007399501652413276,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.
+population_by_state,commonshock,trajectory_energy,static,static_permuted,-8.075794447569133e-05,0.000993954680469654,8,4,-0.00013607593241220196,-2.5439956539180693e-05,10000.0,20261014.0,
+population_by_state,commonshock,trajectory_energy,static,static_permuted,-8.075794447569133e-05,0.000993954680469654,8,8,,,,,Fewer than two blocks; temporal evidence too short for this bootstrap interval.

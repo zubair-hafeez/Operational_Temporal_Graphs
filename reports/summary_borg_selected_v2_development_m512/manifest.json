@@ -1,0 +1,43 @@
+{
+  "config": {
+    "dataset": "borg",
+    "data_tag": "selected_v2",
+    "draws": 512,
+    "period": "development"
+  },
+  "sources": [
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed0/full_cohort_scores_m512.parquet",
+      "sha256": "8a0716cb490c07194d1c58a3b9e834a06e97c27538ba59c077e765d1c840ff4d"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed1/full_cohort_scores_m512.parquet",
+      "sha256": "1a23e64a231c0202170ea00d876275a29bcec5ad1d4aafa1135ef8ba5b362ce0"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed2/full_cohort_scores_m512.parquet",
+      "sha256": "1e4ad30051c1dcea49044c12ddd6c698ca3758277811b4a288527417cb284f02"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed0/full_cohort_scores_m512.parquet",
+      "sha256": "3032e7c4f2d3358bf112f74897c767c4145d0d0e9a528fe14c83a1a9223305d0"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed1/full_cohort_scores_m512.parquet",
+      "sha256": "4dbe3b626f27c2581890d4a8c7d076ecd4255e7abb93b594608e69ff579c4349"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed2/full_cohort_scores_m512.parquet",
+      "sha256": "68f3b07d3f278e6e874bebee32600277ebf0fab8457e0a57cd3d336af4830c4d"
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_origins": 8,
+  "status": "complete",
+  "interpretation": "Development scores are selected on development and are not unbiased final estimates. Intervals are descriptive paired circular moving-block bootstrap intervals with seed-averaged forecast origins. No task-level IID or seed-as-new-data inference.",
+  "script_sha256": "ad653669611e48d13d1db21a8b9f41df963a9e586e64d9b1d1756cecd1692777"
+}

@@ -17,7 +17,7 @@ def projections(states,relations,relation_names):
     return result
 
 
-def cohort_scores(cdf,loadings,relations,states,labels,relation_names,draws,seed,family='gaussian',sampling_relations=None,chunk_size=4096):
+def cohort_scores(cdf,loadings,relations,states,labels,relation_names,draws,seed,family='gaussian',sampling_relations=None,chunk_size=4096,device='cpu'):
     n,h=cdf.shape
     if np.any(np.diff(labels,axis=1)<0):raise ValueError('Nonmonotone outcome labels')
     projection=projections(states,relations,relation_names)
@@ -28,18 +28,34 @@ def cohort_scores(cdf,loadings,relations,states,labels,relation_names,draws,seed
         truth[name]=np.column_stack([np.bincount(v['code'][valid],weights=labels[valid,k],minlength=len(v['size'])) for k in range(h)])
     random=np.random.default_rng(seed)
     incidence=relations if sampling_relations is None else sampling_relations
-    for lo,hi,u in factor_uniform_chunks(loadings,incidence,draws,random,family,chunk_size):
+    if str(device).startswith('cuda'):
+        from .torch_scenarios import projected_counts_torch
+        counts=projected_counts_torch(cdf,loadings,incidence,projection,draws,seed,family,device)
+        chunks=[]
+    else:chunks=factor_uniform_chunks(loadings,incidence,draws,random,family,chunk_size)
+    for lo,hi,u in chunks:
         bins=first_exit_bins(cdf[lo:hi],u)
         for name,v in projection.items():
             code=v['code'][lo:hi];valid=code>=0
             if not valid.any():continue
             local,inverse=np.unique(code[valid],return_inverse=True);base=inverse*(h+1)
-            for j in range(draws):
-                bc=np.bincount(base+bins[j,valid],minlength=len(local)*(h+1)).reshape(len(local),h+1)
-                counts[name][j,local]+=np.cumsum(bc[:,:h],axis=1)
+            # Batch draw indices into one bincount. Blocking bounds temporary
+            # memory while avoiding a Python loop for each ensemble member.
+            stride=len(local)*(h+1)
+            for first_draw in range(0,draws,64):
+                stop_draw=min(draws,first_draw+64);number=stop_draw-first_draw
+                encoded=(np.arange(number)[:,None]*stride+base[None,:]+bins[first_draw:stop_draw,valid]).ravel()
+                bc=np.bincount(encoded,minlength=number*stride).reshape(number,len(local),h+1)
+                counts[name][first_draw:stop_draw,local]+=np.cumsum(bc[:,:,:h],axis=2)
+    return score_projected_counts(projection,counts,truth)
+
+
+def score_projected_counts(projection,counts,truth):
+    """Score any declared aggregate forecast with the same operational metrics."""
     rows=[]
     for name,v in projection.items():
         size=v['size'];sample=counts[name];actual=truth[name]
+        draws,_,h=sample.shape
         crps=ensemble_crps(sample,actual)/size[:,None]
         coverage,width,interval=interval_statistics(sample,actual)
         # Independent adjacent ensemble draws give an unbiased energy-score

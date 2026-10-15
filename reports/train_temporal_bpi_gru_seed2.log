@@ -1,0 +1,47 @@
+{"fold": "oof_june", "epoch": 0, "train_nll": 1.2395247568643837, "calibration_integrated_brier": 0.11123604864704308, "elapsed_s": 1.687876716023311}
+{"fold": "oof_june", "epoch": 1, "train_nll": 1.0616633993860694, "calibration_integrated_brier": 0.09979303423097619, "elapsed_s": 2.2134336970048025}
+{"fold": "oof_june", "epoch": 2, "train_nll": 1.0080876517065487, "calibration_integrated_brier": 0.09758359575750153, "elapsed_s": 2.735009973985143}
+{"fold": "oof_june", "epoch": 3, "train_nll": 0.9898853709572301, "calibration_integrated_brier": 0.09640496028555696, "elapsed_s": 3.2569268869701773}
+{"fold": "oof_june", "epoch": 4, "train_nll": 0.9773077934965718, "calibration_integrated_brier": 0.09521363113238779, "elapsed_s": 3.779644659953192}
+{"fold": "oof_june", "epoch": 5, "train_nll": 0.9677101427151121, "calibration_integrated_brier": 0.09498756633305835, "elapsed_s": 4.307909708935767}
+{"fold": "oof_june", "epoch": 6, "train_nll": 0.9597793901474144, "calibration_integrated_brier": 0.09474090093824664, "elapsed_s": 4.839805274968967}
+{"fold": "oof_june", "epoch": 7, "train_nll": 0.9538822161698093, "calibration_integrated_brier": 0.09496238315436194, "elapsed_s": 5.367234456003644}
+{"fold": "oof_june", "epoch": 8, "train_nll": 0.9482948938750647, "calibration_integrated_brier": 0.09483810259172523, "elapsed_s": 5.893090853933245}
+{"fold": "oof_june", "epoch": 9, "train_nll": 0.9435871227017631, "calibration_integrated_brier": 0.09408466918795949, "elapsed_s": 6.419478449970484}
+{"fold": "oof_june", "epoch": 10, "train_nll": 0.9393689390365849, "calibration_integrated_brier": 0.09470175866665673, "elapsed_s": 6.94653192802798}
+{"fold": "oof_june", "epoch": 11, "train_nll": 0.9356733485198663, "calibration_integrated_brier": 0.09433517560776969, "elapsed_s": 7.4722445629304275}
+{"fold": "oof_june", "epoch": 12, "train_nll": 0.9313100301178533, "calibration_integrated_brier": 0.09401891608406572, "elapsed_s": 7.995926173985936}
+{"fold": "oof_june", "epoch": 13, "train_nll": 0.9281408997174279, "calibration_integrated_brier": 0.09463930442859105, "elapsed_s": 8.520822318969294}
+{"fold": "oof_june", "epoch": 14, "train_nll": 0.9250835607207415, "calibration_integrated_brier": 0.09426726065693411, "elapsed_s": 9.04385649098549}
+{"fold": "oof_june", "epoch": 15, "train_nll": 0.9224466044805426, "calibration_integrated_brier": 0.0945897827436764, "elapsed_s": 9.567533783963881}
+{"fold": "oof_june", "epoch": 16, "train_nll": 0.917984155309579, "calibration_integrated_brier": 0.09500740328871764, "elapsed_s": 10.09343819192145}
+{"fold": "oof_june", "epoch": 17, "train_nll": 0.9152210457661337, "calibration_integrated_brier": 0.09621709089139226, "elapsed_s": 10.616946542984806}
+{"fold": "oof_june", "metrics": [{"state": 1, "variant": "raw", "integrated_brier": 0.11194070076824911, "brier_by_horizon": [0.026197478884019874, 0.06844125323256642, 0.1504511208105027, 0.20267295014591]}, {"state": 1, "variant": "temperature", "integrated_brier": 0.1115160923239003, "brier_by_horizon": [0.026180121385312397, 0.06834168379699411, 0.14977167319013177, 0.20177089092316458]}], "elapsed_s": 10.770013632951304}
+{"fold": "oof_july", "epoch": 0, "train_nll": 1.2029967417976055, "calibration_integrated_brier": 0.109606283966903, "elapsed_s": 11.616766527993605}
+{"fold": "oof_july", "epoch": 1, "train_nll": 1.0218104359976725, "calibration_integrated_brier": 0.10493843657422476, "elapsed_s": 12.295819149934687}
+{"fold": "oof_july", "epoch": 2, "train_nll": 0.9872821033046217, "calibration_integrated_brier": 0.10782217971762195, "elapsed_s": 12.975514639983885}
+{"fold": "oof_july", "epoch": 3, "train_nll": 0.9709524448741641, "calibration_integrated_brier": 0.1086241794590501, "elapsed_s": 13.656127630965784}
+{"fold": "oof_july", "epoch": 4, "train_nll": 0.9615913910288479, "calibration_integrated_brier": 0.11023185808843317, "elapsed_s": 14.336193704977632}
+{"fold": "oof_july", "epoch": 5, "train_nll": 0.9546390421390896, "calibration_integrated_brier": 0.10936482259912084, "elapsed_s": 15.017873829929158}
+{"fold": "oof_july", "epoch": 6, "train_nll": 0.9498322947863489, "calibration_integrated_brier": 0.10719610361358324, "elapsed_s": 15.698748757946305}
+{"fold": "oof_july", "metrics": [{"state": 1, "variant": "raw", "integrated_brier": 0.10666745897002212, "brier_by_horizon": [0.02729852877427337, 0.06341913318632425, 0.1441964066558775, 0.19175576726361504]}, {"state": 1, "variant": "temperature", "integrated_brier": 0.10666665561884256, "brier_by_horizon": [0.02728549282094721, 0.06360856460656693, 0.14409079321541052, 0.19168177183244636]}], "elapsed_s": 15.889679037034512}
+{"fold": "oof_august", "epoch": 0, "train_nll": 1.1871806727321437, "calibration_integrated_brier": 0.10610962063844619, "elapsed_s": 16.91463734593708}
+{"fold": "oof_august", "epoch": 1, "train_nll": 1.0141321751819572, "calibration_integrated_brier": 0.10205727668124856, "elapsed_s": 17.76205320795998}
+{"fold": "oof_august", "epoch": 2, "train_nll": 0.9855746310982634, "calibration_integrated_brier": 0.10077135207503399, "elapsed_s": 18.60735239193309}
+{"fold": "oof_august", "epoch": 3, "train_nll": 0.9729711642721304, "calibration_integrated_brier": 0.10145896020482004, "elapsed_s": 19.45554070896469}
+{"fold": "oof_august", "epoch": 4, "train_nll": 0.9646331685733432, "calibration_integrated_brier": 0.10240598556308132, "elapsed_s": 20.300592013983987}
+{"fold": "oof_august", "epoch": 5, "train_nll": 0.9575069226848874, "calibration_integrated_brier": 0.10142698899371883, "elapsed_s": 21.153606905951165}
+{"fold": "oof_august", "epoch": 6, "train_nll": 0.9520192374263514, "calibration_integrated_brier": 0.10155338038386506, "elapsed_s": 21.996892599971034}
+{"fold": "oof_august", "epoch": 7, "train_nll": 0.9470394877760346, "calibration_integrated_brier": 0.10182863114936819, "elapsed_s": 22.84060956200119}
+{"fold": "oof_august", "metrics": [{"state": 1, "variant": "raw", "integrated_brier": 0.10632784009597612, "brier_by_horizon": [0.026565575304507393, 0.0715213410951019, 0.1418533416830911, 0.1853711023012024]}, {"state": 1, "variant": "temperature", "integrated_brier": 0.10557102413407418, "brier_by_horizon": [0.02667916513490971, 0.07142284323675263, 0.14108795283023257, 0.18309413533440186]}], "elapsed_s": 23.043895301991142}
+{"fold": "development_october", "epoch": 0, "train_nll": 1.128132760254284, "calibration_integrated_brier": 0.09322541579139418, "elapsed_s": 24.547021192032844}
+{"fold": "development_october", "epoch": 1, "train_nll": 0.9899213558163075, "calibration_integrated_brier": 0.09093542338918512, "elapsed_s": 25.835115483030677}
+{"fold": "development_october", "epoch": 2, "train_nll": 0.9679865744595699, "calibration_integrated_brier": 0.090610971226193, "elapsed_s": 27.119820195017383}
+{"fold": "development_october", "epoch": 3, "train_nll": 0.9574541514938922, "calibration_integrated_brier": 0.09044444449498297, "elapsed_s": 28.40193242498208}
+{"fold": "development_october", "epoch": 4, "train_nll": 0.9492790365268029, "calibration_integrated_brier": 0.08961334344757386, "elapsed_s": 29.686946411966346}
+{"fold": "development_october", "epoch": 5, "train_nll": 0.9425541797176371, "calibration_integrated_brier": 0.08999376084689348, "elapsed_s": 30.978780576959252}
+{"fold": "development_october", "epoch": 6, "train_nll": 0.9372861871940417, "calibration_integrated_brier": 0.09172607439644713, "elapsed_s": 32.26911160896998}
+{"fold": "development_october", "epoch": 7, "train_nll": 0.9318580212580294, "calibration_integrated_brier": 0.0910296335453555, "elapsed_s": 33.55594568699598}
+{"fold": "development_october", "epoch": 8, "train_nll": 0.9269206847377269, "calibration_integrated_brier": 0.09300691684224169, "elapsed_s": 34.85022201493848}
+{"fold": "development_october", "epoch": 9, "train_nll": 0.922379737129687, "calibration_integrated_brier": 0.09181024932702442, "elapsed_s": 36.1519158949377}
+{"fold": "development_october", "metrics": [{"state": 1, "variant": "raw", "integrated_brier": 0.09838002744964502, "brier_by_horizon": [0.024852735839638946, 0.06624584567464238, 0.1301263332073676, 0.17229519507693333]}, {"state": 1, "variant": "temperature", "integrated_brier": 0.09830869066774127, "brier_by_horizon": [0.024849039469135182, 0.06622198638789487, 0.13007254594721282, 0.17209119086672164]}], "elapsed_s": 36.36227142892312}

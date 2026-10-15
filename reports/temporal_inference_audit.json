@@ -1,0 +1,16 @@
+{
+  "audit": "Exported inference vs saved development predictions; BPI Mixer three-seed mean, first1000 targets.",
+  "results": [
+    {
+      "device": "cpu",
+      "max_abs_error": 0.002052783966064453,
+      "mean_abs_error": 1.1721869668690488e-05
+    },
+    {
+      "device": "cuda:1",
+      "max_abs_error": 1.7881393432617188e-07,
+      "mean_abs_error": 1.3258686593076163e-08
+    }
+  ],
+  "policy": "Use CUDA for temporal-model cohort inference, matching the declared training environment. CPU and GPU trigonometric time encodings can differ at large float32 time arguments."
+}

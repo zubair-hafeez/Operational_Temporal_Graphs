@@ -1,0 +1,13 @@
+{"task": "suite", "command": ["/home/zubair/zubairEnv/bin/python", "/mnt/zubair/Operational_Temporal_Graphs/scripts/run_development_suite.py", "--suite", "joint", "--datasets", "borg", "--data-tag", "selected_v2"], "log": "/mnt/zubair/Operational_Temporal_Graphs/reports/gpu_runner_suite_20261015T003420_349348Z.log", "program_sha256": "b666c771f0edf7cac61d0f3b2d91be87ecf43c01c5b3269c77464a2a9945cea1"}
+{"start": "train_joint_borg_selected_v2_gaussian_seed0", "gpu": 0}
+{"complete": "train_joint_borg_selected_v2_gaussian_seed0", "elapsed_s": 67.808363965014}
+{"start": "train_joint_borg_selected_v2_gaussian_seed1", "gpu": 0}
+{"complete": "train_joint_borg_selected_v2_gaussian_seed1", "elapsed_s": 62.37600849091541}
+{"start": "train_joint_borg_selected_v2_gaussian_seed2", "gpu": 0}
+{"complete": "train_joint_borg_selected_v2_gaussian_seed2", "elapsed_s": 63.80418138299137}
+{"start": "train_joint_borg_selected_v2_commonshock_seed0", "gpu": 0}
+{"complete": "train_joint_borg_selected_v2_commonshock_seed0", "elapsed_s": 43.632716799969785}
+{"start": "train_joint_borg_selected_v2_commonshock_seed1", "gpu": 0}
+{"complete": "train_joint_borg_selected_v2_commonshock_seed1", "elapsed_s": 34.432375579024665}
+{"start": "train_joint_borg_selected_v2_commonshock_seed2", "gpu": 0}
+{"complete": "train_joint_borg_selected_v2_commonshock_seed2", "elapsed_s": 64.86091175302863}
