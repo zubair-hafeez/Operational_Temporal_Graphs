@@ -19,5 +19,12 @@
     "commit_url": "https://github.com/ServiceNow/TACTiS/commit/64e9db6405438ebd3a756a072711c81f57fbcffb",
     "archive_sha256": "cca37fb4f166c09216d5c693a8754f83105468fb7e016195c3318ba69945c7ab",
     "archive_bytes": 887967
+  },
+  {
+    "name": "graphmixer",
+    "sha": "c84f1e0bee4eed848872a966b8166d741e240713",
+    "commit_url": "https://github.com/CongWeilin/GraphMixer/commit/c84f1e0bee4eed848872a966b8166d741e240713",
+    "archive_sha256": "c47f1c2b1ac484a0ad246076cd5bd3e992ac5e7fd7541e30127977165bd4001a",
+    "archive_bytes": 21530
   }
 ]

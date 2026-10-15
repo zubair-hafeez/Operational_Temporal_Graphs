@@ -11,3 +11,6 @@
 {"state": 1, "arm": "personal", "fold": "oof_august", "horizon": 7, "elapsed_s": 68.62645874905866}
 {"state": 1, "arm": "personal", "fold": "oof_august", "horizon": 14, "elapsed_s": 83.43973700096831}
 {"state": 1, "arm": "personal", "fold": "development_october", "horizon": 1, "elapsed_s": 103.66744305402972}
+{"state": 1, "arm": "personal", "fold": "development_october", "horizon": 3, "elapsed_s": 124.92643836396746}
+{"state": 1, "arm": "personal", "fold": "development_october", "horizon": 7, "elapsed_s": 147.60311707900837}
+{"state": 1, "arm": "personal", "fold": "development_october", "horizon": 14, "elapsed_s": 169.1573395599844}

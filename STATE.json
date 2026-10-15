@@ -1,14 +1,35 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
   "status": "active",
-  "phase": "full_development_cross_fitted_multihorizon_training",
+  "phase": "full_cohort_joint_validation_and_temporal_neural_controls",
   "final_test_opened": false,
   "research_direction": "behavior-preserving temporal graph generation",
-  "datasets": ["Google ClusterData2011-2", "BPI Challenge 2017"],
-  "gpu_inventory": [{"index": 0, "model": "RTX A6000", "memory_mib": 49140}, {"index": 1, "model": "RTX A6000", "memory_mib": 49140}],
+  "datasets": [
+    "Google ClusterData2011-2",
+    "BPI Challenge 2017"
+  ],
+  "gpu_inventory": [
+    {
+      "index": 0,
+      "model": "RTX A6000",
+      "memory_mib": 49140
+    },
+    {
+      "index": 1,
+      "model": "RTX A6000",
+      "memory_mib": 49140
+    }
+  ],
   "interpreter": "/home/zubair/zubairEnv/bin/python",
   "torch_version": "2.5.1+cu124",
-  "next_actions": ["finish nine active cross-fitted marginal-training jobs", "compare development marginal arms and diagnose calibration", "train crossed job/machine and workflow coupling with forward out-of-sample probabilities", "evaluate full-population multihorizon scenarios and operational decision proxies", "implement appropriate temporal and joint-generative baselines with documented adaptations", "freeze final protocol before opening final data"],
+  "next_actions": [
+    "finish temporal Mixer/GRU/MLP forward folds and multi-seed controls",
+    "compare full-population dependence and incidence controls with strongest marginal forecasts",
+    "add empirical/resampling and direct aggregate controls",
+    "quantify block uncertainty and operational proxy utility",
+    "freeze final protocol before preparing untouched final periods",
+    "write and compile complete evidence-backed manuscript and reproducibility package"
+  ],
   "results": [
     "All 500 Borg task-event shards and BPI archive acquired with checksums.",
     "Seven-day Borg prefix: 35,398,938 events; causal replay and 325,080 queries.",
@@ -19,6 +40,11 @@
     "22-day Borg prefix complete: 115,400,646 events. Full development: 1,833,102 queries, horizons 1/5/15/60 minutes, 16 complete-population cohorts.",
     "BPI full development: 519,142 current-case queries at 1/3/7/14-day horizons.",
     "GPU Gaussian context-factor pilots complete. Context adaptation does not consistently beat static factors on scenario scores; Marshall-Olkin/common-shock controls also give mixed results. No claim of a successful novel architecture yet.",
-    "Pinned DG-Gen, CEP3, TACTiS source archives. Released DG-Gen/CEP3 count-stopping protocols require explicit adaptation for unknown-count fixed-horizon forecasting."
+    "Pinned DG-Gen, CEP3, TACTiS source archives. Released DG-Gen/CEP3 count-stopping protocols require explicit adaptation for unknown-count fixed-horizon forecasting.",
+    "All initial and recent-event-history HGB marginal folds/calibration audits complete. Four coherent CDF calibration variants compared on development only.",
+    "Full joint models use frozen out-of-fold CDFs and simultaneous global/job/machine or handler factors, one uniform per entity across four horizons.",
+    "Full development Gaussian macro fraction CRPS: Borg independent .023049, global .018615, static .018238, context .018227; BPI independent .043650, global .038720, static .039012, context .039699. Only 8 Borg / 17 BPI development cutoffs; final remains untouched.",
+    "Recent-event retrieval finished: 115.4 million Borg events, task/job/machine last-16 histories; BPI case/handler histories. 29 local tests passed.",
+    "BPI Mixer seed0 full development integrated Brier .097513, improving HGB personal .100393. Borg Mixer seed0 training active."
   ]
 }

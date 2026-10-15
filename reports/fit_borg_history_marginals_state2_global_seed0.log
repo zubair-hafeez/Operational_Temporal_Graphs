@@ -1,0 +1,16 @@
+{"state": 2, "arm": "global", "fold": "oof8_10", "horizon": 1, "elapsed_s": 12.182153698988259}
+{"state": 2, "arm": "global", "fold": "oof8_10", "horizon": 5, "elapsed_s": 24.478224938968197}
+{"state": 2, "arm": "global", "fold": "oof8_10", "horizon": 15, "elapsed_s": 37.19766675797291}
+{"state": 2, "arm": "global", "fold": "oof8_10", "horizon": 60, "elapsed_s": 50.086747447028756}
+{"state": 2, "arm": "global", "fold": "oof12_14", "horizon": 1, "elapsed_s": 68.79439666692633}
+{"state": 2, "arm": "global", "fold": "oof12_14", "horizon": 5, "elapsed_s": 89.50648875103798}
+{"state": 2, "arm": "global", "fold": "oof12_14", "horizon": 15, "elapsed_s": 109.47156989003997}
+{"state": 2, "arm": "global", "fold": "oof12_14", "horizon": 60, "elapsed_s": 129.87124974792823}
+{"state": 2, "arm": "global", "fold": "oof16_18", "horizon": 1, "elapsed_s": 155.1202441790374}
+{"state": 2, "arm": "global", "fold": "oof16_18", "horizon": 5, "elapsed_s": 180.06309859699104}
+{"state": 2, "arm": "global", "fold": "oof16_18", "horizon": 15, "elapsed_s": 205.44824257702567}
+{"state": 2, "arm": "global", "fold": "oof16_18", "horizon": 60, "elapsed_s": 231.5649379119277}
+{"state": 2, "arm": "global", "fold": "development20_22", "horizon": 1, "elapsed_s": 261.00722209899686}
+{"state": 2, "arm": "global", "fold": "development20_22", "horizon": 5, "elapsed_s": 290.06609353399836}
+{"state": 2, "arm": "global", "fold": "development20_22", "horizon": 15, "elapsed_s": 319.3201762409881}
+{"state": 2, "arm": "global", "fold": "development20_22", "horizon": 60, "elapsed_s": 349.4843656519661}

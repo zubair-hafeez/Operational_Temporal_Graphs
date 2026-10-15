@@ -1,0 +1,16 @@
+{"state": 1, "arm": "relational", "fold": "oof8_10", "horizon": 1, "elapsed_s": 20.698491443064995}
+{"state": 1, "arm": "relational", "fold": "oof8_10", "horizon": 5, "elapsed_s": 42.764650520985015}
+{"state": 1, "arm": "relational", "fold": "oof8_10", "horizon": 15, "elapsed_s": 65.01271282101516}
+{"state": 1, "arm": "relational", "fold": "oof8_10", "horizon": 60, "elapsed_s": 90.03556039195973}
+{"state": 1, "arm": "relational", "fold": "oof12_14", "horizon": 1, "elapsed_s": 121.00750921503641}
+{"state": 1, "arm": "relational", "fold": "oof12_14", "horizon": 5, "elapsed_s": 152.12603931501508}
+{"state": 1, "arm": "relational", "fold": "oof12_14", "horizon": 15, "elapsed_s": 184.00102883100044}
+{"state": 1, "arm": "relational", "fold": "oof12_14", "horizon": 60, "elapsed_s": 216.13210802304093}
+{"state": 1, "arm": "relational", "fold": "oof16_18", "horizon": 1, "elapsed_s": 251.06103335996158}
+{"state": 1, "arm": "relational", "fold": "oof16_18", "horizon": 5, "elapsed_s": 286.7420290480368}
+{"state": 1, "arm": "relational", "fold": "oof16_18", "horizon": 15, "elapsed_s": 322.55905247305054}
+{"state": 1, "arm": "relational", "fold": "oof16_18", "horizon": 60, "elapsed_s": 358.763208104996}
+{"state": 1, "arm": "relational", "fold": "development20_22", "horizon": 1, "elapsed_s": 398.78229177498724}
+{"state": 1, "arm": "relational", "fold": "development20_22", "horizon": 5, "elapsed_s": 441.32370811200235}
+{"state": 1, "arm": "relational", "fold": "development20_22", "horizon": 15, "elapsed_s": 485.185215607984}
+{"state": 1, "arm": "relational", "fold": "development20_22", "horizon": 60, "elapsed_s": 529.7980031990446}

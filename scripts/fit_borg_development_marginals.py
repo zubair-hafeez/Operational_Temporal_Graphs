@@ -23,10 +23,13 @@ def metric(y,p,w):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--state',type=int,choices=[1,2],required=True)
     ap.add_argument('--dataset',choices=['borg','bpi'],default='borg')
+    ap.add_argument('--history',action='store_true',help='Use the Borg past-event history extension')
     ap.add_argument('--arm',choices=['personal','global','relational'],required=True)
     ap.add_argument('--folds',nargs='+');ap.add_argument('--seed',type=int,default=0)
     ap.add_argument('--max-iter',type=int,default=250);a=ap.parse_args()
-    src=ROOT/'data/processed'/f'{a.dataset}_development_horizons_v1';m=json.loads((src/'metadata.json').read_text())
+    if a.history and a.dataset!='borg':raise ValueError('History extension is Borg-specific')
+    version='history_v1' if a.history else 'horizons_v1'
+    src=ROOT/'data/processed'/f'{a.dataset}_development_{version}';m=json.loads((src/'metadata.json').read_text())
     if a.dataset=='borg':folds=FOLDS;horizons=HORIZONS;unit='m';max_horizon_day=1/24
     else:
         origin=pd.Timestamp('2016-01-01',tz='UTC')
@@ -42,7 +45,8 @@ def main():
     names=m['feature_groups']['personal']+(m['feature_groups']['global'] if a.arm!='personal' else [])+(m['feature_groups']['relational'] if a.arm=='relational' else [])
     cols=[m['features'].index(c) for c in names];state=q.state.to_numpy()==a.state
     t=q.elapsed_day.to_numpy();w=q.sampling_weight.to_numpy();y=q[[f'exit_{h}{unit}' for h in horizons]].to_numpy()
-    run=ROOT/'runs'/f'{a.dataset}_marginals_v1_state{a.state}_{a.arm}_seed{a.seed}';run.mkdir(parents=True,exist_ok=True)
+    tag='history_v1' if a.history else 'v1'
+    run=ROOT/'runs'/f'{a.dataset}_marginals_{tag}_state{a.state}_{a.arm}_seed{a.seed}';run.mkdir(parents=True,exist_ok=True)
     start=time.monotonic()
     with threadpool_limits(limits=4):
         for fold,(fit_end,cal_end,target_end) in folds.items():

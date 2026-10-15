@@ -1,0 +1,13 @@
+Reading development prefix
+{"cutoff": 0, "total": 527, "elapsed_s": 2.87597466702573}
+{"cutoff": 48, "total": 527, "elapsed_s": 4.279527791077271}
+{"cutoff": 96, "total": 527, "elapsed_s": 5.259708189056255}
+{"cutoff": 144, "total": 527, "elapsed_s": 6.0175557440379634}
+{"cutoff": 192, "total": 527, "elapsed_s": 6.666972910054028}
+{"cutoff": 240, "total": 527, "elapsed_s": 8.08636086108163}
+{"cutoff": 288, "total": 527, "elapsed_s": 9.388611030997708}
+{"cutoff": 336, "total": 527, "elapsed_s": 10.19533880497329}
+{"cutoff": 384, "total": 527, "elapsed_s": 11.614533364074305}
+{"cutoff": 432, "total": 527, "elapsed_s": 13.376137097016908}
+{"cutoff": 480, "total": 527, "elapsed_s": 18.75534765003249}
+{"n_queries": 1833102, "n_features": 176, "cohorts": 16, "elapsed_s": 24.55344280297868}

@@ -1,0 +1,12 @@
+{"mode": "global", "epoch": 0, "train_pair_nll": 0.24973340369010064, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.21535342354875672, "elapsed_s": 1.616545805009082}
+{"mode": "global", "epoch": 5, "train_pair_nll": 0.24912273262787543, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.21527587938107898, "elapsed_s": 5.246949201915413}
+{"mode": "global", "epoch": 10, "train_pair_nll": 0.24912816114554437, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.2152651413113191, "elapsed_s": 8.89158110099379}
+{"mode": "static", "epoch": 0, "train_pair_nll": 0.24809599101355997, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.21367097837227939, "elapsed_s": 9.625176204950549}
+{"mode": "static", "epoch": 5, "train_pair_nll": 0.248053334546418, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.213383948986817, "elapsed_s": 13.301879017963074}
+{"mode": "static", "epoch": 10, "train_pair_nll": 0.24819753732607647, "mean_context_offset_squared": 0.0, "validation_pair_nll": 0.21341164649695393, "elapsed_s": 17.096004994935356}
+{"mode": "context", "epoch": 0, "train_pair_nll": 0.2480431476054626, "mean_context_offset_squared": 0.04945788232526845, "validation_pair_nll": 0.21526814671067096, "elapsed_s": 18.282584563014098}
+{"mode": "context", "epoch": 5, "train_pair_nll": 0.24634339930535862, "mean_context_offset_squared": 0.05541693860822254, "validation_pair_nll": 0.21300759510481784, "elapsed_s": 23.760649951989762}
+{"mode": "context", "epoch": 10, "train_pair_nll": 0.24613450976139814, "mean_context_offset_squared": 0.05498131400081847, "validation_pair_nll": 0.21289617143434322, "elapsed_s": 29.232891981955618}
+{"mode": "context", "epoch": 15, "train_pair_nll": 0.24594637342965425, "mean_context_offset_squared": 0.058616259429189896, "validation_pair_nll": 0.21262989646268704, "elapsed_s": 34.7993404319277}
+{"mode": "context", "epoch": 20, "train_pair_nll": 0.24561644876368915, "mean_context_offset_squared": 0.06024928680525886, "validation_pair_nll": 0.2128096994425519, "elapsed_s": 40.41976401594002}
+[{"mode": "global", "best_epoch": 2, "validation_pair_nll": 0.21514905445145666, "parameters": 4, "elapsed_s": 8.914769829018041}, {"mode": "static", "best_epoch": 2, "validation_pair_nll": 0.21316491243605387, "parameters": 8, "elapsed_s": 17.11535102594644}, {"mode": "context", "best_epoch": 14, "validation_pair_nll": 0.2125299941091609, "parameters": 6860, "elapsed_s": 42.66058850893751}]

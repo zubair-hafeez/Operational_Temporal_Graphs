@@ -1,0 +1,16 @@
+{"state": 2, "arm": "relational", "fold": "oof8_10", "horizon": 1, "elapsed_s": 21.03067256102804}
+{"state": 2, "arm": "relational", "fold": "oof8_10", "horizon": 5, "elapsed_s": 42.65857272502035}
+{"state": 2, "arm": "relational", "fold": "oof8_10", "horizon": 15, "elapsed_s": 64.40072457701899}
+{"state": 2, "arm": "relational", "fold": "oof8_10", "horizon": 60, "elapsed_s": 90.01684527494945}
+{"state": 2, "arm": "relational", "fold": "oof12_14", "horizon": 1, "elapsed_s": 124.11270297993906}
+{"state": 2, "arm": "relational", "fold": "oof12_14", "horizon": 5, "elapsed_s": 158.06343382201158}
+{"state": 2, "arm": "relational", "fold": "oof12_14", "horizon": 15, "elapsed_s": 191.80352286295965}
+{"state": 2, "arm": "relational", "fold": "oof12_14", "horizon": 60, "elapsed_s": 226.1156010099221}
+{"state": 2, "arm": "relational", "fold": "oof16_18", "horizon": 1, "elapsed_s": 266.8149264990352}
+{"state": 2, "arm": "relational", "fold": "oof16_18", "horizon": 5, "elapsed_s": 308.8472715159878}
+{"state": 2, "arm": "relational", "fold": "oof16_18", "horizon": 15, "elapsed_s": 350.04425192496274}
+{"state": 2, "arm": "relational", "fold": "oof16_18", "horizon": 60, "elapsed_s": 392.28634552203584}
+{"state": 2, "arm": "relational", "fold": "development20_22", "horizon": 1, "elapsed_s": 441.13342285796534}
+{"state": 2, "arm": "relational", "fold": "development20_22", "horizon": 5, "elapsed_s": 491.90452640794683}
+{"state": 2, "arm": "relational", "fold": "development20_22", "horizon": 15, "elapsed_s": 543.2932120090118}
+{"state": 2, "arm": "relational", "fold": "development20_22", "horizon": 60, "elapsed_s": 596.3687522469554}

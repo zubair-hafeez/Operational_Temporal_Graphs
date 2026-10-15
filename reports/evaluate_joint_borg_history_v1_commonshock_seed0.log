@@ -1,0 +1,9 @@
+{"cohort": "cohort_hour0480", "n": 145771, "elapsed_s": 72.66400252806488}
+{"cohort": "cohort_hour0486", "n": 122896, "elapsed_s": 134.41758674010634}
+{"cohort": "cohort_hour0492", "n": 118509, "elapsed_s": 193.10168019204866}
+{"cohort": "cohort_hour0498", "n": 117617, "elapsed_s": 251.9247080840869}
+{"cohort": "cohort_hour0504", "n": 118559, "elapsed_s": 311.85583794803824}
+{"cohort": "cohort_hour0510", "n": 118909, "elapsed_s": 372.26285781909246}
+{"cohort": "cohort_hour0516", "n": 141263, "elapsed_s": 443.1666994630359}
+{"cohort": "cohort_hour0522", "n": 129126, "elapsed_s": 507.1198618171038}
+{"config": {"dataset": "borg", "history": true, "family": "commonshock", "seed": 0, "draws": 512}, "macro_fraction_crps": {"context": 0.01825938020872876, "global": 0.01905528547798087, "independent": 0.0230562585272052, "static": 0.01824271994676208, "static_permuted": 0.01863847426906763}, "n_cohorts": 8, "elapsed_s": 507.1286476110108, "macro_definition": "Equal cutoff, projection type, horizon, and group weights; population projection groups by current state. Relation groups require >=5 entities.", "decision_proxy": "Reserve capacity for unexited current cohort at quantiles .75/.9 under normalized asymmetric loss ratios 3/9. No causal policy or currency claim.", "script_sha256": "0df06e2ab905a116b099244c7c7b087414bbf75df246709b58410472aa9191e9", "scores_sha256": "c4d7dfb364f606dcedd97397601228cd44fa3b2b80b0cb2f10de63a6adb21f67", "training_manifest_sha256": "82dc954167e89d46eb74a8a943e84dea0572cd08bc7374befcffb8defa7f14f6"}

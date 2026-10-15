@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 from scipy.stats import multivariate_normal,norm
-from otg.copula import FactorLoadings,joint_bernoulli_probabilities,pair_nll,common_shock_probabilities
+from otg.copula import FactorLoadings,joint_bernoulli_probabilities,pair_nll,common_shock_probabilities,mask_unavailable_relations
 
 
 def test_joint_probabilities_have_fixed_marginals_and_match_integral():
@@ -59,3 +59,13 @@ def test_common_shock_independence_and_complete_sharing_limits():
     shared=torch.tensor([[0.,1.,0.],[0.,1.,0.]])
     full=common_shock_probabilities(shared,shared,p,q,torch.ones(2))
     np.testing.assert_allclose(full[:,3],torch.minimum(p,q),atol=1e-7)
+
+
+def test_crossed_relations_and_unknown_weight_preserve_marginals():
+    model=FactorLoadings(3,n_relations=2);x=torch.randn(4,3)
+    loads=model(x);available=torch.tensor([[1.,1.],[1.,0.],[1.,1.],[0.,0.]])
+    masked=mask_unavailable_relations(loads,available)
+    np.testing.assert_allclose((masked.detach()**2).sum(1),1,atol=1e-6)
+    assert masked[1,2]==0 and (masked[3,1:3]==0).all()
+    loss=pair_nll(masked[:2],masked[2:],torch.tensor([.2,.3]),torch.tensor([.4,.5]),torch.tensor([[1.,0.],[0.,0.]]),torch.tensor([1,0]),torch.tensor([0,1])).mean()
+    loss.backward();assert all(torch.isfinite(p.grad).all() for p in model.parameters())

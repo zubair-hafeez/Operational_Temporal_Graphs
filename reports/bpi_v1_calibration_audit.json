@@ -1,0 +1,734 @@
+[
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "personal",
+    "fold": "development_october",
+    "params": {
+      "shared_population": [
+        1.0918813609580529,
+        -0.25286306350912424
+      ],
+      "shared_cutoff": [
+        1.0896033295116299,
+        -0.2540547464810695
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10039343615205605,
+        "population_integrated_brier": 0.1003925376715233,
+        "cutoff_mean_brier_by_horizon": [
+          0.02853482127521202,
+          0.06785375542241424,
+          0.13439252084434722,
+          0.17079264691737953
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10078340170097155,
+        "population_integrated_brier": 0.10078282699704628,
+        "cutoff_mean_brier_by_horizon": [
+          0.028574123625225416,
+          0.06822527108657542,
+          0.13401886435987698,
+          0.17231534771777354
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10091170067486299,
+        "population_integrated_brier": 0.10091101540009238,
+        "cutoff_mean_brier_by_horizon": [
+          0.028743821957077146,
+          0.06829551613231727,
+          0.1336913404465819,
+          0.17291612423193392
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10090627765665727,
+        "population_integrated_brier": 0.10090559024844732,
+        "cutoff_mean_brier_by_horizon": [
+          0.028740279078642975,
+          0.06829394381158228,
+          0.1336705641439947,
+          0.17292032387025102
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "edd0864b0d72c3df108cb4d392932cec3f12d9f42deb5404ca15a290b8be99ea",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "personal",
+    "fold": "oof_august",
+    "params": {
+      "shared_population": [
+        0.9946272677181008,
+        -0.34304971880658713
+      ],
+      "shared_cutoff": [
+        0.9928946133318891,
+        -0.34737140448186954
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10629864760378943,
+        "population_integrated_brier": 0.10629045023136885,
+        "cutoff_mean_brier_by_horizon": [
+          0.030846929317130192,
+          0.08043527904423932,
+          0.13678736181358095,
+          0.17712502017111828
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10063499408668092,
+        "population_integrated_brier": 0.10061957483520911,
+        "cutoff_mean_brier_by_horizon": [
+          0.029381161674361035,
+          0.07128912678968158,
+          0.12758122316127984,
+          0.17428846474865958
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10131230586689544,
+        "population_integrated_brier": 0.1013234111838003,
+        "cutoff_mean_brier_by_horizon": [
+          0.029569821291548986,
+          0.07424772606089022,
+          0.1291834378049791,
+          0.17224823850030094
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10127565606790151,
+        "population_integrated_brier": 0.10128713534120208,
+        "cutoff_mean_brier_by_horizon": [
+          0.029566761454280898,
+          0.07419154598931817,
+          0.1291118842394557,
+          0.17223243244438818
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "cec02fe8566e625c45eff9c3fd7dde4078225b36ae34b74421e3e95ddc951877",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "personal",
+    "fold": "oof_july",
+    "params": {
+      "shared_population": [
+        0.950982068333534,
+        -0.13486999710071768
+      ],
+      "shared_cutoff": [
+        0.9399706103763886,
+        -0.14175871395803177
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.1032354671318153,
+        "population_integrated_brier": 0.10327137174622543,
+        "cutoff_mean_brier_by_horizon": [
+          0.026081879908408327,
+          0.06929067660514925,
+          0.1351099559890496,
+          0.18245935622243278
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.1013392990056231,
+        "population_integrated_brier": 0.10139227330598523,
+        "cutoff_mean_brier_by_horizon": [
+          0.025793825455267406,
+          0.06585573193066346,
+          0.13184337732771645,
+          0.1818642613880141
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.1019087036876684,
+        "population_integrated_brier": 0.10196357947557935,
+        "cutoff_mean_brier_by_horizon": [
+          0.02580969488643156,
+          0.06738052208270572,
+          0.13285560368292704,
+          0.18158899440918883
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10188163320181681,
+        "population_integrated_brier": 0.10193822653946648,
+        "cutoff_mean_brier_by_horizon": [
+          0.025839532766375056,
+          0.06735419681433819,
+          0.13277054436714245,
+          0.1815622589189463
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "021fa08fb4c6ea5e0721c33c7b367c75487c5870280bbbd0c160e1e09881d6f4",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "personal",
+    "fold": "oof_june",
+    "params": {
+      "shared_population": [
+        1.0229949114328758,
+        -0.16982639486211432
+      ],
+      "shared_cutoff": [
+        1.0230308365582146,
+        -0.17044950573187775
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10246110221703361,
+        "population_integrated_brier": 0.10181114200932671,
+        "cutoff_mean_brier_by_horizon": [
+          0.026129482240375874,
+          0.06537031447219908,
+          0.1349139838601364,
+          0.18343062816871086
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10224468853991724,
+        "population_integrated_brier": 0.10153931791166312,
+        "cutoff_mean_brier_by_horizon": [
+          0.02625691379118444,
+          0.06517355878613391,
+          0.13421426699688735,
+          0.18333401476220584
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10232663732973946,
+        "population_integrated_brier": 0.10167841844618547,
+        "cutoff_mean_brier_by_horizon": [
+          0.02616844929436327,
+          0.06508104838118449,
+          0.13452108552203218,
+          0.18353596593339266
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10232789536668316,
+        "population_integrated_brier": 0.10167971578231785,
+        "cutoff_mean_brier_by_horizon": [
+          0.026168904863991677,
+          0.06508099457707564,
+          0.13452137163455413,
+          0.1835403104584375
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "79ccced52d6472b108f011c5666a192fa77ab7f01ae985ba5ac868d2c9368119",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "global",
+    "fold": "development_october",
+    "params": {
+      "shared_population": [
+        0.9584378896491851,
+        -0.07801927349472966
+      ],
+      "shared_cutoff": [
+        0.9570273250164307,
+        -0.07824423903445407
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10384881648129247,
+        "population_integrated_brier": 0.10384131782194271,
+        "cutoff_mean_brier_by_horizon": [
+          0.028436025146271575,
+          0.0720418280998927,
+          0.14385209601237725,
+          0.17106531675373213
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10314325537798308,
+        "population_integrated_brier": 0.10313783786889784,
+        "cutoff_mean_brier_by_horizon": [
+          0.02826586871624975,
+          0.0697653861507676,
+          0.1426047571472131,
+          0.1719370095313813
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10378117025374045,
+        "population_integrated_brier": 0.1037734570830486,
+        "cutoff_mean_brier_by_horizon": [
+          0.02839500356272061,
+          0.07221639401665152,
+          0.1426904930343073,
+          0.1718227903015998
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10377153012597748,
+        "population_integrated_brier": 0.10376380909534484,
+        "cutoff_mean_brier_by_horizon": [
+          0.028390765690372834,
+          0.07220326791147841,
+          0.142672722576757,
+          0.17181936424108188
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "9f96978fafcdba22d7196fb28ab0da819eb3430999a4a9b6799086fc30348866",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "global",
+    "fold": "oof_august",
+    "params": {
+      "shared_population": [
+        0.9157549761663991,
+        -0.4232590111278234
+      ],
+      "shared_cutoff": [
+        0.9137191442772423,
+        -0.42719841023305444
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10929636211806149,
+        "population_integrated_brier": 0.10923852136126724,
+        "cutoff_mean_brier_by_horizon": [
+          0.03199112287600776,
+          0.07779536758828216,
+          0.14400155560599012,
+          0.18339740236870905
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.1017972817831164,
+        "population_integrated_brier": 0.10175470530684376,
+        "cutoff_mean_brier_by_horizon": [
+          0.029920417705952957,
+          0.07207740041604127,
+          0.1311470348808495,
+          0.17404427409857912
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10202795272741495,
+        "population_integrated_brier": 0.10199494935994444,
+        "cutoff_mean_brier_by_horizon": [
+          0.030282468555632318,
+          0.0726257817235582,
+          0.13279223759743705,
+          0.17241132293353872
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10198421894628498,
+        "population_integrated_brier": 0.1019515928835734,
+        "cutoff_mean_brier_by_horizon": [
+          0.03027764465308295,
+          0.07259211755528905,
+          0.1327074753741777,
+          0.17235963820875233
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "4cedd5ab791d670e139c405ff9d8eaaa82e594b3e7b042e3644d6c9fa73bdf91",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "global",
+    "fold": "oof_july",
+    "params": {
+      "shared_population": [
+        0.9389881810695654,
+        -0.14191488703691607
+      ],
+      "shared_cutoff": [
+        0.9260193531888731,
+        -0.1452383184022969
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10524225064836619,
+        "population_integrated_brier": 0.10529901320530569,
+        "cutoff_mean_brier_by_horizon": [
+          0.027476685058100875,
+          0.06559238466629932,
+          0.14375303600997105,
+          0.1841468968449693
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10320884441328314,
+        "population_integrated_brier": 0.103275535471488,
+        "cutoff_mean_brier_by_horizon": [
+          0.027850468280524048,
+          0.06651654107570049,
+          0.1349722635496391,
+          0.1834961049102713
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10353534679600895,
+        "population_integrated_brier": 0.10360729444800632,
+        "cutoff_mean_brier_by_horizon": [
+          0.02704410037148515,
+          0.06472416945928244,
+          0.14007215765583525,
+          0.18230095964225532
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10355623766743247,
+        "population_integrated_brier": 0.10363008474756619,
+        "cutoff_mean_brier_by_horizon": [
+          0.027101554516522245,
+          0.06475934535259392,
+          0.14003184916902517,
+          0.18233220154044508
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "0ab9005ab6f4d15002e2c5a87988ec6bd2552ac812d410aa0ef2be30ebd636a8",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "global",
+    "fold": "oof_june",
+    "params": {
+      "shared_population": [
+        0.9334558079365707,
+        -0.19195721791612005
+      ],
+      "shared_cutoff": [
+        0.9335013020999863,
+        -0.19268080162904586
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10247286330618083,
+        "population_integrated_brier": 0.101873428156963,
+        "cutoff_mean_brier_by_horizon": [
+          0.027624068648713695,
+          0.06410358215627228,
+          0.13643624750316352,
+          0.18172755495050116
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10259693188237758,
+        "population_integrated_brier": 0.10204583049316814,
+        "cutoff_mean_brier_by_horizon": [
+          0.027099589510958994,
+          0.06502825628021626,
+          0.13602962036618288,
+          0.18223026142869084
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10247279837712912,
+        "population_integrated_brier": 0.10189299153266455,
+        "cutoff_mean_brier_by_horizon": [
+          0.027697652792345682,
+          0.06410086247807434,
+          0.1349747950248809,
+          0.18311788319798114
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10247535741257302,
+        "population_integrated_brier": 0.10189550176870321,
+        "cutoff_mean_brier_by_horizon": [
+          0.0276990275648895,
+          0.06410234246790406,
+          0.1349732867366805,
+          0.18312677310794823
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "93fb9fe6635c0e0f6f186b5c0265be43f1da2673960475c70334d80204cab92b",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "relational",
+    "fold": "development_october",
+    "params": {
+      "shared_population": [
+        0.9603320685808251,
+        -0.08287412960833546
+      ],
+      "shared_cutoff": [
+        0.9588388988263281,
+        -0.08311471939990057
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10327082688416347,
+        "population_integrated_brier": 0.10326140509102101,
+        "cutoff_mean_brier_by_horizon": [
+          0.028256735862551927,
+          0.07197287717464412,
+          0.14193588552291275,
+          0.17091780907911006
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10251011432963468,
+        "population_integrated_brier": 0.10250320851551915,
+        "cutoff_mean_brier_by_horizon": [
+          0.028028078871678498,
+          0.0692318308916986,
+          0.14090466287259787,
+          0.17187588471813284
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10326986860292452,
+        "population_integrated_brier": 0.10326028884164608,
+        "cutoff_mean_brier_by_horizon": [
+          0.028250555317449865,
+          0.07224263847819014,
+          0.14086129349796625,
+          0.17172498702716096
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10326041729428745,
+        "population_integrated_brier": 0.10325083350304848,
+        "cutoff_mean_brier_by_horizon": [
+          0.028246005176919723,
+          0.07222807399799092,
+          0.14084612454689105,
+          0.17172146548555367
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "476701855a738ae755dfa93136d10fff302d60f73c3b30efc052457789fdb495",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "relational",
+    "fold": "oof_august",
+    "params": {
+      "shared_population": [
+        0.9175431559695304,
+        -0.39100523608049137
+      ],
+      "shared_cutoff": [
+        0.9155443672368883,
+        -0.3951310073252262
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10796169347593508,
+        "population_integrated_brier": 0.10789696442785913,
+        "cutoff_mean_brier_by_horizon": [
+          0.03154729582573229,
+          0.07415656766668698,
+          0.14319044702064454,
+          0.18295246344895402
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10149112533904456,
+        "population_integrated_brier": 0.10144884332865996,
+        "cutoff_mean_brier_by_horizon": [
+          0.029699229259723074,
+          0.07134013549042627,
+          0.1310285237046132,
+          0.1738966130366013
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.1016246910678915,
+        "population_integrated_brier": 0.1015848377334606,
+        "cutoff_mean_brier_by_horizon": [
+          0.03007575616773095,
+          0.07102341743460648,
+          0.13278811607346364,
+          0.17261147478411643
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10158273907097155,
+        "population_integrated_brier": 0.10154329321814969,
+        "cutoff_mean_brier_by_horizon": [
+          0.030068994038187347,
+          0.07100398014107077,
+          0.13270368297519863,
+          0.17255429896427366
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "fd8935170db63496bfb0310b7870c72f6805eeccf95c52f1ee43b181d424d73a",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "relational",
+    "fold": "oof_july",
+    "params": {
+      "shared_population": [
+        0.9557537361447226,
+        -0.08851031242340258
+      ],
+      "shared_cutoff": [
+        0.9419956349405589,
+        -0.09191465124314219
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10597915749841803,
+        "population_integrated_brier": 0.10606071048170318,
+        "cutoff_mean_brier_by_horizon": [
+          0.028105851708230094,
+          0.06697332783433717,
+          0.14416996868727816,
+          0.1846674816933589
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10390676621408021,
+        "population_integrated_brier": 0.1039833127678037,
+        "cutoff_mean_brier_by_horizon": [
+          0.028831489893899685,
+          0.06729322045262498,
+          0.13492736248198528,
+          0.1845749921608899
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10481629776978758,
+        "population_integrated_brier": 0.10490663314609956,
+        "cutoff_mean_brier_by_horizon": [
+          0.02777927845775659,
+          0.06634155994533687,
+          0.14152919921267917,
+          0.18361515352069158
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10483685795570143,
+        "population_integrated_brier": 0.10492903298030476,
+        "cutoff_mean_brier_by_horizon": [
+          0.027853776147627924,
+          0.06637750078440961,
+          0.14144558924432735,
+          0.18367056558238423
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "cb53d899774bd5046803fbe035b68af06e2b76dfdb6a7609ea8c26ac582734d4",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  },
+  {
+    "dataset": "bpi",
+    "state": 1,
+    "arm": "relational",
+    "fold": "oof_june",
+    "params": {
+      "shared_population": [
+        0.9512253692308198,
+        -0.2202170158957339
+      ],
+      "shared_cutoff": [
+        0.9512198672757194,
+        -0.2208605411647724
+      ]
+    },
+    "metrics": {
+      "raw_sorted": {
+        "cutoff_mean_integrated_brier": 0.10213174471938963,
+        "population_integrated_brier": 0.10151127921366061,
+        "cutoff_mean_brier_by_horizon": [
+          0.025938389570381068,
+          0.06475222615845663,
+          0.13597522621237906,
+          0.18186113674790788
+        ]
+      },
+      "individual_platt_sorted": {
+        "cutoff_mean_integrated_brier": 0.10218837598261937,
+        "population_integrated_brier": 0.10158631345498453,
+        "cutoff_mean_brier_by_horizon": [
+          0.02561319497872702,
+          0.06462801052405914,
+          0.13590886556666443,
+          0.18260343273993293
+        ]
+      },
+      "shared_population": {
+        "cutoff_mean_integrated_brier": 0.10230937878575434,
+        "population_integrated_brier": 0.10170888582577371,
+        "cutoff_mean_brier_by_horizon": [
+          0.026234251598937528,
+          0.06472871873152,
+          0.13460072250022578,
+          0.18367382252092135
+        ]
+      },
+      "shared_cutoff": {
+        "cutoff_mean_integrated_brier": 0.10231235937702941,
+        "population_integrated_brier": 0.10171187632238057,
+        "cutoff_mean_brier_by_horizon": [
+          0.02623566557228901,
+          0.06472987245438434,
+          0.13459992669126702,
+          0.18368397291139854
+        ]
+      }
+    },
+    "script_sha256": "cf4c4dc736c7a388f094b5df6bbb382ef2af5c069545b2444ccdc92115882dd2",
+    "marginal_manifest_sha256": "c7b28353e66b08368fab054d015bbf88ac1ebae0de9161d211653af696de199b",
+    "calibration_contract": "Only earlier calibration-window labels. Coherent shared positive Platt map across all four horizons, identity-shrinkage penalty .001. Both population and cutoff weights retained."
+  }
+]

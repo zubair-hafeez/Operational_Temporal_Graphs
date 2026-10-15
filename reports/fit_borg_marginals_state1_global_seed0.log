@@ -4,3 +4,13 @@
 {"state": 1, "arm": "global", "fold": "oof8_10", "horizon": 60, "elapsed_s": 26.79743099003099}
 {"state": 1, "arm": "global", "fold": "oof12_14", "horizon": 1, "elapsed_s": 35.81540442700498}
 {"state": 1, "arm": "global", "fold": "oof12_14", "horizon": 5, "elapsed_s": 44.775014966959134}
+{"state": 1, "arm": "global", "fold": "oof12_14", "horizon": 15, "elapsed_s": 51.90071157901548}
+{"state": 1, "arm": "global", "fold": "oof12_14", "horizon": 60, "elapsed_s": 59.88237789401319}
+{"state": 1, "arm": "global", "fold": "oof16_18", "horizon": 1, "elapsed_s": 67.84133474202827}
+{"state": 1, "arm": "global", "fold": "oof16_18", "horizon": 5, "elapsed_s": 79.64135670301039}
+{"state": 1, "arm": "global", "fold": "oof16_18", "horizon": 15, "elapsed_s": 89.21207212505396}
+{"state": 1, "arm": "global", "fold": "oof16_18", "horizon": 60, "elapsed_s": 99.91042750200722}
+{"state": 1, "arm": "global", "fold": "development20_22", "horizon": 1, "elapsed_s": 109.30665341101121}
+{"state": 1, "arm": "global", "fold": "development20_22", "horizon": 5, "elapsed_s": 118.92805930704344}
+{"state": 1, "arm": "global", "fold": "development20_22", "horizon": 15, "elapsed_s": 127.40146072895732}
+{"state": 1, "arm": "global", "fold": "development20_22", "horizon": 60, "elapsed_s": 135.75502616900485}

@@ -10,3 +10,7 @@
 {"state": 1, "arm": "relational", "fold": "oof_august", "horizon": 3, "elapsed_s": 74.78201350802556}
 {"state": 1, "arm": "relational", "fold": "oof_august", "horizon": 7, "elapsed_s": 91.65927428996656}
 {"state": 1, "arm": "relational", "fold": "oof_august", "horizon": 14, "elapsed_s": 109.25194037694018}
+{"state": 1, "arm": "relational", "fold": "development_october", "horizon": 1, "elapsed_s": 134.05645939393435}
+{"state": 1, "arm": "relational", "fold": "development_october", "horizon": 3, "elapsed_s": 162.58830513095018}
+{"state": 1, "arm": "relational", "fold": "development_october", "horizon": 7, "elapsed_s": 186.04214379400946}
+{"state": 1, "arm": "relational", "fold": "development_october", "horizon": 14, "elapsed_s": 204.09752243198454}
