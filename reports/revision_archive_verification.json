@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "archive_sha256": "9ab04634c1b609bcf0abed64963a2f413151893638b83dcdc7f2b8e6dac514b4",
+  "archive_bytes": 159613117,
+  "extracted_directory": "/tmp/otg-revision-review-axvqiunh",
+  "files_verified": 878,
+  "generated_artifacts_identical": 14,
+  "tests_passed": 45,
+  "both_protocols_and_final_alignment_verified": true,
+  "manuscript_compiled_from_archive": true,
+  "commands": [
+    {
+      "command": [
+        "/home/zubair/zubairEnv/bin/python",
+        "-m",
+        "pytest",
+        "tests",
+        "revision/test_revision.py",
+        "revision/test_exact_counts.py",
+        "revision/test_alibaba.py",
+        "-q"
+      ],
+      "returncode": 0,
+      "log": "/tmp/otg-revision-review-axvqiunh/verification_0.log"
+    },
+    {
+      "command": [
+        "/home/zubair/zubairEnv/bin/python",
+        "revision/build_revision_artifacts.py"
+      ],
+      "returncode": 0,
+      "log": "/tmp/otg-revision-review-axvqiunh/verification_1.log"
+    },
+    {
+      "command": [
+        "/home/zubair/zubairEnv/bin/python",
+        "revision/audit_revision_artifacts.py"
+      ],
+      "returncode": 0,
+      "log": "/tmp/otg-revision-review-axvqiunh/verification_2.log"
+    }
+  ],
+  "verification_script_sha256": "21194ea1a267dde564eebaa4cae667a78f06986c2c20a5840c423c636b30d7b1"
+}

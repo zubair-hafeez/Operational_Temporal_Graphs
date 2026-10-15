@@ -1,7 +1,7 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
-  "status": "active",
-  "phase": "revision_packaging",
+  "status": "complete",
+  "phase": "revised_manuscript_ready_for_author_review",
   "final_test_opened": true,
   "research_direction": "Joint first-exit forecasting for changing operational cohorts on temporal graphs",
   "datasets": [
@@ -24,8 +24,8 @@
   "interpreter": "/home/zubair/zubairEnv/bin/python",
   "torch_version": "2.5.1+cu124",
   "next_actions": [
-    "Package revised paper and verify clean extraction",
-    "Final author review, venue choice and attribution"
+    "Author review and actual attribution",
+    "Author venue choice and any separately authorized submission"
   ],
   "results": [
     "All 500 Borg task-event shards and BPI archive acquired with checksums.",
@@ -87,12 +87,59 @@
   "revision": {
     "authorized": "2026-10-15",
     "original_study": "complete; immutable review archive retained",
-    "current": "Three-source empirical revision complete; numerical audit passed; packaging and clean-extraction verification remain",
+    "current": "Complete: strengthened three-source empirical manuscript and verified reproducible review package",
     "new_test_status": "BPI2012 February completed under 82-asset freeze; Alibaba candidate deferred before predictive fitting because missing-end semantics were unverified",
     "fresh_protocol_sha256": "d40ee5bbfac35299e298c60521c27d6116ee7871d6e73b36c1661e49297e0e20",
     "draft": "paper_revision/main.pdf",
     "tests_passed": 45,
-    "audit": "reports/revision_artifact_audit.json"
+    "audit": "reports/revision_artifact_audit.json",
+    "archive_verification": {
+      "status": "passed",
+      "archive_sha256": "9ab04634c1b609bcf0abed64963a2f413151893638b83dcdc7f2b8e6dac514b4",
+      "archive_bytes": 159613117,
+      "extracted_directory": "/tmp/otg-revision-review-axvqiunh",
+      "files_verified": 878,
+      "generated_artifacts_identical": 14,
+      "tests_passed": 45,
+      "both_protocols_and_final_alignment_verified": true,
+      "manuscript_compiled_from_archive": true,
+      "commands": [
+        {
+          "command": [
+            "/home/zubair/zubairEnv/bin/python",
+            "-m",
+            "pytest",
+            "tests",
+            "revision/test_revision.py",
+            "revision/test_exact_counts.py",
+            "revision/test_alibaba.py",
+            "-q"
+          ],
+          "returncode": 0,
+          "log": "/tmp/otg-revision-review-axvqiunh/verification_0.log"
+        },
+        {
+          "command": [
+            "/home/zubair/zubairEnv/bin/python",
+            "revision/build_revision_artifacts.py"
+          ],
+          "returncode": 0,
+          "log": "/tmp/otg-revision-review-axvqiunh/verification_1.log"
+        },
+        {
+          "command": [
+            "/home/zubair/zubairEnv/bin/python",
+            "revision/audit_revision_artifacts.py"
+          ],
+          "returncode": 0,
+          "log": "/tmp/otg-revision-review-axvqiunh/verification_2.log"
+        }
+      ],
+      "verification_script_sha256": "21194ea1a267dde564eebaa4cae667a78f06986c2c20a5840c423c636b30d7b1"
+    },
+    "review_ready_utc": "2026-10-15T13:07:29.608839+00:00",
+    "external_submission": false,
+    "remaining_experiments": []
   },
   "original_artifacts": {
     "pdf": "paper/main.pdf",

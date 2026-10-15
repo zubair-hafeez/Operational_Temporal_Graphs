@@ -1,3 +1,11 @@
+# Current revision complete for final author review
+
+The strengthened empirical manuscript and review package are COMPLETE. PDF `paper_revision/main.pdf`; guidance `REVISION_REVIEW_NOTES.md`; reproduction `REVISION_REPRODUCE.md`. Local archive `releases/operational_cohorts_revision_review.zip` is159,613,117bytes with878files, SHA256 `9ab04634c1b609bcf0abed64963a2f413151893638b83dcdc7f2b8e6dac514b4`. Fresh extraction `/tmp/otg-revision-review-axvqiunh` verified every file hash, regenerated all14 CSV/TeX/manifest/figure artifacts identically, passed45 tests, verified both freezes and compiled the PDF without overfull boxes or unresolved references. Evidence: `reports/revision_archive_verification.json`.
+
+Original PDF and archive hashes remain unchanged. No experiment or required artifact task remains. Final author identity, venue choice, disclosures and any public upload/submission belong to the researcher; none was invented or performed. The archive records packaging-time state at commit5c0367d; this post-verification status and verification report are intentionally outside that immutable ZIP. Mark the active goal complete and deliver the PDF, notes and ZIP links. Preserve user-owned notebook checkpoints. RF remains excluded.
+
+--- Packaging-stage notes below are historical ---
+
 # Current revision ready for package verification
 
 The complete three-source revised manuscript is `paper_revision/main.pdf` (10 pages). Strong direct-count/calibration/reconciliation controls, graph diagnostics, joint-risk evaluation and fresh BPI2012 confirmation are complete. All45 tests pass; `reports/revision_artifact_audit.json` verifies original264/fresh82 frozen assets,20 table-source hashes,117 scored origins and all41 fresh delayed-calibration fits. See `REVISION_REVIEW_NOTES.md` and `REVISION_REPRODUCE.md`.
