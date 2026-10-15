@@ -1,7 +1,7 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
-  "status": "review_ready",
-  "phase": "complete_manuscript_local_packaging",
+  "status": "complete",
+  "phase": "ready_for_author_review",
   "final_test_opened": true,
   "research_direction": "Joint first-exit forecasting for changing operational cohorts on temporal graphs",
   "datasets": [
@@ -76,5 +76,13 @@
     "tests_passed": 36,
     "max_abs_mc_crps_change": 0.00012198429925083104
   },
-  "review_ready_utc": "2026-10-15T01:15:23.956064+00:00"
+  "review_ready_utc": "2026-10-15T01:15:23.956064+00:00",
+  "completed_utc": "2026-10-15T01:16:49.227369+00:00",
+  "archive_verification": {
+    "status": "passed",
+    "files_verified": 656,
+    "generated_numeric_and_text_files_identical": 13,
+    "manuscript_compiled_from_archive": true,
+    "sha256": "a6d9aaa7e372dfd9b21c09285dbe76c4fdfe7fec2ddbd3b3dcf13d460cf7b2ef"
+  }
 }

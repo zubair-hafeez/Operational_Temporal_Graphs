@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "archive_sha256": "a6d9aaa7e372dfd9b21c09285dbe76c4fdfe7fec2ddbd3b3dcf13d460cf7b2ef",
+  "files_verified": 656,
+  "generated_numeric_and_text_files_identical": 13,
+  "fresh_extraction": "/tmp/otg-review-check-a9e48wqv",
+  "manuscript_compiled_from_archive": true,
+  "commands": [
+    {
+      "command": [
+        "/home/zubair/zubairEnv/bin/python",
+        "scripts/build_paper_artifacts.py"
+      ],
+      "output": "{\"status\": \"complete\", \"primary\": {\"borg\": {\"family\": \"gaussian\", \"mode\": \"static\", \"selection_metric\": \"Development macro fraction CRPS averaged over three seeds\", \"selected_score\": 0.0193579326849471}, \"bpi\": {\"family\": \"gaussian\", \"mode\": \"global\", \"selection_metric\": \"Development macro fraction CRPS averaged over three seeds\", \"selected_score\": 0.0408549177851549}}, \"final_longest_horizon_marginals\": {\"borg1\": {\"brier\": 0.15600696861344782, \"predicted_fraction\": 0.3193246904494507, \"observed_fraction\": 0.3184218383521413}, \"borg2\": {\"brier\": 0.057298038553978685, \"predicted_fraction\": 0.1198777751997113, \"observed_fraction\": 0.12869639456489138}, \"bpi1\": {\"brier\": 0.17805385345318278, \"predicted_fraction\": 0.5252309246141402, \"observed_fraction\": 0.5792324513100278}}, \"monte_carlo_max_abs_crps_change\": 0.00012198429925083104}\n"
+    },
+    {
+      "command": [
+        "/home/zubair/zubairEnv/bin/python",
+        "scripts/draw_forecast_contract.py"
+      ],
+      "output": ""
+    },
+    {
+      "command": [
+        "/home/zubair/zubairEnv/bin/python",
+        "scripts/complete_paper_artifacts.py"
+      ],
+      "output": "{\"status\": \"complete\", \"crps_order_unchanged\": true, \"max_abs_crps_change\": 0.0001219842992508, \"inputs\": [{\"path\": \"paper/generated/monte_carlo_sensitivity.csv\", \"sha256\": \"0a5f4d0bd63ac349c499ca56efcfad5f2c5690b2db56eb7eef4859fbb5471a87\"}, {\"path\": \"paper/generated/runtimes.csv\", \"sha256\": \"e98d91f4f7540dd9dc4b33e1903080780b51375b830db210143fbc9568e85b3e\"}, {\"path\": \"reports/final_artifact_audit.json\", \"sha256\": \"4bd9552fd5f39dfbd9be031798a62bab71944e9d82cbe7bdd2d82535adb7cc24\"}], \"script_sha256\": \"51beb3aee9bc7e09e673d44ecb94f29ab0cd54b922d7b55d2a426476f2179db4\", \"caption_changes\": \"Clarify residual seed count and origin-score versus projection CSV granularity; no numerical changes.\"}\n"
+    }
+  ]
+}

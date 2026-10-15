@@ -1,10 +1,10 @@
-# Current state: manuscript complete, local review package being assembled
+# Current state: complete and ready for author review
 
 The complete manuscript is `paper/main.pdf` (12 pages, including references and appendix), with source in `paper/main.tex`. All final experiments, both families and all seeds, the 1,024-draw sensitivity, diagnostics, generated tables/figures and the artifact consistency audit are complete. Read `REVIEW_NOTES.md` before making any publication claim. The study is an application benchmark with classical dependence models, not a new copula architecture. No external submission or publication has occurred.
 
 Final selected results: Borg Gaussian/static CRPS .025875 versus independence .034166 (24.3% lower), reserve ratio9 loss .052804 versus .131064 (59.7% lower); BPI Gaussian/global CRPS .045951 versus .050102 (8.3% lower), reserve loss .128991 versus .117699 (9.6% higher). Most Borg gain is already global; graph incidence adds a smaller gain. Historical residuals have the lowest mean BPI CRPS. All 264 frozen assets verify; 36 tests pass; Monte Carlo ordering is stable. Paper reports block-length sensitivity, marginal bias and projection-level coverage failures.
 
-CUDA permissions are resolved through the persistently approved absolute `scripts/gpu_research.py` runner. No further experiment is pending. Preserve all original data, runs and the final freeze. The package script will create `releases/operational_cohorts_review.zip`; verify its manifest and round-trip saved-score artifact regeneration before final handoff. The material below is historical and may describe now-completed work.
+CUDA permissions are resolved through the persistently approved absolute `scripts/gpu_research.py` runner. No further experiment is pending. Preserve all original data, runs and the final freeze. The package is complete at `releases/operational_cohorts_review.zip` (57,449,428 bytes). A fresh extraction verified all 656 file hashes, exactly regenerated all 13 numerical/text artifacts, and compiled the manuscript. See `reports/review_archive_verification.json`. The ZIP records the packaging-time source snapshot; this completion note and the post-package verification report remain outside that immutable archive. The material below is historical and may describe now-completed work.
 
 ---
 
