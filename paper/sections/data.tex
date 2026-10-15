@@ -2,7 +2,7 @@
 \subsection{Two operational adapters}
 \paragraph{Compute cluster.}
 We use all 500 task-event shards of Google ClusterData2011-2
-\cite{google2011}. The trace covers approximately 29 days in one cluster.
+\citep{google2011}. The trace covers approximately 29 days in one cluster.
 Positive trace timestamps use the publisher's 600-second physical origin;
 time-zero rows describe an initial state with unknown preceding age. The
 adapter replays observed events in timestamp and source order. Tasks are
@@ -17,7 +17,7 @@ Requests are not measurements of resource utilization.
 
 \paragraph{Loan application workflow.}
 BPI Challenge 2017 records applications initiated during 2016 with later
-follow-up \cite{vandongen2017}. We predict the first occurrence of
+follow-up \citep{vandongen2017}. We predict the first occurrence of
 \texttt{A\_Pending}, \texttt{A\_Denied}, or \texttt{A\_Cancelled} after creation,
 at 1, 3, 7, and 14 days. ``Resolution'' denotes this declared milestone; it
 does not mean repayment or necessarily the last logged event. Cases with a
@@ -51,6 +51,12 @@ November 1 through December 31: 61 complete current cohorts. Follow-up through
 January 15 supports all 14-day labels. The archive concerns 2016 applications;
 this experiment does not require predicting unobserved 2017 arrivals.
 
+The final evaluation contains 3,760,001 task--origin queries in Borg and
+114,051 case--origin queries in BPI. Borg cohorts range from 105,077 to 171,603
+active tasks; BPI cohorts range from 1,484 to 2,189 active cases. These counts
+include repeated entities at different origins and are not independent sample
+sizes. The final Borg prefix contains 144,648,283 task-event rows.
+
 Model selection was exploratory and development-informed. Before opening final
 labels, we froze model choices, checkpoints, code hashes, origins, metrics,
 random seeds, and uncertainty calculations in an immutable manifest. No model
@@ -59,17 +65,25 @@ holdout freeze, not prospective preregistration of the initial research idea.
 
 \subsection{Individual models and common-CDF controls}
 Histogram gradient boosting (HGB) uses personal, global, and relational feature
-arms. Borg has 32 base features and an extension with 144 recent-event counts;
+arms. The personal arm describes observed state, age, event history, and
+available requests or offer history. The global arm adds calendar features
+and system-wide activity; the relational arm additionally summarizes current
+job/machine populations or last-handler case history. These arms are nested.
+Borg has 32 base features and an extension with 144 recent-event counts;
 BPI has 103 features. Four monotone calibration variants are compared: sorted
 raw horizon probabilities, independently Platt-calibrated and sorted
 probabilities, and two shared positive-slope Platt maps with population or
 equal-origin fitting weights. Temporal encoders receive the same extended
 tabular features and the last 16 observed events per scope: task, job, and
-machine for Borg; case and handler for BPI. Event identities are not embeddings.
+machine for Borg; case and handler for BPI. Entity identifiers are excluded
+from learned embeddings.
 The temporal Mixer and GRU use a five-category first-exit head; the MLP uses
 the tabular features alone. We compare raw and temperature-calibrated
 three-seed mean predictions. Selection minimizes equal-origin integrated
 Brier score, separately by current state, without choosing the best seed.
+Here integrated Brier means the arithmetic mean of binary Brier scores at
+the four specified horizons, with equal forecast-origin weights; it is a
+discrete-horizon summary rather than a continuous-time integral.
 
 All dependence controls share this selected CDF. Each family is fitted with
 seeds 0, 1, and 2, and evaluated with 512 draws per origin. Seed 0 is also

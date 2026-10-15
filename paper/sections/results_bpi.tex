@@ -42,7 +42,10 @@ therefore insufficient, and the choice of family matters.
 The direct historical-residual comparator achieves the lowest aggregate CRPS
 among these workflow comparisons, 0.04387, while its coverage is 0.831 and its
 ratio-9 loss is 0.12576. It can shift aggregate means and is not a
-matched-marginal ablation. This distinction is consequential: at 14 days, the
+matched-marginal ablation. Its mean CRPS advantage over the selected Gaussian
+model is not resolved by the block intervals: the Gaussian-minus-residual
+difference is 0.00208, with a 14-day interval $[-0.00070,0.00536]$.
+This distinction is consequential: at 14 days, the
 selected individual ensemble predicts an average population resolution
 fraction of 0.5252 versus the observed 0.5792. Every matched-marginal copula
 inherits that mean bias. The residual baseline's advantage is evidence for

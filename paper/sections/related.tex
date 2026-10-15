@@ -1,12 +1,12 @@
 \section{Related work and scope}
 \paragraph{Temporal prediction and generation.}
 GraphMixer demonstrates the strength of simple temporal encoders for link
-prediction \cite{cong2023}. We use an independently implemented Mixer-style
+prediction \citep{cong2023}. We use an independently implemented Mixer-style
 survival adaptation, alongside recurrent and tabular controls, rather than
 claiming to reproduce its original link-prediction protocol. CEP3 forecasts
-community events and their times with a graph point process \cite{wang2022};
+community events and their times with a graph point process \citep{wang2022};
 DG-Gen autoregressively generates continuous-time dynamic graphs
-\cite{hosseini2025}. These are relevant generative approaches, but their
+\citep{hosseini2025}. These are relevant generative approaches, but their
 published tasks do not by themselves establish reliable distributions of
 current-cohort first exits. We do not report numerical superiority over these
 systems: a fair comparison would require explicit adaptations of outcome
@@ -14,11 +14,11 @@ semantics, state initialization, horizon stopping, and candidate populations.
 
 \paragraph{Joint probabilistic forecasting.}
 TACTiS and TACTiS-2 learn copula-based multivariate predictive distributions and
-support irregular or unaligned time series \cite{drouin2022,ashok2024}.
+support irregular or unaligned time series \citep{drouin2022,ashok2024}.
 Separating fitted marginals from a spatial Gaussian copula is also established,
-including in neural rainfall downscaling \cite{huk2025}. Our reference models
+including in neural rainfall downscaling \citep{huk2025}. Our reference models
 use more restrictive dependence families, including the classical
-Marshall--Olkin shock construction \cite{marshall1967}. The practical
+Marshall--Olkin shock construction \citep{marshall1967}. The practical
 distinction is the use of current typed incidence to share random factors among
 changing entity populations, with identical individual forecasts across
 controls. We claim neither a universal modeling advantage over attentional
@@ -26,10 +26,10 @@ copulas nor a new marginal--dependence decomposition.
 
 \paragraph{Operational simulation and uncertainty.}
 RIMS integrates learned predictions with business process simulation and
-runtime intercase information \cite{meneghello2025}. AgentSimulator models
-resource behavior and interactions \cite{kirchdorfer2025}. Closely related
+runtime intercase information \citep{meneghello2025}. AgentSimulator models
+resource behavior and interactions \citep{kirchdorfer2025}. Closely related
 work reconstructs current process states and estimates state-conditional
-forecast-error intervals, including on BPI 2017 \cite{avramenko2026}.
+forecast-error intervals, including on BPI 2017 \citep{avramenko2026}.
 Thus, neither current-state initialization nor uncertainty estimation for
 operational forecasts is an unaddressed problem. Our study instead isolates
 joint outcome dependence under fixed individual CDFs, tests relation incidence,
@@ -40,6 +40,6 @@ simulation system in \citet{avramenko2026}.
 
 Resource-trace generation also has a distinct operational objective. Mimesys
 synthesizes executable workloads to reproduce resource contention
-\cite{kim2026}. Our sampled first-exit bins cannot substitute for executable
+\citep{kim2026}. Our sampled first-exit bins cannot substitute for executable
 workloads or full process simulations. They target the uncertainty of the
 observed cohort under the logged operating regime.

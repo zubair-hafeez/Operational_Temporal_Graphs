@@ -1,0 +1,43 @@
+{
+  "config": {
+    "dataset": "borg",
+    "data_tag": "selected_v2",
+    "draws": 512,
+    "period": "final"
+  },
+  "sources": [
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed0/final_cohort_scores_m512.parquet",
+      "sha256": "1d90417e4c083b7649d488ac4cc48dabc780dcc40210566ec4577d330fbe0364"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed1/final_cohort_scores_m512.parquet",
+      "sha256": "d75512655aae3fae8cf80af8e648a8c5eba3451e1fce983d684157e45f564586"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed2/final_cohort_scores_m512.parquet",
+      "sha256": "e9aadd933fa63f5dd99a6d9b107012682b28b4c71043ee59fbe077828e549e67"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed0/final_cohort_scores_m512.parquet",
+      "sha256": "f80d390207475ebfd0b4064f6e85e533f34a766a03d8aa50c74649406f297990"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed1/final_cohort_scores_m512.parquet",
+      "sha256": "b92afa1aef2d11337d4c3b5e24cb0d763d0c564752712d8f9b274dc44243d585"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed2/final_cohort_scores_m512.parquet",
+      "sha256": "a5be1cdf829ac167de6b52f61641dee63eb608eb8bc73bceaf551e78fefc0d24"
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_origins": 28,
+  "status": "complete",
+  "interpretation": "Final scores use frozen development checkpoints without adaptation. Intervals are descriptive paired circular moving-block bootstrap intervals with seed-averaged forecast origins. No task-level IID or seed-as-new-data inference.",
+  "script_sha256": "ad653669611e48d13d1db21a8b9f41df963a9e586e64d9b1d1756cecd1692777"
+}

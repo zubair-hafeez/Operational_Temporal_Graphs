@@ -1,0 +1,937 @@
+{
+  "status": "complete",
+  "protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77",
+  "primary": {
+    "borg": {
+      "family": "gaussian",
+      "mode": "static",
+      "selection_metric": "Development macro fraction CRPS averaged over three seeds",
+      "selected_score": 0.0193579326849471
+    },
+    "bpi": {
+      "family": "gaussian",
+      "mode": "global",
+      "selection_metric": "Development macro fraction CRPS averaged over three seeds",
+      "selected_score": 0.0408549177851549
+    }
+  },
+  "macro": {
+    "borg": {
+      "gaussian_independent": {
+        "fraction_crps": 0.03416565246259958,
+        "coverage_90": 0.6593648438845533,
+        "buffer_cost_ratio9": 0.1310635125689285,
+        "interval_score_90_fraction": 0.5359648508579228,
+        "trajectory_energy": 0.09161609333638344
+      },
+      "gaussian_global": {
+        "fraction_crps": 0.026458116423897338,
+        "coverage_90": 0.9796838384591366,
+        "buffer_cost_ratio9": 0.05505519307636209,
+        "interval_score_90_fraction": 0.21777266206405566,
+        "trajectory_energy": 0.07400832062545905
+      },
+      "gaussian_static": {
+        "fraction_crps": 0.02587498630833241,
+        "coverage_90": 0.9058571827486158,
+        "buffer_cost_ratio9": 0.05280439277002545,
+        "interval_score_90_fraction": 0.20869938789222697,
+        "trajectory_energy": 0.07274905725870241
+      },
+      "gaussian_context": {
+        "fraction_crps": 0.025629026280957617,
+        "coverage_90": 0.9145677658129584,
+        "buffer_cost_ratio9": 0.05412505183115684,
+        "interval_score_90_fraction": 0.20482200133247572,
+        "trajectory_energy": 0.0723943542665968
+      },
+      "gaussian_static_permuted": {
+        "fraction_crps": 0.026905984951917216,
+        "coverage_90": 0.8916435093646601,
+        "buffer_cost_ratio9": 0.058572937152585644,
+        "interval_score_90_fraction": 0.23908824193185899,
+        "trajectory_energy": 0.07469989415301728
+      },
+      "commonshock_independent": {
+        "fraction_crps": 0.03416296035397388,
+        "coverage_90": 0.6603818380481539,
+        "buffer_cost_ratio9": 0.13098469938966578,
+        "interval_score_90_fraction": 0.5356003793587703,
+        "trajectory_energy": 0.09161420455505946
+      },
+      "commonshock_global": {
+        "fraction_crps": 0.027692832115687228,
+        "coverage_90": 0.8482204341909164,
+        "buffer_cost_ratio9": 0.06660306437792794,
+        "interval_score_90_fraction": 0.24551189501908682,
+        "trajectory_energy": 0.07660746340691384
+      },
+      "commonshock_static": {
+        "fraction_crps": 0.026459576949511156,
+        "coverage_90": 0.8605861477213965,
+        "buffer_cost_ratio9": 0.06388743942615698,
+        "interval_score_90_fraction": 0.227717687021907,
+        "trajectory_energy": 0.0738064853342503
+      },
+      "commonshock_context": {
+        "fraction_crps": 0.026108937482327777,
+        "coverage_90": 0.865630122340179,
+        "buffer_cost_ratio9": 0.06290109256937229,
+        "interval_score_90_fraction": 0.225679425105771,
+        "trajectory_energy": 0.07327654764474893
+      },
+      "commonshock_static_permuted": {
+        "fraction_crps": 0.02718729067455335,
+        "coverage_90": 0.8516529503565063,
+        "buffer_cost_ratio9": 0.06703235956972271,
+        "interval_score_90_fraction": 0.25244905318219735,
+        "trajectory_energy": 0.07518121254018033
+      },
+      "empirical_historical_residual": {
+        "fraction_crps": 0.030889228725264766,
+        "coverage_90": 0.874643170480601,
+        "buffer_cost_ratio9": 0.08399659061621852,
+        "interval_score_90_fraction": 0.33527637233553353,
+        "trajectory_energy": 0.08389930040240005
+      }
+    },
+    "bpi": {
+      "gaussian_independent": {
+        "fraction_crps": 0.050101542824557053,
+        "coverage_90": 0.5355767961431965,
+        "buffer_cost_ratio9": 0.11769864244711031,
+        "interval_score_90_fraction": 0.5684684058072869,
+        "trajectory_energy": 0.12583311589850735
+      },
+      "gaussian_global": {
+        "fraction_crps": 0.04595127111895174,
+        "coverage_90": 0.8897202023266055,
+        "buffer_cost_ratio9": 0.12899124231642517,
+        "interval_score_90_fraction": 0.354177384540089,
+        "trajectory_energy": 0.11717948556884016
+      },
+      "gaussian_static": {
+        "fraction_crps": 0.046486762425696285,
+        "coverage_90": 0.7934968540363831,
+        "buffer_cost_ratio9": 0.12219193426110239,
+        "interval_score_90_fraction": 0.38570962491396793,
+        "trajectory_energy": 0.11838872220187088
+      },
+      "gaussian_context": {
+        "fraction_crps": 0.04629832921356645,
+        "coverage_90": 0.8275654172066528,
+        "buffer_cost_ratio9": 0.12582253582800912,
+        "interval_score_90_fraction": 0.3690233970019217,
+        "trajectory_energy": 0.11822361476681506
+      },
+      "gaussian_static_permuted": {
+        "fraction_crps": 0.046940896257068494,
+        "coverage_90": 0.7757061162486025,
+        "buffer_cost_ratio9": 0.11936377313113075,
+        "interval_score_90_fraction": 0.4072334405018094,
+        "trajectory_energy": 0.11907625707124879
+      },
+      "commonshock_independent": {
+        "fraction_crps": 0.05012948070227142,
+        "coverage_90": 0.5354991589824557,
+        "buffer_cost_ratio9": 0.11778655073434977,
+        "interval_score_90_fraction": 0.5693424734470445,
+        "trajectory_energy": 0.12588336418105406
+      },
+      "commonshock_global": {
+        "fraction_crps": 0.050946480485694313,
+        "coverage_90": 0.5788628266371575,
+        "buffer_cost_ratio9": 0.11758141589022839,
+        "interval_score_90_fraction": 0.494483884935185,
+        "trajectory_energy": 0.12797888268856453
+      },
+      "commonshock_static": {
+        "fraction_crps": 0.05026471240770531,
+        "coverage_90": 0.6074427493270074,
+        "buffer_cost_ratio9": 0.11779046824741625,
+        "interval_score_90_fraction": 0.487271479184673,
+        "trajectory_energy": 0.1260908836732645
+      },
+      "commonshock_context": {
+        "fraction_crps": 0.05027939881404356,
+        "coverage_90": 0.6801860114164408,
+        "buffer_cost_ratio9": 0.11786745459823753,
+        "interval_score_90_fraction": 0.43469183871804573,
+        "trajectory_energy": 0.12626626486756198
+      },
+      "commonshock_static_permuted": {
+        "fraction_crps": 0.050028254285676685,
+        "coverage_90": 0.593337426750027,
+        "buffer_cost_ratio9": 0.11716527024287783,
+        "interval_score_90_fraction": 0.5098774027259235,
+        "trajectory_energy": 0.12550279426224914
+      },
+      "empirical_historical_residual": {
+        "fraction_crps": 0.0438662899994433,
+        "coverage_90": 0.8310605628835481,
+        "buffer_cost_ratio9": 0.12575771797248678,
+        "interval_score_90_fraction": 0.375030147621923,
+        "trajectory_energy": 0.10824901103259368
+      }
+    }
+  },
+  "final_longest_horizon_marginals": {
+    "borg1": {
+      "brier": 0.15600696861344782,
+      "predicted_fraction": 0.3193246904494507,
+      "observed_fraction": 0.3184218383521413
+    },
+    "borg2": {
+      "brier": 0.057298038553978685,
+      "predicted_fraction": 0.1198777751997113,
+      "observed_fraction": 0.12869639456489138
+    },
+    "bpi1": {
+      "brier": 0.17805385345318278,
+      "predicted_fraction": 0.5252309246141402,
+      "observed_fraction": 0.5792324513100278
+    }
+  },
+  "paired_intervals": [
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "independent",
+      "metric": "fraction_crps",
+      "block": 4,
+      "mean_difference": -0.008290666154267169,
+      "ci95_low": -0.010560033542001865,
+      "ci95_high": -0.006105045689302439,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "independent",
+      "metric": "fraction_crps",
+      "block": 8,
+      "mean_difference": -0.008290666154267169,
+      "ci95_low": -0.009852788753721975,
+      "ci95_high": -0.0068574245924685065,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "independent",
+      "metric": "buffer_cost_ratio9",
+      "block": 4,
+      "mean_difference": -0.07825911979890307,
+      "ci95_low": -0.11743760695034598,
+      "ci95_high": -0.04280319970290506,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "independent",
+      "metric": "buffer_cost_ratio9",
+      "block": 8,
+      "mean_difference": -0.07825911979890307,
+      "ci95_low": -0.10747367716638424,
+      "ci95_high": -0.046761950944462685,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "global",
+      "metric": "fraction_crps",
+      "block": 4,
+      "mean_difference": -0.0005831301155649278,
+      "ci95_low": -0.001042989056892536,
+      "ci95_high": -0.000184508270732307,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "global",
+      "metric": "fraction_crps",
+      "block": 8,
+      "mean_difference": -0.0005831301155649278,
+      "ci95_low": -0.0009386340587386043,
+      "ci95_high": -0.00020658011596585483,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "global",
+      "metric": "buffer_cost_ratio9",
+      "block": 4,
+      "mean_difference": -0.002250800306336641,
+      "ci95_low": -0.004115070469010864,
+      "ci95_high": -0.00033358218242669763,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "global",
+      "metric": "buffer_cost_ratio9",
+      "block": 8,
+      "mean_difference": -0.002250800306336641,
+      "ci95_low": -0.003792812998285957,
+      "ci95_high": -0.0008716924136709283,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "context",
+      "reference_family": "gaussian",
+      "reference_mode": "static",
+      "metric": "fraction_crps",
+      "block": 4,
+      "mean_difference": -0.00024596002737479474,
+      "ci95_low": -0.0006609383771014954,
+      "ci95_high": 0.00019473690121601394,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "context",
+      "reference_family": "gaussian",
+      "reference_mode": "static",
+      "metric": "fraction_crps",
+      "block": 8,
+      "mean_difference": -0.00024596002737479474,
+      "ci95_low": -0.0005341495491780427,
+      "ci95_high": 8.611346640639146e-05,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "context",
+      "reference_family": "gaussian",
+      "reference_mode": "static",
+      "metric": "buffer_cost_ratio9",
+      "block": 4,
+      "mean_difference": 0.0013206590611313815,
+      "ci95_low": -0.004063151558061266,
+      "ci95_high": 0.010292126669742767,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "context",
+      "reference_family": "gaussian",
+      "reference_mode": "static",
+      "metric": "buffer_cost_ratio9",
+      "block": 8,
+      "mean_difference": 0.0013206590611313815,
+      "ci95_low": -0.003943193294967773,
+      "ci95_high": 0.009214076044310168,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "static_permuted",
+      "metric": "fraction_crps",
+      "block": 4,
+      "mean_difference": -0.001030998643584807,
+      "ci95_low": -0.0011751973862946324,
+      "ci95_high": -0.000873174660118378,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "static_permuted",
+      "metric": "fraction_crps",
+      "block": 8,
+      "mean_difference": -0.001030998643584807,
+      "ci95_low": -0.0011672849900904807,
+      "ci95_high": -0.0008735177970461494,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "static_permuted",
+      "metric": "buffer_cost_ratio9",
+      "block": 4,
+      "mean_difference": -0.005768544382560187,
+      "ci95_low": -0.007296578858777725,
+      "ci95_high": -0.004401407268761231,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "static_permuted",
+      "metric": "buffer_cost_ratio9",
+      "block": 8,
+      "mean_difference": -0.005768544382560187,
+      "ci95_low": -0.007348259757998382,
+      "ci95_high": -0.004231544696466396,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "empirical",
+      "reference_mode": "historical_residual",
+      "metric": "fraction_crps",
+      "block": 4,
+      "mean_difference": -0.005014242416932354,
+      "ci95_low": -0.0069871092975807274,
+      "ci95_high": -0.0031638957044786116,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "empirical",
+      "reference_mode": "historical_residual",
+      "metric": "fraction_crps",
+      "block": 8,
+      "mean_difference": -0.005014242416932354,
+      "ci95_low": -0.007249232191673459,
+      "ci95_high": -0.0031049646642210293,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "empirical",
+      "reference_mode": "historical_residual",
+      "metric": "buffer_cost_ratio9",
+      "block": 4,
+      "mean_difference": -0.031192197846193054,
+      "ci95_low": -0.04819806120170366,
+      "ci95_high": -0.018371893768504843,
+      "n_origins": 28,
+      "block_length_origins": 4,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "borg",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "empirical",
+      "reference_mode": "historical_residual",
+      "metric": "buffer_cost_ratio9",
+      "block": 8,
+      "mean_difference": -0.031192197846193054,
+      "ci95_low": -0.04771026864622789,
+      "ci95_high": -0.01728913185180164,
+      "n_origins": 28,
+      "block_length_origins": 8,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "global",
+      "reference_family": "gaussian",
+      "reference_mode": "independent",
+      "metric": "fraction_crps",
+      "block": 14,
+      "mean_difference": -0.004150271705605323,
+      "ci95_low": -0.006383987945527022,
+      "ci95_high": -0.0018837805635281647,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "global",
+      "reference_family": "gaussian",
+      "reference_mode": "independent",
+      "metric": "fraction_crps",
+      "block": 28,
+      "mean_difference": -0.004150271705605323,
+      "ci95_low": -0.005485073832678441,
+      "ci95_high": -0.0026933923825320253,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "global",
+      "reference_family": "gaussian",
+      "reference_mode": "independent",
+      "metric": "buffer_cost_ratio9",
+      "block": 14,
+      "mean_difference": 0.011292599869314841,
+      "ci95_low": -0.001166954974387914,
+      "ci95_high": 0.021289318807489823,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "global",
+      "reference_family": "gaussian",
+      "reference_mode": "independent",
+      "metric": "buffer_cost_ratio9",
+      "block": 28,
+      "mean_difference": 0.011292599869314841,
+      "ci95_low": 0.0042597023549728625,
+      "ci95_high": 0.01745901661131405,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "global",
+      "metric": "fraction_crps",
+      "block": 14,
+      "mean_difference": 0.0005354913067445522,
+      "ci95_low": -0.0003295505629300917,
+      "ci95_high": 0.0015458331708651891,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "global",
+      "metric": "fraction_crps",
+      "block": 28,
+      "mean_difference": 0.0005354913067445522,
+      "ci95_low": -8.446415036751267e-05,
+      "ci95_high": 0.0012241919860920788,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "global",
+      "metric": "buffer_cost_ratio9",
+      "block": 14,
+      "mean_difference": -0.006799308055322775,
+      "ci95_low": -0.008789633669193508,
+      "ci95_high": -0.004419591951465111,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "global",
+      "metric": "buffer_cost_ratio9",
+      "block": 28,
+      "mean_difference": -0.006799308055322775,
+      "ci95_low": -0.008757392978969557,
+      "ci95_high": -0.004678870880235741,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "context",
+      "reference_family": "gaussian",
+      "reference_mode": "static",
+      "metric": "fraction_crps",
+      "block": 14,
+      "mean_difference": -0.000188433212129839,
+      "ci95_low": -0.000626370802436812,
+      "ci95_high": 0.00026177092050929865,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "context",
+      "reference_family": "gaussian",
+      "reference_mode": "static",
+      "metric": "fraction_crps",
+      "block": 28,
+      "mean_difference": -0.000188433212129839,
+      "ci95_low": -0.0003743615131557437,
+      "ci95_high": 3.095090268866507e-05,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "context",
+      "reference_family": "gaussian",
+      "reference_mode": "static",
+      "metric": "buffer_cost_ratio9",
+      "block": 14,
+      "mean_difference": 0.003630601566906725,
+      "ci95_low": 0.0023831999061187307,
+      "ci95_high": 0.005173001213109967,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "context",
+      "reference_family": "gaussian",
+      "reference_mode": "static",
+      "metric": "buffer_cost_ratio9",
+      "block": 28,
+      "mean_difference": 0.003630601566906725,
+      "ci95_low": 0.0026685489260032265,
+      "ci95_high": 0.0046517169172501215,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "static_permuted",
+      "metric": "fraction_crps",
+      "block": 14,
+      "mean_difference": -0.0004541338313722077,
+      "ci95_low": -0.0007259426736384685,
+      "ci95_high": -0.00018755261847535986,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "static_permuted",
+      "metric": "fraction_crps",
+      "block": 28,
+      "mean_difference": -0.0004541338313722077,
+      "ci95_low": -0.0006205353364249924,
+      "ci95_high": -0.00030113491868177957,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "static_permuted",
+      "metric": "buffer_cost_ratio9",
+      "block": 14,
+      "mean_difference": 0.0028281611299716385,
+      "ci95_low": 0.0011905653576129703,
+      "ci95_high": 0.004420436052218606,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "static",
+      "reference_family": "gaussian",
+      "reference_mode": "static_permuted",
+      "metric": "buffer_cost_ratio9",
+      "block": 28,
+      "mean_difference": 0.0028281611299716385,
+      "ci95_low": 0.0018621064759339152,
+      "ci95_high": 0.003802065920776602,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "global",
+      "reference_family": "empirical",
+      "reference_mode": "historical_residual",
+      "metric": "fraction_crps",
+      "block": 14,
+      "mean_difference": 0.002084981119508427,
+      "ci95_low": -0.0006989775938858234,
+      "ci95_high": 0.005362110141364354,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "global",
+      "reference_family": "empirical",
+      "reference_mode": "historical_residual",
+      "metric": "fraction_crps",
+      "block": 28,
+      "mean_difference": 0.002084981119508427,
+      "ci95_low": -0.0002939220456643237,
+      "ci95_high": 0.0046543512512300005,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "global",
+      "reference_family": "empirical",
+      "reference_mode": "historical_residual",
+      "metric": "buffer_cost_ratio9",
+      "block": 14,
+      "mean_difference": 0.003233524343938377,
+      "ci95_low": -0.01441081092581481,
+      "ci95_high": 0.01875867492752601,
+      "n_origins": 61,
+      "block_length_origins": 14,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    },
+    {
+      "dataset": "bpi",
+      "family": "gaussian",
+      "mode": "global",
+      "reference_family": "empirical",
+      "reference_mode": "historical_residual",
+      "metric": "buffer_cost_ratio9",
+      "block": 28,
+      "mean_difference": 0.003233524343938377,
+      "ci95_low": -0.00663179319931595,
+      "ci95_high": 0.011744642105047014,
+      "n_origins": 61,
+      "block_length_origins": 28,
+      "bootstrap_repeats": 10000,
+      "seed": 20261014
+    }
+  ],
+  "monte_carlo_max_abs_crps_change": 0.00012198429925083104,
+  "inputs": [
+    {
+      "path": "reports/borg_selected_marginals_v2.json",
+      "sha256": "6713c4f919ba276dfa09f1960c60f6eb3a9e21fd614832d12642aff3530ab9cf"
+    },
+    {
+      "path": "reports/bpi_selected_marginals_v2.json",
+      "sha256": "4acd795b116cc6e6f2f9a297fdd7b83fd46c02828008eea88f3201dc1546f5fa"
+    },
+    {
+      "path": "reports/final_diagnostics_borg/marginal_scores.csv",
+      "sha256": "77f8a046c945baea4bb189c890319b191e4239d3260b9004a8dd75141a74db78"
+    },
+    {
+      "path": "reports/final_diagnostics_bpi/marginal_scores.csv",
+      "sha256": "8b0a3b94a5cf543cdb87407b8bc745ef460b2d882095403e203cde23cc19cfc5"
+    },
+    {
+      "path": "reports/summary_borg_selected_v2_final_m512/all_scores.parquet",
+      "sha256": "00b22b090f13ad05566c60d9a300a9a41f8e776449db5957e23aaef32ae80cf6"
+    },
+    {
+      "path": "reports/summary_bpi_selected_v2_final_m512/all_scores.parquet",
+      "sha256": "4cbaa6459d48ec500a8f01b58c9989d0d386719988ec7723bf015c43ec7a9af3"
+    },
+    {
+      "path": "runs/aggregate_residual_borg_selected_v2/final_scores_m512.parquet",
+      "sha256": "bf5026496a511d606c152927752ee347423058dab4becf0a29a34b7622f29f77"
+    },
+    {
+      "path": "runs/aggregate_residual_bpi_selected_v2/final_scores_m512.parquet",
+      "sha256": "75052b82b1c876b7ade52cc770d2c2f82a6d86560467edf0a4f48faf8d927d20"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed0/final_cohort_report_m512.json",
+      "sha256": "ca599345b19e3a430ce52336debabf3c5f0cf1413571586af8bbb1e0d8d19213"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed0/final_cohort_scores_m1024.parquet",
+      "sha256": "4635a75c6ce5ee977ca75fe284278113fb2701ab6bad6031d25eed1b546cb8b8"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed1/final_cohort_report_m512.json",
+      "sha256": "5581b4779bf1dc6e29bd16e68338e4ead4d781a5878e14cfba18f02ccf95f45c"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_commonshock_seed2/final_cohort_report_m512.json",
+      "sha256": "fefc1c3fbe13fa2909df631f2c8414ec74f67b5897e1b57dbc687d1d0dd7af09"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed0/final_cohort_report_m512.json",
+      "sha256": "7536a11ce5e48d4005d8081b8623fc45f28088ad73333352f9cc92cccdfa46db"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed0/final_cohort_scores_m1024.parquet",
+      "sha256": "1868b0ef494ae6e3f8082df206d5cb5352f32a7711a35c60eb253ae6b390c999"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed1/final_cohort_report_m512.json",
+      "sha256": "c2fdfdc9be35cdf0b6e08f9641df0dfcf21531042ffdc09b9df8cbb8ffcc1ff3"
+    },
+    {
+      "path": "runs/joint_borg_selected_v2_gaussian_seed2/final_cohort_report_m512.json",
+      "sha256": "09bb439e06a0220a3250600b92399093e8dd243d53d6cc5abefb1bafd608bfd5"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed0/final_cohort_report_m512.json",
+      "sha256": "4909f52f96bf45f8618d358ca2c560e48c736b784a4cc0504d94bde5d5fd71db"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed0/final_cohort_scores_m1024.parquet",
+      "sha256": "9c65c04ac613f42a2b10cb5ab6f6167ef72134d0b07248cf7835c64a76fde126"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed1/final_cohort_report_m512.json",
+      "sha256": "1ed993fb343bbce8c2a0c3e8f174da7f5c685544a79e5e2c342812912632c689"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_commonshock_seed2/final_cohort_report_m512.json",
+      "sha256": "6e56b87970eb947f16002b1bf608b44052580324d1fe65550e8fcd82dd57e327"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed0/final_cohort_report_m512.json",
+      "sha256": "d0a7b5b0c423e42b5eab821a18be11bd619451fb0df2a53ae9591cda3d3e8b5d"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed0/final_cohort_scores_m1024.parquet",
+      "sha256": "bc527534e836c0db206ea28f726ad816442b4dcfa7c4e814c03d83143a9c26a8"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed1/final_cohort_report_m512.json",
+      "sha256": "28a1d1a78c83f1a52f832edc7f509e2428437152d3dd2e440524941b3b6a161d"
+    },
+    {
+      "path": "runs/joint_bpi_selected_v2_gaussian_seed2/final_cohort_report_m512.json",
+      "sha256": "e45979e42dfe2b7a44cf8cf9735270c52551c658c36ed4c6fad9848737a90c6d"
+    }
+  ],
+  "script_sha256": "2300e362d4981e5502a7009777b663c1b780a9db96fc27f1e7edaf74a76af45d"
+}

@@ -1,7 +1,7 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
-  "status": "active",
-  "phase": "frozen_final_cluster_replay_after_lossless_schema_correction",
+  "status": "review_ready",
+  "phase": "complete_manuscript_local_packaging",
   "final_test_opened": true,
   "research_direction": "Joint first-exit forecasting for changing operational cohorts on temporal graphs",
   "datasets": [
@@ -23,9 +23,8 @@
   "interpreter": "/home/zubair/zubairEnv/bin/python",
   "torch_version": "2.5.1+cu124",
   "next_actions": [
-    "Finish Borg final cohorts/histories; predict frozen selected CDFs",
-    "Score both families and all three seeds on Borg final; run1024 draw seed0 sensitivity",
-    "Complete final artifacts/audit, abstract and cluster results, PDF and review archive"
+    "Author review of manuscript, contribution and limitations",
+    "Author/affiliation, venue and eventual release-license decisions remain with researcher"
   ],
   "results": [
     "All 500 Borg task-event shards and BPI archive acquired with checksums.",
@@ -55,5 +54,27 @@
     "Final Borg timestamp schema corrected losslessly after merge failure before cohort outputs; all144,648,283 event and143,996,870 interval timestamps checked. Original prefix/failed logs preserved; all264 frozen hashes still verify."
   ],
   "final_opened_utc": "2026-10-15T00:44:25.718025+00:00",
-  "final_protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77"
+  "final_protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77",
+  "artifacts": {
+    "pdf": "paper/main.pdf",
+    "source": "paper/main.tex",
+    "review_notes": "REVIEW_NOTES.md",
+    "reproduction": "REPRODUCE.md",
+    "archive": "releases/operational_cohorts_review.zip"
+  },
+  "final_results": {
+    "borg_crps_improvement_percent": 24.266084668931143,
+    "borg_reserve_ratio9_improvement_percent": 59.710836574554094,
+    "bpi_crps_improvement_percent": 8.283720363938729,
+    "bpi_reserve_ratio9_worsening_percent": 9.59450307541938,
+    "origins": {
+      "borg": 28,
+      "bpi": 61
+    },
+    "artifact_audit": "passed",
+    "frozen_files_verified": 264,
+    "tests_passed": 36,
+    "max_abs_mc_crps_change": 0.00012198429925083104
+  },
+  "review_ready_utc": "2026-10-15T01:15:23.956064+00:00"
 }

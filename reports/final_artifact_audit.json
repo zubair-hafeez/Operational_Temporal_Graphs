@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77",
+  "frozen_files_verified": 264,
+  "datasets": {
+    "borg": {
+      "origins": 28,
+      "entity_origin_queries": 3760001,
+      "cdf_monotonicity": "passed",
+      "label_monotonicity": "passed",
+      "frozen_feature_transform": "exact",
+      "scores": [
+        {
+          "path": "runs/joint_borg_selected_v2_gaussian_seed0/final_cohort_scores_m512.parquet",
+          "sha256": "1d90417e4c083b7649d488ac4cc48dabc780dcc40210566ec4577d330fbe0364"
+        },
+        {
+          "path": "runs/joint_borg_selected_v2_gaussian_seed0/final_cohort_scores_m1024.parquet",
+          "sha256": "1868b0ef494ae6e3f8082df206d5cb5352f32a7711a35c60eb253ae6b390c999"
+        },
+        {
+          "path": "runs/joint_borg_selected_v2_gaussian_seed1/final_cohort_scores_m512.parquet",
+          "sha256": "d75512655aae3fae8cf80af8e648a8c5eba3451e1fce983d684157e45f564586"
+        },
+        {
+          "path": "runs/joint_borg_selected_v2_gaussian_seed2/final_cohort_scores_m512.parquet",
+          "sha256": "e9aadd933fa63f5dd99a6d9b107012682b28b4c71043ee59fbe077828e549e67"
+        },
+        {
+          "path": "runs/joint_borg_selected_v2_commonshock_seed0/final_cohort_scores_m512.parquet",
+          "sha256": "f80d390207475ebfd0b4064f6e85e533f34a766a03d8aa50c74649406f297990"
+        },
+        {
+          "path": "runs/joint_borg_selected_v2_commonshock_seed0/final_cohort_scores_m1024.parquet",
+          "sha256": "4635a75c6ce5ee977ca75fe284278113fb2701ab6bad6031d25eed1b546cb8b8"
+        },
+        {
+          "path": "runs/joint_borg_selected_v2_commonshock_seed1/final_cohort_scores_m512.parquet",
+          "sha256": "b92afa1aef2d11337d4c3b5e24cb0d763d0c564752712d8f9b274dc44243d585"
+        },
+        {
+          "path": "runs/joint_borg_selected_v2_commonshock_seed2/final_cohort_scores_m512.parquet",
+          "sha256": "a5be1cdf829ac167de6b52f61641dee63eb608eb8bc73bceaf551e78fefc0d24"
+        }
+      ]
+    },
+    "bpi": {
+      "origins": 61,
+      "entity_origin_queries": 114051,
+      "cdf_monotonicity": "passed",
+      "label_monotonicity": "passed",
+      "frozen_feature_transform": "exact",
+      "scores": [
+        {
+          "path": "runs/joint_bpi_selected_v2_gaussian_seed0/final_cohort_scores_m512.parquet",
+          "sha256": "ede83d6a60cdd961a1201429d651c21f5fe2d0b433da3639c9c5eb18e1f1238d"
+        },
+        {
+          "path": "runs/joint_bpi_selected_v2_gaussian_seed0/final_cohort_scores_m1024.parquet",
+          "sha256": "bc527534e836c0db206ea28f726ad816442b4dcfa7c4e814c03d83143a9c26a8"
+        },
+        {
+          "path": "runs/joint_bpi_selected_v2_gaussian_seed1/final_cohort_scores_m512.parquet",
+          "sha256": "9f0414dcfc58428e70e866952e193dfdb965f9988acd40c26f2f42347020ef8b"
+        },
+        {
+          "path": "runs/joint_bpi_selected_v2_gaussian_seed2/final_cohort_scores_m512.parquet",
+          "sha256": "5aaf61941ea7a329b7ea6c9e9120ff9f941d479a42b5e2a74b946d177dcf3bc6"
+        },
+        {
+          "path": "runs/joint_bpi_selected_v2_commonshock_seed0/final_cohort_scores_m512.parquet",
+          "sha256": "bc51c4830e5ac1d43c9ae5845dea244ac23fd2ab9fb4bf169cdba420b50e5a1c"
+        },
+        {
+          "path": "runs/joint_bpi_selected_v2_commonshock_seed0/final_cohort_scores_m1024.parquet",
+          "sha256": "9c65c04ac613f42a2b10cb5ab6f6167ef72134d0b07248cf7835c64a76fde126"
+        },
+        {
+          "path": "runs/joint_bpi_selected_v2_commonshock_seed1/final_cohort_scores_m512.parquet",
+          "sha256": "74d6b8cbe3df29501802cf873aa862073794e2e83b725a8e412eb4268fb735ea"
+        },
+        {
+          "path": "runs/joint_bpi_selected_v2_commonshock_seed2/final_cohort_scores_m512.parquet",
+          "sha256": "a71dc62ca719619d712b296c5c0fffa4b5a4514565812fa1ee0076f9b3ead760"
+        }
+      ]
+    }
+  },
+  "timestamp_correction_sha256": "f926e5edf3474cd1af145608bdc2c190d2c96a93e2104f5accf6f0c9da9b43e1",
+  "limitations": "Checks artifact consistency and causal input contracts implemented in code; cannot establish real-world calibration, causal validity or absence of every conceptual error."
+}

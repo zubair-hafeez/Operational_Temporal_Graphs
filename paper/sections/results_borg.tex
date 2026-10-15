@@ -1,0 +1,45 @@
+\subsection{Cluster: shared variation matters, with an additional relation signal}
+Across 28 final cluster origins, the development-selected Gaussian static
+model reduces macro count-fraction CRPS from 0.03417 to 0.02587, a 24.3\%
+improvement over independent sampling. The mean paired difference is
+$-0.00829$, with a one-day block interval $[-0.01056,-0.00611]$ and a two-day
+interval $[-0.00985,-0.00686]$. At reserve penalty ratio 9, loss falls from
+0.13106 to 0.05280, a 59.7\% reduction in this declared proxy. Its paired
+one-day interval is $[-0.11744,-0.04280]$ for a mean difference of $-0.07826$.
+These are within-trace estimates over seven final days, not independent-task
+confidence bounds or measured deployment savings.
+
+Most of the CRPS gain already appears with a global factor: its score is
+0.02646. Adding typed relation factors improves that by a further 2.2\%, with
+paired difference $-0.000583$ and one-day interval
+$[-0.001043,-0.000185]$. At ratio 9, the corresponding global-to-static loss
+change is 0.05506 to 0.05280. The large independent-to-static improvement
+therefore must not be attributed entirely to graph relations.
+
+The incidence control localizes the additional relation signal. Permuting
+memberships increases static-model CRPS from 0.02587 to 0.02691. The paired
+difference for true minus permuted incidence is $-0.001031$, with one-day
+interval $[-0.001175,-0.000873]$. Job-level CRPS changes most: 0.01451 with
+true incidence versus 0.01729 with permuted incidence. Machine-level CRPS
+changes from 0.02504 to 0.02535; population CRPS is essentially unchanged
+(0.03807 versus 0.03808). Under this controlled sampler intervention, correct
+job grouping carries predictive information beyond individual event risk and
+global random variation.
+
+Macro coverage requires a qualification. Static Gaussian coverage averages
+0.906 across projections, compared with 0.659 for independence. However,
+static population coverage is only 0.763, while job and machine coverage are
+0.978 and 0.976. Its near-nominal macro value therefore does not establish
+calibration within every projection. Independence is particularly unreliable
+for the population count, with coverage 0.100. This projection breakdown is
+more informative than a single aggregate coverage number.
+
+The context model obtains a slightly lower mean CRPS, 0.02563, but its
+context-minus-static difference has one-day interval
+$[-0.000661,0.000195]$. Its reserve loss is also slightly higher, 0.05413.
+The evidence does not establish a consistent benefit from the additional
+context network. Common-shock static factors improve over their independent
+control (0.02646 versus 0.03416), but are weaker than Gaussian static factors
+on the principal mean scores. The historical-residual comparator has CRPS
+0.03089 and reserve loss 0.08400. It is useful as an aggregate-error baseline,
+but it does not explain away the selected model's cluster improvement.

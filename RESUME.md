@@ -1,3 +1,13 @@
+# Current state: manuscript complete, local review package being assembled
+
+The complete manuscript is `paper/main.pdf` (12 pages, including references and appendix), with source in `paper/main.tex`. All final experiments, both families and all seeds, the 1,024-draw sensitivity, diagnostics, generated tables/figures and the artifact consistency audit are complete. Read `REVIEW_NOTES.md` before making any publication claim. The study is an application benchmark with classical dependence models, not a new copula architecture. No external submission or publication has occurred.
+
+Final selected results: Borg Gaussian/static CRPS .025875 versus independence .034166 (24.3% lower), reserve ratio9 loss .052804 versus .131064 (59.7% lower); BPI Gaussian/global CRPS .045951 versus .050102 (8.3% lower), reserve loss .128991 versus .117699 (9.6% higher). Most Borg gain is already global; graph incidence adds a smaller gain. Historical residuals have the lowest mean BPI CRPS. All 264 frozen assets verify; 36 tests pass; Monte Carlo ordering is stable. Paper reports block-length sensitivity, marginal bias and projection-level coverage failures.
+
+CUDA permissions are resolved through the persistently approved absolute `scripts/gpu_research.py` runner. No further experiment is pending. Preserve all original data, runs and the final freeze. The package script will create `releases/operational_cohorts_review.zip`; verify its manifest and round-trip saved-score artifact regeneration before final handoff. The material below is historical and may describe now-completed work.
+
+---
+
 # Continue authorized end-to-end research
 
 ## Authoritative update: final protocol frozen; BPI final complete; Borg schema repair
@@ -36,3 +46,9 @@ Current active suite: temporal session75186, log reports/development_temporal_su
 New script `select_development_marginals.py` requires all temporal architectures/seeds complete, then chooses best HGB variant or three-seed neural ensemble by equal-cutoff development IBrier. It creates `{dataset}_joint_selected_v2` with forward-fold CDFs and sampled pairs. NOT RUN YET. Added `--data-tag selected_v2` support to joint trainer/evaluator. Need implement `predict_selected_cohorts.py`, launch selected fits and evaluation after baselines finish. No final data opened. A batched bincount implementation speeds cohort scoring without changing integer trajectories; toy equivalence tests pass.
 
 TeX compiler and generic caches copied into ignored paper/tools; approved network command has cached packages. Compiler probe builds with no overfull equations after layout fix. Final main.tex still awaits abstract, Borg/audit results and generated figures/tables. paper/sections/results_bpi.tex contains actual final BPI results. requirements-research.txt and REPRODUCE.md added. New repair script is not in original freeze; no frozen code was changed.
+
+Update: timestamp correction COMPLETED, exact roundtrip all144.6m event/144.0m interval timestamps, original prefix preserved. All28 Borg final cohorts now complete (254s replay). Temporal histories building in session75412. Frozen Borg HGB full predictions active session72577, log reports/gpu_runner_predict_20261015T005958_388962Z.log. Can score once selected_v2/final_cohorts/manifest.json exists; HGB does not require final history assets. Latest commit7da6095 contains BPI final and correction audit.
+
+2026-10-15 01:01 UTC: Borg final prediction and temporal history assets COMPLETE. Final scoring ACTIVE: main512-draw six fits session30762 on GPU0 (workers6), log reports/gpu_runner_evaluate-suite_20261015T010114_079982Z.log; seed0 two-family1024-draw sensitivity session30678 on GPU1, log reports/gpu_runner_evaluate-suite_20261015T010114_079144Z.log. Direct residual final baseline session1914; final marginal diagnostics session19775. After completion summarize Borg, run build_paper_artifacts.py and new audit_final_artifacts.py, then write actual abstract/results_borg/results_audits and compile main.pdf. New package_review_artifact.py creates local ZIP with frozen92.7MB assets and final score evidence; requires REVIEW_NOTES.md and final audit. All new scripts are outside original freeze; original264files still verify.
+
+Final Borg marginal diagnostics complete. Equal-origin integrated Brier pending .082510, running .029373; longest-horizon mean predicted/observed pending .319325/.318422, running .119878/.128696. Running known-initial-age stratum IBrier .035286 vs unknown-age .000252, unknown-age ~21,876 tasks/origin; pending unknown-age only1 task/origin. Include those limitations in results_audits. BPI main result mean improvements8.3%CRPS but9.6%worse reserve ratio9;14day loss CI crosses0,28day excludes, explicitly described in results_bpi.tex.

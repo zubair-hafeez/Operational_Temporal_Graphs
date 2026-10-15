@@ -1,0 +1,23 @@
+\begin{abstract}
+Operational forecasts often concern groups of related entities, while
+individual event probabilities leave their collective uncertainty unspecified.
+We construct a temporal-graph forecasting benchmark for the joint first exits
+of the population active at a forecast origin, using a compute-cluster trace
+and a loan-application workflow. The benchmark separates individual-model
+selection from dependence modeling: tree and temporal neural predictors supply
+fixed marginal CDFs, while classical global, typed relation, and
+context-dependent factors generate coherent multihorizon entity outcomes.
+Controls include two dependence families, risk-stratified incidence
+permutation, and historical aggregate-error resampling. A frozen future-period
+evaluation covers 28 cluster origins and 61 workflow origins. The selected
+model reduces normalized count CRPS by 24.3\% in the cluster and 8.3\% in the
+workflow relative to independent sampling. Yet a declared reserve-loss proxy
+improves by 59.7\% in the cluster and worsens by 9.6\% in the workflow.
+Observed relation incidence contributes beyond individual risk, while richer
+context networks do not establish a consistent advantage. Simple aggregate
+residual resampling is the strongest workflow CRPS comparator. These findings
+support evaluating marginal bias, joint distributions, and decision loss
+separately. The contribution is a reproducible application benchmark and
+scalable reference implementation, with explicit limits on calibration,
+temporal evidence, and operational interpretation.
+\end{abstract}

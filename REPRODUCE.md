@@ -12,6 +12,8 @@ Run `python -m pytest -q tests` for implementation checks. Tests do not constitu
 
 ## Fast reproduction from saved forecasts and scores
 
+The local ZIP includes the manuscript, source, all 264 frozen model/selection files, final score tables, and the completed audit reports. It excludes raw provider logs and the large final cohort/history arrays. From that ZIP, `build_paper_artifacts.py`, `draw_forecast_contract.py`, and `complete_paper_artifacts.py` regenerate the manuscript tables and figures from saved numerical evidence. The completion script reads the supplied audit report. Independently rerunning `audit_final_artifacts.py` or individual diagnostics requires reconstructing the excluded final arrays by the later instructions. The archive's `RELEASE_MANIFEST.json` records every included file hash; it is a local review package, not an externally published release.
+
 Final score tables are under `reports/summary_{borg,bpi}_selected_v2_final_m512/`. Each contains all seed/origin/projection/horizon scores, macro and projection tables, and paired block intervals. The empirical baseline is stored separately in `runs/aggregate_residual_{dataset}_selected_v2/`. `paper/generated/evidence_manifest.json` links all manuscript-generated outputs to source hashes.
 
 With the preserved checkpoints, selected-data manifests and final forecasts present, run:
@@ -22,9 +24,12 @@ python scripts/final_diagnostics.py --dataset bpi
 python scripts/summarize_joint_results.py --dataset borg --period final
 python scripts/summarize_joint_results.py --dataset bpi --period final
 python scripts/build_paper_artifacts.py
+python scripts/draw_forecast_contract.py
+python scripts/audit_final_artifacts.py
+python scripts/complete_paper_artifacts.py
 ```
 
-The first four commands deliberately refuse to overwrite an existing result directory. Use a clean reproduction checkout with source assets restored; preserve existing results if auditing the original workspace. The last command regenerates paper-only tables and figures from saved evidence. The primary comparisons and all secondary controls must be retained, including negative results.
+The first four commands deliberately refuse to overwrite an existing result directory. Use a clean reproduction checkout with source assets restored; preserve existing results if auditing the original workspace. The remaining commands regenerate paper-only tables/figures, the separately labeled inference schematic, and numerical-audit prose. The presentation completion script clarifies two captions without changing numbers. The primary comparisons and all secondary controls must be retained, including negative results.
 
 ## Data acquisition and development reconstruction
 

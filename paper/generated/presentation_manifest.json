@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "crps_order_unchanged": true,
+  "max_abs_crps_change": 0.0001219842992508,
+  "inputs": [
+    {
+      "path": "paper/generated/monte_carlo_sensitivity.csv",
+      "sha256": "0a5f4d0bd63ac349c499ca56efcfad5f2c5690b2db56eb7eef4859fbb5471a87"
+    },
+    {
+      "path": "paper/generated/runtimes.csv",
+      "sha256": "e98d91f4f7540dd9dc4b33e1903080780b51375b830db210143fbc9568e85b3e"
+    },
+    {
+      "path": "reports/final_artifact_audit.json",
+      "sha256": "4bd9552fd5f39dfbd9be031798a62bab71944e9d82cbe7bdd2d82535adb7cc24"
+    }
+  ],
+  "script_sha256": "51beb3aee9bc7e09e673d44ecb94f29ab0cd54b922d7b55d2a426476f2179db4",
+  "caption_changes": "Clarify residual seed count and origin-score versus projection CSV granularity; no numerical changes."
+}

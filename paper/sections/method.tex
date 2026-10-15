@@ -1,4 +1,12 @@
 \section{Joint forecasts for observed operational cohorts}
+\begin{figure*}[t]
+\centering\includegraphics[width=\textwidth]{figures/forecast_contract.pdf}
+\caption{Inference contract at a forecast origin (schematic). Observed history
+supplies the current cohort, relations, and individual CDFs. Shared randomness
+changes the joint law while preserving those CDFs. Future outcomes enter
+scoring only. Training uses separate earlier chronological windows.}
+\label{fig:contract}
+\end{figure*}
 At forecast origin $t$, let $V_t$ be the set of currently active entities and
 $\mathcal H_t$ the event history observable by $t$. Each entity has a current
 state $s_i(t)$ and zero or more observed relation memberships $g_r(i,t)$.
@@ -49,7 +57,7 @@ marginals and makes every sampled trajectory monotone across horizons.
 The same shared draws are reused across streamed entity chunks.
 
 We also evaluate a classical common-shock construction related to
-Marshall--Olkin models \cite{marshall1967}. With independent unit-rate
+Marshall--Olkin models \citep{marshall1967}. With independent unit-rate
 exponential factors $E_0,E_{r,g},E_i$ and nonnegative weights summing to one,
 \begin{equation}
  \begin{aligned}
@@ -107,7 +115,7 @@ horizons, projection types, and forecast origins. We also report projections
 separately so a population-level benefit cannot conceal a relation-level loss.
 
 For $M$ independent scenario draws, the fair ensemble CRPS
-\cite{ferro2014,gneiting2007} is
+\citep{ferro2014,gneiting2007} is
 \begin{equation}
  \begin{aligned}
  \widehat{\operatorname{CRPS}}(X,y)&=

@@ -1,0 +1,21 @@
+\subsection{Marginal diagnostics and data-quality strata}
+Figure~\ref{fig:bias} shows that dependence comparisons inherit distinct
+marginal errors. At 60 minutes, mean Borg pending-task exit probability is
+0.3193 versus an observed fraction of 0.3184. For running tasks the corresponding
+values are 0.1199 and 0.1287. Their final integrated Brier scores are 0.08251
+and 0.02937. The BPI 14-day bias is larger in absolute fraction, as discussed
+above. A small pooled mean error is not evidence of conditional calibration at
+every origin or relation group; the released reliability and origin tables
+retain this variation.
+
+Cutoff-defined strata also matter. About 21,876 running tasks per final origin
+have unknown initial state age. Their integrated Brier is 0.00025, compared
+with 0.03529 for known-age running tasks. Long-lived initial-state entities are
+thus a relatively easy subpopulation, and pooled scores conceal that
+heterogeneity. The unknown-age pending stratum contains only one task per
+origin and cannot support a general robustness claim. Running tasks with a
+known preceding publisher-imputed event have Brier 0.01078 versus 0.03006
+without one; these are descriptive case-mix differences, not causal effects
+of imputation. All strata remain in the primary complete-cohort evaluation.
+
+\input{generated/numerical_audits}
