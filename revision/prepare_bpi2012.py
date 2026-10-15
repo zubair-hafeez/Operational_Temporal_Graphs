@@ -44,7 +44,9 @@ def main():
     first=pd.Timestamp('2011-10-02T12:00:00Z');last=pd.Timestamp(before,tz='UTC')-pd.Timedelta(days=14)
     for stamp in pd.date_range(first,last,freq='D'):
         t=int(stamp.value//1000);hi=int(np.searchsorted(times,t,side='right'));replay.apply(e.iloc[lo:hi]);lo=hi
-        if a.period=='final' and t<int(pd.Timestamp('2012-02-01',tz='UTC').value//1000):continue
+        # Retain cross-boundary origins solely for delayed calibration once
+        # their labels mature; scoring still begins on February 1.
+        if a.period=='final' and t<int(pd.Timestamp('2012-01-19',tz='UTC').value//1000):continue
         ids=np.flatnonzero((replay.created>=0)&~replay.resolved).astype(np.int32)
         if not len(ids):continue
         x,groups=replay.features(ids,t);features.append(x);resource=replay.resource[ids].astype(np.int64);resource[resource==len(resources)]=-1

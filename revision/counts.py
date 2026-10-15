@@ -2,7 +2,7 @@
 from __future__ import annotations
 import numpy as np
 from scipy.optimize import minimize
-from scipy.special import gammaln,softmax
+from scipy.special import gammaln,softmax,digamma
 from otg.residuals import aggregate_inputs
 
 
@@ -36,15 +36,24 @@ def fit_dm(records,bias):
     w=np.concatenate([np.full(len(z['n']),1/(len(records)*len(z['n']))) for z in records])
     def objective(theta):
         fit={'theta':theta,'bias':bias};alpha=parameters(p,fit)
-        return -np.dot(w,dm_logpmf(y,n,alpha))+(1e-3*np.sum(theta[:-1]**2) if bias else 0)
+        value=-np.dot(w,dm_logpmf(y,n,alpha))+(1e-3*np.sum(theta[:-1]**2) if bias else 0)
+        concentration=alpha.sum(-1)
+        da=(digamma(concentration)-digamma(concentration+n))[:,None]+digamma(alpha+y)-digamma(alpha)
+        dlogk=(alpha*da).sum(-1)
+        if bias:
+            db=alpha*(da-(alpha*da).sum(-1,keepdims=True)/concentration[:,None])
+            gradient=np.r_[-w@db[:,:4]+.002*theta[:4],-w@dlogk]
+        else:gradient=np.array([-w@dlogk])
+        return value,gradient
     candidates=[]
     for init in [2.,5.]:
         theta=np.r_[np.zeros(4),init] if bias else np.array([init])
-        opt=minimize(objective,theta,method='L-BFGS-B',bounds=([(-2,2)]*4 if bias else [])+[(-2,12)],options={'maxiter':500,'ftol':1e-10})
+        opt=minimize(objective,theta,jac=True,method='L-BFGS-B',bounds=([(-2,2)]*4 if bias else [])+[(-2,12)],options={'maxiter':500,'ftol':1e-10,'maxls':40})
         candidates.append(opt)
-    opt=min(candidates,key=lambda v:v.fun)
+    good=[v for v in candidates if v.success]
+    opt=min(good or candidates,key=lambda v:v.fun)
     if not opt.success:raise RuntimeError(str(opt.message))
-    return {'bias':bias,'theta':opt.x.tolist(),'fit_objective':float(opt.fun),'origins':len(records),'groups':len(n),'regularization':.001}
+    return {'bias':bias,'theta':opt.x.tolist(),'fit_objective':float(opt.fun),'origins':len(records),'groups':len(n),'regularization':.001,'gradient':'analytic','optimizer':str(opt.message),'gradient_at_solution':opt.jac.tolist()}
 
 
 def sample_dm(n,alpha,draws,rng):

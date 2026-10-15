@@ -12,8 +12,8 @@ from otg.protocol import verify_final_protocol
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--dataset',choices=['bpi','borg'],default='bpi');ap.add_argument('--draws',type=int,default=512);a=ap.parse_args();threadpool_limits(limits=2)
-    out=ROOT/'runs'/f'revision_{a.dataset}_direct_counts_v1';out.mkdir(exist_ok=False);start=time.monotonic();verify_final_protocol(ROOT)
+    ap=argparse.ArgumentParser();ap.add_argument('--dataset',choices=['bpi','borg'],default='bpi');ap.add_argument('--draws',type=int,default=512);ap.add_argument('--version',default='v2',choices=['v1','v2']);a=ap.parse_args();threadpool_limits(limits=2)
+    out=ROOT/'runs'/f'revision_{a.dataset}_direct_counts_{a.version}';out.mkdir(exist_ok=False);start=time.monotonic();verify_final_protocol(ROOT)
     if a.dataset=='bpi':origins=bpi_origins();relations=['resource']
     else:
         from revision.borg_data import borg_origins

@@ -14,15 +14,21 @@ from otg.protocol import verify_final_protocol
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--draws',type=int,default=512);ap.add_argument('--seeds',type=int,nargs='+',default=[0,1,2]);a=ap.parse_args()
-    out=ROOT/'runs/revision_bpi_calibration_v1';out.mkdir(exist_ok=False)
+    ap=argparse.ArgumentParser();ap.add_argument('--draws',type=int,default=512);ap.add_argument('--seeds',type=int,nargs='+',default=[0,1,2]);ap.add_argument('--same-version',action='store_true');a=ap.parse_args()
+    out=ROOT/'runs'/('revision_bpi_calibration_same_version_v2' if a.same_version else 'revision_bpi_calibration_v1');out.mkdir(exist_ok=False)
     torch.set_num_threads(2);threadpool_limits(limits=2)
     _,protocol_hash=verify_final_protocol(ROOT);origins=bpi_origins();start=time.monotonic()
-    train=[o for o in origins if o['period']=='train'];static=fit_intercept(train)
+    if a.same_version:
+        d=ROOT/'data/processed/revision_bpi_calibration_window_v1';cq=pd.read_parquet(d/'queries.parquet');cp=np.load(d/'cdf.npy');train=[]
+        for t,ids in cq.groupby('cutoff_us').indices.items():
+            train.append({'t':int(t),'p':cp[ids],'y':cq.iloc[ids][['exit_1d','exit_3d','exit_7d','exit_14d']].to_numpy(np.int8)})
+        history=train+[o for o in origins if o['period']!='train']
+    else:train=[o for o in origins if o['period']=='train'];history=origins
+    static=fit_intercept(train)
     scores=[];marginals=[];fits=[]
     for oi,o in enumerate(origins):
         if o['period']=='train':continue
-        eligible=eligible_history(origins,o['t']);rolling=fit_intercept(eligible)
+        eligible=eligible_history(history,o['t']);rolling=fit_intercept(eligible)
         assert all(v['t']+14*DAY_US<=o['t'] for v in eligible)
         fits.append({'cutoff_us':o['t'],'period':o['period'],'static_intercept':static,'rolling_intercept':rolling,'rolling_fit_origins':[v['t'] for v in eligible]})
         q=o['q'];rel=q[['resource']].to_numpy(np.int64);st=q.state.to_numpy();configs={s:frozen_loadings(o,s) for s in a.seeds}
