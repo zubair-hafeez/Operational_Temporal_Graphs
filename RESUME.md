@@ -1,3 +1,13 @@
+# Current revision ready for package verification
+
+The complete three-source revised manuscript is `paper_revision/main.pdf` (10 pages). Strong direct-count/calibration/reconciliation controls, graph diagnostics, joint-risk evaluation and fresh BPI2012 confirmation are complete. All45 tests pass; `reports/revision_artifact_audit.json` verifies original264/fresh82 frozen assets,20 table-source hashes,117 scored origins and all41 fresh delayed-calibration fits. See `REVISION_REVIEW_NOTES.md` and `REVISION_REPRODUCE.md`.
+
+Alibaba development prep completed but is explicitly DEFERRED before predictive fitting: missing ends account for84.3% of candidate active tasks at hour47 in the first2day audit. No evidence validates their interpretation as continuous running. Prepared output is feasibility-only, not a benchmark. No day6+ exact outcomes/statuses were retained or summarized and no final protocol exists.
+
+Remaining: run `revision/package_review.py`, then `revision/verify_review_package.py --tectonic paper/tools/tectonic --tex-cache paper/tools/tex-cache`. Verify all files, regenerate numerical/text artifacts/figure, run45 tests and compile from clean extraction. Complete state/ledger/commit only after success; report PDF/review-notes/archive links to user and mark active goal complete. No external submission/publication authorized. Preserve both freezes, original ZIP and user-owned `paper/.ipynb_checkpoints/`. No subagents. RF excluded.
+
+--- Historical notes follow ---
+
 # Active revision — four-source feasibility stage
 
 The user authorized iterative execution until a strong reviewable paper. Goal remains active. Original frozen study/archive preserved. New 10-page draft at `paper_revision/main.pdf` compiles cleanly (no overfull/undefined references), but final packaging/review is outstanding. See `revision/` and LEDGER.

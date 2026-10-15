@@ -40,9 +40,11 @@ must be observable. Prefix state carries across date partitions without
 revealing future events. Recorded event time is the availability proxy;
 the archives do not establish live ingestion latency or exclusive resource
 ownership. The municipal BPI 2015 candidate was deferred after a
-development-source audit exposed inconsistent activity labels and ambiguous
-closure semantics. No outcome definition was forced to obtain another
-favorable benchmark.
+development-source audit did not establish a sufficiently reliable closure
+definition across its activity labels. An Alibaba 2018 task-table candidate
+was also deferred: absent end timestamps dominated some reconstructed active
+cohorts, and their interpretation as continued running was unverified.
+Neither candidate contributed predictive results.
 
 \subsection{Initial frozen evaluation}
 The initial study compares HGB personal/global/relational arms and temporal
@@ -77,10 +79,8 @@ final periods are therefore \emph{retrospective}. Direct count training uses
 The stronger development-fitted DM control instead uses the eight Borg or
 17 BPI 2017 current-version development origins, matching the historical
 residual fitting period. Both fitting regimes are retained.
-The original residual comparator instead fits on development residuals,
-with leave-one-origin-out development scoring. It uses three sampling seeds;
-a one-seed caption in an earlier review version was incorrect, without
-affecting any reported number.
+The original residual comparator fits on development residuals,
+with leave-one-origin-out development scoring and three sampling seeds.
 
 For fresh confirmation, BPI 2012 individual fitting ends before November 1,
 2011; November calibrates the individual model, December fits dependence and

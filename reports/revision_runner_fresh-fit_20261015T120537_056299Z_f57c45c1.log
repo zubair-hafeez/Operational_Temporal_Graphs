@@ -1,0 +1,7 @@
+{"command": ["/home/zubair/zubairEnv/bin/python", "/mnt/zubair/Operational_Temporal_Graphs/revision/fit_bpi2012_joint.py", "--device", "cuda:1", "--seed", "1"], "script_sha256": "82a28efd7d9989ff53fa4bb946326d79477bd6e88fe4db9f24c74cd260d5ab9a", "log": "/mnt/zubair/Operational_Temporal_Graphs/reports/revision_runner_fresh-fit_20261015T120537_056299Z_f57c45c1.log"}
+{"calibration": "identity", "mode": "global", "best_epoch": 16, "validation_pair_nll": 1.0372586943067852, "elapsed_s": 3.908991478034295}
+{"calibration": "identity", "mode": "static", "best_epoch": 20, "validation_pair_nll": 1.0373325250048184, "elapsed_s": 6.37163575401064}
+{"calibration": "static", "mode": "global", "best_epoch": 16, "validation_pair_nll": 1.045474883286752, "elapsed_s": 8.511741321068257}
+{"calibration": "static", "mode": "static", "best_epoch": 49, "validation_pair_nll": 1.045351488481658, "elapsed_s": 12.71791113098152}
+{"calibration": "rolling60", "mode": "global", "best_epoch": 16, "validation_pair_nll": 1.0433782130740694, "elapsed_s": 14.90014607203193}
+{"calibration": "rolling60", "mode": "static", "best_epoch": 49, "validation_pair_nll": 1.0432618917081629, "elapsed_s": 19.120408501010388}

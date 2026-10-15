@@ -10,6 +10,10 @@
       "sha256": "bf5026496a511d606c152927752ee347423058dab4becf0a29a34b7622f29f77"
     },
     {
+      "path": "runs/revision_borg_direct_counts_v2/manifest.json",
+      "sha256": "dd8908c23dfd6eb77e02527932bf80a8245ef29d98c82b45d4d69e67799f8f22"
+    },
+    {
       "path": "runs/revision_borg_direct_counts_v2/scores.parquet",
       "sha256": "f266cf430d5bbc4eb86b19ee0ac56f26fe32ad5f7b7c44b3c5f7bc8beadf1acb"
     },
@@ -32,6 +36,10 @@
     {
       "path": "runs/aggregate_residual_bpi_selected_v2/final_scores_m512.parquet",
       "sha256": "75052b82b1c876b7ade52cc770d2c2f82a6d86560467edf0a4f48faf8d927d20"
+    },
+    {
+      "path": "runs/revision_bpi_direct_counts_v2/manifest.json",
+      "sha256": "9e0894e78d8a3c9e78f7187bca04902eeadd7b2ae83f4b246e35c6edc9f0ee72"
     },
     {
       "path": "runs/revision_bpi_direct_counts_v2/scores.parquet",
@@ -74,7 +82,7 @@
       "sha256": "93e22187a1087a0841e33af5dde1944f0ea845b341d22aef8208fbdfd6f5bcce"
     }
   ],
-  "script_sha256": "4cdc6737fb90728a989683fa7fa9fcbce7f9ba59fcae69b292b752ca7d80028f",
+  "script_sha256": "512a75f910c48052d8b1fc47eea2ed2cd00e38261c6c9fdd3d09473ddd5e0533",
   "original_frozen_assets_verified": 264,
   "fresh_frozen_assets_verified": 82,
   "interpretation": "Original holdout scores, explicitly retrospective follow-ups, and separately frozen fresh confirmation are distinguished in manuscript."

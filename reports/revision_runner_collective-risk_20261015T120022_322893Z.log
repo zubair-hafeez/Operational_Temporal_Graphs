@@ -1,0 +1,30 @@
+{"command": ["/home/zubair/zubairEnv/bin/python", "/mnt/zubair/Operational_Temporal_Graphs/revision/collective_risk.py", "--dataset", "bpi", "--device", "cuda:1"], "script_sha256": "1a7384621c8ad04e46cc85195cc38e4e17ee4b8fc68ac65f94248053829939fb", "log": "/mnt/zubair/Operational_Temporal_Graphs/reports/revision_runner_collective-risk_20261015T120022_322893Z.log"}
+{"period": "development", "origins": 4, "elapsed_s": 0.586687788949348}
+{"period": "development", "origins": 8, "elapsed_s": 0.8885797419352457}
+{"period": "development", "origins": 12, "elapsed_s": 1.1840179689461365}
+{"period": "development", "origins": 16, "elapsed_s": 1.4945449469378218}
+{"period": "retrospective_final", "origins": 4, "elapsed_s": 1.8721316519659013}
+{"period": "retrospective_final", "origins": 8, "elapsed_s": 2.168474245001562}
+{"period": "retrospective_final", "origins": 12, "elapsed_s": 2.4794179119635373}
+{"period": "retrospective_final", "origins": 16, "elapsed_s": 2.787770334049128}
+{"period": "retrospective_final", "origins": 20, "elapsed_s": 3.086930023971945}
+{"period": "retrospective_final", "origins": 24, "elapsed_s": 3.3761655029375106}
+{"period": "retrospective_final", "origins": 28, "elapsed_s": 3.644683061982505}
+{"period": "retrospective_final", "origins": 32, "elapsed_s": 3.91814541304484}
+{"period": "retrospective_final", "origins": 36, "elapsed_s": 4.181874917005189}
+{"period": "retrospective_final", "origins": 40, "elapsed_s": 4.457342603011057}
+{"period": "retrospective_final", "origins": 44, "elapsed_s": 4.709948402945884}
+{"period": "retrospective_final", "origins": 48, "elapsed_s": 4.983231954975054}
+{"period": "retrospective_final", "origins": 52, "elapsed_s": 5.231139148934744}
+{"period": "retrospective_final", "origins": 56, "elapsed_s": 5.431490971008316}
+{"period": "retrospective_final", "origins": 60, "elapsed_s": 5.642679987009615}
+                                     slow_group_fraction_crps  collective_brier  collective_event
+period              mode                                                                         
+development         global                           0.007570          0.002083          0.000000
+                    independent                      0.005858          0.000000          0.000000
+                    static                           0.012152          0.000098          0.000000
+                    static_permuted                  0.005809          0.000024          0.000000
+retrospective_final global                           0.010290          0.004905          0.004098
+                    independent                      0.009792          0.004098          0.004098
+                    static                           0.014342          0.004118          0.004098
+                    static_permuted                  0.009672          0.004106          0.004098

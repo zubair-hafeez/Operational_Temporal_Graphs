@@ -1,12 +1,13 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
   "status": "active",
-  "phase": "post_review_revision",
+  "phase": "revision_packaging",
   "final_test_opened": true,
   "research_direction": "Joint first-exit forecasting for changing operational cohorts on temporal graphs",
   "datasets": [
     "Google ClusterData2011-2",
-    "BPI Challenge 2017"
+    "BPI Challenge 2017",
+    "BPI Challenge 2012"
   ],
   "gpu_inventory": [
     {
@@ -23,10 +24,8 @@
   "interpreter": "/home/zubair/zubairEnv/bin/python",
   "torch_version": "2.5.1+cu124",
   "next_actions": [
-    "Complete delayed calibration and direct count diagnostics",
-    "Add established reconciliation comparison",
-    "Audit fresh replication source and freeze protocol before opening reserved outcomes",
-    "Revise and critically audit manuscript against actual results"
+    "Package revised paper and verify clean extraction",
+    "Final author review, venue choice and attribution"
   ],
   "results": [
     "All 500 Borg task-event shards and BPI archive acquired with checksums.",
@@ -58,11 +57,11 @@
   "final_opened_utc": "2026-10-15T00:44:25.718025+00:00",
   "final_protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77",
   "artifacts": {
-    "pdf": "paper/main.pdf",
-    "source": "paper/main.tex",
-    "review_notes": "REVIEW_NOTES.md",
-    "reproduction": "REPRODUCE.md",
-    "archive": "releases/operational_cohorts_review.zip"
+    "pdf": "paper_revision/main.pdf",
+    "source": "paper_revision/main.tex",
+    "review_notes": "REVISION_REVIEW_NOTES.md",
+    "reproduction": "REVISION_REPRODUCE.md",
+    "archive": "releases/operational_cohorts_revision_review.zip"
   },
   "final_results": {
     "borg_crps_improvement_percent": 24.266084668931143,
@@ -78,8 +77,6 @@
     "tests_passed": 36,
     "max_abs_mc_crps_change": 0.00012198429925083104
   },
-  "review_ready_utc": "2026-10-15T01:15:23.956064+00:00",
-  "completed_utc": "2026-10-15T01:16:49.227369+00:00",
   "archive_verification": {
     "status": "passed",
     "files_verified": 656,
@@ -90,9 +87,20 @@
   "revision": {
     "authorized": "2026-10-15",
     "original_study": "complete; immutable review archive retained",
-    "current": "Three-source revision drafted; added strong current-version direct baseline; auditing independent-provider Alibaba2018 replication",
-    "new_test_status": "BPI2012 February complete under frozen protocol; Alibaba day6+ remains gated",
+    "current": "Three-source empirical revision complete; numerical audit passed; packaging and clean-extraction verification remain",
+    "new_test_status": "BPI2012 February completed under 82-asset freeze; Alibaba candidate deferred before predictive fitting because missing-end semantics were unverified",
     "fresh_protocol_sha256": "d40ee5bbfac35299e298c60521c27d6116ee7871d6e73b36c1661e49297e0e20",
-    "draft": "paper_revision/main.pdf"
-  }
+    "draft": "paper_revision/main.pdf",
+    "tests_passed": 45,
+    "audit": "reports/revision_artifact_audit.json"
+  },
+  "original_artifacts": {
+    "pdf": "paper/main.pdf",
+    "source": "paper/main.tex",
+    "review_notes": "REVIEW_NOTES.md",
+    "reproduction": "REPRODUCE.md",
+    "archive": "releases/operational_cohorts_review.zip"
+  },
+  "original_completed_utc": "2026-10-15T01:16:49.227369+00:00",
+  "original_review_ready_utc": "2026-10-15T01:15:23.956064+00:00"
 }

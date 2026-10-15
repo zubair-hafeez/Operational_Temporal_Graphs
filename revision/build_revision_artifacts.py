@@ -23,13 +23,18 @@ def read(path):
     return pd.read_parquet(p) if p.suffix=='.parquet' else pd.read_csv(p)
 
 
+def read_json(path):
+    p=ROOT/path;SOURCES.append({'path':str(p.relative_to(ROOT)),'sha256':digest(p)})
+    return json.loads(p.read_text())
+
+
 def main():
     verify_final_protocol(ROOT);verify_fresh_protocol();OUT.mkdir(exist_ok=True)
     allframes=[];jointframes=[]
     for ds in ['borg','bpi']:
         old=read(f'reports/summary_{ds}_selected_v2_final_m512/all_scores.parquet');old=old[(old.family=='gaussian')&old['mode'].isin(['independent','global','static'])].copy();old['method']=old['mode'];old['dataset']=ds;allframes.append(old)
         residual=read(f'runs/aggregate_residual_{ds}_selected_v2/final_scores_m512.parquet');residual['method']='historical_residual';residual['dataset']=ds;allframes.append(residual)
-        base=ROOT/'runs'/f'revision_{ds}_direct_counts_v2';chosen=json.loads((base/'manifest.json').read_text())['selected_on_development'];dm=read(str((base/'scores.parquet').relative_to(ROOT)));dm=dm[(dm.period=='retrospective_final')&(dm['mode']==chosen)].copy();dm['method']='early_dm';dm['dataset']=ds;allframes.append(dm)
+        base=ROOT/'runs'/f'revision_{ds}_direct_counts_v2';chosen=read_json(f'runs/revision_{ds}_direct_counts_v2/manifest.json')['selected_on_development'];dm=read(str((base/'scores.parquet').relative_to(ROOT)));dm=dm[(dm.period=='retrospective_final')&(dm['mode']==chosen)].copy();dm['method']='early_dm';dm['dataset']=ds;allframes.append(dm)
         dm=read(f'runs/revision_{ds}_development_fitted_dm_v1/scores.parquet');dm=dm[dm.period=='retrospective_final'].copy();dm['method']='recent_dm';dm['dataset']=ds;allframes.append(dm)
         if ds=='bpi':
             re=read('runs/revision_bpi_updated_dm_profiles_v1/count_scores.parquet');re=re[re['mode'].isin(['development_bottom_up_dm','development_conditioned_dm'])].copy();re['method']=re['mode'].map({'development_bottom_up_dm':'bottom_up','development_conditioned_dm':'conditioned'});re['dataset']=ds;allframes.append(re)

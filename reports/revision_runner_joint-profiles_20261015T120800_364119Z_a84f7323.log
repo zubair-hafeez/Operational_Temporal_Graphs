@@ -1,0 +1,20 @@
+{"command": ["/home/zubair/zubairEnv/bin/python", "/mnt/zubair/Operational_Temporal_Graphs/revision/evaluate_joint_profiles.py", "--dataset", "borg", "--device", "cuda:1"], "script_sha256": "a395e76f84c851fde54769f05e3c60d592b9a31c32a304ac6d9bbaca96c7dde5", "log": "/mnt/zubair/Operational_Temporal_Graphs/reports/revision_runner_joint-profiles_20261015T120800_364119Z_a84f7323.log"}
+{"period": "development", "origins": 4, "elapsed_s": 68.03724627895281}
+{"period": "development", "origins": 8, "elapsed_s": 135.9809885279974}
+{"period": "retrospective_final", "origins": 4, "elapsed_s": 207.3591355229728}
+{"period": "retrospective_final", "origins": 8, "elapsed_s": 278.9588878789218}
+{"period": "retrospective_final", "origins": 12, "elapsed_s": 351.6885159909725}
+{"period": "retrospective_final", "origins": 16, "elapsed_s": 422.09321510698646}
+{"period": "retrospective_final", "origins": 20, "elapsed_s": 491.98782903898973}
+{"period": "retrospective_final", "origins": 24, "elapsed_s": 558.8876208040165}
+{"period": "retrospective_final", "origins": 28, "elapsed_s": 625.8800269609783}
+                                        joint_profile_energy  joint_variogram_fair  peak_slowdown_crps
+period              mode                                                                              
+development         direct_selected_dm              0.045376              0.015762            4.455034
+                    global                          0.048351              0.015761            7.143492
+                    independent                     0.050389              0.016113           15.287289
+                    static                          0.045710              0.015491            4.583718
+retrospective_final direct_selected_dm              0.054318              0.020200            3.990292
+                    global                          0.057545              0.020568            7.543407
+                    independent                     0.059737              0.021079           15.760396
+                    static                          0.054633              0.020076            4.172591

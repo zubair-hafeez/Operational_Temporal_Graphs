@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "original_protocol_sha256": "3fca720b01d98a36554b48d6f0d246965edcb6d5e839d80c5b821359e1a60f77",
+  "original_frozen_assets": 264,
+  "fresh_frozen_assets": 82,
+  "fresh_protocol_sha256": "d40ee5bbfac35299e298c60521c27d6116ee7871d6e73b36c1661e49297e0e20",
+  "generated_inputs_verified": 20,
+  "origins": {
+    "borg": 28,
+    "bpi": 61,
+    "bpi2012": 28
+  },
+  "fresh_scored_queries": 23749,
+  "online_fits_maturity_verified": 41,
+  "exact_vs_sampled_dm": {
+    "borg": {
+      "exact": 0.0285335203906903,
+      "sampled_512_three_seeds": 0.028502887185223202,
+      "absolute_difference": 3.063320546709686e-05
+    },
+    "bpi": {
+      "exact": 0.0407724330507093,
+      "sampled_512_three_seeds": 0.04077458799440245,
+      "absolute_difference": 2.15494369314867e-06
+    }
+  },
+  "importance_effective_fraction": {
+    "bpi": {
+      "mean": 0.8012485885736428,
+      "min": 0.4418763416175832
+    },
+    "bpi2012": {
+      "mean": 0.8693395693741043,
+      "min": 0.6542185409583526
+    }
+  },
+  "percent_improvement_positive_is_better": {
+    "borg:static_vs_independent": {
+      "fraction_crps": 24.266084668930986,
+      "buffer_cost_ratio9": 59.710836574554115
+    },
+    "borg:static_vs_global": {
+      "fraction_crps": 2.2039744108095616,
+      "buffer_cost_ratio9": 4.088261580001584
+    },
+    "bpi:global_vs_independent": {
+      "fraction_crps": 8.283720363938707,
+      "buffer_cost_ratio9": -9.594503075419315
+    },
+    "bpi2012:global_vs_independent": {
+      "fraction_crps": 12.690473523679714,
+      "buffer_cost_ratio9": -20.41681087900271
+    },
+    "bpi2012:early_dm_vs_global": {
+      "fraction_crps": 37.74240014196173,
+      "buffer_cost_ratio9": 32.63272693814457
+    }
+  },
+  "reporting_correction": "Original historical residual results use three seeds. Earlier one-seed caption was erroneous.",
+  "scope": "Evidence consistency and implementation audit, not independent peer review or proof of generalization.",
+  "audit_script_sha256": "ac695571fc961feb55e4f5cd4dd874d95b5782bc50ab914d01e3b639e1b573bd"
+}
