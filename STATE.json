@@ -61,7 +61,9 @@
     "source": "paper_revision/main.tex",
     "review_notes": "REVISION_REVIEW_NOTES.md",
     "reproduction": "REVISION_REPRODUCE.md",
-    "archive": "releases/operational_cohorts_revision_review.zip"
+    "retired_archive": "releases/operational_cohorts_revision_review.zip",
+    "archive_contents_manifest": "archives/ORGANIZATION_MANIFEST.json",
+    "restore_archive_command": "python scripts/organized_review.py --restore revision --output /tmp/otg_revision_review.zip"
   },
   "final_results": {
     "borg_crps_improvement_percent": 24.266084668931143,
@@ -86,7 +88,7 @@
   },
   "revision": {
     "authorized": "2026-10-15",
-    "original_study": "complete; immutable review archive retained",
+    "original_study": "complete; original manuscript and every historical release member preserved after user-authorized deduplication",
     "current": "Complete: strengthened three-source empirical manuscript and verified reproducible review package",
     "new_test_status": "BPI2012 February completed under 82-asset freeze; Alibaba candidate deferred before predictive fitting because missing-end semantics were unverified",
     "fresh_protocol_sha256": "d40ee5bbfac35299e298c60521c27d6116ee7871d6e73b36c1661e49297e0e20",
@@ -146,8 +148,22 @@
     "source": "paper/main.tex",
     "review_notes": "REVIEW_NOTES.md",
     "reproduction": "REPRODUCE.md",
-    "archive": "releases/operational_cohorts_review.zip"
+    "retired_archive": "releases/operational_cohorts_review.zip",
+    "archive_contents_manifest": "archives/ORGANIZATION_MANIFEST.json",
+    "restore_archive_command": "python scripts/organized_review.py --restore original --output /tmp/otg_original_review.zip"
   },
   "original_completed_utc": "2026-10-15T01:16:49.227369+00:00",
-  "original_review_ready_utc": "2026-10-15T01:15:23.956064+00:00"
+  "original_review_ready_utc": "2026-10-15T01:15:23.956064+00:00",
+  "organization": {
+    "latest_paper": "paper_revision/main.pdf",
+    "latest_paper_shortcut": "LATEST_PAPER.pdf",
+    "latest_pages": 10,
+    "earlier_paper": "paper/main.pdf",
+    "earlier_pages": 12,
+    "guide": "START_HERE.txt",
+    "manifest": "archives/ORGANIZATION_MANIFEST.json",
+    "verify": "python scripts/organized_review.py",
+    "revision_package_restore": "python scripts/organized_review.py --restore revision --output /tmp/otg_revision_review.zip",
+    "updated_utc": "2026-10-18T20:39:35.133616+00:00"
+  }
 }

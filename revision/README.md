@@ -1,3 +1,5 @@
+Folder organization update: the latest manuscript remains `paper_revision/main.pdf` (10 pages; shortcut `LATEST_PAPER.pdf`). References below to verified ZIP archives describe the completed historical packaging checks. The duplicate ZIP files were subsequently removed at the user's request; all unique member bytes are retained and portable packages can be reconstructed with `scripts/organized_review.py`. See the project-root `START_HERE.txt`.
+
 # Revision study
 
 The revision is complete for author review. Read `../REVISION_REVIEW_NOTES.md`, `../REVISION_REPRODUCE.md` and `../paper_revision/main.pdf`. Both frozen asset sets verify; all45 tests pass; the separate review ZIP passed clean-extraction reproduction of14 generated artifacts and PDF compilation. The material below records the initial diagnostic plan and its provenance. BPI2012 supplied fresh confirmation; BPI2015 and Alibaba candidates were deferred for adapter/endpoint issues, as documented in their audit notes.

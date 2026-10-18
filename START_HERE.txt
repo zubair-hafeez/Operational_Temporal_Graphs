@@ -1,0 +1,48 @@
+OPERATIONAL TEMPORAL GRAPHS — ORGANIZED PROJECT
+
+OPEN THIS PAPER: LATEST_PAPER.pdf
+Actual file: paper_revision/main.pdf — 10 pages, completed revision.
+Title: Evaluating Collective Forecasts on Temporal Operational Graphs:
+Calibration, Dependence, and Group Risk.
+
+EARLIER PAPER: paper/main.pdf — 12 pages, original study retained for history.
+It is a distinct earlier version, not a duplicate of the latest paper.
+The two identical notebook checkpoint PDF copies were removed.
+
+READING ORDER
+1. LATEST_PAPER.pdf
+2. REVISION_REVIEW_NOTES.md — findings, limitations, author review.
+3. REVISION_REPRODUCE.md — reproduction instructions.
+
+FOLDER GUIDE
+paper_revision/  Latest manuscript source, figures and generated tables.
+paper/           Earlier manuscript plus the shared cached TeX tools.
+revision/        Revised experiment and audit implementation.
+otg/, scripts/   Original implementation and project utilities.
+data/, runs/     Public data, derived inputs, fitted models and predictions.
+reports/         Experiment results, provenance and verification reports.
+docs/            Protocols and research plans.
+archives/        Unique historical release files and organization manifest.
+releases/        Original package manifests and package-restoration guide.
+tests/           Implementation tests.
+
+CLEANUP AND REPRODUCTION
+The two release ZIPs were redundant packaged copies. Every archive member
+was verified and retained; unique old versions are under archives/.
+Large byte-identical immutable data arrays and a shared figure now use
+relative links while preserving the paths required by the experiments.
+Do not overwrite frozen inputs; new work needs separate output paths.
+No manuscript text, model values, predictions or reported results changed.
+
+From this folder, using the documented Python 3.10 environment:
+  python scripts/organized_review.py
+  python revision/audit_revision_artifacts.py
+
+Reconstruct a portable review ZIP only when needed:
+  python scripts/organized_review.py --restore revision --output /tmp/otg_revision_review.zip
+Use --restore original for the earlier package. The tool checks every member
+hash. It does not promise the original ZIP's container checksum.
+
+archives/ORGANIZATION_MANIFEST.json records all retained archive members,
+removed duplicate PDFs and duplicate-link targets. Historical notes may
+mention retired ZIPs; this guide describes the current layout.

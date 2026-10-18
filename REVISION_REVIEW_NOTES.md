@@ -1,3 +1,5 @@
+Folder organization update: the latest manuscript remains `paper_revision/main.pdf` (10 pages; shortcut `LATEST_PAPER.pdf`). References below to verified ZIP archives describe the completed historical packaging checks. The duplicate ZIP files were subsequently removed at the user's request; all unique member bytes are retained and portable packages can be reconstructed with `scripts/organized_review.py`. See the project-root `START_HERE.txt`.
+
 # Revised paper for author review
 
 Read `paper_revision/main.pdf`. The revised manuscript is a complete empirical paper on collective forecasting for temporal operational graphs. Its defensible contribution is a reproducible evaluation framework and application evidence: distinguish individual mean bias, shared uncertainty, typed graph incidence, and joint group risk. It does not introduce a new copula or establish that a temporal graph neural model universally wins.

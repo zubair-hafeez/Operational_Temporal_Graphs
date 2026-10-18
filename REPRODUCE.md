@@ -1,3 +1,13 @@
+Folder organization update (18 October 2026): the latest manuscript is `paper_revision/main.pdf` (10 pages), also accessible as `LATEST_PAPER.pdf`; `paper/main.pdf` is the earlier 12-page paper. The duplicate review ZIPs were removed after all unique contents were retained. The ZIP-based commands below describe the historical package workflow. To use them, first reconstruct the appropriate package from this folder:
+
+```bash
+python scripts/organized_review.py --restore original --output /tmp/otg_original_review.zip
+```
+
+Use that output path in place of the retired `releases/` ZIP. Every member is restored byte-for-byte; ZIP metadata/compression and its whole-archive checksum may differ. To check current storage without recreating a ZIP, run `python scripts/organized_review.py`. Large immutable duplicate arrays use relative links; preserve links when copying the project, or dereference them when creating a standalone subset. Treat frozen inputs as immutable and create new output paths for new experiments.
+
+--- Historical reproduction instructions ---
+
 # Reproducing the operational-cohort study
 
 The implemented target is a conditional joint first-exit distribution for the population active at a timestamp. Read `docs/SCOPE_REVISION.md` for the boundary between this task and the original broader event-log proposal. `docs/FINAL_PROTOCOL.json` is the immutable development-informed final freeze. Final results must not be used to repeat model selection.

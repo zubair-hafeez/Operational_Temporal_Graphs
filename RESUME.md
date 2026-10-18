@@ -1,3 +1,13 @@
+# Current folder organization — 18 October 2026
+
+The latest paper is `paper_revision/main.pdf` (10 pages), accessible directly as `LATEST_PAPER.pdf`. Earlier paper: `paper/main.pdf` (12 pages). Read `START_HERE.txt`, `REVISION_REVIEW_NOTES.md` and `REVISION_REPRODUCE.md`.
+
+At the user's request, duplicate release ZIPs and identical notebook PDF checkpoints were removed after retaining and verifying their contents. Unique historical release files remain under `archives/`. Eighty duplicated immutable artifact paths use relative links; all scientific paths and bytes remain available. `archives/ORGANIZATION_MANIFEST.json` records every retained member and link. Run `python scripts/organized_review.py` to verify, or add `--restore revision --output /tmp/otg_revision_review.zip` to reconstruct a portable package. The historical ZIP hashes describe the retired files; reconstructed ZIP container bytes may differ while all member hashes match. Do not recreate duplicate project copies unless requested.
+
+The historical notes below refer to now-retired ZIP paths and previously preserved duplicate checkpoint files. Current user-authorized organization supersedes those storage instructions. Scientific evidence and manuscripts were not edited.
+
+--- Historical completion and working notes ---
+
 # Current revision complete for final author review
 
 The strengthened empirical manuscript and review package are COMPLETE. PDF `paper_revision/main.pdf`; guidance `REVISION_REVIEW_NOTES.md`; reproduction `REVISION_REPRODUCE.md`. Local archive `releases/operational_cohorts_revision_review.zip` is159,613,117bytes with878files, SHA256 `9ab04634c1b609bcf0abed64963a2f413151893638b83dcdc7f2b8e6dac514b4`. Fresh extraction `/tmp/otg-revision-review-axvqiunh` verified every file hash, regenerated all14 CSV/TeX/manifest/figure artifacts identically, passed45 tests, verified both freezes and compiled the PDF without overfull boxes or unresolved references. Evidence: `reports/revision_archive_verification.json`.
