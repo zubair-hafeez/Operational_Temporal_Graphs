@@ -16,6 +16,8 @@ def main():
     if bool(args.restore) != bool(args.output):
         parser.error('--restore and --output must be supplied together')
     record = json.loads((ROOT / 'archives/ORGANIZATION_MANIFEST.json').read_text())
+    if args.restore and any(e.get('removed_by_user_request') for e in record['entries']):
+        parser.error('Historical package restoration was retired when the user requested deletion of all earlier manuscripts. Use paper_revision/ for the latest paper source.')
     checked = {}
 
     def verify(relative, expected, size):
@@ -33,6 +35,8 @@ def main():
         return path
 
     for entry in record['entries']:
+        if entry.get('removed_by_user_request'):
+            continue
         verify(entry['destination'], entry['sha256'], entry['bytes'])
     for entry in record['links']:
         path = ROOT / entry['path']
@@ -40,6 +44,8 @@ def main():
             raise ValueError('Unexpected duplicate-link target: ' + entry['path'])
         verify(entry['path'], entry['sha256'], entry['bytes'])
     for entry in record['removed_checkpoints']:
+        if entry.get('removed_by_user_request'):
+            continue
         verify(entry['retained'], entry['sha256'], entry['bytes'])
 
     if args.restore:
@@ -62,6 +68,7 @@ def main():
     else:
         print(json.dumps({'status': 'all_organized_artifacts_verified',
                           'release_members': len(record['entries']),
+                          'earlier_manuscript_entries_removed_by_user': sum(bool(e.get('removed_by_user_request')) for e in record['entries']),
                           'deduplicated_paths': len(record['links']),
                           'retained_files_checked': len(checked)}))
 

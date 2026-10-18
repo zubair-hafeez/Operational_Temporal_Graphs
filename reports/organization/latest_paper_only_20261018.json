@@ -1,0 +1,113 @@
+{
+  "status": "earlier_manuscripts_removed_at_explicit_user_request",
+  "instruction": "REMOVE ALL EARLIER VERSION PAPERS FROM EACH FOLDER ONLY KEEP LATEST ONE",
+  "completed_utc": "2026-10-18T20:44:12.988067+00:00",
+  "latest_pdf": "paper_revision/main.pdf",
+  "latest_sha256": "68b152096be9c846312c7f90938317339cce3c66db2da47b136dcacbed4df10a",
+  "removed_files": [
+    {
+      "path": "paper/main.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "6605a047e9466df5359b610e9afa676f2e45b4fc1a6f37249132750ae1eb565b",
+      "bytes": 853
+    },
+    {
+      "path": "paper/main.log",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "1bd4b2b16a67b9fe7f147cfc82c3d6b543c1723b47e1069b70591867a276df4b",
+      "bytes": 22291
+    },
+    {
+      "path": "paper/main.blg",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "f7f776f61e365e48ef4e36e855330a84656940380f2bed652c3c9060f7936d1a",
+      "bytes": 194
+    },
+    {
+      "path": "paper/main.pdf",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "d8eb1c4a666c85362c1f31a663195928e2047876b7c792c8c576e656977f30ef",
+      "bytes": 161215
+    },
+    {
+      "path": "paper/references.bib",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "5670e7ce3b2c9227538bc6db12d5626ea0c07108e1da95e67fabae52ea9817ed",
+      "bytes": 4865
+    },
+    {
+      "path": "paper/sections/discussion.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "4c8fc614957e88c5b0eea861be3075c87b44a6a8d2c56d136437ee45e1ceca6a",
+      "bytes": 4205
+    },
+    {
+      "path": "paper/sections/results_borg.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "8e88a80c09c9bd666ba6cb67a72866f602f51b750f05c1265c9bb7ab7700dbed",
+      "bytes": 2942
+    },
+    {
+      "path": "paper/sections/abstract.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "cec2eb7df766fd0fe151d4a9e82dbc4731b7f254499c4554ca1123d55df7bbec",
+      "bytes": 1576
+    },
+    {
+      "path": "paper/sections/related.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "c471b44ff9e87e5920efed7575e45a26faebf9057a0ff53c45a880bc9a6b9955",
+      "bytes": 2953
+    },
+    {
+      "path": "paper/sections/results_bpi.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "7866a15c5b1baa851ef4c3072bd1cef32cc515869ae80ffaad9e5153a229fc98",
+      "bytes": 3491
+    },
+    {
+      "path": "paper/sections/data.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "e38c1f8396e5f7a5a0d129d45e90d567ba7a943f7bb101172a1eff46b6210c6c",
+      "bytes": 7001
+    },
+    {
+      "path": "paper/sections/introduction.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "539f2aed2f6e991acea4f8866b4e4bcab91adaca9a6a7c89b296aea6c3b8e309",
+      "bytes": 3111
+    },
+    {
+      "path": "paper/sections/conclusion.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "dc780886c7cfcb9b540d125fca46e8e14e4768bf6fa57de9bff2c3f1f57349bc",
+      "bytes": 806
+    },
+    {
+      "path": "paper/sections/results.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "775817d963e069bbb35781f9b239b8952be149d3dab357b19c39f4e0317868de",
+      "bytes": 1932
+    },
+    {
+      "path": "paper/sections/method.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "d15baf54253f2e5e641f0d52fa071128b598077724b9e5abbbdd51ff0239a483",
+      "bytes": 8298
+    },
+    {
+      "path": "paper/sections/results_audits.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "207116e85bb8caf5f0e1cbb1a0623c6824c54bdcd0634c890b9c90d7f03c008d",
+      "bytes": 1337
+    },
+    {
+      "path": "paper/sections/appendix.tex",
+      "reason": "Earlier manuscript source or PDF",
+      "sha256": "da5fe5791eb75dcc28bf661e97def4d3aab2fbd2affd311863d6c30959239204",
+      "bytes": 6023
+    }
+  ],
+  "archived_paper_removals": [],
+  "scope": "Earlier manuscript PDFs, entrypoint/prose sources and build logs removed. Scientific code/data/results and latest paper inputs preserved. Version-control history was not rewritten."
+}

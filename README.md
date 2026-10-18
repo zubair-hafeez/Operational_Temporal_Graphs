@@ -1,6 +1,9 @@
 # Joint forecasting for operational temporal graphs
 
-**Latest paper: [LATEST_PAPER.pdf](LATEST_PAPER.pdf), 10 pages.** This shortcut opens `paper_revision/main.pdf`. The earlier 12-page paper remains in `paper/main.pdf`. Start with [START_HERE.txt](START_HERE.txt) for the organized folder guide.
+**Latest paper only:** [LATEST_PAPER.pdf](LATEST_PAPER.pdf) — 10 pages. Earlier manuscript versions have been deleted at your request. [START_HERE.txt](START_HERE.txt) is the authoritative folder guide. Historical notes and package recipes below may reference retired papers or archives.
+
+
+**Latest paper: [LATEST_PAPER.pdf](LATEST_PAPER.pdf), 10 pages.** This shortcut opens `paper_revision/main.pdf`. The earlier 12-page manuscript has been removed. Start with [START_HERE.txt](START_HERE.txt) for the organized folder guide.
 
 Research project on joint first-exit forecasts for populations active at a forecast origin. Applications are Google Borg task states and BPI 2017 application resolution. The [scope revision](docs/SCOPE_REVISION.md) records how experiments and prior work narrowed the original event-log-generation proposal. This implementation does not generate full future logs or arrivals.
 

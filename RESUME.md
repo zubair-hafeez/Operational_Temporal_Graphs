@@ -1,3 +1,9 @@
+# Latest-paper-only organization — 18 October 2026
+
+User explicitly requested removal of ALL earlier-version papers. Completed: keep only `paper_revision/main.pdf` (10 pages), with root `LATEST_PAPER.pdf` shortcut. Earlier manuscript files and obsolete prose sources are deleted; experimental records and support assets remain. See `reports/organization/latest_paper_only_20261018.json`. Historical notes below about preserving earlier manuscripts or reconstructing earlier release packages are superseded. Do not restore deleted manuscript versions unless explicitly requested. No new research work is authorized by cleanup.
+
+--- Earlier operational notes ---
+
 # Current folder organization — 18 October 2026
 
 The latest paper is `paper_revision/main.pdf` (10 pages), accessible directly as `LATEST_PAPER.pdf`. Earlier paper: `paper/main.pdf` (12 pages). Read `START_HERE.txt`, `REVISION_REVIEW_NOTES.md` and `REVISION_REPRODUCE.md`.

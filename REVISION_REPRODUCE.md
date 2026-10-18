@@ -1,3 +1,5 @@
+LATEST-ONLY UPDATE: Earlier manuscripts were deleted at the user's request. Historical ZIP restoration commands below are retired. The current editable manuscript is paper_revision/main.tex; its data, figures and scientific evidence remain. Use python scripts/organized_review.py and python revision/audit_revision_artifacts.py for current checks.
+
 Folder organization update (18 October 2026): the latest manuscript is `paper_revision/main.pdf` (10 pages), also accessible as `LATEST_PAPER.pdf`; `paper/main.pdf` is the earlier 12-page paper. The duplicate review ZIPs were removed after all unique contents were retained. The ZIP-based commands below describe the historical package workflow. To use them, first reconstruct the appropriate package from this folder:
 
 ```bash

@@ -404,7 +404,8 @@
       "destination": "paper/main.pdf",
       "sha256": "d8eb1c4a666c85362c1f31a663195928e2047876b7c792c8c576e656977f30ef",
       "bytes": 161215,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -412,7 +413,8 @@
       "destination": "paper/main.tex",
       "sha256": "6605a047e9466df5359b610e9afa676f2e45b4fc1a6f37249132750ae1eb565b",
       "bytes": 853,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -420,7 +422,8 @@
       "destination": "paper/references.bib",
       "sha256": "5670e7ce3b2c9227538bc6db12d5626ea0c07108e1da95e67fabae52ea9817ed",
       "bytes": 4865,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -428,7 +431,8 @@
       "destination": "paper/sections/abstract.tex",
       "sha256": "cec2eb7df766fd0fe151d4a9e82dbc4731b7f254499c4554ca1123d55df7bbec",
       "bytes": 1576,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -436,7 +440,8 @@
       "destination": "paper/sections/appendix.tex",
       "sha256": "da5fe5791eb75dcc28bf661e97def4d3aab2fbd2affd311863d6c30959239204",
       "bytes": 6023,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -444,7 +449,8 @@
       "destination": "paper/sections/conclusion.tex",
       "sha256": "dc780886c7cfcb9b540d125fca46e8e14e4768bf6fa57de9bff2c3f1f57349bc",
       "bytes": 806,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -452,7 +458,8 @@
       "destination": "paper/sections/data.tex",
       "sha256": "e38c1f8396e5f7a5a0d129d45e90d567ba7a943f7bb101172a1eff46b6210c6c",
       "bytes": 7001,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -460,7 +467,8 @@
       "destination": "paper/sections/discussion.tex",
       "sha256": "4c8fc614957e88c5b0eea861be3075c87b44a6a8d2c56d136437ee45e1ceca6a",
       "bytes": 4205,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -468,7 +476,8 @@
       "destination": "paper/sections/introduction.tex",
       "sha256": "539f2aed2f6e991acea4f8866b4e4bcab91adaca9a6a7c89b296aea6c3b8e309",
       "bytes": 3111,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -476,7 +485,8 @@
       "destination": "paper/sections/method.tex",
       "sha256": "d15baf54253f2e5e641f0d52fa071128b598077724b9e5abbbdd51ff0239a483",
       "bytes": 8298,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -484,7 +494,8 @@
       "destination": "paper/sections/related.tex",
       "sha256": "c471b44ff9e87e5920efed7575e45a26faebf9057a0ff53c45a880bc9a6b9955",
       "bytes": 2953,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -492,7 +503,8 @@
       "destination": "paper/sections/results.tex",
       "sha256": "775817d963e069bbb35781f9b239b8952be149d3dab357b19c39f4e0317868de",
       "bytes": 1932,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -500,7 +512,8 @@
       "destination": "paper/sections/results_audits.tex",
       "sha256": "207116e85bb8caf5f0e1cbb1a0623c6824c54bdcd0634c890b9c90d7f03c008d",
       "bytes": 1337,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -508,7 +521,8 @@
       "destination": "paper/sections/results_borg.tex",
       "sha256": "8e88a80c09c9bd666ba6cb67a72866f602f51b750f05c1265c9bb7ab7700dbed",
       "bytes": 2942,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -516,7 +530,8 @@
       "destination": "paper/sections/results_bpi.tex",
       "sha256": "7866a15c5b1baa851ef4c3072bd1cef32cc515869ae80ffaad9e5153a229fc98",
       "bytes": 3491,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_review.zip",
@@ -5804,7 +5819,8 @@
       "destination": "paper/main.pdf",
       "sha256": "d8eb1c4a666c85362c1f31a663195928e2047876b7c792c8c576e656977f30ef",
       "bytes": 161215,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5812,7 +5828,8 @@
       "destination": "paper/main.tex",
       "sha256": "6605a047e9466df5359b610e9afa676f2e45b4fc1a6f37249132750ae1eb565b",
       "bytes": 853,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5820,7 +5837,8 @@
       "destination": "paper/references.bib",
       "sha256": "5670e7ce3b2c9227538bc6db12d5626ea0c07108e1da95e67fabae52ea9817ed",
       "bytes": 4865,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5828,7 +5846,8 @@
       "destination": "paper/sections/abstract.tex",
       "sha256": "cec2eb7df766fd0fe151d4a9e82dbc4731b7f254499c4554ca1123d55df7bbec",
       "bytes": 1576,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5836,7 +5855,8 @@
       "destination": "paper/sections/appendix.tex",
       "sha256": "da5fe5791eb75dcc28bf661e97def4d3aab2fbd2affd311863d6c30959239204",
       "bytes": 6023,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5844,7 +5864,8 @@
       "destination": "paper/sections/conclusion.tex",
       "sha256": "dc780886c7cfcb9b540d125fca46e8e14e4768bf6fa57de9bff2c3f1f57349bc",
       "bytes": 806,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5852,7 +5873,8 @@
       "destination": "paper/sections/data.tex",
       "sha256": "e38c1f8396e5f7a5a0d129d45e90d567ba7a943f7bb101172a1eff46b6210c6c",
       "bytes": 7001,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5860,7 +5882,8 @@
       "destination": "paper/sections/discussion.tex",
       "sha256": "4c8fc614957e88c5b0eea861be3075c87b44a6a8d2c56d136437ee45e1ceca6a",
       "bytes": 4205,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5868,7 +5891,8 @@
       "destination": "paper/sections/introduction.tex",
       "sha256": "539f2aed2f6e991acea4f8866b4e4bcab91adaca9a6a7c89b296aea6c3b8e309",
       "bytes": 3111,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5876,7 +5900,8 @@
       "destination": "paper/sections/method.tex",
       "sha256": "d15baf54253f2e5e641f0d52fa071128b598077724b9e5abbbdd51ff0239a483",
       "bytes": 8298,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5884,7 +5909,8 @@
       "destination": "paper/sections/related.tex",
       "sha256": "c471b44ff9e87e5920efed7575e45a26faebf9057a0ff53c45a880bc9a6b9955",
       "bytes": 2953,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5892,7 +5918,8 @@
       "destination": "paper/sections/results.tex",
       "sha256": "775817d963e069bbb35781f9b239b8952be149d3dab357b19c39f4e0317868de",
       "bytes": 1932,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5900,7 +5927,8 @@
       "destination": "paper/sections/results_audits.tex",
       "sha256": "207116e85bb8caf5f0e1cbb1a0623c6824c54bdcd0634c890b9c90d7f03c008d",
       "bytes": 1337,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5908,7 +5936,8 @@
       "destination": "paper/sections/results_borg.tex",
       "sha256": "8e88a80c09c9bd666ba6cb67a72866f602f51b750f05c1265c9bb7ab7700dbed",
       "bytes": 2942,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -5916,7 +5945,8 @@
       "destination": "paper/sections/results_bpi.tex",
       "sha256": "7866a15c5b1baa851ef4c3072bd1cef32cc515869ae80ffaad9e5153a229fc98",
       "bytes": 3491,
-      "action": "existing_identical"
+      "action": "existing_identical",
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18; do not restore."
     },
     {
       "archive": "releases/operational_cohorts_revision_review.zip",
@@ -12871,7 +12901,8 @@
       "removed": "paper/.ipynb_checkpoints/main-checkpoint.pdf",
       "retained": "paper/main.pdf",
       "sha256": "d8eb1c4a666c85362c1f31a663195928e2047876b7c792c8c576e656977f30ef",
-      "bytes": 161215
+      "bytes": 161215,
+      "removed_by_user_request": "Earlier manuscript version removed on 2026-10-18."
     },
     {
       "removed": "paper_revision/.ipynb_checkpoints/main-checkpoint.pdf",
@@ -12881,5 +12912,6 @@
     }
   ],
   "completed_utc": "2026-10-18T20:38:20.503335+00:00",
-  "bytes_removed_net": 1796496227
+  "bytes_removed_net": 1796496227,
+  "subsequent_user_instruction": "Keep only latest manuscript; earlier manuscript files intentionally removed. All other retained entries remain verifiable."
 }

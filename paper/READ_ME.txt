@@ -1,3 +1,3 @@
-EARLIER PAPER: main.pdf (12 pages).
-LATEST PAPER: ../LATEST_PAPER.pdf or ../paper_revision/main.pdf (10 pages).
-The shared tools/ directory is used by both projects and is retained.
+SUPPORTING RESEARCH ASSETS ONLY. Earlier manuscript removed at user request.
+Latest paper: ../LATEST_PAPER.pdf (10 pages).
+Figures, tables and shared compiler tools are retained for reproduction.
