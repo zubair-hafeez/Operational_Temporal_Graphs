@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "sources": {
+    "uci": {
+      "historical_rows": 91079,
+      "all_observed_attributes_identical": true,
+      "relation_partition_and_missing_mask_identical": true,
+      "training_vocabulary_and_encodings_identical": true,
+      "future_end_labels_excluded_from_comparison": true
+    },
+    "bpi2014": {
+      "historical_rows": 256250,
+      "all_observed_attributes_identical": true,
+      "relation_partition_and_missing_mask_identical": true,
+      "training_vocabulary_and_encodings_identical": true,
+      "future_end_labels_excluded_from_comparison": true
+    },
+    "azure_full": {
+      "historical_rows": 87165,
+      "all_observed_attributes_identical": true,
+      "relation_partition_and_missing_mask_identical": true,
+      "training_vocabulary_and_encodings_identical": true,
+      "future_end_labels_excluded_from_comparison": true
+    }
+  }
+}

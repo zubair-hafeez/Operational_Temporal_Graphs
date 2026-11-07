@@ -1,21 +1,23 @@
 \begin{abstract}
-Individual event probabilities on temporal operational graphs do not determine
-the uncertainty of group counts or simultaneous delays. We build a
-current-cohort forecasting benchmark on a compute-cluster trace and two
-loan-workflow releases, separating marginal prediction, shared dependence,
-typed incidence and group-risk evaluation. Controls include temporal neural
-and tree predictors, classical factor scenarios, direct count distributions,
-historical residuals and discrete probabilistic reconciliation. Original
-frozen evaluations motivate explicitly retrospective calibration and graph
-diagnostics; a separately frozen workflow period provides fresh confirmation.
-Typed factors reduce cluster count CRPS by 24.3\% against independence, but
-only 2.2\% beyond a global factor. Recent same-version calibration and direct
-count fitting substantially change the workflow comparison. In fresh
-confirmation, global dependence improves count CRPS by 12.7\% while worsening
-a reserve-loss proxy by 20.4\%; a development-selected direct count model
-outperforms it on both. Count and peak-group-delay rankings also differ.
-The contribution is a reproducible application benchmark and controlled
-empirical evidence for evaluating mean bias, collective uncertainty and
-operational risk separately, with explicit limits on temporal replication
-and deployment interpretation.
+Individual event probabilities do not determine uncertainty in group counts
+or simultaneous delays. We study when observed relations improve collective
+forecasts across six operational logs spanning compute clusters, cloud VMs,
+loan workflows, and IT incidents. A current-cohort benchmark separates three
+effects: stronger individual predictions, shared uncertainty, and typed
+dependence beyond a global factor. Controls include temporal and graph neural
+predictors, feature-matched boosted trees, Gaussian and Student-$t$ copulas,
+direct count distributions, and calibration. Three additional source periods
+are evaluated under a frozen protocol after small, storage-bounded pilots.
+On the original cluster trace, typed factors improve count CRPS by 24.3\%
+over independence but only 2.2\% over a global factor. On new-period IT
+incidents, typed Gaussian and Student-$t$ factors improve their global
+controls by 3.3\% and 3.6\%, respectively, while a strong bias-adjusted
+direct-count model is essentially tied with the latter. In Azure, a
+development-selected subscription-only factor improves global CRPS by 4.7\%,
+although the combined typed fit collapses to the global control. Other sources
+show smaller incremental gains; larger neural models do not
+consistently beat trees. Count accuracy, calibration, and reserve-loss rankings
+also differ. The contribution is a reproducible cross-domain evaluation and
+controlled evidence about when relations matter, not a universally superior
+graph architecture or a claim of deployment savings.
 \end{abstract}

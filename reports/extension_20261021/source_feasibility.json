@@ -1,0 +1,324 @@
+{
+  "datasets": {
+    "google2019": {
+      "rows": 998903,
+      "entities": 726033,
+      "singleton_entity_fraction": 0.8298286716994957,
+      "sentinel_end_rows": 10,
+      "types": {
+        "0": 204867,
+        "2": 197962,
+        "3": 189810,
+        "10": 121395,
+        "7": 86396,
+        "4": 68810,
+        "6": 42636,
+        "9": 39174,
+        "1": 35276,
+        "5": 10048,
+        "8": 2529
+      },
+      "decision": "schema pilot only: isolated export shard is not complete task or machine histories",
+      "next": "requires whole-entity extraction across shards or bounded BigQuery export before valid forecasts",
+      "relationships": [
+        "collection/job",
+        "machine",
+        "allocation"
+      ],
+      "source": "https://github.com/google/cluster-data/blob/master/ClusterData2019.md"
+    },
+    "bpi2014_changes": {
+      "rows": 30275,
+      "distinct_changes": 18000,
+      "snapshot_columns": [
+        "CI Name (aff)",
+        "CI Type (aff)",
+        "CI Subtype (aff)",
+        "Service Component WBS (aff)",
+        "Change ID",
+        "Change Type",
+        "Risk Assessment",
+        "Emergency Change",
+        "CAB-approval needed",
+        "Planned Start",
+        "Planned End",
+        "Scheduled Downtime Start",
+        "Scheduled Downtime End",
+        "Actual Start",
+        "Actual End",
+        "Requested End Date",
+        "Change record Open Time",
+        "Change record Close Time",
+        "Originated from",
+        "# Related Interactions",
+        "# Related Incidents"
+      ],
+      "negative_or_missing_closure": 0,
+      "decision": "snapshot-schema pilot; planned times, affected CI and risk have no version history; no causal graph claim",
+      "alternative": "timestamped incident activities from same release support team relation replay",
+      "source": "https://ais.win.tue.nl/bpi/2014/challenge.html"
+    },
+    "azure": {
+      "source": "azure",
+      "stage": "exploratory development pilot",
+      "future_evaluation_scored": false,
+      "raw_rows": 49231,
+      "sample": "biased row prefix; sampled-population pilot only",
+      "forbidden_features": [
+        "max_cpu",
+        "avg_cpu",
+        "p95_cpu",
+        "category",
+        "end"
+      ],
+      "category_warning": "workload class may be derived from lifetime use; excluded",
+      "zero_duration_rows": 2716,
+      "negative_intervals": 0,
+      "target": "observed VM deletion within horizon, active sampled VMs",
+      "bounds": [
+        0.0,
+        864000.0,
+        1123200.0,
+        1382400.0,
+        1728000.0
+      ],
+      "horizons_seconds": [
+        300.0,
+        1800.0,
+        7200.0,
+        21600.0
+      ],
+      "relationships": [
+        "deployment",
+        "subscription"
+      ],
+      "queries": 291761,
+      "features": 19,
+      "categorical_columns": [
+        "cores",
+        "memory",
+        "state"
+      ],
+      "numeric_columns": [],
+      "vocabulary_fit_before": 864000.0,
+      "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+      "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+      "code_sha256": "a843c684c941bd85e1225c0fd5c05fc9a04c3696acc4767780acb20c66ea9e71",
+      "origin_counts": {
+        "train": 35,
+        "calibration": 11,
+        "dependence": 11,
+        "validation": 15
+      }
+    },
+    "citibike": {
+      "source": "citibike",
+      "stage": "exploratory development pilot",
+      "future_evaluation_scored": false,
+      "raw_rows": 50661,
+      "target": "recorded trip end for rides active at origin",
+      "forbidden_features": [
+        "end_station_id",
+        "end_lat",
+        "end_lng",
+        "ended_at"
+      ],
+      "sampling_limitation": "publisher-filtered trips, including retrospective removal of short/staff trips; population is released rides",
+      "bounds": [
+        1704085200.0,
+        1704949200.0,
+        1705208400.0,
+        1705467600.0,
+        1705813200.0
+      ],
+      "horizons_seconds": [
+        300.0,
+        900.0,
+        1800.0,
+        3600.0
+      ],
+      "relationships": [
+        "station"
+      ],
+      "queries": 3658,
+      "features": 12,
+      "categorical_columns": [
+        "rideable_type",
+        "member_casual",
+        "state"
+      ],
+      "numeric_columns": [],
+      "vocabulary_fit_before": 1704949200.0,
+      "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+      "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+      "code_sha256": "a843c684c941bd85e1225c0fd5c05fc9a04c3696acc4767780acb20c66ea9e71",
+      "origin_counts": {
+        "train": 113,
+        "calibration": 42,
+        "dependence": 27,
+        "validation": 46
+      }
+    },
+    "uci": {
+      "source": "uci",
+      "stage": "exploratory development pilot",
+      "future_evaluation_scored": false,
+      "target": "first observed Resolved/Closed update after first observed nonterminal update",
+      "forbidden_features": [
+        "resolved_at",
+        "closed_at",
+        "resolved_by",
+        "closed_code",
+        "made_sla",
+        "rfc",
+        "caused_by"
+      ],
+      "semantics": "event-time replay of recorded updates, not true resolution timestamp; completed-case extraction may bias population",
+      "raw_rows": 141712,
+      "bounds": [
+        1456790400.0,
+        1458604800.0,
+        1459468800.0,
+        1460678400.0,
+        1462060800.0
+      ],
+      "horizons_seconds": [
+        3600.0,
+        21600.0,
+        86400.0,
+        259200.0
+      ],
+      "relationships": [
+        "handler",
+        "team"
+      ],
+      "queries": 67079,
+      "features": 22,
+      "categorical_columns": [
+        "state",
+        "priority",
+        "contact_type"
+      ],
+      "numeric_columns": [
+        "reassignment_count",
+        "reopen_count",
+        "sys_mod_count"
+      ],
+      "vocabulary_fit_before": 1458604800.0,
+      "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+      "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+      "code_sha256": "a843c684c941bd85e1225c0fd5c05fc9a04c3696acc4767780acb20c66ea9e71",
+      "origin_counts": {
+        "train": 18,
+        "calibration": 7,
+        "dependence": 11,
+        "validation": 13
+      }
+    },
+    "bpi2014": {
+      "source": "bpi2014",
+      "stage": "exploratory development pilot",
+      "future_evaluation_scored": false,
+      "target": "first Closed activity after observed Open activity",
+      "forbidden_features": [
+        "final incident table attributes",
+        "cause CI",
+        "final related change",
+        "KM number"
+      ],
+      "semantics": "retain only entities with observed Open; first closure, later reopening outside target",
+      "raw_rows": 466737,
+      "bounds": [
+        1380585600.0,
+        1383264000.0,
+        1384473600.0,
+        1385856000.0,
+        1388534400.0
+      ],
+      "horizons_seconds": [
+        3600.0,
+        21600.0,
+        86400.0,
+        259200.0
+      ],
+      "relationships": [
+        "team"
+      ],
+      "queries": 89436,
+      "features": 41,
+      "categorical_columns": [
+        "state"
+      ],
+      "numeric_columns": [],
+      "vocabulary_fit_before": 1383264000.0,
+      "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+      "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+      "code_sha256": "a843c684c941bd85e1225c0fd5c05fc9a04c3696acc4767780acb20c66ea9e71",
+      "origin_counts": {
+        "train": 28,
+        "calibration": 11,
+        "dependence": 13,
+        "validation": 28
+      }
+    },
+    "airline": {
+      "source": "airline",
+      "stage": "exploratory development pilot",
+      "future_evaluation_scored": false,
+      "raw_rows": 547271,
+      "selected_flights": 20387,
+      "target": "departure by common future horizons among today's scheduled flights still undeparted at origin",
+      "assumption": "reported schedule treated as available at local midnight; archive does not prove schedule version availability",
+      "cancellation": "included as no departure within horizon; cancellation status is label-only",
+      "forbidden_features": [
+        "DepDelay",
+        "Cancelled",
+        "arrival fields",
+        "actual aircraft assignment",
+        "cause of delay"
+      ],
+      "scope": "scheduled workload population, not in-flight arrivals; NY airports only; development only",
+      "bounds": [
+        1704085200.0,
+        1704949200.0,
+        1705208400.0,
+        1705467600.0,
+        1705813200.0
+      ],
+      "horizons_seconds": [
+        1800.0,
+        3600.0,
+        10800.0,
+        21600.0
+      ],
+      "relationships": [
+        "airport",
+        "carrier",
+        "destination"
+      ],
+      "queries": 55208,
+      "features": 11,
+      "categorical_columns": [
+        "state"
+      ],
+      "numeric_columns": [
+        "scheduled_minutes",
+        "Distance",
+        "CRSElapsedTime"
+      ],
+      "vocabulary_fit_before": 1704949200.0,
+      "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+      "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+      "code_sha256": "72bc43b456e8ab6270d1232af8e9364f89633e323790960f2e95252d92ddf760",
+      "origin_counts": {
+        "train": 35,
+        "calibration": 11,
+        "dependence": 11,
+        "validation": 15
+      }
+    }
+  },
+  "raw_bytes": 505629374,
+  "code_sha256": "a454be271e847ac2b58e44c1931af31cfb16071856f13808d07b938059222e06",
+  "bpi2013_status": "primary endpoint timed out; failure record retained; UCI and BPI2014 IT logs acquired"
+}

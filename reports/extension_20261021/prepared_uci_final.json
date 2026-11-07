@@ -1,0 +1,220 @@
+{
+  "source": "uci",
+  "stage": "frozen-protocol confirmation",
+  "future_evaluation_scored": false,
+  "target": "first observed Resolved/Closed update after first observed nonterminal update",
+  "forbidden_features": [
+    "resolved_at",
+    "closed_at",
+    "resolved_by",
+    "closed_code",
+    "made_sla",
+    "rfc",
+    "caused_by"
+  ],
+  "semantics": "event-time replay of recorded updates, not true resolution timestamp; completed-case extraction may bias population",
+  "raw_rows": 141712,
+  "bounds": [
+    1456790400.0,
+    1458604800.0,
+    1459468800.0,
+    1460678400.0,
+    1462060800.0
+  ],
+  "horizons_seconds": [
+    3600.0,
+    21600.0,
+    86400.0,
+    259200.0
+  ],
+  "relationships": [
+    "handler",
+    "team"
+  ],
+  "cohorts": [
+    {
+      "origin": 1462104000.0,
+      "part": "final",
+      "offset": 0,
+      "size": 1190
+    },
+    {
+      "origin": 1462190400.0,
+      "part": "final",
+      "offset": 1190,
+      "size": 1248
+    },
+    {
+      "origin": 1462276800.0,
+      "part": "final",
+      "offset": 2438,
+      "size": 1216
+    },
+    {
+      "origin": 1462363200.0,
+      "part": "final",
+      "offset": 3654,
+      "size": 1179
+    },
+    {
+      "origin": 1462449600.0,
+      "part": "final",
+      "offset": 4833,
+      "size": 1245
+    },
+    {
+      "origin": 1462536000.0,
+      "part": "final",
+      "offset": 6078,
+      "size": 1269
+    },
+    {
+      "origin": 1462622400.0,
+      "part": "final",
+      "offset": 7347,
+      "size": 1214
+    },
+    {
+      "origin": 1462708800.0,
+      "part": "final",
+      "offset": 8561,
+      "size": 1238
+    },
+    {
+      "origin": 1462795200.0,
+      "part": "final",
+      "offset": 9799,
+      "size": 1286
+    },
+    {
+      "origin": 1462881600.0,
+      "part": "final",
+      "offset": 11085,
+      "size": 1264
+    },
+    {
+      "origin": 1462968000.0,
+      "part": "final",
+      "offset": 12349,
+      "size": 1300
+    },
+    {
+      "origin": 1463054400.0,
+      "part": "final",
+      "offset": 13649,
+      "size": 1240
+    },
+    {
+      "origin": 1463140800.0,
+      "part": "final",
+      "offset": 14889,
+      "size": 1205
+    },
+    {
+      "origin": 1463227200.0,
+      "part": "final",
+      "offset": 16094,
+      "size": 1195
+    },
+    {
+      "origin": 1463313600.0,
+      "part": "final",
+      "offset": 17289,
+      "size": 1215
+    },
+    {
+      "origin": 1463400000.0,
+      "part": "final",
+      "offset": 18504,
+      "size": 1232
+    },
+    {
+      "origin": 1463486400.0,
+      "part": "final",
+      "offset": 19736,
+      "size": 1222
+    },
+    {
+      "origin": 1463572800.0,
+      "part": "final",
+      "offset": 20958,
+      "size": 1258
+    },
+    {
+      "origin": 1463659200.0,
+      "part": "final",
+      "offset": 22216,
+      "size": 1239
+    },
+    {
+      "origin": 1463745600.0,
+      "part": "final",
+      "offset": 23455,
+      "size": 1176
+    },
+    {
+      "origin": 1463832000.0,
+      "part": "final",
+      "offset": 24631,
+      "size": 1144
+    },
+    {
+      "origin": 1463918400.0,
+      "part": "final",
+      "offset": 25775,
+      "size": 1156
+    },
+    {
+      "origin": 1464004800.0,
+      "part": "final",
+      "offset": 26931,
+      "size": 1181
+    },
+    {
+      "origin": 1464091200.0,
+      "part": "final",
+      "offset": 28112,
+      "size": 1147
+    },
+    {
+      "origin": 1464177600.0,
+      "part": "final",
+      "offset": 29259,
+      "size": 1138
+    },
+    {
+      "origin": 1464264000.0,
+      "part": "final",
+      "offset": 30397,
+      "size": 1111
+    },
+    {
+      "origin": 1464350400.0,
+      "part": "final",
+      "offset": 31508,
+      "size": 1136
+    },
+    {
+      "origin": 1464436800.0,
+      "part": "final",
+      "offset": 32644,
+      "size": 1145
+    }
+  ],
+  "queries": 33789,
+  "features": 22,
+  "categorical_columns": [
+    "state",
+    "priority",
+    "contact_type"
+  ],
+  "numeric_columns": [
+    "reassignment_count",
+    "reopen_count",
+    "sys_mod_count"
+  ],
+  "vocabulary_fit_before": 1458604800.0,
+  "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+  "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+  "code_sha256": "4cc4697774db37d70a42d88411ed5d36aa835314609c9e6388794c91d39010ab"
+}

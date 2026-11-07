@@ -1,0 +1,210 @@
+{
+  "source": "bpi2014",
+  "stage": "frozen-protocol confirmation",
+  "future_evaluation_scored": false,
+  "target": "first Closed activity after observed Open activity",
+  "forbidden_features": [
+    "final incident table attributes",
+    "cause CI",
+    "final related change",
+    "KM number"
+  ],
+  "semantics": "retain only entities with observed Open; first closure, later reopening outside target",
+  "raw_rows": 466737,
+  "bounds": [
+    1380585600.0,
+    1383264000.0,
+    1384473600.0,
+    1385856000.0,
+    1388534400.0
+  ],
+  "horizons_seconds": [
+    3600.0,
+    21600.0,
+    86400.0,
+    259200.0
+  ],
+  "relationships": [
+    "team"
+  ],
+  "cohorts": [
+    {
+      "origin": 1388577600.0,
+      "part": "final",
+      "offset": 0,
+      "size": 1095
+    },
+    {
+      "origin": 1388664000.0,
+      "part": "final",
+      "offset": 1095,
+      "size": 1133
+    },
+    {
+      "origin": 1388750400.0,
+      "part": "final",
+      "offset": 2228,
+      "size": 1155
+    },
+    {
+      "origin": 1388836800.0,
+      "part": "final",
+      "offset": 3383,
+      "size": 1147
+    },
+    {
+      "origin": 1388923200.0,
+      "part": "final",
+      "offset": 4530,
+      "size": 1147
+    },
+    {
+      "origin": 1389009600.0,
+      "part": "final",
+      "offset": 5677,
+      "size": 1177
+    },
+    {
+      "origin": 1389096000.0,
+      "part": "final",
+      "offset": 6854,
+      "size": 1199
+    },
+    {
+      "origin": 1389182400.0,
+      "part": "final",
+      "offset": 8053,
+      "size": 1174
+    },
+    {
+      "origin": 1389268800.0,
+      "part": "final",
+      "offset": 9227,
+      "size": 1180
+    },
+    {
+      "origin": 1389355200.0,
+      "part": "final",
+      "offset": 10407,
+      "size": 1198
+    },
+    {
+      "origin": 1389441600.0,
+      "part": "final",
+      "offset": 11605,
+      "size": 1197
+    },
+    {
+      "origin": 1389528000.0,
+      "part": "final",
+      "offset": 12802,
+      "size": 1195
+    },
+    {
+      "origin": 1389614400.0,
+      "part": "final",
+      "offset": 13997,
+      "size": 1242
+    },
+    {
+      "origin": 1389700800.0,
+      "part": "final",
+      "offset": 15239,
+      "size": 1246
+    },
+    {
+      "origin": 1389787200.0,
+      "part": "final",
+      "offset": 16485,
+      "size": 1289
+    },
+    {
+      "origin": 1389873600.0,
+      "part": "final",
+      "offset": 17774,
+      "size": 1260
+    },
+    {
+      "origin": 1389960000.0,
+      "part": "final",
+      "offset": 19034,
+      "size": 1216
+    },
+    {
+      "origin": 1390046400.0,
+      "part": "final",
+      "offset": 20250,
+      "size": 1208
+    },
+    {
+      "origin": 1390132800.0,
+      "part": "final",
+      "offset": 21458,
+      "size": 1204
+    },
+    {
+      "origin": 1390219200.0,
+      "part": "final",
+      "offset": 22662,
+      "size": 1245
+    },
+    {
+      "origin": 1390305600.0,
+      "part": "final",
+      "offset": 23907,
+      "size": 1302
+    },
+    {
+      "origin": 1390392000.0,
+      "part": "final",
+      "offset": 25209,
+      "size": 1323
+    },
+    {
+      "origin": 1390478400.0,
+      "part": "final",
+      "offset": 26532,
+      "size": 1309
+    },
+    {
+      "origin": 1390564800.0,
+      "part": "final",
+      "offset": 27841,
+      "size": 1270
+    },
+    {
+      "origin": 1390651200.0,
+      "part": "final",
+      "offset": 29111,
+      "size": 1253
+    },
+    {
+      "origin": 1390737600.0,
+      "part": "final",
+      "offset": 30364,
+      "size": 1257
+    },
+    {
+      "origin": 1390824000.0,
+      "part": "final",
+      "offset": 31621,
+      "size": 1346
+    },
+    {
+      "origin": 1390910400.0,
+      "part": "final",
+      "offset": 32967,
+      "size": 1346
+    }
+  ],
+  "queries": 34313,
+  "features": 41,
+  "categorical_columns": [
+    "state"
+  ],
+  "numeric_columns": [],
+  "vocabulary_fit_before": 1383264000.0,
+  "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+  "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+  "code_sha256": "4cc4697774db37d70a42d88411ed5d36aa835314609c9e6388794c91d39010ab"
+}

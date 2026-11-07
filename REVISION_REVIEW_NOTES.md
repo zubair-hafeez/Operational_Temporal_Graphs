@@ -1,4 +1,4 @@
-Folder organization update: the latest manuscript remains `paper_revision/main.pdf` (10 pages; shortcut `LATEST_PAPER.pdf`). References below to verified ZIP archives describe the completed historical packaging checks. The duplicate ZIP files were subsequently removed at the user's request; all unique member bytes are retained and portable packages can be reconstructed with `scripts/organized_review.py`. See the project-root `START_HERE.txt`.
+CURRENT SIX-SOURCE UPDATE (22 October 2026): Use [extension/REVIEW.txt](extension/REVIEW.txt) for the current scientific assessment and [extension/REPRODUCE.txt](extension/REPRODUCE.txt) for reproduction. Current paper: [paper_revision/main.pdf](paper_revision/main.pdf). The user chose a venue-neutral manuscript; journal recommendations and readiness statements below are historical, not current venue advice. Earlier PDFs and duplicate ZIPs remain removed. No guarantee of top-conference acceptance or external submission is claimed.
 
 # Revised paper for author review
 

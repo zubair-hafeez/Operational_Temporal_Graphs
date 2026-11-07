@@ -1,0 +1,110 @@
+Cross-domain extension: reproducibility and evidence map
+======================================================
+Reference root: /mnt/zubair/Operational_Temporal_Graphs
+Reference Python: /home/zubair/zubairEnv/bin/python
+Current paper: paper_revision/main.tex and main.pdf
+User-owned shortcut: OPERATION.LATEST_PAPER.pdf
+
+This is the current six-source empirical paper. Earlier manuscript versions
+must not be recreated. Original experiments and immutable protocols remain
+available; this extension does not overwrite their data or fitted models.
+
+FAST CHECKS FROM THE PROJECT ROOT (CPU; no downloads)
+  python extension/build_publication.py
+  python extension/audit_prefixes.py
+  python extension/audit_publication.py
+  python -m pytest tests revision/test_revision.py revision/test_exact_counts.py revision/test_alibaba.py extension/test_extension.py -q
+
+The builder regenerates extension CSVs, TeX tables, paired intervals, and a
+vector figure from saved confirmation results. The audit verifies all three
+asset freezes, final CDFs, outcome maturity, score aggregation, count sampling
+against exact DM, the 1,024-draw checks, tests, and the 2-GiB extension budget.
+Numerical/library versions are recorded in publication_audit.json. Existing
+requirements-research.txt describes the base environment; the extension also
+uses joblib and the installed sklearn OneHotEncoder(sparse_output=False) API.
+
+Compile from paper_revision/:
+  XDG_CACHE_HOME=/mnt/zubair/Operational_Temporal_Graphs/paper/tools/tex-cache ../paper/tools/tectonic --keep-logs main.tex
+This updates only the current paper. No duplicate paper ZIP is needed.
+
+NEW CONFIRMATION EVIDENCE
+  extension/CONFIRMATION_PROTOCOL.json
+    165 asset entries; SHA256:
+    777d8af2f81b6fe4ca7fa84a58bd9c6e01978bf8c526b871f317211b0edd07d0
+  runs/extension_20261021/{uci,azure_full,bpi2014}_confirmation/
+    opened.json: opening time and frozen protocol hash
+    predictions.npz: every three-seed mean marginal CDF
+    marginal_scores.csv: per-origin/horizon Brier and mean calibration
+    projection_scores.csv: per-model/seed/origin/projection scores
+    origin_scores.csv: seeds and projections averaged within origin
+    macro_scores.csv and report.json: summaries and primary intervals
+  data/processed/extension_20261021/{uci,azure_full,bpi2014}_final/
+    cohorts.npz and manifest.json: timestamp-bounded queries and target labels
+  reports/extension_20261021/pre_confirmation_audit.json
+  reports/extension_20261021/publication_audit.json
+  paper_revision/generated/extension_manifest.json
+
+Secondary selected-model intervals are explicitly post-confirmation descriptive
+analyses in generated/extension_secondary_intervals.json. Their model choices
+were frozen beforehand; these intervals do not replace primary comparisons.
+Seven-day circular blocks on seven-day Azure span the entire period and have
+degenerate variance; they cannot support a certainty claim.
+
+EXPERIMENT COMMANDS (HISTORICAL RECIPE; DO NOT OVERWRITE FINISHED RUNS)
+  python extension/fetch_pilots.py --source SOURCE
+  python extension/prepare_pilots.py --source SOURCE
+  python extension/run_pilots.py --source SOURCE --seed SEED --epochs EPOCHS --marginals-only --tag replication_v2 [--ablations] [--device cuda:0]
+  python extension/joint_controls.py --source SOURCE --tag controls_v2
+  python extension/freeze_confirmation.py
+  python extension/confirm.py --source SOURCE
+
+SOURCE is uci, azure_full, or bpi2014. Seeds are 0,1,2. UCI uses 30 epochs;
+Azure/BPI2014 use 20. Use --ablations for UCI and Azure. Three seeds are averaged,
+never best-seed selected. HGB and neural features share the same observed prefix;
+the temporal HGB receives the same flattened tokens as attention. The complete
+saved command/config and source snapshots are in each run. Confirmation uses
+512 draws, sampling seeds 0/1/2, and fair CRPS; fitting/pilots use empirical CRPS.
+All models remain fixed in confirmation. Dependence is not refit to final scores.
+
+Preparation, fitting and confirmation refuse to overwrite their output dirs.
+Do not delete completed scientific records to rerun them. Exact frozen-model
+confirmation requires a separate workspace with the frozen inputs and without
+the final output directories; use read-only links for large unchanged inputs.
+A hardware-dependent retraining will produce different model hashes: it is a
+replication, not an exact verification of the original freeze. Changing a frozen
+file in place is prohibited. A new experiment needs distinct names and an honest
+statement that these final periods have already been inspected.
+
+POST-CONFIRMATION NUMERICAL CHECKS (NO TRAINING OR MODEL SELECTION)
+  python extension/count_sensitivity.py --source uci
+  python extension/count_sensitivity.py --source azure_full
+  python extension/count_sensitivity.py --source bpi2014
+Uses 1,024 draws, seed 0, all origins, and the predefined controls plus each
+development-selected coherent arm. Fair count CRPS is compared to seed-0
+512-draw scores. It does not certify every joint-tail metric's sampling error.
+
+PILOTS, STRONG CONTROLS, AND DEFERRED SOURCES
+  extension/PLAN.txt: six-direction scope and initial storage cap
+  extension/audit_sources.py; reports/extension_20261021/source_feasibility.json
+  extension/fetch_pilots.py: bounded acquisition, checksums, partial-download caps
+  *_seed0_pilot_v1/: Azure row prefix, UCI, BPI2014, CitiBike, NY airline,
+    and geographically dispersed 11-airport airline pilots
+  *_seed{0,1,2}_replication_v2/: stronger marginal models and fixed checkpoints
+  *_joint_controls_v2/: development-selected marginals, all Gaussian/t fits,
+    concentration/bias-DM fits, historical residuals, and score evidence
+  borg_seed0_graph_pilot/: 176-feature matched, sampled-node graph diagnostic
+  uci_attentional_seed0/: unchanged upstream TACTiS copula module with custom
+    64-node discrete-target adaptation; NOT a full TACTiS/TACTiS-2 reproduction
+  reports/extension_20261021/relation_diagnostic_*.csv: descriptive residual
+    association versus size-preserving label permutations; not causal effects
+
+Google 2019: one 11.4-MB shard, 83% singleton entity histories; unsuitable for
+complete trajectories. Do not treat this as a predictive benchmark or fetch
+the multi-terabyte release automatically. Azure: 438-MB complete VM table,
+publisher digest verified; all released VMs in hash-selected subscriptions.
+Do not fetch the 156-GB CPU series for this task. BPI change snapshots lack
+attribute versions; timestamped incident activities are used instead. UCI
+backfilled future resolution fields are explicitly excluded. Transportation
+pilots disclose retrospective trip filtering and schedule-availability limits.
+Source failures and negative pilots are retained. Original third-party terms
+remain applicable; no license, public upload, or submission is inferred.

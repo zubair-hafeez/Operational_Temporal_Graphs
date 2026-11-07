@@ -1,0 +1,10 @@
+{
+  "source": "google2019",
+  "requested_url": "https://storage.googleapis.com/clusterdata_2019_a/instance_events-000000000000.parquet.gz",
+  "started_utc": "2026-10-22T03:17:34.622051+00:00",
+  "script_sha256": "d03c9db65d8454c7c471fc88f9946422a37693cec07dbecef581e53f94c0464b",
+  "limit_bytes": 32000000,
+  "status": "failed",
+  "error": "URLError(gaierror(-3, 'Temporary failure in name resolution'))",
+  "elapsed_seconds": 0.002502596937119961
+}

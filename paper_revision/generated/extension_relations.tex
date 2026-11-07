@@ -1,0 +1,32 @@
+\begin{table*}[t]
+\centering\small
+\caption{Frozen relation controls. Variance weights are global/handler/team (UCI), global/deployment/subscription (Azure), and global/team (BPI14). Only degrees of freedom change between matched Gaussian and Student-$t$ arms; Student-$t$ uses a shared scale. Scores are $\times 1,000$.}\label{tab:extension-relations}
+\begin{tabular}{lllrrr}
+\toprule
+Source & Coupling & Weights & $\nu$ & CRPS & Loss \\
+\midrule
+UCI incidents & G: global & 0.15/0/0 & --- & 44.57 & 92.39 \\
+UCI incidents & G: handler & 0/0.5/0 & --- & 44.49 & 105.93 \\
+UCI incidents & G: global handler & 0.15/0.15/0 & --- & 43.82 & 86.52 \\
+UCI incidents & G: team & 0/0/0.3 & --- & 43.67 & 95.06 \\
+UCI incidents & G: global team & 0.15/0/0.15 & --- & 43.59 & 84.56 \\
+UCI incidents & G: typed & 0/0.3/0.3 & --- & 43.11 & 90.42 \\
+UCI incidents & $t$: global & 0.15/0/0 & 16 & 44.44 & 91.18 \\
+UCI incidents & $t$: typed & 0/0.3/0.3 & 16 & 42.84 & 84.72 \\
+Azure V2 & G: global & 0.7/0/0 & --- & 7.60 & 14.20 \\
+Azure V2 & G: deployment & 0/0.7/0 & --- & 7.28 & 13.09 \\
+Azure V2 & G: global deployment & 0.7/0/0 & --- & 7.60 & 14.20 \\
+Azure V2 & G: subscription & 0/0/0.7 & --- & 7.25 & 13.00 \\
+Azure V2 & G: global subscription & 0.7/0/0 & --- & 7.60 & 14.20 \\
+Azure V2 & G: typed & 0.7/0/0 & --- & 7.60 & 14.20 \\
+Azure V2 & $t$: global & 0.7/0/0 & 4 & 7.58 & 14.17 \\
+Azure V2 & $t$: typed & 0.7/0/0 & 4 & 7.58 & 14.17 \\
+BPI 2014 & G: global & 0.05/0 & --- & 34.15 & 85.89 \\
+BPI 2014 & G: team & 0/0.15 & --- & 33.74 & 78.76 \\
+BPI 2014 & G: global team & 0.05/0.05 & --- & 34.08 & 86.14 \\
+BPI 2014 & G: typed & 0.05/0.05 & --- & 34.08 & 86.14 \\
+BPI 2014 & $t$: global & 0.05/0 & 16 & 34.41 & 87.91 \\
+BPI 2014 & $t$: typed & 0.05/0.05 & 16 & 34.40 & 88.25 \\
+\bottomrule
+\end{tabular}
+\end{table*}

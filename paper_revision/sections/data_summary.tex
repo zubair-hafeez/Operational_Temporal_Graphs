@@ -1,0 +1,50 @@
+\section{Data and evidence stages}
+\label{sec:data}
+\begin{table*}[t]
+\centering\small
+\caption{Six scored sources. An origin is a forecasting time, not an independent
+organizational replication. New-period experiments are selected after development
+pilots; their models are fixed before target preparation and scoring.}
+\label{tab:sources}
+\begin{tabular}{llllr}
+\toprule
+Source & Current-cohort target & Observed relations & Evidence stage & Origins\\
+\midrule
+Borg 2011 & First pending/running state exit & Job, machine & Original frozen period & 28\\
+BPI 2017 & First qualifying application milestone & Last handler & Original frozen period & 61\\
+BPI 2012 & First approval/decline/cancellation & Last handler & First confirmation & 28\\
+Azure V2 & VM deletion & Deployment, subscription & New-period confirmation & 28\\
+UCI incidents & First recorded resolution/closure & Handler, team & New-period confirmation & 28\\
+BPI 2014 & First Closed activity after Open & Team & New-period confirmation & 28\\
+\bottomrule
+\end{tabular}
+\end{table*}
+The sources span two compute providers and several workflow/incident releases
+(Table~\ref{tab:sources}). Their horizons and target semantics differ; scores
+are compared within source, not pooled into one cross-domain leaderboard.
+All features and memberships use recorded events at or before the origin.
+Entire outcome windows must mature before their partition ends. Historical
+extracts do not establish complete live populations or ingestion availability.
+
+The initial Borg/BPI 2017 study froze 264 assets. Its outcomes motivated
+retrospective direct-count, calibration, and joint-risk controls. BPI 2012 then
+froze 82 assets before February scoring. The new extension freezes 165 assets
+for Azure days 22--28.75, UCI May 1--28, 2016, and BPI 2014 January 1--28,
+2014. The latter adds 84 origins without retuning on their scores. These are
+internal holdout freezes, not externally preregistered studies.
+
+New-source model fitting, marginal calibration, dependence fitting, development
+validation, and confirmation occupy distinct chronological windows. Three-seed
+neural/boosted-tree CDF ensembles are selected by earlier calibration Brier;
+copulas and direct counts use the same dependence window. Controls include
+feature-matched temporal HGB, node-only and global-set networks, typed message
+passing, temporal attention, and relation-specific/shuffled graphs. Gaussian
+and Student-$t$ couplings retain the selected marginal probabilities. Complete
+windows, feature exclusions, model budgets, and source-selection disclosures
+appear in Appendix~\ref{app:design}.
+
+Azure retains all released VMs in a deterministic 5\% sample of subscriptions,
+not a prefix of arbitrary VM rows. Google 2019 is audited on one shard only;
+incomplete trajectories prevent a valid predictive benchmark. BPI change
+snapshots lack reliable attribute-version histories. Citi Bike and two airline
+geographies are exploratory pilots, not additional confirmation sources.

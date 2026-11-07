@@ -3,7 +3,7 @@ Let $V_t$ be the entities active after processing all events recorded by origin
 $t$, and let $g_r(i,t)$ denote entity $i$'s observed membership in relation type
 $r$. For ordered horizons $h_1<\cdots<h_K$, the outcome
 $Y_{ik}=\ind\{T_i\leq t+h_k\}$ records the first exit from the current task
-state or the first qualifying application resolution. Each forecast draw
+state, VM deletion, or first qualifying workflow/incident milestone. Each forecast draw
 assigns one of $K+1$ categories, with the final category indicating survival
 beyond $h_K$. This contract does not predict subsequent returns, exact
 within-bin times, or outcomes of future arrivals.
@@ -14,6 +14,18 @@ whereas its variance also includes pairwise outcome covariances. Thus a
 coupling can change aggregate dispersion and tails but cannot fix a biased
 expected count. We exploit this distinction in two separate experiments:
 matched-marginal dependence comparisons and controlled marginal correction.
+
+For a fixed horizon this distinction is explicit:
+\begin{equation}
+ \operatorname{Var}(C_A)=\sum_{i\in A}F_i(1-F_i)
+ +2\sum_{i<j;\,i,j\in A}\operatorname{Cov}(Y_i,Y_j).
+\end{equation}
+Relations can improve collective uncertainty when they identify residual
+co-movement relevant to the requested groups. They need not improve individual
+probabilities, and a relation correlated with outcomes before conditioning
+need not add information after strong shared-context predictors. This familiar
+identity motivates the separate marginal, global, typed, and incidence-shuffle
+controls; it is not a new theoretical claim.
 
 \subsection{Entity-coherent factor scenarios}
 For each draw, generate independent standard normal global, relation-group,
@@ -33,20 +45,30 @@ Independent sampling uses only private noise. Global models learn
 state-specific global/private weights; typed models add one weight per
 observed relation type. The initial study also includes context-dependent
 weight offsets and an exponential common-shock family. All weights are
-nonnegative, with at least .02 private variance. These families cannot express
-arbitrary negative association. We fit them by composite binary pair
+nonnegative, with at least .02 private variance in the initial study and .10
+in the new-source grid. These families cannot express arbitrary negative
+association. The initial study fits them by composite binary pair
 likelihood using earlier out-of-sample individual forecasts, random fitting
 horizon pairs, and January or original-development checkpoint selection.
 Different calibration treatments receive separate dependence fits in the
-fresh replication; retrospective BPI 2017 diagnostics retain original weights
-to isolate marginal correction.
+first workflow replication; retrospective BPI 2017 diagnostics retain original weights
+to isolate marginal correction. The three-source extension instead fits small
+variance grids by count CRPS on its dependence window. A matched Student-$t$
+control divides $Z_i$ by one shared $\sqrt{Q/\nu}$, $Q\sim\chi^2_\nu$, and
+uses the Student-$t$ CDF to preserve uniform marginals. Its global control
+already contains the same shared scale, so additional gains cannot be
+attributed solely to adding heavy-tailed common variation.
 
-We permute noise-sharing incidence within current state and half-unit
+The initial study permutes noise-sharing incidence within current state and half-unit
 last-horizon logit-risk bins, retaining true evaluation groups. This preserves
 individual probabilities, fitted weights and group sizes within strata.
 Additional Borg controls remove job or machine variance and transfer it to
 private noise. These sampler interventions assess predictive grouping under a
 fitted model, not causal effects of reassigning actual tasks or people.
+New-source coupling shuffles preserve known-membership masks and group sizes
+without risk stratification; neural shuffles preserve group sizes but may move
+missing-membership positions. These are distinct controls, not exact replicas
+of the original risk-stratified intervention.
 
 \subsection{Delayed calibration}
 A shared logit intercept preserves horizon order:
@@ -142,10 +164,13 @@ fixed reference forecast. Every compared method uses the same reference
 $F$, including recalibrated methods. It measures forecast-relative group
 risk, not an observed capacity threshold or an organizational SLA.
 
-We average three random seeds within each origin before paired circular
+The initial studies average three random seeds within each origin before paired circular
 moving-block resampling (10,000 replicates). Borg blocks span one/two days;
 BPI 2017 blocks span 14/28 days; the fresh BPI 2012 analysis prespecifies
 seven days with fourteen-day sensitivity. Short traces provide few blocks,
 so intervals describe these observed periods and offer limited evidence for
 other operating regimes. Cases and random seeds are not independent temporal
-replications.
+replications. The three-source extension uses 2,000 replicates and 1/3/7-day
+blocks. Seven days is the entire Azure confirmation period, making that
+particular circular-bootstrap interval degenerate, not strong evidence of
+certainty. All intervals are descriptive, unadjusted for multiple comparisons.

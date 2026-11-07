@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-22T17:07:26.555319+00:00",
+  "frozen_prior_assets": 346,
+  "datasets": {
+    "azure": {
+      "origins": 72,
+      "queries": 291761,
+      "finite_and_monotone": true,
+      "maturity_embargo_verified": true
+    },
+    "azure_full": {
+      "origins": 72,
+      "queries": 932730,
+      "finite_and_monotone": true,
+      "maturity_embargo_verified": true
+    },
+    "citibike": {
+      "origins": 228,
+      "queries": 3658,
+      "finite_and_monotone": true,
+      "maturity_embargo_verified": true
+    },
+    "airline": {
+      "origins": 72,
+      "queries": 55208,
+      "finite_and_monotone": true,
+      "maturity_embargo_verified": true
+    },
+    "uci": {
+      "origins": 49,
+      "queries": 67079,
+      "finite_and_monotone": true,
+      "maturity_embargo_verified": true
+    },
+    "bpi2014": {
+      "origins": 80,
+      "queries": 89436,
+      "finite_and_monotone": true,
+      "maturity_embargo_verified": true
+    },
+    "borg": {
+      "origins": 88,
+      "queries": 180224,
+      "finite_and_monotone": true,
+      "maturity_embargo_verified": true
+    }
+  },
+  "roundtrip": {
+    "hgb_personal": 1.1102230246251565e-16,
+    "hgb_relational": 1.1102230246251565e-16,
+    "hgb_temporal": 1.1102230246251565e-16,
+    "mlp": 2.0758306357171463e-07,
+    "set": 2.2079012840237056e-07,
+    "graph": 2.2934896681814365e-07,
+    "temporal_attention": 2.53752930279294e-07,
+    "graph_shuffled": 2.1833602320553425e-07,
+    "graph_relation0": 2.3447688335398453e-07,
+    "graph_relation1": 2.3043706309788803e-07
+  },
+  "tests": {
+    "command": [
+      "/home/zubair/zubairEnv/bin/python",
+      "-m",
+      "pytest",
+      "tests",
+      "revision/test_revision.py",
+      "revision/test_exact_counts.py",
+      "revision/test_alibaba.py",
+      "extension/test_extension.py",
+      "-q"
+    ],
+    "exit_code": 0,
+    "output": "....................................................                     [100%]\n52 passed in 6.09s\n"
+  },
+  "status": "passed"
+}

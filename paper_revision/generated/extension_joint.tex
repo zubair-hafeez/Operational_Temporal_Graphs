@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering\small
+\caption{All-source confirmation distribution diagnostics. Coverage targets .90; width is in cohort fractions. Energy, fair variogram and peak-deviation CRPS are lower-is-better. Direct DM joint profiles are separately generated group trajectories, not coherent entity-level realizations.}\label{tab:extension-joint}
+\begin{tabular}{llrrrrr}
+\toprule
+Source & Model & Cov. & Width & Energy & Variogram & Peak \\
+\midrule
+UCI incidents & Independent & 0.669 & 0.144 & 0.06817 & 0.02670 & 1.791 \\
+UCI incidents & Gaussian global & 0.908 & 0.236 & 0.06524 & 0.02689 & 1.396 \\
+UCI incidents & Gaussian typed & 0.847 & 0.263 & 0.06433 & 0.02568 & 1.107 \\
+UCI incidents & Student-$t$ global & 0.937 & 0.247 & 0.06536 & 0.02692 & 1.381 \\
+UCI incidents & Student-$t$ typed & 0.922 & 0.277 & 0.06371 & 0.02563 & 1.054 \\
+UCI incidents & Direct DM & 0.931 & 0.241 & 0.06411 & 0.02544 & 1.094 \\
+UCI incidents & Bias-DM & 0.935 & 0.269 & 0.06366 & 0.02613 & 1.069 \\
+Azure V2 & Independent & 0.765 & 0.022 & 0.03744 & 0.01045 & 2.698 \\
+Azure V2 & Gaussian global & 0.985 & 0.041 & 0.03720 & 0.01018 & 2.178 \\
+Azure V2 & Gaussian typed & 0.985 & 0.041 & 0.03720 & 0.01018 & 2.178 \\
+Azure V2 & Student-$t$ global & 0.981 & 0.040 & 0.03716 & 0.01023 & 2.165 \\
+Azure V2 & Student-$t$ typed & 0.981 & 0.040 & 0.03716 & 0.01023 & 2.165 \\
+Azure V2 & Direct DM & 0.950 & 0.033 & 0.03446 & 0.01006 & 1.650 \\
+Azure V2 & Bias-DM & 0.948 & 0.031 & 0.03439 & 0.00986 & 1.629 \\
+BPI 2014 & Independent & 0.693 & 0.118 & 0.04777 & 0.01505 & 1.349 \\
+BPI 2014 & Gaussian global & 0.915 & 0.166 & 0.04736 & 0.01520 & 1.237 \\
+BPI 2014 & Gaussian typed & 0.927 & 0.177 & 0.04718 & 0.01506 & 1.211 \\
+BPI 2014 & Student-$t$ global & 0.948 & 0.178 & 0.04776 & 0.01534 & 1.250 \\
+BPI 2014 & Student-$t$ typed & 0.955 & 0.189 & 0.04761 & 0.01520 & 1.240 \\
+BPI 2014 & Direct DM & 0.915 & 0.166 & 0.04658 & 0.01488 & 1.174 \\
+BPI 2014 & Bias-DM & 0.848 & 0.155 & 0.04906 & 0.01503 & 1.411 \\
+\bottomrule
+\end{tabular}
+\end{table*}

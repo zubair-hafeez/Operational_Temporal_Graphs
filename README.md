@@ -1,31 +1,28 @@
-# Joint forecasting for operational temporal graphs
+> **Complete research snapshot:** Code and manuscript files are browsable here. Datasets, checkpoints, caches, ignored files and original local Git metadata are included in the split archives attached to [release research-snapshot-20261107T032249Z](https://github.com/zubair-hafeez/Operational_Temporal_Graphs/releases/tag/research-snapshot-20261107T032249Z). See [restore instructions](github_snapshot/RESTORE.md) and [verification report](github_snapshot/VERIFICATION_REPORT.md). A normal Git clone does not download those archives.
 
-**Latest paper only:** [LATEST_PAPER.pdf](LATEST_PAPER.pdf) — 10 pages. Earlier manuscript versions have been deleted at your request. [START_HERE.txt](START_HERE.txt) is the authoritative folder guide. Historical notes and package recipes below may reference retired papers or archives.
+# Collective forecasting on operational temporal graphs
 
+Latest paper: [OPERATION.LATEST_PAPER.pdf](OPERATION.LATEST_PAPER.pdf), pointing to [paper_revision/main.pdf](paper_revision/main.pdf). Editable [LaTeX](paper_revision/main.tex). Earlier manuscript versions remain deleted; no duplicate paper archive is needed.
 
-**Latest paper: [LATEST_PAPER.pdf](LATEST_PAPER.pdf), 10 pages.** This shortcut opens `paper_revision/main.pdf`. The earlier 12-page manuscript has been removed. Start with [START_HERE.txt](START_HERE.txt) for the organized folder guide.
+“When Do Relations Help Collective Forecasts?” is a venue-neutral, six-source empirical study: Borg, Azure V2, BPI 2017/2012, UCI incidents and BPI 2014 incidents. It forecasts first exits of currently active cohorts, not full future logs or arrivals. The six sources have 201 scored origins; repeated entities and seeds are not independent replications.
 
-Research project on joint first-exit forecasts for populations active at a forecast origin. Applications are Google Borg task states and BPI 2017 application resolution. The [scope revision](docs/SCOPE_REVISION.md) records how experiments and prior work narrowed the original event-log-generation proposal. This implementation does not generate full future logs or arrivals.
+The [extension review](extension/REVIEW.txt) maps all six requested improvements to experiments and limitations. [Reproduction instructions](extension/REPRODUCE.txt) cover saved models, score tables, source sampling and bounded downloads. Google2019, BPI change snapshots, CitiBike and airline pilots are transparently reported as deferred or exploratory—not extra confirmation sources.
 
-The current [revised manuscript PDF](paper_revision/main.pdf) and [LaTeX source](paper_revision/main.tex) present a three-log empirical study of collective forecasting on temporal operational graphs. Start with the [revision review notes](REVISION_REVIEW_NOTES.md), then the [revision reproduction instructions](REVISION_REPRODUCE.md). The original study, PDF, archived release contents and [264-file protocol](docs/FINAL_PROTOCOL.json) remain preserved. The new [82-asset protocol](revision/FRESH_FINAL_PROTOCOL.json) separately froze BPI 2012 confirmation before its final outcomes were retained.
+Key confirmation findings: UCI typed Gaussian/Student-t reduce count CRPS by 3.3%/3.6% against matched global controls, but the strongest direct-count model is essentially tied. Azure's development-selected subscription-only Gaussian improves global CRPS by 4.7%, while its combined typed fit collapses to global. Strong trees often beat neural graphs. Original Borg's typed gain remains 2.2% beyond global, versus 24.3% beyond independence. The contribution is controlled evidence, not a universal graph-model win.
 
-The [saved revision plan](docs/CURRENT_PAPER_REVISION_PLAN.md) motivated the completed direct-count, reconciliation, calibration, graph and joint-risk controls. The [broader research extension plan](docs/RESEARCH_EXTENSION_PLAN.md) remains a separate proposal; no unimplemented method is claimed as a result.
-
-The study evaluates 28 Borg, 61 BPI 2017 and 28 fresh BPI 2012 origins. Borg typed factors improve count CRPS 24.3% over independence and 2.2% beyond a global factor. Strong recent direct counts and same-version calibration change the BPI 2017 ranking. In fresh BPI 2012, global dependence improves count CRPS 12.7% while worsening reserve loss 20.4%; a development-selected direct model beats it on both. Count and joint-risk rankings can differ. These findings support a benchmark and controlled empirical contribution using established statistical models.
-
-All 45 implementation tests pass. The [revision audit](reports/revision_artifact_audit.json) verifies both frozen asset sets, table inputs and final-period eligibility. The former review ZIPs were deduplicated at the user's request. All member bytes, including unique historical versions, remain in this project and are mapped by [the organization manifest](archives/ORGANIZATION_MANIFEST.json). Use `python scripts/organized_review.py --restore revision --output /tmp/otg_revision_review.zip` to reconstruct a portable revision package; see [the release guide](releases/README.txt). [Clean-extraction verification](reports/revision_archive_verification.json) checked all 878 file hashes, exactly regenerated 14 artifacts, passed all 45 tests and compiled the PDF. No external submission or publication has occurred.
+The [new protocol](extension/CONFIRMATION_PROTOCOL.json) freezes 165 assets before new-period target preparation and scoring. The original [264-entry](docs/FINAL_PROTOCOL.json) and [82-entry](revision/FRESH_FINAL_PROTOCOL.json) manifests remain immutable. [Pre-confirmation checks](reports/extension_20261021/pre_confirmation_audit.json) passed 52 tests; the [publication audit](reports/extension_20261021/publication_audit.json) records final checks and numerical sensitivity. New storage is about 1.1 GB, below the 2-GiB cap. No external submission or public release has occurred.
 
 ## Working state
 
-Read [RESUME.md](RESUME.md), [STATE.json](STATE.json), [research protocol](docs/PROTOCOL.md), and [evidence ledger](LEDGER.md). Data and large artifacts are kept outside version control; source URLs, hashes, versions, and run configurations are retained.
+Read [START_HERE.txt](START_HERE.txt), [RESUME.md](RESUME.md), [STATE.json](STATE.json) and [extension/REVIEW.txt](extension/REVIEW.txt). Large data/models are outside version control; URLs, hashes, versions and run configurations are retained.
 
-Use `/home/zubair/zubairEnv/bin/python`. Two RTX A6000 GPUs are available through approved host execution. Existing allocations belong to other work and must remain untouched. This research is independent of RF projects.
+Use /home/zubair/zubairEnv/bin/python. Two RTX A6000 GPUs were used within bounded allocations; other projects' GPU processes must remain untouched. This project is independent of RF work.
 
-## Initial commands
+## Local verification (no downloads)
 
 ```bash
-/home/zubair/zubairEnv/bin/python scripts/fetch_data.py --borg-parts 500 --workers 4
-/home/zubair/zubairEnv/bin/python -m pytest tests -q
+/home/zubair/zubairEnv/bin/python extension/build_publication.py
+/home/zubair/zubairEnv/bin/python extension/audit_publication.py
 ```
 
-The data downloader validates existing files and resumes missing downloads. It downloads only task events, machine events, schema/documentation metadata, and the BPI archive, not the complete Google usage release.
+Do not rerun completed experiment directories or alter frozen files. Historical notes can reference retired papers and archives; current instructions supersede those restoration recipes.

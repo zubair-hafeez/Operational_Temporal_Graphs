@@ -1,13 +1,41 @@
 {
   "objective": "Complete a rigorous manuscript and reproducible research artifacts for final user review",
-  "status": "complete",
-  "phase": "revised_manuscript_ready_for_author_review",
+  "status": "complete_for_author_review",
+  "phase": "six_source_manuscript_and_artifacts_verified",
+  "extension_20261021": {
+    "authorized": "2026-10-21",
+    "plan": "extension/PLAN.txt",
+    "status": "complete_for_author_review",
+    "pilot_sources": ["Google2019 shard audit", "AzureV2", "BPI2014 changes audit and incident replay", "UCI incidents", "CitiBike", "US airline"],
+    "new_confirmation_opened": true,
+    "confirmation_sources": ["UCI incidents", "Azure V2", "BPI2014 incidents"],
+    "confirmation_origins": 84,
+    "confirmation_queries": 426610,
+    "protocol": "extension/CONFIRMATION_PROTOCOL.json",
+    "protocol_sha256": "777d8af2f81b6fe4ca7fa84a58bd9c6e01978bf8c526b871f317211b0edd07d0",
+    "venue": "neutral, confirmed by user",
+    "storage_budget_gib": 2,
+    "remaining": [],
+    "implementation_tests_passed": 52,
+    "new_storage_bytes_at_audit": 1110622771,
+    "publication_audit": "reports/extension_20261021/publication_audit.json",
+    "manuscript": "paper_revision/main.pdf",
+    "manuscript_sha256": "c8fc434371eb93826793055ed2751750c535241404ef000bc076f2f20c3a64e8",
+    "pages_including_references_appendix": 15,
+    "review": "extension/REVIEW.txt",
+    "reproduce": "extension/REPRODUCE.txt",
+    "publication_status": "not submitted; author review, attribution and venue-specific requirements remain",
+    "prior_studies": "completed; both frozen protocols remain unchanged"
+  },
   "final_test_opened": true,
   "research_direction": "Joint first-exit forecasting for changing operational cohorts on temporal graphs",
   "datasets": [
     "Google ClusterData2011-2",
     "BPI Challenge 2017",
-    "BPI Challenge 2012"
+    "BPI Challenge 2012",
+    "Azure Public Dataset V2",
+    "UCI Incident Management Process Enriched Event Log",
+    "BPI Challenge 2014 incident activities"
   ],
   "gpu_inventory": [
     {
@@ -59,8 +87,8 @@
   "artifacts": {
     "pdf": "paper_revision/main.pdf",
     "source": "paper_revision/main.tex",
-    "review_notes": "REVISION_REVIEW_NOTES.md",
-    "reproduction": "REVISION_REPRODUCE.md",
+    "review_notes": "extension/REVIEW.txt",
+    "reproduction": "extension/REPRODUCE.txt",
     "retired_archive": "releases/operational_cohorts_revision_review.zip",
     "archive_contents_manifest": "archives/ORGANIZATION_MANIFEST.json"
   },
@@ -155,8 +183,8 @@
   "original_review_ready_utc": "2026-10-15T01:15:23.956064+00:00",
   "organization": {
     "latest_paper": "paper_revision/main.pdf",
-    "latest_paper_shortcut": "LATEST_PAPER.pdf",
-    "latest_pages": 10,
+    "latest_paper_shortcut": "OPERATION.LATEST_PAPER.pdf",
+    "latest_pages": 15,
     "guide": "START_HERE.txt",
     "manifest": "archives/ORGANIZATION_MANIFEST.json",
     "verify": "python scripts/organized_review.py",
@@ -165,8 +193,8 @@
   "manuscript_retention": {
     "policy": "latest_only_by_explicit_user_request",
     "latest_pdf": "paper_revision/main.pdf",
-    "pages": 10,
-    "shortcut": "LATEST_PAPER.pdf",
+    "pages": 15,
+    "shortcut": "OPERATION.LATEST_PAPER.pdf",
     "deletion_record": "reports/organization/latest_paper_only_20261018.json",
     "earlier_manuscripts_removed": true,
     "scientific_evidence_retained": true,

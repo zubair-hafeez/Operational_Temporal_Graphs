@@ -2,7 +2,11 @@
 \paragraph{Temporal graphs and event generation.}
 GraphMixer illustrates strong temporal encoding with simple components
 \citep{cong2023}; our Mixer-style survival predictor is an independent
-adaptation, not a reproduction of its link-prediction protocol. CEP3 models
+adaptation, not a reproduction of its link-prediction protocol. TGN, TGAT,
+and DyGFormer model temporal graph interactions \citep{rossi2020,xu2020,yu2023};
+our stronger controls use typed aggregation and observed-history attention
+with a current-cohort first-exit head, not their original link predictors.
+CEP3 models
 community event times \citep{wang2022}, and DG-Gen generates continuous-time
 dynamic graphs \citep{hosseini2025}. Their generation targets differ from
 conditional first exits of an already active population. We make no numerical
@@ -12,7 +16,10 @@ state initialization, unknown future-count stopping and outcome adapters.
 \paragraph{Joint forecasting and reconciliation.}
 TACTiS and TACTiS-2 learn flexible multivariate copulas
 \citep{drouin2022,ashok2024}; separating learned marginals from spatial copulas
-is also established \citep{huk2025}. Our positive-factor Gaussian and
+is also established \citep{huk2025}. A bounded development pilot adapts the
+published TACTiS copula module, with explicit discrete-target and rank
+adjustments; it is not a full TACTiS/TACTiS-2 reproduction.
+Our positive-factor Gaussian and
 Marshall--Olkin controls \citep{marshall1967} are deliberately restrictive
 classical families. Typed current incidence specifies shared randomness for
 changing entities; neither that construction nor the marginal--dependence

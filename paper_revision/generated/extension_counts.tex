@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering\small
+\caption{Frozen new-period results: count-fraction CRPS and ratio-9 reserve loss, both multiplied by 1,000 (lower is better). Each source has 28 origins. All joint arms share its development-selected three-seed marginal predictor. Direct rows use exact count distributions. Last row: typed Student-$t$ (UCI), subscription-only Gaussian (Azure), team-only Gaussian (BPI14), selected on development, never on confirmation.}\label{tab:extension-counts}
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & UCI CRPS & Loss & Azure CRPS & Loss & BPI14 CRPS & Loss \\
+\midrule
+Independent & 48.63 & 148.60 & 8.70 & 20.83 & 34.76 & 81.82 \\
+Gaussian global & 44.57 & 92.39 & 7.60 & 14.20 & 34.15 & 85.89 \\
+Gaussian typed & 43.11 & 90.42 & 7.60 & 14.20 & 34.08 & 86.14 \\
+Shuffled typed & 46.41 & 117.50 & 7.60 & 14.20 & 34.22 & 86.48 \\
+Student-$t$ global & 44.44 & 91.18 & 7.58 & 14.17 & 34.41 & 87.91 \\
+Student-$t$ typed & 42.84 & 84.72 & 7.58 & 14.17 & 34.40 & 88.25 \\
+Direct DM (exact) & 43.31 & 87.15 & 7.47 & 13.19 & 33.70 & 82.46 \\
+Bias-DM (exact) & 42.77 & 86.02 & 7.44 & 13.11 & 36.11 & 85.51 \\
+Residual & 46.57 & 122.43 & 9.76 & 32.56 & 39.11 & 94.63 \\
+Dev.-selected coherent & 42.84 & 84.72 & 7.25 & 13.00 & 33.74 & 78.76 \\
+\bottomrule
+\end{tabular}
+\end{table*}

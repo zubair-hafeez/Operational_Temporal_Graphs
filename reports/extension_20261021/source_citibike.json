@@ -1,0 +1,16 @@
+{
+  "source": "citibike",
+  "requested_url": "https://s3.amazonaws.com/tripdata/JC-202401-citibike-tripdata.csv.zip",
+  "started_utc": "2026-10-22T03:18:19.485747+00:00",
+  "script_sha256": "d03c9db65d8454c7c471fc88f9946422a37693cec07dbecef581e53f94c0464b",
+  "limit_bytes": 4000000,
+  "final_url": "https://s3.amazonaws.com/tripdata/JC-202401-citibike-tripdata.csv.zip",
+  "content_length": "1883296",
+  "etag": "\"ce5585eadab5e9632ef69d9d1649ea1e\"",
+  "status": "complete",
+  "downloaded_bytes": 1883296,
+  "stored_bytes": 1883296,
+  "sha256": "d59d149f200fb81e204099afb0f76f1b02267bb2d605e92309e6f9974b176e15",
+  "sampling": "complete named asset",
+  "elapsed_seconds": 0.23959718411788344
+}

@@ -58,15 +58,24 @@ exact discrete quantiles and finite-ensemble quantiles can differ slightly.
 Projection/horizon CSVs and paired block-size sensitivities accompany the
 reported macro values.
 
+A post-confirmation extension check doubles scenario draws to 1,024 for
+seed 0, without retraining or reselecting models. UCI's typed/global advantage
+and Azure's subscription-only/global advantage persist, while BPI 2014's
+combined typed/global difference remains small. This checks numerical
+stability of count scores, not independent generalization or all tail metrics.
+
 \paragraph{Computation and integrity.}
 The experiments use two RTX A6000 GPUs, with CPU replay, HGB and direct-count
 fits. Original Borg evaluation of five controls over 28 origins requires
 about 245--251 seconds per 512-draw process under concurrent shared-device
 execution, with at most .67 GiB allocated PyTorch memory; it excludes replay,
 training and individual inference and is not an isolated latency benchmark.
-The original 264-file freeze and the fresh 82-file freeze are verified after
-evaluation. Original code, results and the immutable review archive remain
-intact; new diagnostics and manuscript sources live in separate directories.
+The original 264-entry, first-confirmation 82-entry, and new-extension
+165-entry asset manifests are verified after evaluation. Original scientific
+code, results and frozen assets remain intact; obsolete manuscript copies were
+removed. New diagnostics and manuscript sources live in separate directories.
+The extension additionally checks that later source records do not alter
+earlier observed attributes, relation partitions or training encodings.
 The test suite covers causal replay, temporal eligibility, coherent sampling,
 known DM moments, exact reconciliation on a small enumerated distribution,
 and dependence-sensitive profile scores.

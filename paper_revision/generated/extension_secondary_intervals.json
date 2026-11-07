@@ -1,0 +1,407 @@
+[
+  {
+    "source": "uci",
+    "candidate": "student_t",
+    "reference": "gaussian_global",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 1,
+    "block_origins": 1,
+    "mean_difference": -0.001729535331628311,
+    "interval95": [
+      -0.0021585975365104922,
+      -0.0012976679059076067
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "uci",
+    "candidate": "student_t",
+    "reference": "gaussian_global",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 3,
+    "block_origins": 3,
+    "mean_difference": -0.001729535331628311,
+    "interval95": [
+      -0.0022454802018214244,
+      -0.0012409977307905919
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "uci",
+    "candidate": "student_t",
+    "reference": "gaussian_global",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 7,
+    "block_origins": 7,
+    "mean_difference": -0.001729535331628311,
+    "interval95": [
+      -0.002335407884227181,
+      -0.0011373021186073717
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "uci",
+    "candidate": "student_t",
+    "reference": "direct_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 1,
+    "block_origins": 1,
+    "mean_difference": -0.0004681443156536186,
+    "interval95": [
+      -0.0008818339261263671,
+      -8.586246010855943e-05
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "uci",
+    "candidate": "student_t",
+    "reference": "direct_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 3,
+    "block_origins": 3,
+    "mean_difference": -0.0004681443156536186,
+    "interval95": [
+      -0.00110466331268386,
+      7.396690942004772e-05
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "uci",
+    "candidate": "student_t",
+    "reference": "direct_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 7,
+    "block_origins": 7,
+    "mean_difference": -0.0004681443156536186,
+    "interval95": [
+      -0.0011800162138107938,
+      0.0002055435198685893
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "uci",
+    "candidate": "student_t",
+    "reference": "direct_bias_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 1,
+    "block_origins": 1,
+    "mean_difference": 6.349288247647465e-05,
+    "interval95": [
+      -0.0014746749218784222,
+      0.0014014004066112897
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "uci",
+    "candidate": "student_t",
+    "reference": "direct_bias_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 3,
+    "block_origins": 3,
+    "mean_difference": 6.349288247647465e-05,
+    "interval95": [
+      -0.0018658873214867395,
+      0.0015454085514728106
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "uci",
+    "candidate": "student_t",
+    "reference": "direct_bias_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 7,
+    "block_origins": 7,
+    "mean_difference": 6.349288247647465e-05,
+    "interval95": [
+      -0.0019582013496567087,
+      0.001670680517421401
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "azure_full",
+    "candidate": "gaussian_subscription",
+    "reference": "gaussian_global",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 1,
+    "block_origins": 4,
+    "mean_difference": -0.00035445986495348563,
+    "interval95": [
+      -0.0004481201149137035,
+      -0.00026742427841053
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "azure_full",
+    "candidate": "gaussian_subscription",
+    "reference": "gaussian_global",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 3,
+    "block_origins": 12,
+    "mean_difference": -0.00035445986495348563,
+    "interval95": [
+      -0.0004497201168025603,
+      -0.00026620472054530823
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "azure_full",
+    "candidate": "gaussian_subscription",
+    "reference": "gaussian_global",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 7,
+    "block_origins": 28,
+    "mean_difference": -0.00035445986495348563,
+    "interval95": [
+      -0.0003544598649534857,
+      -0.0003544598649534856
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "azure_full",
+    "candidate": "gaussian_subscription",
+    "reference": "direct_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 1,
+    "block_origins": 4,
+    "mean_difference": -0.0002225652182956464,
+    "interval95": [
+      -0.00027052262063661023,
+      -0.00017594897636860388
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "azure_full",
+    "candidate": "gaussian_subscription",
+    "reference": "direct_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 3,
+    "block_origins": 12,
+    "mean_difference": -0.0002225652182956464,
+    "interval95": [
+      -0.0002639033120415052,
+      -0.0001829659407555644
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "azure_full",
+    "candidate": "gaussian_subscription",
+    "reference": "direct_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 7,
+    "block_origins": 28,
+    "mean_difference": -0.0002225652182956464,
+    "interval95": [
+      -0.0002225652182956464,
+      -0.00022256521829564638
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "azure_full",
+    "candidate": "gaussian_subscription",
+    "reference": "direct_bias_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 1,
+    "block_origins": 4,
+    "mean_difference": -0.00018943488798083585,
+    "interval95": [
+      -0.00024222361108661167,
+      -0.00013351692223587683
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "azure_full",
+    "candidate": "gaussian_subscription",
+    "reference": "direct_bias_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 3,
+    "block_origins": 12,
+    "mean_difference": -0.00018943488798083585,
+    "interval95": [
+      -0.00022990475181845822,
+      -0.00014488260838508988
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "azure_full",
+    "candidate": "gaussian_subscription",
+    "reference": "direct_bias_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 7,
+    "block_origins": 28,
+    "mean_difference": -0.00018943488798083585,
+    "interval95": [
+      -0.00018943488798083585,
+      -0.00018943488798083582
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "bpi2014",
+    "candidate": "gaussian_team",
+    "reference": "gaussian_global",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 1,
+    "block_origins": 1,
+    "mean_difference": -0.0004106821570991182,
+    "interval95": [
+      -0.0007672214100193763,
+      -3.4516194122875766e-05
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "bpi2014",
+    "candidate": "gaussian_team",
+    "reference": "gaussian_global",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 3,
+    "block_origins": 3,
+    "mean_difference": -0.0004106821570991182,
+    "interval95": [
+      -0.0008350749373571889,
+      4.792756309228753e-06
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "bpi2014",
+    "candidate": "gaussian_team",
+    "reference": "gaussian_global",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 7,
+    "block_origins": 7,
+    "mean_difference": -0.0004106821570991182,
+    "interval95": [
+      -0.0008237526958653708,
+      7.497331225173971e-05
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "bpi2014",
+    "candidate": "gaussian_team",
+    "reference": "direct_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 1,
+    "block_origins": 1,
+    "mean_difference": 4.1573140914113755e-05,
+    "interval95": [
+      -0.00016730467286005875,
+      0.00025446430164922067
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "bpi2014",
+    "candidate": "gaussian_team",
+    "reference": "direct_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 3,
+    "block_origins": 3,
+    "mean_difference": 4.1573140914113755e-05,
+    "interval95": [
+      -0.00020513325987389934,
+      0.00028421597040159154
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "bpi2014",
+    "candidate": "gaussian_team",
+    "reference": "direct_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 7,
+    "block_origins": 7,
+    "mean_difference": 4.1573140914113755e-05,
+    "interval95": [
+      -0.0001972174598989405,
+      0.00034240331844924367
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "bpi2014",
+    "candidate": "gaussian_team",
+    "reference": "direct_bias_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 1,
+    "block_origins": 1,
+    "mean_difference": -0.0023710512348703076,
+    "interval95": [
+      -0.003224488319406956,
+      -0.0015123072448898164
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "bpi2014",
+    "candidate": "gaussian_team",
+    "reference": "direct_bias_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 3,
+    "block_origins": 3,
+    "mean_difference": -0.0023710512348703076,
+    "interval95": [
+      -0.0032948618984674377,
+      -0.0013372192852884606
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  },
+  {
+    "source": "bpi2014",
+    "candidate": "gaussian_team",
+    "reference": "direct_bias_dm_exact",
+    "status": "post-confirmation descriptive interval; model fixed before confirmation",
+    "origins": 28,
+    "block_days": 7,
+    "block_origins": 7,
+    "mean_difference": -0.0023710512348703076,
+    "interval95": [
+      -0.0031642158465978974,
+      -0.0014055550363780652
+    ],
+    "warning": "finite-period exploratory interval; not independent organizational replication"
+  }
+]

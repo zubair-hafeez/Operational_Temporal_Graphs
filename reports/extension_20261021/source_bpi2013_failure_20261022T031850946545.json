@@ -1,0 +1,10 @@
+{
+  "source": "bpi2013",
+  "requested_url": "https://data.4tu.nl/file/0fc5c579-e544-4fab-9143-fab1f5192432/aa51ffbb-25fd-4b5a-b0b8-9aba659b7e8c",
+  "started_utc": "2026-10-22T03:18:20.938001+00:00",
+  "script_sha256": "d03c9db65d8454c7c471fc88f9946422a37693cec07dbecef581e53f94c0464b",
+  "limit_bytes": 10000000,
+  "status": "failed",
+  "error": "URLError(TimeoutError('timed out'))",
+  "elapsed_seconds": 30.008462830912322
+}

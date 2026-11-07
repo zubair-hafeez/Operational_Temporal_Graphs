@@ -1,0 +1,16 @@
+{
+  "source": "azure_prefix",
+  "requested_url": "https://github.com/Azure/AzurePublicDataset/releases/download/dataset-v2/trace_data_vmtable_vmtable.csv.gz",
+  "started_utc": "2026-10-22T03:18:18.878807+00:00",
+  "script_sha256": "d03c9db65d8454c7c471fc88f9946422a37693cec07dbecef581e53f94c0464b",
+  "limit_bytes": 8000000,
+  "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/100736092/a038fb36-fc6e-4c80-a92d-57b20c6a3fae",
+  "content_length": "437594496",
+  "etag": "\"0x8DEC0C722F20198\"",
+  "status": "complete",
+  "downloaded_bytes": 8000000,
+  "stored_bytes": 14997946,
+  "sha256": "602202fff587aa76508f2c4cabc3fc7e821637171d74c161105400424cea9d60",
+  "sampling": "first 8 MB compressed stream; complete rows only; schema audit",
+  "elapsed_seconds": 0.5530896598938853
+}

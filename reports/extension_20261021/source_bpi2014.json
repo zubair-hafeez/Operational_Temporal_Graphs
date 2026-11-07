@@ -1,0 +1,16 @@
+{
+  "source": "bpi2014",
+  "requested_url": "https://fluxicon.com/blog/2014/04/bpi-challenge-2014/",
+  "started_utc": "2026-10-22T03:18:19.778014+00:00",
+  "script_sha256": "d03c9db65d8454c7c471fc88f9946422a37693cec07dbecef581e53f94c0464b",
+  "limit_bytes": 100000000,
+  "final_url": "https://files.fluxicon.com//Datasets/BPIC/BPI-Challenge-2014.zip",
+  "content_length": "9805795",
+  "etag": "\"959fe3-59c55fb176b39\"",
+  "status": "complete",
+  "downloaded_bytes": 9805795,
+  "stored_bytes": 9805795,
+  "sha256": "b37dcbc0ae1192434cd38582d178b6392b36f803fc0188f42ddaf8fd41ef84bd",
+  "sampling": "complete named asset",
+  "elapsed_seconds": 9.888624981045723
+}

@@ -1,0 +1,100 @@
+\subsection{Cross-domain extension and stronger graph controls}
+We next screened additional public sources with bounded local storage, retaining
+unsuccessful and unsuitable candidates. Azure V2 \citep{azure2019} supplies a
+second compute provider. A first 49,231-row schema/prediction pilot was followed
+by a sample retaining \emph{all released VMs} in subscriptions selected by a
+fixed SHA-256 rule (first 32 bits modulo 20 equal zero). The sample is complete
+within those released subscriptions, not the provider's full production
+population. The target is VM deletion at 5/30/120/360 minutes; observed deployment
+and subscription memberships supply two relations. Lifetime CPU summaries,
+usage-derived VM categories, and deletion times are excluded from features.
+Time-zero creations give an observed age lower bound; timestamp coarsening and
+the publisher's workload sampling limit interpretation. The interval adapter
+emits creation events only, so Azure temporal tokens summarize prior creations,
+not a full stream of VM deletions or CPU measurements.
+
+The UCI incident log \citep{amaral2018} supplies handler and team relations.
+We predict the first \emph{recorded} Resolved/Closed update after the first
+observed nonterminal update at 1/6/24/72 hours. This is an event-log milestone,
+not an estimate of an unobserved physical repair time. Resolution timestamps,
+closure codes, eventual resolvers, and SLA outcomes repeated in earlier rows
+are excluded. BPI 2014 \citep{vandongen2014activity} supplies timestamped incident
+activities and team membership; its target is the first Closed activity after
+an observed Open. We do not reconstruct live arrival populations from either
+historical case extract. Event timestamps proxy information availability.
+Naive incident timestamps are interpreted on a UTC clock for reproducible
+partitioning; the archives do not verify operational timezone or ingestion
+latency. This convention does not recover daylight-saving transitions.
+
+All sources have distinct individual-fit, calibration, dependence-fit, and
+development-validation windows. Entire longest-horizon labels must mature
+strictly before each window ends. Azure uses day boundaries 0/10/13/16/20;
+UCI uses March 1/22, April 1/15, and May 1, 2016; BPI 2014 uses October 1,
+November 1/15, December 1, 2013, and January 1, 2014. Prefix state carries
+across boundaries. New-period confirmation fixes 28 origins per source:
+Azure days 22--28.75, UCI May 1--28, and BPI 2014 January 1--28.
+An executable asset manifest freezes all fitted models and comparisons before
+these targets are prepared or scored. Earlier schema audits inspected whole-file
+state totals and time ranges; this is an internal prediction-holdout freeze,
+not external preregistration or a claim that the raw files were never opened.
+
+\paragraph{Matched individual models.}
+Controls include personal-feature HGB, HGB with current relation summaries,
+and HGB with the same observed event-history tokens available to temporal
+attention. Neural controls use width 48: a node MLP, a global set model,
+two rounds of typed entity--group mean message passing, and temporal attention
+over the last eight observed relation events followed by message passing.
+These are independent survival-target adaptations, not reproductions of TGN,
+TGAT, or DyGFormer benchmark systems \citep{rossi2020,xu2020,yu2023}.
+Each network uses a five-category first-exit head. UCI trains for 30 epochs;
+Azure and BPI 2014 for 20, with AdamW learning rate .001 and weight decay .001.
+HGB uses 100 boosting iterations, 15 leaves and L2 penalty 10. Checkpoints and temperature
+are chosen on the earlier calibration window; three-seed mean CDFs determine
+the selected architecture. Relation-specific and size-preserving shuffled
+graph controls keep the input feature set and training budget fixed.
+A separate bounded Borg pilot shares the existing 176 engineered features
+across models, testing additional message passing beyond those summaries;
+its sampled-node scores are not population estimates.
+
+\paragraph{Joint controls.}
+Gaussian factors include independent, global, each relation alone,
+global-plus-each-relation, combined typed, and shuffled-incidence controls.
+Small development-only variance grids and coordinate search fit count scores;
+the typed model may reduce to the global control. Coordinate fitting starts
+at the global fit and performs two sweeps over weights; it is not an exhaustive
+joint-grid optimum. Separately fitted relation-only arms are retained even
+when they beat that combined fit. Student-$t$ copulas add a
+shared inverse-chi-square scale and compare global and typed variants with
+degrees of freedom chosen from 4/8/16. Each draw still uses one entity uniform
+across horizons. Concentration-only and bias-adjusted direct DM, exact
+beta-binomial count scores, and historical residual forecasts use the same
+dependence-fitting period. None is tuned on confirmation.
+
+A small additional comparator uses the unchanged published TACTiS attentional
+copula module \citep{drouin2022}, with a custom current-cohort encoder,
+randomized discrete probability-integral-transform targets, and rank-adjusted
+generated uniforms. All comparators in that pilot use the same 64-node subsets.
+It is explicitly a limited adaptation: neither the full time-series model nor
+an exact discrete likelihood reproduction, and not evidence of superiority
+over TACTiS or TACTiS-2 in their original tasks.
+
+Exploratory fitting uses empirical-ensemble CRPS; confirmation uses the fair
+distinct-pair estimator with 512 draws and three sampling seeds. The peak
+reference scale in confirmation is $\sqrt{1+\sum_iF_i(1-F_i)}$, as in the
+original study. Development pilot peak scores used a max-with-one stabilization
+and are not numerically pooled with confirmation. Seeds are averaged within
+origin before 2,000 paired circular block replicates with 1/3/7-day blocks.
+The same frozen probabilities and reference risk quantities are used for
+every joint comparator.
+
+\paragraph{Screened alternatives and limits.}
+A Google 2019 \citep{google2019} event-shard audit found approximately 83\% of
+sampled entity histories contained one event; that shard cannot support a
+complete-trajectory forecast. BPI 2014 change snapshots lack version histories
+for planned times and affected configuration items; incident activities offer
+a better-supported relation replay. Citi Bike \citep{citibike} and airline
+\citep{bts2024} pilots test transportation at small scale. Published trips are
+retrospectively filtered, and airline schedule-version availability is an
+explicit assumption. Their exploratory scores are not presented as live
+deployment results. Source selection followed development feasibility and
+performance, so reporting all screened candidates is part of the evidence.

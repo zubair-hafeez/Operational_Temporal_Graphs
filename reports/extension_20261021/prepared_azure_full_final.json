@@ -1,0 +1,217 @@
+{
+  "source": "azure_full",
+  "stage": "frozen-protocol confirmation",
+  "future_evaluation_scored": false,
+  "raw_rows": 136962,
+  "sample": "whole subscriptions with SHA256 first32bits mod20=0",
+  "forbidden_features": [
+    "max_cpu",
+    "avg_cpu",
+    "p95_cpu",
+    "category",
+    "end"
+  ],
+  "category_warning": "workload class may be derived from lifetime use; excluded",
+  "zero_duration_rows": 4777,
+  "negative_intervals": 0,
+  "target": "observed VM deletion within horizon, active sampled VMs",
+  "bounds": [
+    0.0,
+    864000.0,
+    1123200.0,
+    1382400.0,
+    1728000.0
+  ],
+  "horizons_seconds": [
+    300.0,
+    1800.0,
+    7200.0,
+    21600.0
+  ],
+  "relationships": [
+    "deployment",
+    "subscription"
+  ],
+  "cohorts": [
+    {
+      "origin": 1900800.0,
+      "part": "final",
+      "offset": 0,
+      "size": 12693
+    },
+    {
+      "origin": 1922400.0,
+      "part": "final",
+      "offset": 12693,
+      "size": 12732
+    },
+    {
+      "origin": 1944000.0,
+      "part": "final",
+      "offset": 25425,
+      "size": 12731
+    },
+    {
+      "origin": 1965600.0,
+      "part": "final",
+      "offset": 38156,
+      "size": 12784
+    },
+    {
+      "origin": 1987200.0,
+      "part": "final",
+      "offset": 50940,
+      "size": 12671
+    },
+    {
+      "origin": 2008800.0,
+      "part": "final",
+      "offset": 63611,
+      "size": 12742
+    },
+    {
+      "origin": 2030400.0,
+      "part": "final",
+      "offset": 76353,
+      "size": 12707
+    },
+    {
+      "origin": 2052000.0,
+      "part": "final",
+      "offset": 89060,
+      "size": 12697
+    },
+    {
+      "origin": 2073600.0,
+      "part": "final",
+      "offset": 101757,
+      "size": 12642
+    },
+    {
+      "origin": 2095200.0,
+      "part": "final",
+      "offset": 114399,
+      "size": 12663
+    },
+    {
+      "origin": 2116800.0,
+      "part": "final",
+      "offset": 127062,
+      "size": 12694
+    },
+    {
+      "origin": 2138400.0,
+      "part": "final",
+      "offset": 139756,
+      "size": 12810
+    },
+    {
+      "origin": 2160000.0,
+      "part": "final",
+      "offset": 152566,
+      "size": 12862
+    },
+    {
+      "origin": 2181600.0,
+      "part": "final",
+      "offset": 165428,
+      "size": 12820
+    },
+    {
+      "origin": 2203200.0,
+      "part": "final",
+      "offset": 178248,
+      "size": 12849
+    },
+    {
+      "origin": 2224800.0,
+      "part": "final",
+      "offset": 191097,
+      "size": 12867
+    },
+    {
+      "origin": 2246400.0,
+      "part": "final",
+      "offset": 203964,
+      "size": 12905
+    },
+    {
+      "origin": 2268000.0,
+      "part": "final",
+      "offset": 216869,
+      "size": 12771
+    },
+    {
+      "origin": 2289600.0,
+      "part": "final",
+      "offset": 229640,
+      "size": 12889
+    },
+    {
+      "origin": 2311200.0,
+      "part": "final",
+      "offset": 242529,
+      "size": 12836
+    },
+    {
+      "origin": 2332800.0,
+      "part": "final",
+      "offset": 255365,
+      "size": 12922
+    },
+    {
+      "origin": 2354400.0,
+      "part": "final",
+      "offset": 268287,
+      "size": 12852
+    },
+    {
+      "origin": 2376000.0,
+      "part": "final",
+      "offset": 281139,
+      "size": 12814
+    },
+    {
+      "origin": 2397600.0,
+      "part": "final",
+      "offset": 293953,
+      "size": 12789
+    },
+    {
+      "origin": 2419200.0,
+      "part": "final",
+      "offset": 306742,
+      "size": 12929
+    },
+    {
+      "origin": 2440800.0,
+      "part": "final",
+      "offset": 319671,
+      "size": 12931
+    },
+    {
+      "origin": 2462400.0,
+      "part": "final",
+      "offset": 332602,
+      "size": 12976
+    },
+    {
+      "origin": 2484000.0,
+      "part": "final",
+      "offset": 345578,
+      "size": 12930
+    }
+  ],
+  "queries": 358508,
+  "features": 19,
+  "categorical_columns": [
+    "cores",
+    "memory",
+    "state"
+  ],
+  "numeric_columns": [],
+  "vocabulary_fit_before": 864000.0,
+  "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+  "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+  "code_sha256": "4cc4697774db37d70a42d88411ed5d36aa835314609c9e6388794c91d39010ab"
+}

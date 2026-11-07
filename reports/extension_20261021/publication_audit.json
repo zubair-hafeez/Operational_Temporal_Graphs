@@ -1,0 +1,137 @@
+{
+  "utc": "2026-10-22T17:47:49.810158+00:00",
+  "freezes": {
+    "docs/FINAL_PROTOCOL.json": 264,
+    "revision/FRESH_FINAL_PROTOCOL.json": 82,
+    "extension/CONFIRMATION_PROTOCOL.json": 165
+  },
+  "sources": {
+    "uci": {
+      "origins": 28,
+      "queries": 33789,
+      "predictors": 10,
+      "direct_mc_exact_max_crps_gap": 5.569719889485236e-06,
+      "maturity_and_cdf_checks": "passed",
+      "freeze_precedes_scoring": true
+    },
+    "azure_full": {
+      "origins": 28,
+      "queries": 358508,
+      "predictors": 10,
+      "direct_mc_exact_max_crps_gap": 3.419316064092598e-06,
+      "maturity_and_cdf_checks": "passed",
+      "freeze_precedes_scoring": true
+    },
+    "bpi2014": {
+      "origins": 28,
+      "queries": 34313,
+      "predictors": 7,
+      "direct_mc_exact_max_crps_gap": 3.238360744312746e-05,
+      "maturity_and_cdf_checks": "passed",
+      "freeze_precedes_scoring": true
+    }
+  },
+  "sensitivity": {
+    "uci": {
+      "scope": "post-confirmation 1024-draw seed0 check; no refitting or reselection",
+      "max_change_vs_seed0_512": 0.0001452865189056768,
+      "scores1024": {
+        "gaussian_global": 0.044528394906797206,
+        "gaussian_typed": 0.0431346053440767,
+        "independent": 0.048578255675351664,
+        "student_t": 0.04289137100536205,
+        "student_t_global": 0.044399365467844114,
+        "student_t_typed": 0.04289137100536205
+      },
+      "typed_vs_global_order_preserved": true
+    },
+    "azure_full": {
+      "scope": "post-confirmation 1024-draw seed0 check; no refitting or reselection",
+      "max_change_vs_seed0_512": 3.7957403369925057e-05,
+      "scores1024": {
+        "gaussian_global": 0.00762694020884585,
+        "gaussian_subscription": 0.007254511727947596,
+        "gaussian_typed": 0.00762694020884585,
+        "independent": 0.008695222937044193,
+        "student_t_global": 0.007613440324860085,
+        "student_t_typed": 0.007613440324860085
+      },
+      "typed_vs_global_order_preserved": true
+    },
+    "bpi2014": {
+      "scope": "post-confirmation 1024-draw seed0 check; no refitting or reselection",
+      "max_change_vs_seed0_512": 0.00010797673568277433,
+      "scores1024": {
+        "gaussian_global": 0.03426708341765771,
+        "gaussian_team": 0.0337238768527084,
+        "gaussian_typed": 0.03417415614824347,
+        "independent": 0.0347795545503703,
+        "student_t_global": 0.03449162105281734,
+        "student_t_typed": 0.03445597566893194
+      },
+      "typed_vs_global_order_preserved": true
+    }
+  },
+  "prefix_extension": {
+    "status": "passed",
+    "sources": {
+      "uci": {
+        "historical_rows": 91079,
+        "all_observed_attributes_identical": true,
+        "relation_partition_and_missing_mask_identical": true,
+        "training_vocabulary_and_encodings_identical": true,
+        "future_end_labels_excluded_from_comparison": true
+      },
+      "bpi2014": {
+        "historical_rows": 256250,
+        "all_observed_attributes_identical": true,
+        "relation_partition_and_missing_mask_identical": true,
+        "training_vocabulary_and_encodings_identical": true,
+        "future_end_labels_excluded_from_comparison": true
+      },
+      "azure_full": {
+        "historical_rows": 87165,
+        "all_observed_attributes_identical": true,
+        "relation_partition_and_missing_mask_identical": true,
+        "training_vocabulary_and_encodings_identical": true,
+        "future_end_labels_excluded_from_comparison": true
+      }
+    }
+  },
+  "identical_regeneration": {
+    "paper_revision/generated/extension_counts.tex": "5e30376baab98ecfac80e48aad2c31ff08182c2e522e6c45b12fa9ea9e8d5ddf",
+    "paper_revision/generated/extension_intervals.csv": "a427d000508eb2746b7dbfb81bf7e7c577722e5ae7a5d2895a858e0506cb9f08",
+    "paper_revision/generated/extension_joint.tex": "17df2e0495592be6cb97e4bbe462f97e55a069a1301736deab831770018ef5bd",
+    "paper_revision/generated/extension_macro.csv": "5bf178581ff9a0bc62737ab542ee10ef41317c2867c5abbb020c6c5106eb757e",
+    "paper_revision/generated/extension_manifest.json": "4751c83c5a6a109338fd9ca7e7cb5ec0e8c6e3dbee70e2508c50d19f93652f96",
+    "paper_revision/generated/extension_marginals.csv": "ef101a65f7ebd1b29aa4bca85abc1e9a0115e2e0ea5969a4b866c40f481c6834",
+    "paper_revision/generated/extension_marginals.tex": "591c744d6dd772cdb33f58b9f2fcc5b6bb81f83fcccf83228511935f41717e2b",
+    "paper_revision/generated/extension_relations.tex": "3f4bfd8544f56231e1f3b4809b751718480064767ccaa01cb0e2add312145d8e",
+    "paper_revision/generated/extension_secondary_intervals.json": "57774aee16ae2f937b5f11480dd4b556c08e9e50223502d7b65e6c4726ce74b3",
+    "paper_revision/figures/extension_effects.pdf": "b7da66c3a10aae36e332189c2969b0424ea427a733cbb4ef1148d010a881de2a"
+  },
+  "tests": {
+    "exit_code": 0,
+    "output": "....................................................                     [100%]\n52 passed in 6.00s\n"
+  },
+  "new_storage_bytes": 1110622771,
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.6.0",
+    "torch": "2.5.1",
+    "matplotlib": "3.10.9",
+    "pyarrow": "22.0.0",
+    "pytest": "9.1.1"
+  },
+  "manuscript": {
+    "path": "paper_revision/main.pdf",
+    "sha256": "c8fc434371eb93826793055ed2751750c535241404ef000bc076f2f20c3a64e8",
+    "pages": 15,
+    "no_overfull_or_unresolved_references": true,
+    "word_bounds_within_page": true,
+    "venue": "neutral, user confirmed"
+  },
+  "status": "passed"
+}

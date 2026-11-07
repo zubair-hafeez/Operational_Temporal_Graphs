@@ -1,0 +1,522 @@
+{
+  "source": "bpi2014",
+  "stage": "exploratory development pilot",
+  "future_evaluation_scored": false,
+  "target": "first Closed activity after observed Open activity",
+  "forbidden_features": [
+    "final incident table attributes",
+    "cause CI",
+    "final related change",
+    "KM number"
+  ],
+  "semantics": "retain only entities with observed Open; first closure, later reopening outside target",
+  "raw_rows": 466737,
+  "bounds": [
+    1380585600.0,
+    1383264000.0,
+    1384473600.0,
+    1385856000.0,
+    1388534400.0
+  ],
+  "horizons_seconds": [
+    3600.0,
+    21600.0,
+    86400.0,
+    259200.0
+  ],
+  "relationships": [
+    "team"
+  ],
+  "cohorts": [
+    {
+      "origin": 1380628800.0,
+      "part": "train",
+      "offset": 0,
+      "size": 1013
+    },
+    {
+      "origin": 1380715200.0,
+      "part": "train",
+      "offset": 1013,
+      "size": 1077
+    },
+    {
+      "origin": 1380801600.0,
+      "part": "train",
+      "offset": 2090,
+      "size": 1143
+    },
+    {
+      "origin": 1380888000.0,
+      "part": "train",
+      "offset": 3233,
+      "size": 990
+    },
+    {
+      "origin": 1380974400.0,
+      "part": "train",
+      "offset": 4223,
+      "size": 1006
+    },
+    {
+      "origin": 1381060800.0,
+      "part": "train",
+      "offset": 5229,
+      "size": 1006
+    },
+    {
+      "origin": 1381147200.0,
+      "part": "train",
+      "offset": 6235,
+      "size": 1091
+    },
+    {
+      "origin": 1381233600.0,
+      "part": "train",
+      "offset": 7326,
+      "size": 1092
+    },
+    {
+      "origin": 1381320000.0,
+      "part": "train",
+      "offset": 8418,
+      "size": 1042
+    },
+    {
+      "origin": 1381406400.0,
+      "part": "train",
+      "offset": 9460,
+      "size": 1062
+    },
+    {
+      "origin": 1381492800.0,
+      "part": "train",
+      "offset": 10522,
+      "size": 1065
+    },
+    {
+      "origin": 1381579200.0,
+      "part": "train",
+      "offset": 11587,
+      "size": 1033
+    },
+    {
+      "origin": 1381665600.0,
+      "part": "train",
+      "offset": 12620,
+      "size": 1035
+    },
+    {
+      "origin": 1381752000.0,
+      "part": "train",
+      "offset": 13655,
+      "size": 1060
+    },
+    {
+      "origin": 1381838400.0,
+      "part": "train",
+      "offset": 14715,
+      "size": 1093
+    },
+    {
+      "origin": 1381924800.0,
+      "part": "train",
+      "offset": 15808,
+      "size": 1077
+    },
+    {
+      "origin": 1382011200.0,
+      "part": "train",
+      "offset": 16885,
+      "size": 1029
+    },
+    {
+      "origin": 1382097600.0,
+      "part": "train",
+      "offset": 17914,
+      "size": 1007
+    },
+    {
+      "origin": 1382184000.0,
+      "part": "train",
+      "offset": 18921,
+      "size": 1009
+    },
+    {
+      "origin": 1382270400.0,
+      "part": "train",
+      "offset": 19930,
+      "size": 1009
+    },
+    {
+      "origin": 1382356800.0,
+      "part": "train",
+      "offset": 20939,
+      "size": 1054
+    },
+    {
+      "origin": 1382443200.0,
+      "part": "train",
+      "offset": 21993,
+      "size": 1063
+    },
+    {
+      "origin": 1382529600.0,
+      "part": "train",
+      "offset": 23056,
+      "size": 1026
+    },
+    {
+      "origin": 1382616000.0,
+      "part": "train",
+      "offset": 24082,
+      "size": 1020
+    },
+    {
+      "origin": 1382702400.0,
+      "part": "train",
+      "offset": 25102,
+      "size": 998
+    },
+    {
+      "origin": 1382788800.0,
+      "part": "train",
+      "offset": 26100,
+      "size": 978
+    },
+    {
+      "origin": 1382875200.0,
+      "part": "train",
+      "offset": 27078,
+      "size": 978
+    },
+    {
+      "origin": 1382961600.0,
+      "part": "train",
+      "offset": 28056,
+      "size": 1005
+    },
+    {
+      "origin": 1383307200.0,
+      "part": "calibration",
+      "offset": 29061,
+      "size": 1075
+    },
+    {
+      "origin": 1383393600.0,
+      "part": "calibration",
+      "offset": 30136,
+      "size": 1005
+    },
+    {
+      "origin": 1383480000.0,
+      "part": "calibration",
+      "offset": 31141,
+      "size": 1007
+    },
+    {
+      "origin": 1383566400.0,
+      "part": "calibration",
+      "offset": 32148,
+      "size": 1102
+    },
+    {
+      "origin": 1383652800.0,
+      "part": "calibration",
+      "offset": 33250,
+      "size": 1154
+    },
+    {
+      "origin": 1383739200.0,
+      "part": "calibration",
+      "offset": 34404,
+      "size": 1096
+    },
+    {
+      "origin": 1383825600.0,
+      "part": "calibration",
+      "offset": 35500,
+      "size": 1137
+    },
+    {
+      "origin": 1383912000.0,
+      "part": "calibration",
+      "offset": 36637,
+      "size": 1165
+    },
+    {
+      "origin": 1383998400.0,
+      "part": "calibration",
+      "offset": 37802,
+      "size": 1116
+    },
+    {
+      "origin": 1384084800.0,
+      "part": "calibration",
+      "offset": 38918,
+      "size": 1120
+    },
+    {
+      "origin": 1384171200.0,
+      "part": "calibration",
+      "offset": 40038,
+      "size": 1167
+    },
+    {
+      "origin": 1384516800.0,
+      "part": "dependence",
+      "offset": 41205,
+      "size": 1093
+    },
+    {
+      "origin": 1384603200.0,
+      "part": "dependence",
+      "offset": 42298,
+      "size": 1064
+    },
+    {
+      "origin": 1384689600.0,
+      "part": "dependence",
+      "offset": 43362,
+      "size": 1084
+    },
+    {
+      "origin": 1384776000.0,
+      "part": "dependence",
+      "offset": 44446,
+      "size": 1160
+    },
+    {
+      "origin": 1384862400.0,
+      "part": "dependence",
+      "offset": 45606,
+      "size": 1160
+    },
+    {
+      "origin": 1384948800.0,
+      "part": "dependence",
+      "offset": 46766,
+      "size": 1177
+    },
+    {
+      "origin": 1385035200.0,
+      "part": "dependence",
+      "offset": 47943,
+      "size": 1166
+    },
+    {
+      "origin": 1385121600.0,
+      "part": "dependence",
+      "offset": 49109,
+      "size": 1182
+    },
+    {
+      "origin": 1385208000.0,
+      "part": "dependence",
+      "offset": 50291,
+      "size": 1179
+    },
+    {
+      "origin": 1385294400.0,
+      "part": "dependence",
+      "offset": 51470,
+      "size": 1186
+    },
+    {
+      "origin": 1385380800.0,
+      "part": "dependence",
+      "offset": 52656,
+      "size": 1190
+    },
+    {
+      "origin": 1385467200.0,
+      "part": "dependence",
+      "offset": 53846,
+      "size": 1229
+    },
+    {
+      "origin": 1385553600.0,
+      "part": "dependence",
+      "offset": 55075,
+      "size": 1213
+    },
+    {
+      "origin": 1385899200.0,
+      "part": "validation",
+      "offset": 56288,
+      "size": 1195
+    },
+    {
+      "origin": 1385985600.0,
+      "part": "validation",
+      "offset": 57483,
+      "size": 1208
+    },
+    {
+      "origin": 1386072000.0,
+      "part": "validation",
+      "offset": 58691,
+      "size": 1224
+    },
+    {
+      "origin": 1386158400.0,
+      "part": "validation",
+      "offset": 59915,
+      "size": 1212
+    },
+    {
+      "origin": 1386244800.0,
+      "part": "validation",
+      "offset": 61127,
+      "size": 1205
+    },
+    {
+      "origin": 1386331200.0,
+      "part": "validation",
+      "offset": 62332,
+      "size": 1176
+    },
+    {
+      "origin": 1386417600.0,
+      "part": "validation",
+      "offset": 63508,
+      "size": 1161
+    },
+    {
+      "origin": 1386504000.0,
+      "part": "validation",
+      "offset": 64669,
+      "size": 1161
+    },
+    {
+      "origin": 1386590400.0,
+      "part": "validation",
+      "offset": 65830,
+      "size": 1195
+    },
+    {
+      "origin": 1386676800.0,
+      "part": "validation",
+      "offset": 67025,
+      "size": 1188
+    },
+    {
+      "origin": 1386763200.0,
+      "part": "validation",
+      "offset": 68213,
+      "size": 1143
+    },
+    {
+      "origin": 1386849600.0,
+      "part": "validation",
+      "offset": 69356,
+      "size": 1166
+    },
+    {
+      "origin": 1386936000.0,
+      "part": "validation",
+      "offset": 70522,
+      "size": 1196
+    },
+    {
+      "origin": 1387022400.0,
+      "part": "validation",
+      "offset": 71718,
+      "size": 1162
+    },
+    {
+      "origin": 1387108800.0,
+      "part": "validation",
+      "offset": 72880,
+      "size": 1161
+    },
+    {
+      "origin": 1387195200.0,
+      "part": "validation",
+      "offset": 74041,
+      "size": 1195
+    },
+    {
+      "origin": 1387281600.0,
+      "part": "validation",
+      "offset": 75236,
+      "size": 1249
+    },
+    {
+      "origin": 1387368000.0,
+      "part": "validation",
+      "offset": 76485,
+      "size": 1260
+    },
+    {
+      "origin": 1387454400.0,
+      "part": "validation",
+      "offset": 77745,
+      "size": 1233
+    },
+    {
+      "origin": 1387540800.0,
+      "part": "validation",
+      "offset": 78978,
+      "size": 1202
+    },
+    {
+      "origin": 1387627200.0,
+      "part": "validation",
+      "offset": 80180,
+      "size": 1169
+    },
+    {
+      "origin": 1387713600.0,
+      "part": "validation",
+      "offset": 81349,
+      "size": 1170
+    },
+    {
+      "origin": 1387800000.0,
+      "part": "validation",
+      "offset": 82519,
+      "size": 1164
+    },
+    {
+      "origin": 1387886400.0,
+      "part": "validation",
+      "offset": 83683,
+      "size": 1193
+    },
+    {
+      "origin": 1387972800.0,
+      "part": "validation",
+      "offset": 84876,
+      "size": 1146
+    },
+    {
+      "origin": 1388059200.0,
+      "part": "validation",
+      "offset": 86022,
+      "size": 1145
+    },
+    {
+      "origin": 1388145600.0,
+      "part": "validation",
+      "offset": 87167,
+      "size": 1135
+    },
+    {
+      "origin": 1388232000.0,
+      "part": "validation",
+      "offset": 88302,
+      "size": 1134
+    }
+  ],
+  "queries": 89436,
+  "features": 41,
+  "categorical_columns": [
+    "state"
+  ],
+  "numeric_columns": [],
+  "vocabulary_fit_before": 1383264000.0,
+  "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+  "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+  "code_sha256": "a843c684c941bd85e1225c0fd5c05fc9a04c3696acc4767780acb20c66ea9e71"
+}

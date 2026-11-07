@@ -1,0 +1,72 @@
+{
+  "generated_by": "extension/build_publication.py",
+  "generator_sha256": "e84f7de87a9e3e0e9918112887201141972f53b7e631ebe4555b6526e52db098",
+  "total_new_origins": 84,
+  "total_new_queries": 426610,
+  "selected": {
+    "uci": {
+      "marginal": "graph",
+      "joint_models": [
+        "independent",
+        "gaussian_global",
+        "gaussian_handler",
+        "gaussian_global_handler",
+        "gaussian_team",
+        "gaussian_global_team",
+        "gaussian_typed",
+        "gaussian_shuffled",
+        "student_t",
+        "student_t_global",
+        "student_t_typed"
+      ],
+      "development_best_coherent": "student_t"
+    },
+    "azure_full": {
+      "marginal": "hgb_temporal",
+      "joint_models": [
+        "independent",
+        "gaussian_global",
+        "gaussian_deployment",
+        "gaussian_global_deployment",
+        "gaussian_subscription",
+        "gaussian_global_subscription",
+        "gaussian_typed",
+        "gaussian_shuffled",
+        "student_t",
+        "student_t_global",
+        "student_t_typed"
+      ],
+      "development_best_coherent": "gaussian_subscription"
+    },
+    "bpi2014": {
+      "marginal": "hgb_relational",
+      "joint_models": [
+        "independent",
+        "gaussian_global",
+        "gaussian_team",
+        "gaussian_global_team",
+        "gaussian_typed",
+        "gaussian_shuffled",
+        "student_t",
+        "student_t_global",
+        "student_t_typed"
+      ],
+      "development_best_coherent": "gaussian_team"
+    }
+  },
+  "inputs": {
+    "extension/CONFIRMATION_PROTOCOL.json": "777d8af2f81b6fe4ca7fa84a58bd9c6e01978bf8c526b871f317211b0edd07d0",
+    "runs/extension_20261021/uci_confirmation/report.json": "92c8eccca57db82a242bea0605f7c67c61b7eb0e432147176af0d040d8a4b2a6",
+    "runs/extension_20261021/uci_confirmation/macro_scores.csv": "adf694fd53d734a465f39a277e23b4fb080893cf6175ceec4ddd1871b8feda72",
+    "runs/extension_20261021/uci_confirmation/marginal_scores.csv": "36e26f52c21840a2556f9fff331616a51c2573bfffa42a01f372bbb4d41bb5fd",
+    "runs/extension_20261021/uci_confirmation/origin_scores.csv": "454f948056c8f6ec950c6b85d4de9d3132179498b0b211ca5ba942e2902d3783",
+    "runs/extension_20261021/azure_full_confirmation/report.json": "c18d10b6b0e64cde37c49e88983b2eac1bea120a5c251bcd382bb0b5054a0845",
+    "runs/extension_20261021/azure_full_confirmation/macro_scores.csv": "bfd9b7e882c0fa5664f6ad8117d12c70c70dacebcf33df1aa8024cf40e2e890b",
+    "runs/extension_20261021/azure_full_confirmation/marginal_scores.csv": "7c0f78d35952d16c811787525b3092ef7978134946862323bb21145924e02be7",
+    "runs/extension_20261021/azure_full_confirmation/origin_scores.csv": "b70f8aa9bc58df715f646f9178dfa66fd34b9a1f3cdd611a28635fe167e93826",
+    "runs/extension_20261021/bpi2014_confirmation/report.json": "a6d1eab3324fb3e12255032e2b140e6238a859bb59185484de2784cddbb7f72e",
+    "runs/extension_20261021/bpi2014_confirmation/macro_scores.csv": "4080c607061a3ab16971f695119f295e07a6a0e786adf54a5e46f81e80b8174b",
+    "runs/extension_20261021/bpi2014_confirmation/marginal_scores.csv": "c118bb41a46b1a67e4caaa727cce5fd2d68896758cb973703c7e4744b327cda5",
+    "runs/extension_20261021/bpi2014_confirmation/origin_scores.csv": "52b2696b3d46ece73e7b2ffc846f220c5100d7e0d53a84faa58974001790664b"
+  }
+}

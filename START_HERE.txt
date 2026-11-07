@@ -1,17 +1,18 @@
 Operational_Temporal_Graphs — LATEST PAPER ONLY
 
-OPEN: LATEST_PAPER.pdf (10 pages)
+OPEN: OPERATION.LATEST_PAPER.pdf
 Actual manuscript: paper_revision/main.pdf
 Editable source: paper_revision/main.tex
-Review/delivery record: REVISION_REVIEW_NOTES.md
-Reproduction guide: REVISION_REPRODUCE.md
+Current six-source review: extension/REVIEW.txt
+Current reproduction guide: extension/REPRODUCE.txt
+Numerical audit: reports/extension_20261021/publication_audit.json
 
 All earlier manuscript PDFs, obsolete manuscript entrypoint/prose sources and
 associated build logs were removed at your explicit request on 18 October 2026.
 Earlier papers embedded in factory manuscript archives were also removed;
 their non-manuscript research support was retained separately.
 Only the latest manuscript version remains as a readable paper in this project.
-LATEST_PAPER.pdf is a shortcut, not a second stored copy.
+OPERATION.LATEST_PAPER.pdf is the user-owned shortcut, not a second stored copy.
 
 Scientific source code, data, models, predictions, numerical tables, figures
 and provenance records remain available. Older paper/ directories can contain
@@ -21,4 +22,7 @@ work and are not current navigation instructions. Historical package restore
 commands predating this deletion are retired.
 
 Deletion record: reports/organization/latest_paper_only_20261018.json
-No new scientific experiments were run and latest manuscript bytes are unchanged.
+That deletion record concerns organization on 18 October. Subsequent authorized
+research on 21/22 October added Azure and two incident confirmations, stronger
+graph/copula controls, transportation pilots and the current revised manuscript.
+The user chose a venue-neutral paper. No external submission has occurred.

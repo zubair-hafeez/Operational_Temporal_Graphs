@@ -1,0 +1,77 @@
+Scientific review: six-source extension, 22 October 2026
+======================================================
+The paper is a venue-neutral empirical benchmark, not a new universal graph
+architecture. No external submission or public release has occurred. This
+review is an internal critical check, not independent peer review.
+
+1. More data, sampled first
+   Completed Google2019 shard audit, Azure prefix then complete-subscription
+   sampling, BPI2014 changes audit and incident replay, UCI incident replay,
+   CitiBike and two airline geographies. Promoted Azure, UCI and BPI2014 to
+   three-seed development and 28-origin frozen confirmation each. Total paper:
+   six scored sources and 201 origins; only 84 belong to this new confirmation.
+   Repeated entities and seeds are not independent organizational replications.
+
+2. Temporal techniques and graph benefits
+   Compared temporal attention, typed message passing, temporal-history HGB,
+   node MLP and global-set controls. A graph can improve individual marginals;
+   a relation-specific copula can improve collective uncertainty while holding
+   those marginals fixed. These are distinct claims. Neither is universally
+   successful across sources. The manuscript now explains this distinction.
+
+3. Stronger graph baseline
+   Three-seed fits, feature-matched temporal HGB, same-budget shuffled graph,
+   single-relation graphs, node-only/set controls. Also a 176-feature matched
+   Borg pilot: graph models lose to strong tree summaries on validation.
+   Fixed training budgets and independent target adaptations are disclosed.
+
+4. Relationship types
+   Original job/machine removals retained. New handler/team, deployment/
+   subscription, station, airport/carrier/destination arms fitted separately.
+   UCI combined typed Gaussian improves global CRPS 3.3%; typed Student-t 3.6%.
+   Azure development-selected subscription-only improves global CRPS 4.7%.
+   Its combined coordinate fit collapses to global: bounded optimization, not
+   proof of no relation signal. BPI2014 combined typed gain is only 0.2%.
+   Neural and coupling shuffles are different controls; missing-mask and
+   risk-stratification differences are disclosed.
+
+5. Modern and joint baselines
+   Temporal attention and graph heads; Gaussian and matched global/typed
+   Student-t; direct concentration-only and bias-DM; exact beta-binomial
+   count scores; residual trajectories; prior reconciliation comparisons.
+   Bounded adapted upstream TACTiS copula does not improve matched subsets.
+   This is not a claim against full TGN/TGAT/DyGFormer/TACTiS-2 systems.
+   UCI bias-DM and typed Student-t are effectively tied on count CRPS.
+   BPI2014 bias correction wins development but loses confirmation. Negative
+   findings are retained instead of searching the final period for a winner.
+
+6. Presentation
+   New title and abstract; clear six-source evidence stages; generated main
+   count/marginal tables; paired-effect figure; full relation weights and
+   joint diagnostics in appendix. Latest paper only, no duplicate archives.
+   Every result must be traceable to saved outputs and current generation code.
+
+Remaining publication risks
+---------------------------
+The contribution is evaluation/empirical evidence, not a novel statistical
+model. A selective general-method conference may require substantially more
+methodological novelty; acceptance cannot be guaranteed by additional runs.
+Two compute providers broaden scope but Azure/Borg have seven final days each.
+Incident archives may be completion-conditioned and do not prove live-population
+availability. Naive incident timestamps use a UTC parsing convention, not a
+verified operational timezone or daylight-saving reconstruction.
+No arrivals, repeated transitions, deployment latency or live
+staffing/resource savings are modeled. Strong direct models often match or beat
+coherent entity scenarios. A narrow typed win is not universal graph necessity.
+Primary intervals are descriptive and not multiplicity-adjusted. Azure's
+whole-trace weekly bootstrap is degenerate. Supplementary selected-model
+intervals were added after confirmation and are marked as such. No final
+period may be reused for tuning and then called fresh validation.
+
+For an eventual submission, the researcher must approve target semantics,
+authors, affiliations, funding/conflicts, third-party terms and AI-assistance
+disclosure, and choose a venue and permanent artifact location. The user chose
+to keep this manuscript venue-neutral. Do not fabricate those details or
+submit/upload on their behalf. Broader temporal replication or a full published
+model adaptation would be future research with a new protocol and holdout,
+not a cosmetic claim that this paper already proves it.

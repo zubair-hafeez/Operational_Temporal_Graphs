@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\small
+\caption{New-period equal-origin integrated Brier $\times 1,000$ (lower is better), using three-seed mean CDFs. Selected beforehand: typed graph (UCI), temporal HGB (Azure), relational HGB (BPI14). Single-relation order: handler/team for UCI; deployment/subscription for Azure. BPI14 has one relation.}\label{tab:extension-marginals}
+\begin{tabular}{lrrr}
+\toprule
+Marginal model & UCI & Azure & BPI14 \\
+\midrule
+HGB personal & 69.04 & 6.15 & 72.84 \\
+HGB relations & 72.70 & 6.95 & 72.86 \\
+HGB temporal & 70.09 & 6.83 & 72.45 \\
+Node MLP & 68.07 & 6.40 & 74.14 \\
+Global set & 69.24 & 6.59 & 74.83 \\
+Typed graph & 67.88 & 6.45 & 74.27 \\
+Shuffled graph & 68.67 & 6.60 & --- \\
+Relation 1 only & 68.07 & 6.30 & --- \\
+Relation 2 only & 67.76 & 6.39 & --- \\
+Temporal attention & 66.77 & 6.20 & 72.87 \\
+\bottomrule
+\end{tabular}
+\end{table}

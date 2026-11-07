@@ -1,7 +1,7 @@
 \section{Introduction}
-A cluster operator sees pending and running tasks belonging to jobs and
-machines. A workflow analyst sees unresolved applications linked to their
-recent handlers. Both need collective forecasts: how many current entities
+A cluster operator sees tasks belonging to jobs and machines; an incident
+manager sees unresolved tickets linked to handlers and teams. Both need
+collective forecasts: how many current entities
 will remain unresolved, and which groups might fall behind together? Temporal
 models can supply each entity's event probability, but those probabilities
 alone do not specify the distribution of group counts or the largest group
@@ -18,8 +18,9 @@ second, and exploiting the third require different controls. An apparent
 ``graph benefit'' against independent sampling can otherwise be mostly a
 benefit of shared uncertainty available without typed relations.
 
-We define a common current-cohort target for a public compute-cluster trace
-and two releases of a loan-processing workflow. At each origin, a causal
+We define a common current-cohort target for six public logs: a compute-cluster
+trace, Azure VMs, two loan-workflow releases, and two IT-incident sources.
+At each origin, a timestamp-bounded
 adapter reconstructs the active entities and their observed memberships.
 Scenarios assign each entity a first-exit bin across four horizons, including
 survival beyond the final horizon. The cohort is not selected using future
@@ -33,12 +34,17 @@ historical residuals, and discrete probabilistic reconciliation. Delayed
 calibration controls separate mean error from dependence, and threshold-free
 joint scores test whether count accuracy extends to a group-risk profile.
 An initial two-log evaluation motivates retrospective diagnostics; a separately
-frozen third-log period supplies fresh confirmation. The manuscript identifies
-these evidence stages explicitly.
+frozen third-log period and three further frozen source periods supply
+confirmation. Storage-bounded transportation pilots and incomplete-history
+audits are retained as negative or deferred evidence. The manuscript identifies
+these stages explicitly rather than pooling development and confirmation.
 
 Three findings organize the study. Shared factors are strong controls, so the
 incremental contribution of typed incidence must be measured against them.
-Calibration can materially change both collective scores and asymmetric loss,
+Job grouping and IT handler/team incidence add predictive signal in particular
+settings, but graph architecture, relation identity, and dependence are not
+interchangeable sources of improvement. Calibration can materially change
+both collective scores and asymmetric loss,
 but transferring residuals across predictor versions is unreliable. Finally,
 methods that forecast individual group counts well can rank differently on
 the largest standardized group delay. These findings motivate an evaluation

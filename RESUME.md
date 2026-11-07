@@ -1,3 +1,43 @@
+# Current six-source extension — 22 October 2026
+
+All six requested research directions have been exercised. Three-seed development
+and fixed-model confirmation are complete on UCI incidents, Azure V2, and BPI2014
+incidents (28 origins each; 426,610 repeated entity-origin queries). Together with
+the original three logs, the paper has six scored sources and 201 origins.
+
+Current paper: paper_revision/main.pdf; user-owned shortcut:
+OPERATION.LATEST_PAPER.pdf. Do not restore the user-deleted LATEST_PAPER.pdf or
+earlier manuscript versions. Source: paper_revision/main.tex. User confirmed
+venue-neutral presentation. Read extension/REVIEW.txt and extension/REPRODUCE.txt.
+
+UCI typed Gaussian improves global CRPS 3.3%; matched typed Student-t 3.6%, but
+bias-DM is essentially tied. Azure development-selected subscription-only improves
+global 4.7%; combined coordinate fit collapses to global. BPI2014 combined typed
+gain is 0.2%; direct DM is competitive. Strong temporal/graph/tree comparisons,
+relation-specific controls, a bounded upstream TACTiS-copula adaptation, negative
+transportation pilots, and Google/change-table feasibility limits are reported.
+
+Do not edit original264, BPI2012's82, or extension's165 frozen assets. New protocol
+extension/CONFIRMATION_PROTOCOL.json SHA256
+777d8af2f81b6fe4ca7fa84a58bd9c6e01978bf8c526b871f317211b0edd07d0.
+All new confirmation periods have now been inspected: never retune on them and
+call the result fresh. New scripts after freeze are analysis/audit/presentation
+only. Repeated training seeds are not independent organizations or periods.
+
+All final checks COMPLETE: three-source 1024-draw count sensitivity, identical
+regeneration of all10 extension tables/CSVs/manifest/figure, all52 tests, all3
+frozen manifests, all3 prefix-invariance audits, and PDF compilation/layout.
+Audit: reports/extension_20261021/publication_audit.json. Current PDF:15pages,
+SHA256 c8fc434371eb93826793055ed2751750c535241404ef000bc076f2f20c3a64e8.
+New storage1,110,622,771bytes at audit (below2GiB). No experiment or download is
+pending for this completed revision. Ready for scientific author review, not
+a guarantee of top-conference acceptance. Attribution, venue-specific formatting,
+and any external release require researcher decisions; user chose venue-neutral.
+No subagents, external submission, public upload, or author identity fabrication.
+The older completion/status and restoration instructions below are historical.
+
+--- Historical organization and study records ---
+
 # Latest-paper-only organization — 18 October 2026
 
 User explicitly requested removal of ALL earlier-version papers. Completed: keep only `paper_revision/main.pdf` (10 pages), with root `LATEST_PAPER.pdf` shortcut. Earlier manuscript files and obsolete prose sources are deleted; experimental records and support assets remain. See `reports/organization/latest_paper_only_20261018.json`. Historical notes below about preserving earlier manuscripts or reconstructing earlier release packages are superseded. Do not restore deleted manuscript versions unless explicitly requested. No new research work is authorized by cleanup.

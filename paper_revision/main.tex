@@ -3,10 +3,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype,amsmath,amssymb,booktabs,graphicx,natbib,url}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\-}
+\makeatother
 \setlength{\columnsep}{0.25in}
 \raggedbottom
 \newcommand{\ind}{1}
-\title{Evaluating Collective Forecasts on Temporal Operational Graphs:\\Calibration, Dependence, and Group Risk}
+\title{When Do Relations Help Collective Forecasts?\\A Controlled Study of Operational Temporal Graphs}
 \author{Anonymous manuscript for author review}
 \date{}
 \begin{document}
@@ -15,12 +18,26 @@
 \input{sections/introduction}
 \input{sections/related}
 \input{sections/method}
-\input{sections/design}
+\input{sections/data_summary}
 \input{sections/results}
 \input{sections/discussion}
 \input{sections/conclusion}
 \bibliographystyle{plainnat}
 \bibliography{references}
 \appendix
+\input{sections/design}
 \input{sections/appendix}
+\input{generated/calibration_table}
+\input{generated/joint_table}
+\begin{figure*}[t]
+\centering\includegraphics[width=.98\textwidth]{figures/calibration_and_controls.pdf}
+\caption{Retrospective BPI 2017 fourteen-day population forecasts under original
+and delayed same-version correction (left); matched-marginal factor comparisons
+on original final periods and fresh BPI 2012 (right). Global dependence captures
+much of the independence improvement; typed incidence adds a smaller,
+application-specific contribution.}
+\label{fig:controls}
+\end{figure*}
+\input{generated/extension_joint}
+\input{generated/extension_relations}
 \end{document}

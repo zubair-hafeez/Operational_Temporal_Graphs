@@ -1,0 +1,16 @@
+{
+  "source": "uci_incidents",
+  "requested_url": "https://archive.ics.uci.edu/static/public/498/incident+management+process+enriched+event+log.zip",
+  "started_utc": "2026-10-22T03:18:23.261010+00:00",
+  "script_sha256": "d03c9db65d8454c7c471fc88f9946422a37693cec07dbecef581e53f94c0464b",
+  "limit_bytes": 15000000,
+  "final_url": "https://archive.ics.uci.edu/static/public/498/incident+management+process+enriched+event+log.zip",
+  "content_length": null,
+  "etag": null,
+  "status": "complete",
+  "downloaded_bytes": 2400214,
+  "stored_bytes": 2400214,
+  "sha256": "6294e29a311647306bfdfc85783f7df66517c197b9cd49aa5ee36ba9c525d1d6",
+  "sampling": "complete named asset",
+  "elapsed_seconds": 2.043973329011351
+}

@@ -1,0 +1,16 @@
+{
+  "source": "google2019",
+  "requested_url": "https://storage.googleapis.com/clusterdata_2019_a/instance_events-000000000000.parquet.gz",
+  "started_utc": "2026-10-22T03:18:09.784214+00:00",
+  "script_sha256": "d03c9db65d8454c7c471fc88f9946422a37693cec07dbecef581e53f94c0464b",
+  "limit_bytes": 32000000,
+  "final_url": "https://storage.googleapis.com/clusterdata_2019_a/instance_events-000000000000.parquet.gz",
+  "content_length": "11359157",
+  "etag": "\"6751872f0424a04a0ac285ac4e769b81\"",
+  "status": "complete",
+  "downloaded_bytes": 11359157,
+  "stored_bytes": 11359157,
+  "sha256": "24cd71e2804557d7fab506cebaa6805990773e4aad7708e588610ba80dc8ece9",
+  "sampling": "complete named asset",
+  "elapsed_seconds": 0.4138102459255606
+}

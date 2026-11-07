@@ -1,0 +1,60 @@
+{
+  "project": "Operational_Temporal_Graphs",
+  "repository": "zubair-hafeez/Operational_Temporal_Graphs",
+  "release_tag": "research-snapshot-20261107T032249Z",
+  "created_utc": "2026-11-07T03:27:10.990917+00:00",
+  "files": 5433,
+  "symlinks": 81,
+  "original_file_bytes": 38287791193,
+  "archive_bytes": 14048244787,
+  "chunks": [
+    {
+      "name": "snapshot.tar.gz.part000",
+      "size": 1900000000,
+      "sha256": "aae7388d1aeba51c841f1a5461f1de6d58b5900403c48cd63a7e5f3f2a310cd3"
+    },
+    {
+      "name": "snapshot.tar.gz.part001",
+      "size": 1900000000,
+      "sha256": "c0a677cb249347016e1ce94737d549a865d461ab6e1d2255f0cfe8fdabc2bfcd"
+    },
+    {
+      "name": "snapshot.tar.gz.part002",
+      "size": 1900000000,
+      "sha256": "8f67ad31bcd1677889da2debdcac1f28fd2b6b48e8a8a5865fc771d42c361da2"
+    },
+    {
+      "name": "snapshot.tar.gz.part003",
+      "size": 1900000000,
+      "sha256": "b230ec31d215212f5607a60176da1cdd23ebaa2ea5a2255f2a53914583490ce9"
+    },
+    {
+      "name": "snapshot.tar.gz.part004",
+      "size": 1900000000,
+      "sha256": "3f9556a290042f487dd8d5d380c235f278124a3d6fe6d7d9bf8e7c5d845ffa5a"
+    },
+    {
+      "name": "snapshot.tar.gz.part005",
+      "size": 1900000000,
+      "sha256": "fbe8b8e6f5637b673111bb64e4d3a0d2e683bfd51d9358941a15cd72c95ccfe6"
+    },
+    {
+      "name": "snapshot.tar.gz.part006",
+      "size": 1900000000,
+      "sha256": "419c10f20c2ebc6dac6002b9f832f1b1c114b78f32caa73995bc363fa9bb6c91"
+    },
+    {
+      "name": "snapshot.tar.gz.part007",
+      "size": 748244787,
+      "sha256": "e27a38c3f951998444df41e130bd322bfb2108c8b08b8dbc234fed4c6039fcd0"
+    }
+  ],
+  "includes_ignored_files": true,
+  "includes_original_git_metadata": true,
+  "verification": {
+    "archive_member_checks": 6453,
+    "file_content_sha256": "passed",
+    "symlinks_and_permissions": "passed",
+    "chunk_checksums": "passed"
+  }
+}

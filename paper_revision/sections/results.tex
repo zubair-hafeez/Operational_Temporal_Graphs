@@ -1,18 +1,8 @@
 \section{Results}
+\input{sections/extension_results}
 \input{generated/count_table}
-\input{generated/calibration_table}
-\input{generated/joint_table}
-\begin{figure*}[t]
-\centering\includegraphics[width=.98\textwidth]{figures/calibration_and_controls.pdf}
-\caption{Left: retrospective BPI 2017 fourteen-day population mean predictions
-under original and delayed same-version correction. Right: matched-marginal
-factor comparisons on original final periods and fresh BPI 2012. The global
-factor captures much of the improvement over independence; typed incidence
-has an application-specific incremental contribution.}
-\label{fig:controls}
-\end{figure*}
 
-\subsection{Count gains survive strong controls only in some settings}
+\subsection{Earlier evidence: the independence gap is not the typed gain}
 The original frozen Borg typed Gaussian model reduces count-fraction CRPS
 from .03417 under independence to .02587, a 24.3\% improvement
 (Table~\ref{tab:counts}). Ratio-9 reserve loss falls from .13106 to .05280.
@@ -64,7 +54,7 @@ produce different reserve quantiles under different joint laws
 random stream, so they differ slightly from the independently generated
 original frozen table.
 
-\subsection{Fresh confirmation favors the direct model}
+\subsection{The first workflow confirmation favors direct counts}
 The February BPI 2012 confirmation was evaluated once under the separately
 frozen protocol. The development-selected identity/global model improves
 CRPS by 12.7\% over independence (.06253 versus .07162), but worsens

@@ -123,3 +123,52 @@ Reviewed all ten PDF pages. Replaced the unsupported blackboard digit indicator 
 Separate local review ZIP complete: 878 files, 159,613,117 bytes, SHA256 `9ab04634c1b609bcf0abed64963a2f413151893638b83dcdc7f2b8e6dac514b4`. Clean extraction at `/tmp/otg-revision-review-axvqiunh` verified all hashes, passed all 45 tests, regenerated all 14 numerical/text/manifest/figure outputs identically, reran the complete revision artifact audit and compiled the manuscript. The verification report is `reports/revision_archive_verification.json`.
 
 Original ZIP remains SHA256 `a6d9aaa7e372dfd9b21c09285dbe76c4fdfe7fec2ddbd3b3dcf13d460cf7b2ef`; original PDF remains SHA256 `d8eb1c4a666c85362c1f31a663195928e2047876b7c792c8c576e656977f30ef`. No remaining experiment is required for the stated empirical manuscript. Delivery is for final author review, without an acceptance guarantee or external submission. Post-verification status notes/report are outside the immutable revision archive, which records the packaging-time source snapshot.
+
+### Cross-domain extension verified — 22 October 2026
+
+The above archival statements are historical: the user later removed earlier
+manuscripts and duplicate ZIPs. This extension preserves the remaining scientific
+assets and user-owned latest-paper shortcut; it does not recreate those copies.
+
+Exercised all six requested directions with an initial2GiB incremental cap.
+Audited an11.4MB Google2019 shard (83% singleton histories; deferred prediction),
+BPI2014 change snapshots (unversioned attributes; deferred), and bounded UCI,
+Azure, BPI2014 incident, CitiBike, NY-airline and11-airport pilots. Azure's438MB
+complete VM table matches the publisher digest; retained all released VMs in
+fixed hash-selected subscriptions instead of scaling an arbitrary row prefix.
+No full Google release or Azure CPU series downloaded.
+
+Three-seed UCI/Azure/BPI2014 marginal development includes temporal-feature HGB,
+node/set/typed-graph/temporal-attention controls, plus UCI/Azure relation and
+shuffled graphs. Borg176-feature graph pilot loses to HGB summaries. Adapted
+unchanged upstream TACTiS attentional copula on matched64-node UCI subsets does
+not beat simple factors; not represented as full TACTiS/TGN reproduction.
+Gaussian global/typed/relation-only/shuffled, matched Student-t, exact/direct
+DM and bias-DM, residual and joint-profile controls completed. All negative
+pilots retained. No test-based reselection or final tuning performed.
+
+Frozen165asset protocol SHA777d8af2f81b6fe4ca7fa84a58bd9c6e01978bf8c526b871f317211b0edd07d0
+preceded all new-period target preparation/scoring. Raw whole-file schema/state
+audits had occurred, explicitly disclosed. Confirmation84origins/426,610queries:
+UCI typedGaussian3.3% and typedStudent-t3.6% CRPS improvement over matched globals;
+best direct bias-DM essentially tied. Azure development-selected subscription-only
+improves global4.7%, while combined coordinate fit reduces exactly to global.
+BPI2014 combined Gaussian typed gain0.2%; team-only and directDM competitive;
+development-winning bias correction does not transfer. Relation-specific outcomes
+and count/reserve/joint-risk tradeoffs are fully reported.
+
+New15page venue-neutral paper (user confirmed) at paper_revision/main.pdf,
+SHAc8fc434371eb93826793055ed2751750c535241404ef000bc076f2f20c3a64e8.
+Publication audit PASSED: original264/firstconfirmation82/new165asset manifests;
+all52tests; all27new marginal predictors' CDFs; full future-label maturity;
+score aggregation; direct sampled/exact gaps<=.0000324; all3 historical-prefix
+invariance audits; identical regeneration of10extension artifacts;512-to1024
+count sensitivity preserving main comparisons. Maximum seed0 CRPS changes:
+UCI .0001453, Azure .0000380, BPI2014 .0001080. No PDF overflow, undefined
+references or out-of-page words. New storage1,110,622,771bytes at audit.
+
+Current review/reproduction: extension/REVIEW.txt and extension/REPRODUCE.txt.
+All experiment and audit work for this revision is complete. The contribution
+is controlled empirical evidence, not a novel universal graph model or assured
+top-conference acceptance. Author review/attribution and any venue-specific
+requirements remain. No external publication, upload or submission occurred.

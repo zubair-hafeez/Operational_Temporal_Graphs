@@ -1,0 +1,481 @@
+{
+  "source": "azure",
+  "stage": "exploratory development pilot",
+  "future_evaluation_scored": false,
+  "raw_rows": 49231,
+  "sample": "biased row prefix; sampled-population pilot only",
+  "forbidden_features": [
+    "max_cpu",
+    "avg_cpu",
+    "p95_cpu",
+    "category",
+    "end"
+  ],
+  "category_warning": "workload class may be derived from lifetime use; excluded",
+  "zero_duration_rows": 2716,
+  "negative_intervals": 0,
+  "target": "observed VM deletion within horizon, active sampled VMs",
+  "bounds": [
+    0.0,
+    864000.0,
+    1123200.0,
+    1382400.0,
+    1728000.0
+  ],
+  "horizons_seconds": [
+    300.0,
+    1800.0,
+    7200.0,
+    21600.0
+  ],
+  "relationships": [
+    "deployment",
+    "subscription"
+  ],
+  "cohorts": [
+    {
+      "origin": 86400.0,
+      "part": "train",
+      "offset": 0,
+      "size": 4075
+    },
+    {
+      "origin": 108000.0,
+      "part": "train",
+      "offset": 4075,
+      "size": 4033
+    },
+    {
+      "origin": 129600.0,
+      "part": "train",
+      "offset": 8108,
+      "size": 3995
+    },
+    {
+      "origin": 151200.0,
+      "part": "train",
+      "offset": 12103,
+      "size": 4010
+    },
+    {
+      "origin": 172800.0,
+      "part": "train",
+      "offset": 16113,
+      "size": 4025
+    },
+    {
+      "origin": 194400.0,
+      "part": "train",
+      "offset": 20138,
+      "size": 4027
+    },
+    {
+      "origin": 216000.0,
+      "part": "train",
+      "offset": 24165,
+      "size": 3989
+    },
+    {
+      "origin": 237600.0,
+      "part": "train",
+      "offset": 28154,
+      "size": 4021
+    },
+    {
+      "origin": 259200.0,
+      "part": "train",
+      "offset": 32175,
+      "size": 4031
+    },
+    {
+      "origin": 280800.0,
+      "part": "train",
+      "offset": 36206,
+      "size": 4003
+    },
+    {
+      "origin": 302400.0,
+      "part": "train",
+      "offset": 40209,
+      "size": 4015
+    },
+    {
+      "origin": 324000.0,
+      "part": "train",
+      "offset": 44224,
+      "size": 4027
+    },
+    {
+      "origin": 345600.0,
+      "part": "train",
+      "offset": 48251,
+      "size": 4067
+    },
+    {
+      "origin": 367200.0,
+      "part": "train",
+      "offset": 52318,
+      "size": 4018
+    },
+    {
+      "origin": 388800.0,
+      "part": "train",
+      "offset": 56336,
+      "size": 4037
+    },
+    {
+      "origin": 410400.0,
+      "part": "train",
+      "offset": 60373,
+      "size": 4040
+    },
+    {
+      "origin": 432000.0,
+      "part": "train",
+      "offset": 64413,
+      "size": 4095
+    },
+    {
+      "origin": 453600.0,
+      "part": "train",
+      "offset": 68508,
+      "size": 4036
+    },
+    {
+      "origin": 475200.0,
+      "part": "train",
+      "offset": 72544,
+      "size": 4038
+    },
+    {
+      "origin": 496800.0,
+      "part": "train",
+      "offset": 76582,
+      "size": 4050
+    },
+    {
+      "origin": 518400.0,
+      "part": "train",
+      "offset": 80632,
+      "size": 4090
+    },
+    {
+      "origin": 540000.0,
+      "part": "train",
+      "offset": 84722,
+      "size": 4067
+    },
+    {
+      "origin": 561600.0,
+      "part": "train",
+      "offset": 88789,
+      "size": 4067
+    },
+    {
+      "origin": 583200.0,
+      "part": "train",
+      "offset": 92856,
+      "size": 4082
+    },
+    {
+      "origin": 604800.0,
+      "part": "train",
+      "offset": 96938,
+      "size": 4115
+    },
+    {
+      "origin": 626400.0,
+      "part": "train",
+      "offset": 101053,
+      "size": 4086
+    },
+    {
+      "origin": 648000.0,
+      "part": "train",
+      "offset": 105139,
+      "size": 4089
+    },
+    {
+      "origin": 669600.0,
+      "part": "train",
+      "offset": 109228,
+      "size": 4090
+    },
+    {
+      "origin": 691200.0,
+      "part": "train",
+      "offset": 113318,
+      "size": 4109
+    },
+    {
+      "origin": 712800.0,
+      "part": "train",
+      "offset": 117427,
+      "size": 4051
+    },
+    {
+      "origin": 734400.0,
+      "part": "train",
+      "offset": 121478,
+      "size": 4022
+    },
+    {
+      "origin": 756000.0,
+      "part": "train",
+      "offset": 125500,
+      "size": 4024
+    },
+    {
+      "origin": 777600.0,
+      "part": "train",
+      "offset": 129524,
+      "size": 4032
+    },
+    {
+      "origin": 799200.0,
+      "part": "train",
+      "offset": 133556,
+      "size": 4008
+    },
+    {
+      "origin": 820800.0,
+      "part": "train",
+      "offset": 137564,
+      "size": 4017
+    },
+    {
+      "origin": 864000.0,
+      "part": "calibration",
+      "offset": 141581,
+      "size": 4066
+    },
+    {
+      "origin": 885600.0,
+      "part": "calibration",
+      "offset": 145647,
+      "size": 4051
+    },
+    {
+      "origin": 907200.0,
+      "part": "calibration",
+      "offset": 149698,
+      "size": 3997
+    },
+    {
+      "origin": 928800.0,
+      "part": "calibration",
+      "offset": 153695,
+      "size": 4032
+    },
+    {
+      "origin": 950400.0,
+      "part": "calibration",
+      "offset": 157727,
+      "size": 4085
+    },
+    {
+      "origin": 972000.0,
+      "part": "calibration",
+      "offset": 161812,
+      "size": 4040
+    },
+    {
+      "origin": 993600.0,
+      "part": "calibration",
+      "offset": 165852,
+      "size": 4017
+    },
+    {
+      "origin": 1015200.0,
+      "part": "calibration",
+      "offset": 169869,
+      "size": 4061
+    },
+    {
+      "origin": 1036800.0,
+      "part": "calibration",
+      "offset": 173930,
+      "size": 4074
+    },
+    {
+      "origin": 1058400.0,
+      "part": "calibration",
+      "offset": 178004,
+      "size": 4044
+    },
+    {
+      "origin": 1080000.0,
+      "part": "calibration",
+      "offset": 182048,
+      "size": 4039
+    },
+    {
+      "origin": 1123200.0,
+      "part": "dependence",
+      "offset": 186087,
+      "size": 4079
+    },
+    {
+      "origin": 1144800.0,
+      "part": "dependence",
+      "offset": 190166,
+      "size": 4076
+    },
+    {
+      "origin": 1166400.0,
+      "part": "dependence",
+      "offset": 194242,
+      "size": 4063
+    },
+    {
+      "origin": 1188000.0,
+      "part": "dependence",
+      "offset": 198305,
+      "size": 4123
+    },
+    {
+      "origin": 1209600.0,
+      "part": "dependence",
+      "offset": 202428,
+      "size": 4097
+    },
+    {
+      "origin": 1231200.0,
+      "part": "dependence",
+      "offset": 206525,
+      "size": 4069
+    },
+    {
+      "origin": 1252800.0,
+      "part": "dependence",
+      "offset": 210594,
+      "size": 4030
+    },
+    {
+      "origin": 1274400.0,
+      "part": "dependence",
+      "offset": 214624,
+      "size": 4042
+    },
+    {
+      "origin": 1296000.0,
+      "part": "dependence",
+      "offset": 218666,
+      "size": 4068
+    },
+    {
+      "origin": 1317600.0,
+      "part": "dependence",
+      "offset": 222734,
+      "size": 4043
+    },
+    {
+      "origin": 1339200.0,
+      "part": "dependence",
+      "offset": 226777,
+      "size": 4010
+    },
+    {
+      "origin": 1382400.0,
+      "part": "validation",
+      "offset": 230787,
+      "size": 4021
+    },
+    {
+      "origin": 1404000.0,
+      "part": "validation",
+      "offset": 234808,
+      "size": 4024
+    },
+    {
+      "origin": 1425600.0,
+      "part": "validation",
+      "offset": 238832,
+      "size": 3991
+    },
+    {
+      "origin": 1447200.0,
+      "part": "validation",
+      "offset": 242823,
+      "size": 4029
+    },
+    {
+      "origin": 1468800.0,
+      "part": "validation",
+      "offset": 246852,
+      "size": 4033
+    },
+    {
+      "origin": 1490400.0,
+      "part": "validation",
+      "offset": 250885,
+      "size": 4038
+    },
+    {
+      "origin": 1512000.0,
+      "part": "validation",
+      "offset": 254923,
+      "size": 4027
+    },
+    {
+      "origin": 1533600.0,
+      "part": "validation",
+      "offset": 258950,
+      "size": 4123
+    },
+    {
+      "origin": 1555200.0,
+      "part": "validation",
+      "offset": 263073,
+      "size": 4100
+    },
+    {
+      "origin": 1576800.0,
+      "part": "validation",
+      "offset": 267173,
+      "size": 4090
+    },
+    {
+      "origin": 1598400.0,
+      "part": "validation",
+      "offset": 271263,
+      "size": 4078
+    },
+    {
+      "origin": 1620000.0,
+      "part": "validation",
+      "offset": 275341,
+      "size": 4117
+    },
+    {
+      "origin": 1641600.0,
+      "part": "validation",
+      "offset": 279458,
+      "size": 4158
+    },
+    {
+      "origin": 1663200.0,
+      "part": "validation",
+      "offset": 283616,
+      "size": 4126
+    },
+    {
+      "origin": 1684800.0,
+      "part": "validation",
+      "offset": 287742,
+      "size": 4019
+    }
+  ],
+  "queries": 291761,
+  "features": 19,
+  "categorical_columns": [
+    "cores",
+    "memory",
+    "state"
+  ],
+  "numeric_columns": [],
+  "vocabulary_fit_before": 864000.0,
+  "history": "last 8 observed relation events in prior 7 days; lag, event age, count, observed terminal, mask",
+  "split_rule": "whole longest horizon strictly before partition end; train/calibration/dependence/validation separate",
+  "code_sha256": "a843c684c941bd85e1225c0fd5c05fc9a04c3696acc4767780acb20c66ea9e71"
+}

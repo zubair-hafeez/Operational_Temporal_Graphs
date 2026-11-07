@@ -1,0 +1,16 @@
+{
+  "source": "azure_schema",
+  "requested_url": "https://github.com/Azure/AzurePublicDataset/releases/download/dataset-v2/schema.csv",
+  "started_utc": "2026-10-22T03:18:18.691640+00:00",
+  "script_sha256": "d03c9db65d8454c7c471fc88f9946422a37693cec07dbecef581e53f94c0464b",
+  "limit_bytes": 100000,
+  "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/100736092/51604ce1-2f3f-4459-ad65-650387707be3",
+  "content_length": "1485",
+  "etag": "\"0x8DEC0C710B2C23F\"",
+  "status": "complete",
+  "downloaded_bytes": 1485,
+  "stored_bytes": 1485,
+  "sha256": "638f5ed7792e9a3bb7e04120d92e4164c20e17adff34a84ff5b996adcbd6c518",
+  "sampling": "complete named asset",
+  "elapsed_seconds": 0.13462974410504103
+}
