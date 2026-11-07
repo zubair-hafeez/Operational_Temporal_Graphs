@@ -1,5 +1,0 @@
-{"parts": 25, "rows": 14881553, "elapsed_s": 17.45}
-{"parts": 50, "rows": 23813417, "elapsed_s": 27.63}
-{"parts": 75, "rows": 29241874, "elapsed_s": 33.78}
-{"parts": 100, "rows": 32959317, "elapsed_s": 37.95}
-{"through_days": 7.0, "stop_us": 605400000000, "rows": 35398938, "tasks": 5695929, "jobs": 154039, "machines": 12562, "unknown_machine": 48, "initial_rows": 277321, "imputed_positive_rows": 1795, "was_time_sorted": true, "interval_count": 35375016, "zero_length_intervals": 133334, "events_sha256": "79317904085192b8c44bbbe677d06e48af91ada33b357b78d5b79720738be633", "source_manifest_sha256": "99d8064e35df5f848baa4abb06da07e67de517d5e0c6a0b6fc2e5a4902f3bbfa", "script_sha256": "787ec61f9261b895625d13f8dd5ac9f3eedc00f50cd2d6e71ffef95d36010063", "elapsed_s": 87.20604200405069}

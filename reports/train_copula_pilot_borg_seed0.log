@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/train_copula_pilot.py", line 69, in <module>
-    if __name__=='__main__':main()
-  File "/mnt/zubair/Operational_Temporal_Graphs/scripts/train_copula_pilot.py", line 23, in main
-    x=torch.as_tensor(features,device=device);p=torch.as_tensor(q.p.to_numpy(np.float32),device=device)
-  File "/home/zubair/zubairEnv/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
-    torch._C._cuda_init()
-RuntimeError: No CUDA GPUs are available

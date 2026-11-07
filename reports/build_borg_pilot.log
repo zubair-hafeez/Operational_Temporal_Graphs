@@ -1,8 +1,0 @@
-{"cutoff": 0, "total_cutoffs": 167, "queries": 2000, "elapsed_s": 0.25}
-{"cutoff": 24, "total_cutoffs": 167, "queries": 50000, "elapsed_s": 3.64}
-{"cutoff": 48, "total_cutoffs": 167, "queries": 98000, "elapsed_s": 9.96}
-{"cutoff": 72, "total_cutoffs": 167, "queries": 146000, "elapsed_s": 14.6}
-{"cutoff": 96, "total_cutoffs": 167, "queries": 194000, "elapsed_s": 18.48}
-{"cutoff": 120, "total_cutoffs": 167, "queries": 242000, "elapsed_s": 22.35}
-{"cutoff": 144, "total_cutoffs": 167, "queries": 290000, "elapsed_s": 26.22}
-{"config": {"prefix": "borg_prefix_7d", "step_minutes": 60, "horizon_minutes": 15, "per_state": 1000, "seed": 20261014}, "n_queries": 325080, "n_features": 32, "splits": {"train": 190000, "pilot_test": 87080, "validation": 48000}, "label": "First change of current task state during (cutoff, cutoff+horizon]; no future input.", "sampling": "Uniform within pending/running at each cutoff; full cell retained for context; inverse inclusion weights stored.", "queries_sha256": "ae43aae64097a6e8cbd1e4b1f3505328484ca06547cfd41ae844a873771dfddc", "features_sha256": "a0601bd265ae2dfcb8a075f65705c83bb4dc8570c88714932a3dcb9b84550ea9", "script_sha256": "82025fe7db1ce04f110fb2503f1798795ca2599e5b57811cab155490bf92cf66", "replay_sha256": "1aaf46da4fe58f4cd105d66dd60eca5b386beee0861cba3f30c7915a1bb22d67", "elapsed_s": 31.735032223979943}
